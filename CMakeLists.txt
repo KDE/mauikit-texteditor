@@ -25,7 +25,7 @@ include(CMakePackageConfigHelpers)
 #include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDEPackageAppTemplates)
 
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/MauiKit/TextEditor")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/MauiKitTextEditor")
 
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/TextEditorConfig.cmake.in"
@@ -47,7 +47,6 @@ ecm_setup_version(${PROJECT_VERSION}
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/TextEditorConfigVersion.cmake"
     SOVERSION 1
 )
-
 
 find_package(Qt5 ${REQUIRED_QT_VERSION} COMPONENTS Core Quick Sql REQUIRED)
 find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS SyntaxHighlighting I18n Config KIO)
