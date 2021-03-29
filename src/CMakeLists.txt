@@ -2,60 +2,60 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause
 
-ecm_create_qm_loader(kquickimageeditor_QM_LOADER libkquickimageeditorplugin_qt)
+ecm_create_qm_loader(texteditor_QM_LOADER libtexteditorplugin_qt)
 
 set(
     sources
-    code/commands/undocommand.cpp
-    code/commands/cropcommand.cpp
-    code/commands/mirrorcommand.cpp
-    code/commands/rotatecommand.cpp
-    code/kquickimageeditor_plugin.cpp
-    code/resizehandle.cpp
-    code/resizerectangle.cpp
-    code/imageitem.cpp
-    code/imagedocument.cpp
+    code/texteditor_plugin.cpp
+    code/documenthandler.cpp
     resources.qrc
-    ${kquickimageeditor_QM_LOADER}
+    ${texteditor_QM_LOADER}
 )
 set(
     pluginData
-
     controls/qmldir
 )
 
 add_library(
-    kquickimageeditorplugin
+    texteditorplugin
     SHARED
 
     ${sources} ${pluginData}
 )
 
 target_link_libraries(
-    kquickimageeditorplugin
+    texteditorplugin
+       
     PRIVATE
         Qt5::Core
         Qt5::Quick
         Qt5::Qml
+        Qt5::Sql
+        KF5::SyntaxHighlighting
+        KF5::I18n
+        KF5::ConfigCore
+        KF5::KIOCore
+        KF5::KIOFileWidgets
+        MauiKit
 )
 
 if (BUILD_SHARED_LIBS)
     add_custom_target(copy_to_bin ALL
         COMMAND ${CMAKE_COMMAND} -E
-                make_directory ${CMAKE_BINARY_DIR}/bin/org/kde/kquickimageeditor/
+                make_directory ${CMAKE_BINARY_DIR}/bin/org/mauikit/texteditor/
         COMMAND ${CMAKE_COMMAND} -E
-                copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/controls ${CMAKE_BINARY_DIR}/bin/org/kde/kquickimageeditor/
+                copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/controls ${CMAKE_BINARY_DIR}/bin/org/mauikit/texteditor/
         COMMAND ${CMAKE_COMMAND} -E
-                copy $<TARGET_FILE:kquickimageeditorplugin> ${CMAKE_BINARY_DIR}/bin/org/kde/kquickimageeditor/
+                copy $<TARGET_FILE:texteditorplugin> ${CMAKE_BINARY_DIR}/bin/org/mauikit/texteditor/
     )
 
-    install(DIRECTORY controls/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/kquickimageeditor)
+    install(DIRECTORY controls/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/mauikit/texteditor)
 
-    include(ECMGeneratePriFile)
-    ecm_generate_pri_file(BASE_NAME KQuickImageEditor LIB_NAME KQuickImageEditor DEPS "core qml quick svg" FILENAME_VAR PRI_FILENAME )
-    install(FILES ${PRI_FILENAME}
-            DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
+    #include(ECMGeneratePriFile)
+    #ecm_generate_pri_file(BASE_NAME KQuickImageEditor LIB_NAME KQuickImageEditor DEPS "core qml quick svg" FILENAME_VAR PRI_FILENAME )
+    #install(FILES ${PRI_FILENAME}
+            #DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 endif()
 
-install(TARGETS kquickimageeditorplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/kquickimageeditor )
+install(TARGETS texteditorplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/mauikit/texteditor )

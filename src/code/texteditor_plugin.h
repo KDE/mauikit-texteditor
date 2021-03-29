@@ -7,7 +7,7 @@
 #include <QDir>
 #include <QQmlExtensionPlugin>
 
-class KQuickImageEditorPlugin : public QQmlExtensionPlugin
+class TextEditorPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID QQmlExtensionInterface_iid)
@@ -17,7 +17,7 @@ private:
     QString resolveFilePath(const QString &path) const
     {
 #if defined(Q_OS_ANDROID)
-        return QStringLiteral(":/android_rcc_bundle/qml/org/kde/kquickimageeditor/") + path;
+        return QStringLiteral(":/android_rcc_bundle/qml/org/mauikit/texteditor/") + path;
 #else
         return baseUrl().toLocalFile() + QLatin1Char('/') + path;
 #endif
@@ -25,7 +25,7 @@ private:
     QString resolveFileUrl(const QString &filePath) const
     {
 #if defined(Q_OS_ANDROID)
-        return QStringLiteral("qrc:/android_rcc_bundle/qml/org/kde/kquickimageeditor/") + filePath;
+        return QStringLiteral("qrc:/android_rcc_bundle/qml/org/mauikit/texteditor/") + filePath;
 #else
         return baseUrl().toString() + QLatin1Char('/') + filePath;
 #endif
