@@ -2,7 +2,9 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.3
 
-import org.kde.mauikit 1.3 as Maui
+import org.mauikit.controls 1.3 as Maui
+import org.mauikit.texteditor 1.0 as TE
+
 import org.kde.kirigami 2.14 as Kirigami
 
 /*!
@@ -128,7 +130,7 @@ Maui.Page
         }
     }
  
-    Maui.DocumentHandler
+    TE.DocumentHandler
         {
             id: document
             document: body.textDocument

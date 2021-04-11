@@ -586,6 +586,17 @@ public:
      * @param value
      */
     void setEnableSyntaxHighlighting(const bool &value);
+    
+    /**
+     * @brief isDark
+     * @param color
+     * @return
+     */
+    static bool isDark(const QColor &color)
+    {
+        const double darkness = 1 - (0.299 * color.red() + 0.587 * color.green() + 0.114 * color.blue()) / 255;
+        return (darkness > 0.5);
+    }
 
 public slots:
     /**

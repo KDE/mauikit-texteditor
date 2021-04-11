@@ -71,8 +71,7 @@
 #include <QTextDocumentWriter>
 #include <QUrl>
 
-#include <MauiKit/fmh.h>
-#include <MauiKit/utils.h>
+#include <MauiKit/Core/fmh.h>
 
 #if defined Q_OS_MACOS || defined Q_OS_WIN32
 #include <KF5/KSyntaxHighlighting/Definition>
@@ -397,7 +396,7 @@ void DocumentHandler::setStyle()
     this->m_highlighter->setDefinition(def);
     
     if (m_theme.isEmpty()) {
-        const auto isDark = UTIL::isDark(this->m_backgroundColor);
+        const bool isDark = DocumentHandler::isDark(this->m_backgroundColor);
         const auto style = DocumentHandler::m_repository->defaultTheme(isDark ? KSyntaxHighlighting::Repository::DarkTheme : KSyntaxHighlighting::Repository::LightTheme);
         this->m_highlighter->setTheme(style);
         
@@ -727,7 +726,19 @@ void DocumentHandler::setFileUrl(const QUrl &url)
 
 QVariantMap DocumentHandler::fileInfo() const
 {
-    return FMH::getFileInfo(m_fileUrl);
+    
+    const QFileInfo file(m_fileUrl.toLocalFile());    
+    if(file.exists())
+    {
+        return QVariantMap();
+    }
+    
+    QVariantMap map = {
+        {FMH::MODEL_NAME[FMH::MODEL_KEY::LABEL], file.fileName()},
+        {FMH::MODEL_NAME[FMH::MODEL_KEY::NAME], file.fileName()}        
+    };    
+    
+    return map;
 }
 
 void DocumentHandler::load(const QUrl &url)

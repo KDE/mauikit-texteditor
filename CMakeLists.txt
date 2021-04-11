@@ -28,15 +28,15 @@ include(KDEPackageAppTemplates)
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/MauiKitTextEditor")
 
 configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/TextEditorConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/TextEditorConfig.cmake"
+    "${CMAKE_CURRENT_SOURCE_DIR}/MauiKitTextEditorConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/MauiKitTextEditorConfig.cmake"
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR}
     PATH_VARS KF5_INCLUDE_INSTALL_DIR CMAKE_INSTALL_PREFIX
 )
 
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/TextEditorConfigVersion.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/TextEditorConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/MauiKitTextEditorConfigVersion.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/MauiKitTextEditorConfig.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
 )
@@ -44,7 +44,7 @@ install(FILES
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX TEXTEDITOR
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/texteditor_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/TextEditorConfigVersion.cmake"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/MauiKitTextEditorConfigVersion.cmake"
     SOVERSION 1
 )
 

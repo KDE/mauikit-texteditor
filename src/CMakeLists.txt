@@ -17,14 +17,15 @@ set(
 )
 
 add_library(
-    texteditorplugin
+    MauiKitTextEditor
     SHARED
-
     ${sources} ${pluginData}
 )
 
+add_library(MauiKit::TextEditor ALIAS MauiKitTextEditor)
+
 target_link_libraries(
-    texteditorplugin
+    MauiKitTextEditor
        
     PRIVATE
         Qt5::Core
@@ -46,7 +47,7 @@ if (BUILD_SHARED_LIBS)
         COMMAND ${CMAKE_COMMAND} -E
                 copy_directory ${CMAKE_CURRENT_SOURCE_DIR}/controls ${CMAKE_BINARY_DIR}/bin/org/mauikit/texteditor/
         COMMAND ${CMAKE_COMMAND} -E
-                copy $<TARGET_FILE:texteditorplugin> ${CMAKE_BINARY_DIR}/bin/org/mauikit/texteditor/
+                copy $<TARGET_FILE:MauiKitTextEditor> ${CMAKE_BINARY_DIR}/bin/org/mauikit/texteditor/
     )
 
     install(DIRECTORY controls/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/mauikit/texteditor)
@@ -58,4 +59,4 @@ if (BUILD_SHARED_LIBS)
 
 endif()
 
-install(TARGETS texteditorplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/mauikit/texteditor )
+install(TARGETS MauiKitTextEditor DESTINATION ${KDE_INSTALL_QMLDIR}/org/mauikit/texteditor )
