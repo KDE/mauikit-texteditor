@@ -48,8 +48,15 @@ ecm_setup_version(${PROJECT_VERSION}
     SOVERSION 1
 )
 
+if(ANDROID)
+    find_package(Qt5 REQUIRED COMPONENTS AndroidExtras)
+    find_package(Gradle REQUIRED)
+else()
+    find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS KIO)
+endif()
+
 find_package(Qt5 ${REQUIRED_QT_VERSION} COMPONENTS Core Quick Sql REQUIRED)
-find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS SyntaxHighlighting I18n Config KIO)
+find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS SyntaxHighlighting I18n Config)
 find_package(MauiKit)
     
 add_subdirectory(src)

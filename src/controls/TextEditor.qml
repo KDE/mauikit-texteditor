@@ -19,8 +19,8 @@ import org.kde.kirigami 2.14 as Kirigami
 Maui.Page
 {
     id: control
-    Kirigami.Theme.inherit: false
-    Kirigami.Theme.colorSet: Kirigami.Theme.View
+//     Kirigami.Theme.inherit: false
+//     Kirigami.Theme.colorSet: Kirigami.Theme.View
 
     /*!
       If a small text tooltip should be visible at the editor right bottom area, displaying the
@@ -163,7 +163,7 @@ Maui.Page
                 bottom: parent.bottom
                 margins: Maui.Style.space.big
             }
-            color: Kirigami.Theme.backgroundColor
+            color: control.Kirigami.Theme.backgroundColor
             width: _countLabel.implicitWidth
             height: Maui.Style.rowHeight
             
@@ -496,7 +496,7 @@ Maui.Page
                             
                             background: Rectangle
                             {
-                                color: "transparent"       
+                                color:  control.Kirigami.Theme.backgroundColor      
                             }   
                             
                             Keys.onPressed:
