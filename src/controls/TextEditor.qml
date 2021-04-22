@@ -426,7 +426,7 @@ Maui.Page
                     
                     rightContent: Repeater
                     {
-                        model: alert.actionLabels()
+                        model: alert.actionLabels
                         
                         Button
                         {
@@ -435,8 +435,8 @@ Maui.Page
                             text: modelData
                             onClicked: alert.triggerAction(_alertAction.index_, _alertBar.index_)
                             
-                            Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.2)
-                            Kirigami.Theme.textColor: Kirigami.Theme.textColor
+                            Kirigami.Theme.backgroundColor: Qt.lighter(_alertBar.Kirigami.Theme.backgroundColor, 1.2)
+                            Kirigami.Theme.textColor: Qt.darker(Kirigami.Theme.backgroundColor)
                         }
                     }
                 }

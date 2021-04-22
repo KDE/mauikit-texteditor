@@ -89,7 +89,8 @@ class DocumentAlert : public QObject
     Q_PROPERTY(QString title MEMBER m_title CONSTANT FINAL)
     Q_PROPERTY(QString body MEMBER m_body CONSTANT FINAL)
     Q_PROPERTY(uint level MEMBER m_level CONSTANT FINAL)
-
+    Q_PROPERTY(QStringList actionLabels READ actionLabels FINAL)
+    
 public:
     enum LEVEL : uint { INFO_LEVEL = 0, WARNING_LEVEL = 1, DANGER_LEVEL = 2 };
 
