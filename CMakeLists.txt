@@ -56,7 +56,7 @@ else()
 endif()
 
 find_package(Qt5 ${REQUIRED_QT_VERSION} COMPONENTS Core Quick Sql REQUIRED)
-find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS SyntaxHighlighting I18n Config)
+find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS SyntaxHighlighting I18n Config CoreAddons)
 find_package(MauiKit)
     
 add_subdirectory(src)
