@@ -48,7 +48,8 @@ target_link_libraries(
         Qt5::Sql
         KF5::SyntaxHighlighting
         KF5::I18n
-        KF5::ConfigCore        
+        KF5::ConfigCore 
+        KF5::CoreAddons
         MauiKit
 )
 
