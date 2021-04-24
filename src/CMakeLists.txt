@@ -32,7 +32,6 @@ else()
         MauiKitTextEditor
 
         PRIVATE
-        Kf5::CoreAddons
         KF5::KIOCore
         KF5::KIOFileWidgets
     )
