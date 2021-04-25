@@ -27,11 +27,12 @@ add_library(MauiKit::TextEditor ALIAS MauiKitTextEditor)
 if(ANDROID)
     target_link_libraries(MauiKitTextEditor PRIVATE Qt5::AndroidExtras )
 
-else()
+elseif(UNIX)
     target_link_libraries(
         MauiKitTextEditor
 
         PRIVATE
+        KF5::ConfigCore 
         KF5::KIOCore
         KF5::KIOFileWidgets
     )
@@ -47,7 +48,6 @@ target_link_libraries(
         Qt5::Sql
         KF5::SyntaxHighlighting
         KF5::I18n
-        KF5::ConfigCore 
         KF5::CoreAddons
         MauiKit
 )
