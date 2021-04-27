@@ -296,15 +296,15 @@ Maui.Page
             width: parent.width
             position: ToolBar.Footer
 
-            rightContent: [ToolButton
+            rightContent: ToolButton
             {
                 id: _replaceButton
                 icon.name: "edit-find-replace"
                 checkable: true
                 checked: false
-            },
+            }
 
-            Maui.ToolButtonMenu
+           leftContent: Maui.ToolButtonMenu
             {
                 icon.name: "games-config-options"
 
@@ -321,7 +321,7 @@ Maui.Page
                     checkable: true
                     text: i18n("Whole Words Only")
                 }
-            }]
+            }
 
             middleContent: Maui.TextField
             {
