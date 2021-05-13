@@ -8,8 +8,8 @@ import org.mauikit.texteditor 1.0 as TE
 import org.kde.kirigami 2.14 as Kirigami
 
 /*!
-  \since org.kde.mauikit.labs 1.0
-  \inqmlmodule org.kde.mauikit
+ \ since org.mauikit.texteditor 1.0
+ \inqmlmodule org.mauikit.texteditor
   \brief Integrated text editor component
 
   A text area for editing text with convinient functions.
