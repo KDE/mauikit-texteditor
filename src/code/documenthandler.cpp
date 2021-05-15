@@ -414,7 +414,9 @@ void DocumentHandler::refreshAllBlocks()
 {
     if (textDocument()) {
         for (QTextBlock it = textDocument()->begin(); it != textDocument()->end(); it = it.next())
-            textDocument()->documentLayout()->updateBlock(it);
+        {
+            emit this->textDocument()->documentLayout()->updateBlock(it);
+        }
     }
 }
 
