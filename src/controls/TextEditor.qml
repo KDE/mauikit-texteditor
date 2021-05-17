@@ -544,6 +544,7 @@ Maui.Page
                             Loader
                             {
                                 id: _linesCounter
+                                asynchronous: true
                                 active: control.showLineNumbers && !document.isRich
                                 anchors.left: parent.left
                                 height: Math.max(body.height, control.height)
