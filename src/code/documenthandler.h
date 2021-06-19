@@ -253,6 +253,7 @@ class DocumentHandler : public QObject
     Q_PROPERTY(bool underline READ underline WRITE setUnderline NOTIFY underlineChanged)
     Q_PROPERTY(bool isRich READ getIsRich NOTIFY isRichChanged)
 
+    Q_PROPERTY(int lineCount READ lineCount NOTIFY lineCountChanged)
     Q_PROPERTY(int fontSize READ fontSize WRITE setFontSize NOTIFY fontSizeChanged)
     Q_PROPERTY(qreal tabSpace READ tabSpace WRITE setTabSpace NOTIFY tabSpaceChanged)
 
@@ -632,6 +633,8 @@ public slots:
      * @return
      */
     int lineHeight(const int &line);
+    
+    int lineCount();
 
     /**
      * @brief getCurrentLineIndex
@@ -678,6 +681,7 @@ signals:
     void underlineChanged();
     void isRichChanged();
 
+    void lineCountChanged();
     void fontSizeChanged();
     void tabSpaceChanged();
 

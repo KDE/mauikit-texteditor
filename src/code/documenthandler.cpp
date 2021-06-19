@@ -147,7 +147,7 @@ void Alerts::append(DocumentAlert *alert)
     beginInsertRows(QModelIndex(), index, index);
     
     // watch out for when the alert is done: such as when an action is triggered
-    connect(alert, &DocumentAlert::done, [&](int index) {
+    connect(alert, &DocumentAlert::done, [this](int index) {
         this->beginRemoveRows(QModelIndex(), index, index);
         auto item = this->m_alerts.takeAt(index);
         if (item) {
@@ -178,16 +178,16 @@ DocumentAlert *DocumentHandler::externallyModifiedAlert()
 {
     auto alert = new DocumentAlert(i18n("File changed externally"), i18n("You can reload the file or save your changes now"), DocumentAlert::WARNING_LEVEL, Alerts::MODIFIED);
     
-    const auto reloadAction = [&]() {
+    const auto reloadAction = [this]() {
         emit this->loadFile(this->fileUrl());
     };
     
-    const auto autoReloadAction = [&]() {
+    const auto autoReloadAction = [this]() {
         this->setAutoReload(true);
         emit this->loadFile(this->fileUrl());
     };
     
-    alert->setActions({{i18n("Reload"), reloadAction}, {i18n("Auto Reload"), autoReloadAction}, {i18n("Ignore"), [&]() {}}});
+    alert->setActions({{i18n("Reload"), reloadAction}, {i18n("Auto Reload"), autoReloadAction}, {i18n("Ignore"), []() {}}});
     return alert;
 }
 
@@ -195,7 +195,7 @@ DocumentAlert *DocumentHandler::canNotSaveAlert(const QString &details)
 {
     auto alert = new DocumentAlert(i18n("File can not be saved"), details, DocumentAlert::DANGER_LEVEL, Alerts::SAVE_ERROR);
     
-    alert->setActions({{i18n("Ignore"), [&]() {}}});
+    alert->setActions({{i18n("Ignore"), [this]() {}}});
     return alert;
 }
 
@@ -203,7 +203,7 @@ DocumentAlert *DocumentHandler::missingAlert()
 {
     auto alert = new DocumentAlert(i18n("Your file was removed"), i18n("This file does not longer exists in your local storage, however you can save it again"), DocumentAlert::DANGER_LEVEL, Alerts::MISSING);
     
-    const auto saveAction = [&]() {
+    const auto saveAction = [this]() {
         this->saveAs(this->fileUrl());
     };
     
@@ -229,7 +229,7 @@ DocumentHandler::DocumentHandler(QObject *parent)
         m_loader->moveToThread(&m_worker);
         connect(&m_worker, &QThread::finished, m_loader, &QObject::deleteLater);
         connect(this, &DocumentHandler::loadFile, m_loader, &FileLoader::loadFile);
-        connect(m_loader, &FileLoader::fileReady, [&](QString array, QUrl url) {
+        connect(m_loader, &FileLoader::fileReady, [this](QString array, QUrl url) {
             this->setText(array);
             
             if (this->textDocument()) {
@@ -258,11 +258,11 @@ DocumentHandler::DocumentHandler(QObject *parent)
     if (m_autoSave)
         m_autoSaveTimer.start(AUTOSAVE_TIMEOUT);
     
-    connect(this, &DocumentHandler::cursorPositionChanged, [&]() {
+    connect(this, &DocumentHandler::cursorPositionChanged, [this]() {
         emit this->currentLineIndexChanged();
     });
     
-    connect(this->m_watcher, &QFileSystemWatcher::fileChanged, [&](QString url) {
+    connect(this->m_watcher, &QFileSystemWatcher::fileChanged, [this](QString url) {
         if (this->fileUrl() == QUrl::fromLocalFile(url)) {
             // THE FILE WAS REMOVED
             if (!FMH::fileExists(this->fileUrl())) {
@@ -470,6 +470,24 @@ void DocumentHandler::setDocument(QQuickTextDocument *document)
     if (this->textDocument()) {
         this->textDocument()->setModified(false);
         connect(this->textDocument(), &QTextDocument::modificationChanged, this, &DocumentHandler::modifiedChanged);
+        
+        connect(this->textDocument(), &QTextDocument::blockCountChanged, this, &DocumentHandler::lineCountChanged);
+        
+//         connect(this->textDocument(), &QTextDocument::documentLayoutChanged, []()
+//         {
+//             qDebug() << "MEH Layout changed" ;
+//         });
+//         
+//         connect(this->textDocument()->documentLayout(), &QAbstractTextDocumentLayout::updateBlock, [this](const QTextBlock &block)
+//         {
+//             qDebug() << "MEH Block rect changed" << block.blockNumber();
+//             emit lineHeightChanged(block.blockNumber(), int(this->textDocument()->documentLayout()->blockBoundingRect(block).height()));
+//         });
+//         
+//         connect(this->textDocument()->documentLayout(), &QAbstractTextDocumentLayout::documentSizeChanged, [](const QSizeF &size)
+//         {
+//             qDebug() << "MEH DOCS SIZE CHANGED" << size;
+//         });
         
         this->load(m_fileUrl);
         
@@ -1094,6 +1112,13 @@ int DocumentHandler::lineHeight(const int &line)
     }
     
     return int(doc->documentLayout()->blockBoundingRect(doc->findBlockByNumber(line)).height());
+}
+
+int DocumentHandler::lineCount()
+{
+    if (!this->textDocument())
+        return 0;
+    return this->textDocument()->blockCount();
 }
 
 int DocumentHandler::getCurrentLineIndex()

@@ -19,8 +19,8 @@ import org.kde.kirigami 2.14 as Kirigami
 Maui.Page
 {
     id: control
-//     Kirigami.Theme.inherit: false
-//     Kirigami.Theme.colorSet: Kirigami.Theme.View
+    //     Kirigami.Theme.inherit: false
+    //     Kirigami.Theme.colorSet: Kirigami.Theme.View
 
     /*!
       If a small text tooltip should be visible at the editor right bottom area, displaying the
@@ -28,19 +28,19 @@ Maui.Page
     */
     property bool showLineCount : true
     
-  
-        property bool showFindBar: false
-        
-        onShowFindBarChanged:
+
+    property bool showFindBar: false
+
+    onShowFindBarChanged:
+    {
+        if(showFindBar)
         {
-            if(showFindBar)
-            {
-                _findField.forceActiveFocus()
-            }else
-            {
-                body.forceActiveFocus()
-            }
+            _findField.forceActiveFocus()
+        }else
+        {
+            body.forceActiveFocus()
         }
+    }
 
     /*!
     */
@@ -109,9 +109,9 @@ Maui.Page
     focus: true
     title: document.fileName
     showTitle: false
-    flickable: _flickable 
+    flickable: _flickable
 
-   Keys.enabled: true
+    Keys.enabled: true
     Keys.onPressed:
     {
         if((event.key === Qt.Key_F) && (event.modifiers & Qt.ControlModifier))
@@ -129,96 +129,96 @@ Maui.Page
             _replaceField.forceActiveFocus()
         }
     }
- 
+
     TE.DocumentHandler
+    {
+        id: document
+        document: body.textDocument
+        cursorPosition: body.cursorPosition
+        selectionStart: body.selectionStart
+        selectionEnd: body.selectionEnd
+        backgroundColor: control.Kirigami.Theme.backgroundColor
+        enableSyntaxHighlighting: false
+        findCaseSensitively:  _findCaseSensitively.checked
+        findWholeWords: _findWholeWords.checked
+
+        onCurrentLineIndexChanged:
         {
-            id: document
-            document: body.textDocument
-            cursorPosition: body.cursorPosition
-            selectionStart: body.selectionStart
-            selectionEnd: body.selectionEnd
-            backgroundColor: control.Kirigami.Theme.backgroundColor
-            enableSyntaxHighlighting: false
-            findCaseSensitively:  _findCaseSensitively.checked
-            findWholeWords: _findWholeWords.checked
-                        
-            onCurrentLineIndexChanged:
-            {
-                //_scrollView.flickable.contentY = documentcurrentLineIndex * 
-            }
-            
-            onSearchFound:
-            {
-                body.select(start, end)
-            }
+            //_scrollView.flickable.contentY = documentcurrentLineIndex *
         }
-            
-        Rectangle
+
+        onSearchFound:
         {
-            z: _scrollView.z +1
-            visible: showLineCount
-            anchors
-            {
-                right: parent.right
-                bottom: parent.bottom
-                margins: Maui.Style.space.big
-            }
-            color: control.Kirigami.Theme.backgroundColor
-            width: _countLabel.implicitWidth
-            height: Maui.Style.rowHeight
-            
-            Label
-            {
-                id: _countLabel
-                anchors.centerIn: parent
-                text: body.length + " / " + body.lineCount
-                color: control.Kirigami.Theme.textColor
-                opacity: 0.5
-            }
+            body.select(start, end)
         }
-        
-        Maui.ContextualMenu
+    }
+
+    Rectangle
+    {
+        z: _scrollView.z +1
+        visible: showLineCount
+        anchors
         {
-            id: documentMenu
-            
-            MenuItem
-            {
-                text: i18n("Copy")
-                onTriggered: body.copy()
-                enabled: body.selectedText.length
-            }
-            
-            MenuItem
-            {
-                text: i18n("Cut")
-                onTriggered: body.cut()
-                enabled: !body.readOnly && body.selectedText.length
-            }
-            
-            MenuItem
-            {
-                text: i18n("Paste")
-                onTriggered: body.paste()
-                enabled: !body.readOnly
-            }
-            
-            MenuItem
-            {
-                text: i18n("Select All")
-                onTriggered: body.selectAll()
-            }
-            
-            MenuItem
-            {
-                text: i18n("Search Selected Text on Google...")
-                onTriggered: Qt.openUrlExternally("https://www.google.com/search?q="+body.selectedText)
-                enabled: body.selectedText.length
-            }
+            right: parent.right
+            bottom: parent.bottom
+            margins: Maui.Style.space.big
         }
-        
-        
-        headBar.visible: !body.readOnly
-        headBar.leftContent: [
+        color: control.Kirigami.Theme.backgroundColor
+        width: _countLabel.implicitWidth
+        height: Maui.Style.rowHeight
+
+        Label
+        {
+            id: _countLabel
+            anchors.centerIn: parent
+            text: body.length + " / " + body.lineCount
+            color: control.Kirigami.Theme.textColor
+            opacity: 0.5
+        }
+    }
+
+    Maui.ContextualMenu
+    {
+        id: documentMenu
+
+        MenuItem
+        {
+            text: i18n("Copy")
+            onTriggered: body.copy()
+            enabled: body.selectedText.length
+        }
+
+        MenuItem
+        {
+            text: i18n("Cut")
+            onTriggered: body.cut()
+            enabled: !body.readOnly && body.selectedText.length
+        }
+
+        MenuItem
+        {
+            text: i18n("Paste")
+            onTriggered: body.paste()
+            enabled: !body.readOnly
+        }
+
+        MenuItem
+        {
+            text: i18n("Select All")
+            onTriggered: body.selectAll()
+        }
+
+        MenuItem
+        {
+            text: i18n("Search Selected Text on Google...")
+            onTriggered: Qt.openUrlExternally("https://www.google.com/search?q="+body.selectedText)
+            enabled: body.selectedText.length
+        }
+    }
+
+
+    headBar.visible: !body.readOnly
+    headBar.leftContent: [
         
         Maui.ToolActions
         {
@@ -276,16 +276,15 @@ Maui.Page
                 onTriggered: document.uppercase = !document.uppercase
             }
         }
-        ]
-        
-        footBar.rightContent: ComboBox
-        {
-            visible: control.showSyntaxHighlightingLanguages
-            model: document.getLanguageNameList()
-            currentIndex: -1
-            onCurrentIndexChanged: document.formatName = model[currentIndex]
-        }
-        
+    ]
+
+    footBar.rightContent: ComboBox
+    {
+        visible: control.showSyntaxHighlightingLanguages
+        model: document.getLanguageNameList()
+        currentIndex: -1
+        onCurrentIndexChanged: document.formatName = model[currentIndex]
+    }
 
     footerColumn: [
 
@@ -304,7 +303,7 @@ Maui.Page
                 checked: false
             }
 
-           leftContent: Maui.ToolButtonMenu
+            leftContent: Maui.ToolButtonMenu
             {
                 icon.name: "games-config-options"
 
@@ -344,12 +343,12 @@ Maui.Page
                         onTriggered: document.find(_findField.text, false)
                     }
 
-//                    Action
-//                    {
-//                        enabled: _findField.text.length
-//                        icon.name: "arrow-down"
-//                        onTriggered: document.find(_findField.text, true)
-//                    }
+                    //                    Action
+                    //                    {
+                    //                        enabled: _findField.text.length
+                    //                        icon.name: "arrow-down"
+                    //                        onTriggered: document.find(_findField.text, true)
+                    //                    }
                 ]
             }
         },
@@ -360,8 +359,8 @@ Maui.Page
             position: ToolBar.Footer
             visible: _replaceButton.checked && _findToolBar.visible
             width: parent.width
-    enabled: !body.readOnly
-    
+            enabled: !body.readOnly
+
             middleContent: Maui.TextField
             {
                 id: _replaceField
@@ -388,263 +387,249 @@ Maui.Page
             ]
         }
     ]
-        
-        ColumnLayout
+
+    ColumnLayout
+    {
+        anchors.fill: parent
+        spacing: 0
+
+        Repeater
         {
-            anchors.fill: parent
-            spacing: 0
-            
-            Repeater
+            model: document.alerts
+
+            Maui.ToolBar
             {
-                model: document.alerts
-                
-                Maui.ToolBar
+                id: _alertBar
+                property var alert : model.alert
+                readonly property int index_ : index
+                Layout.fillWidth: true
+
+                Kirigami.Theme.backgroundColor:
                 {
-                    id: _alertBar
-                    property var alert : model.alert
-                    readonly property int index_ : index
+                    switch(alert.level)
+                    {
+                    case 0: return Kirigami.Theme.positiveTextColor
+                    case 1: return Kirigami.Theme.neutralTextColor
+                    case 2: return Kirigami.Theme.negativeTextColor
+                    }
+                }
+
+                leftContent: Maui.ListItemTemplate
+                {
                     Layout.fillWidth: true
-                    
-                    Kirigami.Theme.backgroundColor:
+                    Layout.fillHeight: true
+
+                    label1.text: alert.title
+                    label2.text: alert.body
+                }
+
+                rightContent: Repeater
+                {
+                    model: alert.actionLabels
+
+                    Button
                     {
-                        switch(alert.level)
-                        {
-                            case 0: return Kirigami.Theme.positiveTextColor
-                            case 1: return Kirigami.Theme.neutralTextColor
-                            case 2: return Kirigami.Theme.negativeTextColor
-                        }
-                    }
-                    
-                    leftContent: Maui.ListItemTemplate
-                    {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                        
-                        label1.text: alert.title
-                        label2.text: alert.body
-                    }
-                    
-                    rightContent: Repeater
-                    {
-                        model: alert.actionLabels
-                        
-                        Button
-                        {
-                            id: _alertAction
-                            property int index_ : index
-                            text: modelData
-                            onClicked: alert.triggerAction(_alertAction.index_, _alertBar.index_)
-                            
-                            Kirigami.Theme.backgroundColor: Qt.lighter(_alertBar.Kirigami.Theme.backgroundColor, 1.2)
-                            Kirigami.Theme.textColor: Qt.darker(Kirigami.Theme.backgroundColor)
-                        }
+                        id: _alertAction
+                        property int index_ : index
+                        text: modelData
+                        onClicked: alert.triggerAction(_alertAction.index_, _alertBar.index_)
+
+                        Kirigami.Theme.backgroundColor: Qt.lighter(_alertBar.Kirigami.Theme.backgroundColor, 1.2)
+                        Kirigami.Theme.textColor: Qt.darker(Kirigami.Theme.backgroundColor)
                     }
                 }
             }
-            
-            PinchArea
+        }
+
+        PinchArea
+        {
+            id: pinchArea
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            property real minScale: 1.0
+            property real maxScale: 3.0
+
+            pinch.minimumScale: minScale
+            pinch.maximumScale: maxScale
+            pinch.dragAxis: Pinch.XandYAxis
+
+            onPinchFinished:
             {
-                id: pinchArea
-                Layout.fillWidth: true
-                Layout.fillHeight: true
+                console.log("pinch.scale", pinch.scale)
+
+                if(pinch.scale > 1.5)
+                    control.zoomIn()
+                else control.zoomOut()
+            }
+
+            ScrollView
+            {
+                id: _scrollView
+                anchors.fill: parent
+                contentWidth: availableWidth
                 
-                property real minScale: 1.0
-                property real maxScale: 3.0
-                
-                pinch.minimumScale: minScale
-                pinch.maximumScale: maxScale
-                pinch.dragAxis: Pinch.XandYAxis
-                
-                onPinchFinished:
+                Flickable
                 {
-                    console.log("pinch.scale", pinch.scale)
-                    
-                    if(pinch.scale > 1.5)
-                        control.zoomIn()
-                        else control.zoomOut()
-                }                        
-                
-                ScrollView
-                {
-                    id: _scrollView
-                    anchors.fill: parent
-                    
-                    Flickable
+                    id: _flickable
+                    interactive: Kirigami.Settings.hasTransientTouchInput
+                    boundsBehavior: Flickable.StopAtBounds
+                    boundsMovement :Flickable.StopAtBounds
+
+                    TextArea.flickable: TextArea
                     {
-                        id: _flickable
-                        interactive: Kirigami.Settings.hasTransientTouchInput
-                        boundsBehavior: Flickable.StopAtBounds
-                        boundsMovement :Flickable.StopAtBounds 
-                        
-                        TextArea.flickable: TextArea
+                        id: body
+
+                        text: document.text
+                        placeholderText: i18n("Body")
+                        selectByKeyboard: !Kirigami.Settings.isMobile
+                        selectByMouse : !Kirigami.Settings.hasTransientTouchInput
+                        textFormat: TextEdit.AutoText
+                        wrapMode: TextEdit.WrapAnywhere
+                        color: control.Kirigami.Theme.textColor
+                        activeFocusOnPress: true
+                        activeFocusOnTab: true
+                        persistentSelection: true
+
+                        leftInset: leftPadding
+                        leftPadding: _linesCounter.width + Maui.Style.space.small
+
+                        background: Rectangle
                         {
-                            id: body                           
-                           
-                            text: document.text
-                            placeholderText: i18n("Body")
-                            selectByKeyboard: !Kirigami.Settings.isMobile
-                            selectByMouse : !Kirigami.Settings.hasTransientTouchInput
-                            textFormat: TextEdit.AutoText
-                            wrapMode: TextEdit.WrapAnywhere
-                            color: control.Kirigami.Theme.textColor
-                            activeFocusOnPress: true
-                            activeFocusOnTab: true
-                            persistentSelection: true
-                            
-                            leftInset: leftPadding
-                            leftPadding: _linesCounter.width + Maui.Style.space.small
-                            
-                            background: Rectangle
+                            color:  control.Kirigami.Theme.backgroundColor
+                        }
+
+                        Keys.onPressed:
+                        {
+                            if(event.key === Qt.Key_PageUp)
                             {
-                                color:  control.Kirigami.Theme.backgroundColor      
-                            }   
-                            
-                            Keys.onPressed:
-                            {
-                                if(event.key === Qt.Key_PageUp)
-                                {
-                                    flickable.flick(0,  60*Math.sqrt(flickable.height))
-                                }   
-                                
-                                if(event.key === Qt.Key_PageDown)
-                                {
-                                    flickable.flick(0, -60*Math.sqrt(flickable.height))                                    
-                                }                                    // TODO: Move cursor
+                                flickable.flick(0,  60*Math.sqrt(flickable.height))
                             }
-                            
-                            onPressAndHold:
+
+                            if(event.key === Qt.Key_PageDown)
                             {
-                                if(Maui.Handy.isLinux)
-                                {
-                                    return
-                                }
+                                flickable.flick(0, -60*Math.sqrt(flickable.height))
+                            }                                    // TODO: Move cursor
+                        }
+
+                        onPressAndHold:
+                        {
+                            if(Maui.Handy.isLinux)
+                            {
+                                return
+                            }
+                            documentMenu.popup()
+                        }
+
+                        onPressed:
+                        {
+                            if(Maui.Handy.isLinux)
+                            {
+                                return
+                            }
+
+                            if(!Kirigami.Settings.isMobile && event.button === Qt.RightButton)
+                            {
                                 documentMenu.popup()
-                            } 
-                            
-                            onPressed:
-                            {
-                                 if(Maui.Handy.isLinux)
-                                {
-                                    return
-                                }
-                                
-                                if(!Kirigami.Settings.isMobile && event.button === Qt.RightButton)
-                                {
-                                    documentMenu.popup()
-                                }
                             }
-                            
-                            HoverHandler
-                            {
-                                //active: true
-                                target: _scrollView
-                                cursorShape: Qt.IBeamCursor
-                            }
-                            
-                            Loader
-                            {
-                                id: _linesCounter
-                                asynchronous: true
-                                active: control.showLineNumbers && !document.isRich
-                                anchors.left: parent.left
-                                height: Math.max(body.height, control.height)
-                                width: active ? 32 : 0
-                                sourceComponent: _linesCounterComponent
-                            }
-                            
-                            Component
-                            {
-                                id: _linesCounterComponent
-                                
-                                Rectangle
+                        }
+
+                        HoverHandler
+                        {
+                            //active: true
+                            target: _scrollView
+                            cursorShape: Qt.IBeamCursor
+                        }
+
+                        Loader
+                        {
+                            id: _linesCounter
+                            asynchronous: true
+                            active: control.showLineNumbers && !document.isRich
+                            anchors.left: parent.left
+                            height: Math.max(body.height, control.height)
+                            width: active ? 32 : 0
+                            sourceComponent: _linesCounterComponent
+                        }
+
+                        Component
+                        {
+                            id: _linesCounterComponent
+
+                            Rectangle
+                            {                             
+                                color: Qt.darker(Kirigami.Theme.backgroundColor, 1)
+
+                                ListView
                                 {
-                                    Kirigami.Theme.inherit: false
-                                    Kirigami.Theme.colorSet: Kirigami.Theme.Window
-                                    color: Qt.darker(Kirigami.Theme.backgroundColor, 1)
+                                    id: _linesCounterList
+                                    anchors.fill: parent
+                                    anchors.topMargin: 7
                                     
-                                    ListView
+                                    currentIndex: document.currentLineIndex
+                                    model: document.lineCount
+                                    
+                                    orientation: ListView.Vertical
+                                    interactive: false                                   
+                                    snapMode: ListView.NoSnap
+
+                                    boundsBehavior: Flickable.StopAtBounds
+                                    boundsMovement :Flickable.StopAtBounds
+
+                                    preferredHighlightBegin: 0
+                                    preferredHighlightEnd: width
+
+                                    highlightRangeMode: ListView.StrictlyEnforceRange
+                                    highlightMoveDuration: 0
+                                    highlightFollowsCurrentItem: false
+                                    highlightResizeDuration: 0
+                                    highlightMoveVelocity: -1
+                                    highlightResizeVelocity: -1
+
+                                    maximumFlickVelocity: 0
+                                                                       
+
+                                    delegate: Item
                                     {
-                                        currentIndex: document.currentLineIndex
-                                        model: body.lineCount
-                                        orientation: ListView.Vertical
-                                        interactive: false
-                                        anchors.fill: parent
-                                        anchors.topMargin: 7
-                                        snapMode: ListView.NoSnap
+                                        id: _delegate
+                                        readonly property int line : index
+                                        width:  ListView.view.width
+                                        height: document.lineHeight(line)                                       
+                                        readonly property bool isCurrentItem : ListView.isCurrentItem
                                         
-                                        boundsBehavior: Flickable.StopAtBounds
-                                        boundsMovement :Flickable.StopAtBounds 
-                                        
-                                        preferredHighlightBegin: 0
-                                        preferredHighlightEnd: width
-                                        
-                                        highlightRangeMode: ListView.StrictlyEnforceRange
-                                        highlightMoveDuration: 0
-                                        highlightFollowsCurrentItem: false
-                                        highlightResizeDuration: 0
-                                        highlightMoveVelocity: -1
-                                        highlightResizeVelocity: -1
-                                        
-                                        maximumFlickVelocity: 4 * (orientation === Qt.Horizontal ? width : height)
-                                        
-                                        delegate: RowLayout
+                                        Connections
                                         {
-                                            //property bool foldable : document.isFoldable(index)
-                                            //property bool folded : document.isFolded(index)
-                                            readonly property int line : index
-                                            width:  ListView.view.width
-                                            height: document.lineHeight(index)
-                                            spacing: 0
-                                            
-                                            readonly property bool isCurrentItem : ListView.isCurrentItem
-                                            
-                                            Label
+                                            target: control.body
+                                            function onContentHeightChanged()
                                             {
-                                                Layout.fillWidth: true
-                                                Layout.fillHeight: true
-                                                
-//                                                 Layout.leftMargin: Maui.Style.space.small
-                                                opacity: isCurrentItem  ? 1 : 0.7
-                                                color:  isCurrentItem ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
-                                                font.pointSize: Math.min(Maui.Style.fontSizes.medium, body.font.pointSize)
-                                                horizontalAlignment: Text.AlignHCenter
-                                                verticalAlignment: Text.AlignTop
-                                                renderType: Text.NativeRendering
-                                                font.family: "Monospace"
-                                                text: index+1
+                                                if(_delegate.isCurrentItem)
+                                                {
+                                                    console.log("Updating line height")
+                                                    _delegate.height = control.document.lineHeight(_delegate.line)
+                                                }
                                             }
-                                            
-                                            //MouseArea
-                                            //{
-                                                //visible: foldable
-                                                
-                                                //Layout.preferredWidth: visible ? 16 : 0
-                                                //Layout.fillHeight: true
-                                                //onClicked:
-                                                //{
-                                                    //console.log("toggle fold", line)
-                                                    //document.toggleFold(line)                                            
-                                                //}
-                                                
-                                                //Kirigami.Icon
-                                                //{
-                                                    //source: folded ? "arrow-down" : "arrow-up"
-                                                    //anchors.centerIn: parent
-                                                    //height: visible ? 12 : 0
-                                                    //width: height
-                                                    //color: Kirigami.Theme.textColor
-                                                    //isMask: true
-                                                //}
-                                            //}
+                                        }                                        
+
+                                        Label
+                                        {
+                                            anchors.fill: parent
+                                            opacity: isCurrentItem  ? 1 : 0.7
+                                            color:  isCurrentItem ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
+                                            font.pointSize: Math.min(Maui.Style.fontSizes.medium, body.font.pointSize)
+                                            horizontalAlignment: Text.AlignHCenter
+                                            verticalAlignment: Text.AlignTop
+                                            renderType: Text.NativeRendering
+                                            font.family: "Monospace"
+                                            text: index+1
                                         }
                                     }
-                                    
-                                    Kirigami.Separator
-                                    {
-                                        anchors.top: parent.top
-                                        anchors.bottom: parent.bottom
-                                        anchors.right: parent.right
-                                    }
+                                }
+
+                                Kirigami.Separator
+                                {
+                                    anchors.top: parent.top
+                                    anchors.bottom: parent.bottom
+                                    anchors.right: parent.right
                                 }
                             }
                         }
@@ -652,7 +637,8 @@ Maui.Page
                 }
             }
         }
-        
+    }
+
 
     /*!
       Zooms in.
@@ -668,6 +654,10 @@ Maui.Page
     function zoomOut()
     {
         body.font.pointSize = body.font.pointSize / 1.5
+    }
 
+    function forceActiveFocus()
+    {
+        body.forceActiveFocus()
     }
 }
