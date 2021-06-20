@@ -117,7 +117,15 @@ Maui.Page
         if((event.key === Qt.Key_F) && (event.modifiers & Qt.ControlModifier))
         {
             control.showFindBar = true
-            _findField.text = control.body.selectedText
+            
+            if(control.body.selectedText.length)
+            {
+                _findField.text =  control.body.selectedText
+            }else
+            {
+                _findField.selectAll()
+            }
+           
             _findField.forceActiveFocus()
         }
 
