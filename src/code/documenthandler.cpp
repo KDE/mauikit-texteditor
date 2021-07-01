@@ -195,7 +195,7 @@ DocumentAlert *DocumentHandler::canNotSaveAlert(const QString &details)
 {
     auto alert = new DocumentAlert(i18n("File can not be saved"), details, DocumentAlert::DANGER_LEVEL, Alerts::SAVE_ERROR);
     
-    alert->setActions({{i18n("Ignore"), [this]() {}}});
+    alert->setActions({{i18n("Ignore"), []() {}}});
     return alert;
 }
 

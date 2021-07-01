@@ -11,7 +11,7 @@ import org.kde.kirigami 2.14 as Kirigami
  * \ since org.mauikit.texteditor 1.0
  * \inqmlmodule org.mauikit.texteditor
  *  \brief Integrated text editor component
- * 
+ *
  *  A text area for editing text with convinient functions.
  *  The Editor is controlled by the DocumentHandler which controls the files I/O,
  *  the syntax highlighting styles, and many more text editing properties.
@@ -19,15 +19,16 @@ import org.kde.kirigami 2.14 as Kirigami
 Maui.Page
 {
     id: control
-    //     Kirigami.Theme.inherit: false
-    //     Kirigami.Theme.colorSet: Kirigami.Theme.View
-    
+
+    focus: false
+    title: document.fileName
+    showTitle: false
+
     /*!
      *      If a small text tooltip should be visible at the editor right bottom area, displaying the
      *      number of count of lines and words.
      */
     property bool showLineCount : true
-    
     
     property bool showFindBar: false
     
@@ -41,11 +42,7 @@ Maui.Page
             body.forceActiveFocus()
         }
     }
-    
-    /*!
-     */
-    property bool showSyntaxHighlightingLanguages: false
-    
+
     /*!
      *      \qmlproperty TextArea Editor::body
      * Access to the editor text area.
@@ -94,24 +91,20 @@ Maui.Page
     
     /*!
      *      \qmlproperty url Editor::fileUrl
-     * 
+     *
      *      If a file url is provided the DocumentHandler will try to open its contents and display it.
      */
     property alias fileUrl : document.fileUrl
     
     /*!
      *      \qmlproperty bool Editor::showLineNumbers
-     * 
+     *
      *      If a sidebar listing each line number should be visible.
      */
     property bool showLineNumbers : false
     
-    focus: true
-    title: document.fileName
-    showTitle: false
-    flickable: _flickable
-    
     Keys.enabled: true
+    Keys.forwardTo: body
     Keys.onPressed:
     {
         if((event.key === Qt.Key_F) && (event.modifiers & Qt.ControlModifier))
@@ -125,8 +118,9 @@ Maui.Page
             {
                 _findField.selectAll()
             }
-           
+
             _findField.forceActiveFocus()
+            event.accepted = true
         }
         
         if((event.key === Qt.Key_R) && (event.modifiers & Qt.ControlModifier))
@@ -135,6 +129,7 @@ Maui.Page
             _replaceButton.checked = true
             _findField.text = control.body.selectedText
             _replaceField.forceActiveFocus()
+            event.accepted = true
         }
     }
     
@@ -158,7 +153,7 @@ Maui.Page
     
     Rectangle
     {
-        z: _scrollView.z +1
+        z: body.z +1
         visible: showLineCount
         anchors
         {
@@ -169,7 +164,8 @@ Maui.Page
         color: control.Kirigami.Theme.backgroundColor
         width: _countLabel.implicitWidth
         height: Maui.Style.rowHeight
-        
+        radius: Maui.Style.radiusV
+
         Label
         {
             id: _countLabel
@@ -219,176 +215,106 @@ Maui.Page
         }
     }
     
-    
-    headBar.visible: !body.readOnly
-    headBar.leftContent: [
-    
-    Maui.ToolActions
-    {
-        expanded: true
-        autoExclusive: false
-        checkable: false
-        
-        Action
-        {
-            icon.name: "edit-undo"
-            enabled: body.canUndo
-            onTriggered: body.undo()
-        }
-        
-        Action
-        {
-            icon.name: "edit-redo"
-            enabled: body.canRedo
-            onTriggered: body.redo()
-        }
-    },
-    
-    Maui.ToolActions
-    {
-        visible: (document.isRich || body.textFormat === Text.RichText) && !body.readOnly
-        expanded: true
-        autoExclusive: false
-        checkable: false
-        
-        Action
-        {
-            icon.name: "format-text-bold"
-            checked: document.bold
-            onTriggered: document.bold = !document.bold
-        }
-        
-        Action
-        {
-            icon.name: "format-text-italic"
-            checked: document.italic
-            onTriggered: document.italic = !document.italic
-        }
-        
-        Action
-        {
-            icon.name: "format-text-underline"
-            checked: document.underline
-            onTriggered: document.underline = !document.underline
-        }
-        
-        Action
-        {
-            icon.name: "format-text-uppercase"
-            checked: document.uppercase
-            onTriggered: document.uppercase = !document.uppercase
-        }
-    }
-    ]
-    
-    footBar.rightContent: ComboBox
-    {
-        visible: control.showSyntaxHighlightingLanguages
-        model: document.getLanguageNameList()
-        currentIndex: -1
-        onCurrentIndexChanged: document.formatName = model[currentIndex]
-    }
-    
     footerColumn: [
-    
-    Maui.ToolBar
-    {
-        id: _findToolBar
-        visible: showFindBar
-        width: parent.width
-        position: ToolBar.Footer
-        
-        rightContent: ToolButton
+
+        Maui.ToolBar
         {
-            id: _replaceButton
-            icon.name: "edit-find-replace"
-            checkable: true
-            checked: false
-        }
-        
-        leftContent: Maui.ToolButtonMenu
-        {
-            icon.name: "games-config-options"
-            
-            MenuItem
+            id: _findToolBar
+            visible: showFindBar
+            width: parent.width
+            position: ToolBar.Footer
+
+            rightContent: ToolButton
             {
-                id: _findCaseSensitively
+                id: _replaceButton
+                icon.name: "edit-find-replace"
                 checkable: true
-                text: i18n("Case Sensitive")
+                checked: false
             }
-            
-            MenuItem
+
+            leftContent: Maui.ToolButtonMenu
             {
-                id: _findWholeWords
-                checkable: true
-                text: i18n("Whole Words Only")
+                icon.name: "overflow-menu"
+
+                MenuItem
+                {
+                    id: _findCaseSensitively
+                    checkable: true
+                    text: i18n("Case Sensitive")
+                }
+
+                MenuItem
+                {
+                    id: _findWholeWords
+                    checkable: true
+                    text: i18n("Whole Words Only")
+                }
             }
-        }
-        
-        middleContent: Maui.TextField
+
+            middleContent: Maui.TextField
+            {
+                id: _findField
+                Layout.fillWidth: true
+                Layout.maximumWidth: 500
+                placeholderText: i18n("Find")
+
+                onAccepted:
+                {
+                    document.find(text)
+                }
+
+                actions:[
+
+                    Action
+                    {
+                        enabled: _findField.text.length
+                        icon.name: "arrow-up"
+                        onTriggered: document.find(_findField.text, false)
+                    }
+
+                    //                    Action
+                    //                    {
+                    //                        enabled: _findField.text.length
+                    //                        icon.name: "arrow-down"
+                    //                        onTriggered: document.find(_findField.text, true)
+                    //                    }
+                ]
+            }
+        },
+
+        Maui.ToolBar
         {
-            id: _findField
-            Layout.fillWidth: true
-            Layout.maximumWidth: 500
-            placeholderText: i18n("Find")
-            
-            onAccepted:
+            id: _replaceToolBar
+            position: ToolBar.Footer
+            visible: _replaceButton.checked && _findToolBar.visible
+            width: parent.width
+            enabled: !body.readOnly
+
+            middleContent: Maui.TextField
             {
-                document.find(text)
+                id: _replaceField
+                placeholderText: i18n("Replace")
+                Layout.fillWidth: true
+                Layout.maximumWidth: 500
+
+                actions: Action
+                {
+                    text: i18n("Replace")
+                    enabled: _replaceField.text.length
+                    icon.name: "checkmark"
+                    onTriggered: document.replace(_findField.text, _replaceField.text)
+                }
             }
-            
-            actions:[
-            
-            Action
-            {
-                enabled: _findField.text.length
-                icon.name: "arrow-up"
-                onTriggered: document.find(_findField.text, false)
-            }
-            
-            //                    Action
-            //                    {
-            //                        enabled: _findField.text.length
-            //                        icon.name: "arrow-down"
-            //                        onTriggered: document.find(_findField.text, true)
-            //                    }
+
+            rightContent: [
+                Button
+                {
+                    enabled: _replaceField.text.length
+                    text: i18n("Replace All")
+                    onClicked: document.replaceAll(_findField.text, _replaceField.text)
+                }
             ]
         }
-    },
-    
-    Maui.ToolBar
-    {
-        id: _replaceToolBar
-        position: ToolBar.Footer
-        visible: _replaceButton.checked && _findToolBar.visible
-        width: parent.width
-        enabled: !body.readOnly
-        
-        middleContent: Maui.TextField
-        {
-            id: _replaceField
-            placeholderText: i18n("Replace")
-            Layout.fillWidth: true
-            Layout.maximumWidth: 500
-            
-            actions: Action
-            {
-                text: i18n("Replace")
-                enabled: _replaceField.text.length
-                icon.name: "checkmark"
-                onTriggered: document.replace(_findField.text, _replaceField.text)
-            }
-        }
-        
-        rightContent: [
-        Button
-        {
-            enabled: _replaceField.text.length
-            text: i18n("Replace All")
-            onClicked: document.replaceAll(_findField.text, _replaceField.text)
-        }
-        ]
-    }
     ]
     
     ColumnLayout
@@ -411,9 +337,9 @@ Maui.Page
                 {
                     switch(alert.level)
                     {
-                        case 0: return Kirigami.Theme.positiveTextColor
-                        case 1: return Kirigami.Theme.neutralTextColor
-                        case 2: return Kirigami.Theme.negativeTextColor
+                    case 0: return Kirigami.Theme.positiveTextColor
+                    case 1: return Kirigami.Theme.neutralTextColor
+                    case 2: return Kirigami.Theme.negativeTextColor
                     }
                 }
                 
@@ -450,38 +376,38 @@ Maui.Page
             Layout.fillWidth: true
             Layout.fillHeight: true
             contentWidth: availableWidth
-            
+
             Flickable
             {
                 id: _flickable
+
                 interactive: Kirigami.Settings.hasTransientTouchInput
-                boundsBehavior: Flickable.StopAtBounds
-                boundsMovement :Flickable.StopAtBounds
-                
+                boundsBehavior : Flickable.StopAtBounds
+                boundsMovement : Flickable.StopAtBounds
+
                 TextArea.flickable: TextArea
                 {
                     id: body
-                    
+
                     text: document.text
                     
                     placeholderText: i18n("Body")
                     
                     selectByKeyboard: !Kirigami.Settings.isMobile
                     selectByMouse : !Kirigami.Settings.hasTransientTouchInput
-                    
+                    persistentSelection: true
+
                     textFormat: TextEdit.AutoText
                     wrapMode: TextEdit.WrapAnywhere
-                    
-                    color: control.Kirigami.Theme.textColor
                     
                     activeFocusOnPress: true
                     activeFocusOnTab: true
                     
-                    persistentSelection: true
-                    
                     padding: Maui.Style.space.small
                     leftPadding: _linesCounter.width + Maui.Style.space.small
                     
+                    color: control.Kirigami.Theme.textColor
+
                     background: Rectangle
                     {
                         color: control.Kirigami.Theme.backgroundColor
@@ -491,44 +417,35 @@ Maui.Page
                     {
                         if(event.key === Qt.Key_PageUp)
                         {
-                            flickable.flick(0,  60*Math.sqrt(flickable.height))
+                            _flickable.flick(0,  60*Math.sqrt(_flickable.height))
+                            event.accepted = true
                         }
                         
                         if(event.key === Qt.Key_PageDown)
                         {
-                            flickable.flick(0, -60*Math.sqrt(flickable.height))
+                            _flickable.flick(0, -60*Math.sqrt(_flickable.height))
+                            event.accepted = true
                         }                                    // TODO: Move cursor
                     }
                     
                     onPressAndHold:
                     {
-                        if(Maui.Handy.isLinux)
+                        if(Kirigami.Settings.isMobile)
                         {
                             return
                         }
+
                         documentMenu.show()
                     }
                     
                     onPressed:
                     {
-                        if(Maui.Handy.isLinux)
-                        {
-                            return
-                        }
-                        
                         if(!Kirigami.Settings.isMobile && event.button === Qt.RightButton)
                         {
                             documentMenu.show()
                         }
                     }
-                    
-                    HoverHandler
-                    {
-                        //active: true
-                        target: body
-                        cursorShape: Qt.IBeamCursor
-                    }
-                    
+
                     Loader
                     {
                         id: _linesCounter
@@ -545,7 +462,7 @@ Maui.Page
                         id: _linesCounterComponent
                         
                         Rectangle
-                        {                             
+                        {
                             color: Qt.darker(Kirigami.Theme.backgroundColor, 1)
                             
                             ListView
@@ -558,7 +475,7 @@ Maui.Page
                                 model: document.lineCount
                                 
                                 orientation: ListView.Vertical
-                                interactive: false                                   
+                                interactive: false
                                 snapMode: ListView.NoSnap
                                 
                                 boundsBehavior: Flickable.StopAtBounds
@@ -582,7 +499,7 @@ Maui.Page
                                     id: _delegate
                                     readonly property int line : index
                                     width:  ListView.view.width
-                                    height: document.lineHeight(line)                                       
+                                    height: document.lineHeight(line)
                                     readonly property bool isCurrentItem : ListView.isCurrentItem
                                     
                                     Connections
@@ -596,7 +513,7 @@ Maui.Page
                                                 _delegate.height = control.document.lineHeight(_delegate.line)
                                             }
                                         }
-                                    }                                        
+                                    }
                                     
                                     Label
                                     {
@@ -610,7 +527,7 @@ Maui.Page
                                         font.family: "Monospace"
                                         text: index+1
                                     }
-                                } 
+                                }
                             }
                             
                             Kirigami.Separator
@@ -624,9 +541,7 @@ Maui.Page
                 }
             }
         }
-        
     }
-    
     
     function forceActiveFocus()
     {
