@@ -288,9 +288,6 @@ class DocumentHandler : public QObject
     
     Q_PROPERTY(bool findCaseSensitively MEMBER m_findCaseSensitively NOTIFY findCaseSensitivelyChanged)
 
-    
-//     Q_PROPERTY(int cursorYPos READ cursorYPos NOTIFY cursorYPosChanged)
-
 public:
     explicit DocumentHandler(QObject *parent = nullptr);
     ~DocumentHandler();

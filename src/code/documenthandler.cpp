@@ -473,21 +473,11 @@ void DocumentHandler::setDocument(QQuickTextDocument *document)
         
         connect(this->textDocument(), &QTextDocument::blockCountChanged, this, &DocumentHandler::lineCountChanged);
         
-//         connect(this->textDocument(), &QTextDocument::documentLayoutChanged, []()
-//         {
-//             qDebug() << "MEH Layout changed" ;
-//         });
-//         
-//         connect(this->textDocument()->documentLayout(), &QAbstractTextDocumentLayout::updateBlock, [this](const QTextBlock &block)
-//         {
-//             qDebug() << "MEH Block rect changed" << block.blockNumber();
-//             emit lineHeightChanged(block.blockNumber(), int(this->textDocument()->documentLayout()->blockBoundingRect(block).height()));
-//         });
-//         
-//         connect(this->textDocument()->documentLayout(), &QAbstractTextDocumentLayout::documentSizeChanged, [](const QSizeF &size)
-//         {
-//             qDebug() << "MEH DOCS SIZE CHANGED" << size;
-//         });
+//          connect(this->textDocument(), &QTextDocument::cursorPositionChanged, [this](const QTextCursor &)
+//                 {
+//                     qDebug() << "Cursors position changed";
+//                     emit currentLineIndexChanged();
+//                 });
         
         this->load(m_fileUrl);
         
@@ -503,12 +493,10 @@ int DocumentHandler::cursorPosition() const
 }
 
 void DocumentHandler::setCursorPosition(int position)
-{
-    if (position == m_cursorPosition)
-        return;
-    
+{    
+    qDebug() << "Setting cursor position" << position ;
+    qDebug() << "Line is then << " << this->textDocument()->findBlock(position).blockNumber();
     m_cursorPosition = position;
-    //     reset();
     emit cursorPositionChanged();
 }
 
@@ -1111,7 +1099,7 @@ int DocumentHandler::lineHeight(const int &line)
         return 0;
     }
     
-    return int(doc->documentLayout()->blockBoundingRect(doc->findBlockByNumber(line)).height());
+    return int(doc->documentLayout()->blockBoundingRect(doc->findBlockByLineNumber(line)).height());
 }
 
 int DocumentHandler::lineCount()
@@ -1122,8 +1110,11 @@ int DocumentHandler::lineCount()
 }
 
 int DocumentHandler::getCurrentLineIndex()
-{
-    return textCursor().blockNumber();
+{    
+    if (!this->textDocument())
+        return -1;
+        
+    return this->textDocument()->findBlock(m_cursorPosition).blockNumber();
 }
 
 void DocumentHandler::setEnableSyntaxHighlighting(const bool &value)

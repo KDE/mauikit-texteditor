@@ -1,4 +1,5 @@
 import QtQuick 2.15
+import QtQml 2.14
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.3
 
@@ -19,11 +20,11 @@ import org.kde.kirigami 2.14 as Kirigami
 Maui.Page
 {
     id: control
-
+    
     focus: false
     title: document.fileName
     showTitle: false
-
+    
     /*!
      *      If a small text tooltip should be visible at the editor right bottom area, displaying the
      *      number of count of lines and words.
@@ -42,7 +43,7 @@ Maui.Page
             body.forceActiveFocus()
         }
     }
-
+    
     /*!
      *      \qmlproperty TextArea Editor::body
      * Access to the editor text area.
@@ -118,7 +119,7 @@ Maui.Page
             {
                 _findField.selectAll()
             }
-
+            
             _findField.forceActiveFocus()
             event.accepted = true
         }
@@ -165,12 +166,12 @@ Maui.Page
         width: _countLabel.implicitWidth
         height: Maui.Style.rowHeight
         radius: Maui.Style.radiusV
-
+        
         Label
         {
             id: _countLabel
             anchors.centerIn: parent
-            text: body.length + " / " + body.lineCount
+            text: body.length + " / " + body.cursorPosition
             color: control.Kirigami.Theme.textColor
             opacity: 0.5
         }
@@ -216,105 +217,105 @@ Maui.Page
     }
     
     footerColumn: [
-
-        Maui.ToolBar
+    
+    Maui.ToolBar
+    {
+        id: _findToolBar
+        visible: showFindBar
+        width: parent.width
+        position: ToolBar.Footer
+        
+        rightContent: ToolButton
         {
-            id: _findToolBar
-            visible: showFindBar
-            width: parent.width
-            position: ToolBar.Footer
-
-            rightContent: ToolButton
+            id: _replaceButton
+            icon.name: "edit-find-replace"
+            checkable: true
+            checked: false
+        }
+        
+        leftContent: Maui.ToolButtonMenu
+        {
+            icon.name: "overflow-menu"
+            
+            MenuItem
             {
-                id: _replaceButton
-                icon.name: "edit-find-replace"
+                id: _findCaseSensitively
                 checkable: true
-                checked: false
+                text: i18n("Case Sensitive")
             }
-
-            leftContent: Maui.ToolButtonMenu
+            
+            MenuItem
             {
-                icon.name: "overflow-menu"
-
-                MenuItem
-                {
-                    id: _findCaseSensitively
-                    checkable: true
-                    text: i18n("Case Sensitive")
-                }
-
-                MenuItem
-                {
-                    id: _findWholeWords
-                    checkable: true
-                    text: i18n("Whole Words Only")
-                }
+                id: _findWholeWords
+                checkable: true
+                text: i18n("Whole Words Only")
             }
-
-            middleContent: Maui.TextField
-            {
-                id: _findField
-                Layout.fillWidth: true
-                Layout.maximumWidth: 500
-                placeholderText: i18n("Find")
-
-                onAccepted:
-                {
-                    document.find(text)
-                }
-
-                actions:[
-
-                    Action
-                    {
-                        enabled: _findField.text.length
-                        icon.name: "arrow-up"
-                        onTriggered: document.find(_findField.text, false)
-                    }
-
-                    //                    Action
-                    //                    {
-                    //                        enabled: _findField.text.length
-                    //                        icon.name: "arrow-down"
-                    //                        onTriggered: document.find(_findField.text, true)
-                    //                    }
-                ]
-            }
-        },
-
-        Maui.ToolBar
+        }
+        
+        middleContent: Maui.TextField
         {
-            id: _replaceToolBar
-            position: ToolBar.Footer
-            visible: _replaceButton.checked && _findToolBar.visible
-            width: parent.width
-            enabled: !body.readOnly
-
-            middleContent: Maui.TextField
+            id: _findField
+            Layout.fillWidth: true
+            Layout.maximumWidth: 500
+            placeholderText: i18n("Find")
+            
+            onAccepted:
             {
-                id: _replaceField
-                placeholderText: i18n("Replace")
-                Layout.fillWidth: true
-                Layout.maximumWidth: 500
-
-                actions: Action
-                {
-                    text: i18n("Replace")
-                    enabled: _replaceField.text.length
-                    icon.name: "checkmark"
-                    onTriggered: document.replace(_findField.text, _replaceField.text)
-                }
+                document.find(text)
             }
-
-            rightContent: [
-                Button
-                {
-                    enabled: _replaceField.text.length
-                    text: i18n("Replace All")
-                    onClicked: document.replaceAll(_findField.text, _replaceField.text)
-                }
+            
+            actions:[
+            
+            Action
+            {
+                enabled: _findField.text.length
+                icon.name: "arrow-up"
+                onTriggered: document.find(_findField.text, false)
+            }
+            
+            //                    Action
+            //                    {
+            //                        enabled: _findField.text.length
+            //                        icon.name: "arrow-down"
+            //                        onTriggered: document.find(_findField.text, true)
+            //                    }
             ]
         }
+    },
+    
+    Maui.ToolBar
+    {
+        id: _replaceToolBar
+        position: ToolBar.Footer
+        visible: _replaceButton.checked && _findToolBar.visible
+        width: parent.width
+        enabled: !body.readOnly
+        
+        middleContent: Maui.TextField
+        {
+            id: _replaceField
+            placeholderText: i18n("Replace")
+            Layout.fillWidth: true
+            Layout.maximumWidth: 500
+            
+            actions: Action
+            {
+                text: i18n("Replace")
+                enabled: _replaceField.text.length
+                icon.name: "checkmark"
+                onTriggered: document.replace(_findField.text, _replaceField.text)
+            }
+        }
+        
+        rightContent: [
+        Button
+        {
+            enabled: _replaceField.text.length
+            text: i18n("Replace All")
+            onClicked: document.replaceAll(_findField.text, _replaceField.text)
+        }
+        ]
+    }
     ]
     
     ColumnLayout
@@ -337,9 +338,9 @@ Maui.Page
                 {
                     switch(alert.level)
                     {
-                    case 0: return Kirigami.Theme.positiveTextColor
-                    case 1: return Kirigami.Theme.neutralTextColor
-                    case 2: return Kirigami.Theme.negativeTextColor
+                        case 0: return Kirigami.Theme.positiveTextColor
+                        case 1: return Kirigami.Theme.neutralTextColor
+                        case 2: return Kirigami.Theme.negativeTextColor
                     }
                 }
                 
@@ -376,19 +377,19 @@ Maui.Page
             Layout.fillWidth: true
             Layout.fillHeight: true
             contentWidth: availableWidth
-
+            
             Flickable
             {
                 id: _flickable
-
+                
                 interactive: Kirigami.Settings.hasTransientTouchInput
                 boundsBehavior : Flickable.StopAtBounds
                 boundsMovement : Flickable.StopAtBounds
-
+                
                 TextArea.flickable: TextArea
                 {
                     id: body
-
+                    
                     text: document.text
                     
                     placeholderText: i18n("Body")
@@ -396,7 +397,7 @@ Maui.Page
                     selectByKeyboard: !Kirigami.Settings.isMobile
                     selectByMouse : !Kirigami.Settings.hasTransientTouchInput
                     persistentSelection: true
-
+                    
                     textFormat: TextEdit.AutoText
                     wrapMode: TextEdit.WrapAnywhere
                     
@@ -407,7 +408,7 @@ Maui.Page
                     leftPadding: _linesCounter.width + Maui.Style.space.small
                     
                     color: control.Kirigami.Theme.textColor
-
+                    
                     background: Rectangle
                     {
                         color: control.Kirigami.Theme.backgroundColor
@@ -434,7 +435,7 @@ Maui.Page
                         {
                             return
                         }
-
+                        
                         documentMenu.show()
                     }
                     
@@ -445,15 +446,18 @@ Maui.Page
                             documentMenu.show()
                         }
                     }
-
+                    
                     Loader
                     {
                         id: _linesCounter
                         asynchronous: true
                         active: control.showLineNumbers && !document.isRich
+                        
                         anchors.left: parent.left
+                        
                         height: Math.max(body.height, control.height)
                         width: active ? 32 : 0
+                        
                         sourceComponent: _linesCounterComponent
                     }
                     
@@ -471,8 +475,15 @@ Maui.Page
                                 anchors.fill: parent
                                 anchors.topMargin: 7
                                 
-                                currentIndex: document.currentLineIndex
                                 model: document.lineCount
+                                
+                                Binding on currentIndex
+                                {
+                                    value: document.currentLineIndex
+                                    restoreMode: Binding.RestoreBindingOrValue 
+                                } 
+                                
+                                onModelChanged: currentIndex= document.currentLineIndex
                                 
                                 orientation: ListView.Vertical
                                 interactive: false
@@ -491,15 +502,17 @@ Maui.Page
                                 highlightMoveVelocity: -1
                                 highlightResizeVelocity: -1
                                 
-                                maximumFlickVelocity: 0
-                                
+                                maximumFlickVelocity: 0                               
                                 
                                 delegate: Item
                                 {
                                     id: _delegate
                                     readonly property int line : index
                                     width:  ListView.view.width
-                                    height: document.lineHeight(line)
+                                    height: Math.max(fontSize, document.lineHeight(line))
+                                    
+                                    readonly property real fontSize : control.body.font.pointSize
+                                    
                                     readonly property bool isCurrentItem : ListView.isCurrentItem
                                     
                                     Connections
@@ -522,7 +535,7 @@ Maui.Page
                                         color:  isCurrentItem ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
                                         font.pointSize: Math.min(Maui.Style.fontSizes.medium, body.font.pointSize)
                                         horizontalAlignment: Text.AlignHCenter
-                                        verticalAlignment: Text.AlignTop
+                                        verticalAlignment: Text.AlignVCenter
                                         renderType: Text.NativeRendering
                                         font.family: "Monospace"
                                         text: index+1
@@ -535,6 +548,8 @@ Maui.Page
                                 anchors.top: parent.top
                                 anchors.bottom: parent.bottom
                                 anchors.right: parent.right
+                                width: 0.5
+                                weight: Kirigami.Separator.Weight.Light
                             }
                         }
                     }
