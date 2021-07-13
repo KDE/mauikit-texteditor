@@ -458,8 +458,9 @@ Maui.Page
                         active: control.showLineNumbers && !document.isRich
                         
                         anchors.left: parent.left
+                        anchors.top: parent.top                        
                         
-                        height: Math.max(body.height, control.height)
+                        height: Math.max(_flickable.contentHeight, control.height)
                         width: active ? 32 : 0
                         
                         sourceComponent: _linesCounterComponent
@@ -476,9 +477,7 @@ Maui.Page
                             ListView
                             {
                                 id: _linesCounterList
-                                anchors.fill: parent
-                                anchors.topMargin: 7
-                                
+                                anchors.fill: parent                                
                                 model: document.lineCount
                                 
                                 Binding on currentIndex
@@ -487,7 +486,14 @@ Maui.Page
                                     restoreMode: Binding.RestoreBindingOrValue 
                                 } 
                                 
-                                onModelChanged: currentIndex= document.currentLineIndex
+                                Connections
+                                {
+                                    target: document
+                                    function onLineCountChanged()
+                                    {
+                                        _linesCounterList.currentIndex= document.currentLineIndex
+                                    }
+                                }
                                 
                                 orientation: ListView.Vertical
                                 interactive: false
@@ -522,6 +528,7 @@ Maui.Page
                                     Connections
                                     {
                                         target: control.body
+                                        
                                         function onContentHeightChanged()
                                         {
                                             if(_delegate.isCurrentItem)
