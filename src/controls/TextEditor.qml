@@ -171,7 +171,7 @@ Maui.Page
         {
             id: _countLabel
             anchors.centerIn: parent
-            text: body.length + " / " + body.cursorPosition
+            text: body.length + " / " + body.lineCount
             color: control.Kirigami.Theme.textColor
             opacity: 0.5
         }
@@ -396,9 +396,13 @@ Maui.Page
                     
                     selectByKeyboard: !Kirigami.Settings.isMobile
                     selectByMouse : !Kirigami.Settings.hasTransientTouchInput
+                    
+                    //                     tabStopDistance: 
+                    //                     textMargin:
+                    
                     persistentSelection: true
                     
-                    textFormat: TextEdit.AutoText
+                    textFormat: TextEdit.PlainText
                     wrapMode: TextEdit.WrapAnywhere
                     
                     activeFocusOnPress: true
@@ -536,7 +540,7 @@ Maui.Page
                                         font.pointSize: Math.min(Maui.Style.fontSizes.medium, body.font.pointSize)
                                         horizontalAlignment: Text.AlignHCenter
                                         verticalAlignment: Text.AlignVCenter
-                                        renderType: Text.NativeRendering
+                                        //                                         renderType: Text.NativeRendering
                                         font.family: "Monospace"
                                         text: index+1
                                     }
@@ -561,5 +565,14 @@ Maui.Page
     function forceActiveFocus()
     {
         body.forceActiveFocus()
+    }
+    
+    function goToLine(line)
+    {
+        if(line>0 && line <= body.lineCount)
+        {
+            body.cursorPosition = document.goToLine(line-1)
+            body.forceActiveFocus()
+        }
     }
 }

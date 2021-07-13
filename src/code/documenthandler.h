@@ -639,7 +639,7 @@ public slots:
      */
     int getCurrentLineIndex();
     
-//     int cursorYPos() const;
+    int goToLine(const int &line);
 
     /**
      * @brief getLanguageNameList

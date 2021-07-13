@@ -494,8 +494,11 @@ int DocumentHandler::cursorPosition() const
 
 void DocumentHandler::setCursorPosition(int position)
 {    
-    qDebug() << "Setting cursor position" << position ;
-    qDebug() << "Line is then << " << this->textDocument()->findBlock(position).blockNumber();
+    if(m_cursorPosition == position)
+    {
+        return;
+    }
+    
     m_cursorPosition = position;
     emit cursorPositionChanged();
 }
@@ -1115,6 +1118,14 @@ int DocumentHandler::getCurrentLineIndex()
         return -1;
         
     return this->textDocument()->findBlock(m_cursorPosition).blockNumber();
+}
+
+int DocumentHandler::goToLine(const int& line)
+{
+     if (!this->textDocument())
+        return this->cursorPosition();
+     const auto block = this->textDocument()->findBlockByLineNumber(line);
+     return block.position() + block.length()-1;     
 }
 
 void DocumentHandler::setEnableSyntaxHighlighting(const bool &value)
