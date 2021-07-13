@@ -473,11 +473,11 @@ void DocumentHandler::setDocument(QQuickTextDocument *document)
         
         connect(this->textDocument(), &QTextDocument::blockCountChanged, this, &DocumentHandler::lineCountChanged);
         
-//          connect(this->textDocument(), &QTextDocument::cursorPositionChanged, [this](const QTextCursor &)
-//                 {
-//                     qDebug() << "Cursors position changed";
-//                     emit currentLineIndexChanged();
-//                 });
+        //          connect(this->textDocument(), &QTextDocument::cursorPositionChanged, [this](const QTextCursor &)
+        //                 {
+        //                     qDebug() << "Cursors position changed";
+        //                     emit currentLineIndexChanged();
+        //                 });
         
         this->load(m_fileUrl);
         
@@ -1073,7 +1073,7 @@ void DocumentHandler::toggleFold(const int &line)
         const auto endBlock =
         m_highlighter->findFoldingRegionEnd(startBlock).next();
         
-        
+        qDebug() << "Fold line"<< line << startBlock.position() << endBlock.position() << doc->blockCount();
         // fold
         auto block = startBlock.next();
         while (block.isValid() && block != endBlock) 
@@ -1084,13 +1084,18 @@ void DocumentHandler::toggleFold(const int &line)
         }
         
         
+        for (QTextBlock it = startBlock; it != endBlock; it = it.next())
+        {
+            emit this->textDocument()->documentLayout()->updateBlock(it);
+        }
+        
         // redraw document
-        doc->markContentsDirty(
-            startBlock.position(), endBlock.position() - startBlock.position() + 1);
+        //         doc->markContentsDirty(startBlock.position(), endBlock.position());
+        qDebug() << "Fold line"<< line << startBlock.position() << endBlock.position() << doc->blockCount();
         
         //         // update scrollbars
-        //         emit doc->documentLayout()->documentSizeChanged(
-        //             doc->documentLayout()->documentSize());
+        emit doc->documentLayout()->documentSizeChanged(
+            doc->documentLayout()->documentSize());
     }
 }
 
@@ -1116,16 +1121,16 @@ int DocumentHandler::getCurrentLineIndex()
 {    
     if (!this->textDocument())
         return -1;
-        
+    
     return this->textDocument()->findBlock(m_cursorPosition).blockNumber();
 }
 
 int DocumentHandler::goToLine(const int& line)
 {
-     if (!this->textDocument())
+    if (!this->textDocument())
         return this->cursorPosition();
-     const auto block = this->textDocument()->findBlockByLineNumber(line);
-     return block.position() + block.length()-1;     
+    const auto block = this->textDocument()->findBlockByLineNumber(line);
+    return block.position() + block.length()-1;     
 }
 
 void DocumentHandler::setEnableSyntaxHighlighting(const bool &value)

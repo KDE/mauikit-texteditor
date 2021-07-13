@@ -461,8 +461,7 @@ Maui.Page
                         anchors.top: parent.top                        
                         
                         height: Math.max(_flickable.contentHeight, control.height)
-                        width: active ? 32 : 0
-                        
+                        width: active ? 48 : 0                        
                         sourceComponent: _linesCounterComponent
                     }
                     
@@ -477,7 +476,10 @@ Maui.Page
                             ListView
                             {
                                 id: _linesCounterList
-                                anchors.fill: parent                                
+
+                                anchors.fill: parent
+                                anchors.topMargin: body.topPadding + body.textMargin
+                                
                                 model: document.lineCount
                                 
                                 Binding on currentIndex
@@ -486,12 +488,19 @@ Maui.Page
                                     restoreMode: Binding.RestoreBindingOrValue 
                                 } 
                                 
+                                Timer
+                                {
+                                    id: _lineIndexTimer
+                                    interval: 250 
+                                    onTriggered: _linesCounterList.currentIndex= document.currentLineIndex
+                                }
+                                
                                 Connections
                                 {
                                     target: document
                                     function onLineCountChanged()
                                     {
-                                        _linesCounterList.currentIndex= document.currentLineIndex
+                                        _lineIndexTimer.restart()
                                     }
                                 }
                                 
@@ -514,10 +523,11 @@ Maui.Page
                                 
                                 maximumFlickVelocity: 0                               
                                 
-                                delegate: Item
+                                delegate: Row
                                 {
                                     id: _delegate
                                     readonly property int line : index
+                                    property bool foldable : control.document.isFoldable(line)
                                     width:  ListView.view.width
                                     height: Math.max(fontSize, document.lineHeight(line))
                                     
@@ -535,13 +545,15 @@ Maui.Page
                                             {
                                                 console.log("Updating line height")
                                                 _delegate.height = control.document.lineHeight(_delegate.line)
+                                                _delegate.foldable = control.document.isFoldable(_delegate.line)
                                             }
                                         }
                                     }
                                     
                                     Label
                                     {
-                                        anchors.fill: parent
+                                        width: 32
+                                        height: parent.height
                                         opacity: isCurrentItem  ? 1 : 0.7
                                         color:  isCurrentItem ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
                                         font.pointSize: Math.min(Maui.Style.fontSizes.medium, body.font.pointSize)
@@ -550,6 +562,23 @@ Maui.Page
                                         //                                         renderType: Text.NativeRendering
                                         font.family: "Monospace"
                                         text: index+1
+                                    }
+                                    
+                                    AbstractButton
+                                    {
+                                        visible: foldable
+                                        anchors.verticalCenter: parent.verticalCenter
+                                        height: 8
+                                        width: 8
+                                        //onClicked: 
+                                        //{
+                                            //control.goToLine(_delegate.line)
+                                            //control.document.toggleFold(_delegate.line)
+                                        //}
+                                        contentItem: Kirigami.Icon
+                                        {
+                                            source: "go-down"
+                                        }
                                     }
                                 }
                             }
