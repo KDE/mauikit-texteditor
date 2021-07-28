@@ -11,6 +11,7 @@ set(
     resources.qrc
     ${texteditor_QM_LOADER}
 )
+
 set(
     pluginData
     controls/qmldir
@@ -25,17 +26,7 @@ add_library(
 add_library(MauiKit::TextEditor ALIAS MauiKitTextEditor)
 
 if(ANDROID)
-    target_link_libraries(MauiKitTextEditor PRIVATE Qt5::AndroidExtras )
-
-elseif(UNIX)
-    target_link_libraries(
-        MauiKitTextEditor
-
-        PRIVATE
-        KF5::ConfigCore 
-        KF5::KIOCore
-        KF5::KIOFileWidgets
-    )
+    target_link_libraries(MauiKitTextEditor PRIVATE Qt5::AndroidExtras)
 endif()
 
 target_link_libraries(
@@ -45,7 +36,6 @@ target_link_libraries(
         Qt5::Core
         Qt5::Quick
         Qt5::Qml
-        Qt5::Sql
         KF5::SyntaxHighlighting
         KF5::I18n
         KF5::CoreAddons
