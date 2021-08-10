@@ -104,36 +104,6 @@ Maui.Page
      */
     property bool showLineNumbers : false
     
-    Keys.enabled: true
-    Keys.forwardTo: body
-    Keys.onPressed:
-    {
-        if((event.key === Qt.Key_F) && (event.modifiers & Qt.ControlModifier))
-        {
-            control.showFindBar = true
-            
-            if(control.body.selectedText.length)
-            {
-                _findField.text =  control.body.selectedText
-            }else
-            {
-                _findField.selectAll()
-            }
-            
-            _findField.forceActiveFocus()
-            event.accepted = true
-        }
-        
-        if((event.key === Qt.Key_R) && (event.modifiers & Qt.ControlModifier))
-        {
-            control.showFindBar = true
-            _replaceButton.checked = true
-            _findField.text = control.body.selectedText
-            _replaceField.forceActiveFocus()
-            event.accepted = true
-        }
-    }
-    
     TE.DocumentHandler
     {
         id: document
@@ -378,6 +348,36 @@ Maui.Page
             Layout.fillHeight: true
             contentWidth: availableWidth
             
+            Keys.enabled: true
+            Keys.forwardTo: body
+            Keys.onPressed:
+            {
+                if((event.key === Qt.Key_F) && (event.modifiers & Qt.ControlModifier))
+                {
+                    control.showFindBar = true
+
+                    if(control.body.selectedText.length)
+                    {
+                        _findField.text =  control.body.selectedText
+                    }else
+                    {
+                        _findField.selectAll()
+                    }
+
+                    _findField.forceActiveFocus()
+                    event.accepted = true
+                }
+
+                if((event.key === Qt.Key_R) && (event.modifiers & Qt.ControlModifier))
+                {
+                    control.showFindBar = true
+                    _replaceButton.checked = true
+                    _findField.text = control.body.selectedText
+                    _replaceField.forceActiveFocus()
+                    event.accepted = true
+                }
+            }
+
             Flickable
             {
                 id: _flickable
@@ -597,12 +597,12 @@ Maui.Page
             }
         }
     }
-    
+
     function forceActiveFocus()
     {
         body.forceActiveFocus()
     }
-    
+
     function goToLine(line)
     {
         if(line>0 && line <= body.lineCount)
