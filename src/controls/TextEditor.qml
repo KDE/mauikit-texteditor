@@ -435,7 +435,7 @@ Maui.Page
                     
                     onPressAndHold:
                     {
-                        if(Kirigami.Settings.isMobile)
+                        if(Kirigami.Settings.isMobile && Maui.Handy.isLinux)
                         {
                             return
                         }
@@ -445,6 +445,11 @@ Maui.Page
                     
                     onPressed:
                     {
+                        if(Kirigami.Settings.isMobile && Maui.Handy.isLinux)
+                        {
+                            return
+                        }
+                        
                         if(!Kirigami.Settings.isMobile && event.button === Qt.RightButton)
                         {
                             documentMenu.show()
