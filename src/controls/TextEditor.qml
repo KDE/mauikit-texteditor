@@ -445,7 +445,7 @@ Maui.Page
                     
                     onPressed:
                     {
-                        if(Kirigami.Settings.isMobile && Maui.Handy.isLinux)
+                        if(Kirigami.Settings.isMobile || Maui.Handy.isLinux)
                         {
                             return
                         }
