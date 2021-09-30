@@ -29,6 +29,8 @@ include(KDEPackageAppTemplates)
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/MauiKitTextEditor")
 
+option(QUICK_COMPILER "Use QtQuick compiler to improve performance" TRUE)
+
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/MauiKitTextEditorConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/MauiKitTextEditorConfig.cmake"
@@ -58,6 +60,14 @@ find_package(Qt5 ${REQUIRED_QT_VERSION} COMPONENTS Core Qml Quick REQUIRED)
 find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS SyntaxHighlighting I18n CoreAddons)
 find_package(MauiKit)
     
+if(QUICK_COMPILER)
+        find_package(Qt5QuickCompiler)
+        set_package_properties(Qt5QuickCompiler PROPERTIES
+                DESCRIPTION "Compile QML at build time"
+                TYPE OPTIONAL
+        )
+endif()
+
 add_subdirectory(src)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

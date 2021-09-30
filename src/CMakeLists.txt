@@ -8,7 +8,6 @@ set(
     sources
     code/texteditor_plugin.cpp
     code/documenthandler.cpp
-    resources.qrc
     ${texteditor_QM_LOADER}
 )
 
@@ -17,13 +16,26 @@ set(
     controls/qmldir
 )
 
+if(QUICK_COMPILER)
+        qtquick_compiler_add_resources(texteditor_QML_QRC resources.qrc)
+else()
+        qt5_add_resources(texteditor_QML_QRC resources.qrc)
+endif()
+
 add_library(
     MauiKitTextEditor
     SHARED
-    ${sources} ${pluginData}
+    ${sources}
+    ${pluginData}
+    ${texteditor_QML_QRC}
 )
 
 add_library(MauiKit::TextEditor ALIAS MauiKitTextEditor)
+
+if(QUICK_COMPILER)
+    add_definitions(-DQUICK_COMPILER)
+    target_compile_definitions(MauiKitTextEditor PUBLIC QUICK_COMPILER)
+endif()
 
 if(ANDROID)
     target_link_libraries(MauiKitTextEditor PRIVATE Qt5::AndroidExtras)
