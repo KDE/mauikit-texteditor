@@ -64,8 +64,11 @@ if (BUILD_SHARED_LIBS)
                 copy $<TARGET_FILE:MauiKitTextEditor> ${CMAKE_BINARY_DIR}/bin/org/mauikit/texteditor/
     )
 
-    install(DIRECTORY controls/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/mauikit/texteditor)
-
+    if(QUICK_COMPILER AND NOT ANDROID )
+        install(FILES controls/qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/mauikit/texteditor)
+    else()
+        install(DIRECTORY controls/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/mauikit/texteditor)
+    endif()
     #include(ECMGeneratePriFile)
     #ecm_generate_pri_file(BASE_NAME KQuickImageEditor LIB_NAME KQuickImageEditor DEPS "core qml quick svg" FILENAME_VAR PRI_FILENAME )
     #install(FILES ${PRI_FILENAME}

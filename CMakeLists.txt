@@ -2,14 +2,27 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.16)
 
 set(KF5_VERSION "5.70.0")
 set(REQUIRED_QT_VERSION 5.15.0)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror")
+
+if(UNIX)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror")
+endif()
+
+set(CMAKE_CXX_VISIBILITY_PRESET hidden)
+set(CMAKE_VISIBILITY_INLINES_HIDDEN TRUE)
+
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
+set(AUTOMOC_MOC_OPTIONS -Muri=org.mauikit.texteditor)
 
 project(TextEditor LANGUAGES CXX VERSION 2.1.0)
 
