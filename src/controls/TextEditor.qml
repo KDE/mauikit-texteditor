@@ -394,7 +394,7 @@ Maui.Page
                     
                     placeholderText: i18n("Body")
                     
-                    selectByKeyboard: !Kirigami.Settings.isMobile
+                    selectByKeyboard: true
                     selectByMouse : !Kirigami.Settings.hasTransientTouchInput
                     
                     //                     tabStopDistance: 
