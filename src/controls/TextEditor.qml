@@ -588,14 +588,14 @@ Maui.Page
                                 }
                             }
                             
-                            Kirigami.Separator
-                            {
-                                anchors.top: parent.top
-                                anchors.bottom: parent.bottom
-                                anchors.right: parent.right
-                                width: 0.5
-                                weight: Kirigami.Separator.Weight.Light
-                            }
+//                            Kirigami.Separator
+//                            {
+//                                anchors.top: parent.top
+//                                anchors.bottom: parent.bottom
+//                                anchors.right: parent.right
+//                                width: 0.5
+//                                weight: Kirigami.Separator.Weight.Light
+//                            }
                         }
                     }
                 }
