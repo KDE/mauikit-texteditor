@@ -222,11 +222,12 @@ Maui.Page
             }
         }
         
-        middleContent: Maui.TextField
+        middleContent: Maui.SearchField
         {
             id: _findField
             Layout.fillWidth: true
             Layout.maximumWidth: 500
+            Layout.alignment: Qt.AlignCenter
             placeholderText: i18n("Find")
             
             onAccepted:
@@ -261,13 +262,14 @@ Maui.Page
         width: parent.width
         enabled: !body.readOnly
         
-        middleContent: Maui.TextField
+        middleContent: Maui.SearchField
         {
             id: _replaceField
             placeholderText: i18n("Replace")
             Layout.fillWidth: true
             Layout.maximumWidth: 500
-            
+            Layout.alignment: Qt.AlignCenter
+            icon.source: "edit-find-replace"
             actions: Action
             {
                 text: i18n("Replace")

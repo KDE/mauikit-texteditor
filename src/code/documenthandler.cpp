@@ -53,7 +53,7 @@
 #if defined Q_OS_MACOS || defined Q_OS_WIN
 #include <KF5/KI18n/KLocalizedString>
 #else
-#include <KI18n/KLocalizedString>
+#include <KLocalizedString>
 #endif
 
 #include <QAbstractTextDocumentLayout>
