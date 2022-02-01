@@ -407,7 +407,10 @@ Maui.Page
                     
                     textFormat: TextEdit.PlainText
                     wrapMode: TextEdit.WrapAnywhere
-                    
+                    selectionColor: Kirigami.Theme.highlightColor
+                    selectedTextColor: Kirigami.Theme.textColor
+                    opacity: control.enabled ? 1 : 0.6
+
                     activeFocusOnPress: true
                     activeFocusOnTab: true
                     
@@ -415,6 +418,26 @@ Maui.Page
                     leftPadding: _linesCounter.width + Maui.Style.space.small
                     
                     color: control.Kirigami.Theme.textColor
+
+                    Label
+                    {
+                        id: placeholder
+
+                        opacity: 0.5
+
+                        x: body.leftPadding
+                        y: body.topPadding
+                        width: body.width - (body.leftPadding + body.rightPadding)
+                        height: body.height - (body.topPadding + body.bottomPadding)
+
+                        text: body.placeholderText
+                        font: body.font
+                        color: body.color
+                        horizontalAlignment: body.horizontalAlignment
+                        verticalAlignment: body.verticalAlignment
+                        visible: !body.length && !body.preeditText && (!body.activeFocus || body.horizontalAlignment !== Qt.AlignHCenter)
+                        elide: Text.ElideRight
+                    }
                     
                     background: Rectangle
                     {
