@@ -344,7 +344,7 @@ Maui.Page
             }
         }
         
-        ScrollView
+        Maui.ScrollView
         {
             id: _scrollView
             Layout.fillWidth: true
