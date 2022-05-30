@@ -199,11 +199,11 @@ Kirigami.ApplicationWindow {
 
                 /*Rectangle {
                     radius: 2
-                    width: Kirigami.Units.gridUnit * 8
-                    height: Kirigami.Units.gridUnit * 3
+                    width: Maui.Style.units.gridUnit * 8
+                    height: Maui.Style.units.gridUnit * 3
                     anchors.centerIn: parent
-                    Kirigami.Theme.colorSet: Kirigami.Theme.View
-                    color: Kirigami.Theme.backgroundColor
+                    Maui.Theme.colorSet: Maui.Theme.View
+                    color: Maui.Theme.backgroundColor
                     QQC2.Label {
                         anchors.centerIn: parent
                         text: "x: " + (resizeRectangle.x - rootEditorView.contentItem.width + editImage.paintedWidth)

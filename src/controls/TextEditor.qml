@@ -112,7 +112,7 @@ Maui.Page
         cursorPosition: body.cursorPosition
         selectionStart: body.selectionStart
         selectionEnd: body.selectionEnd
-        backgroundColor: control.Kirigami.Theme.backgroundColor
+        backgroundColor: control.Maui.Theme.backgroundColor
         enableSyntaxHighlighting: false
         findCaseSensitively:  _findCaseSensitively.checked
         findWholeWords: _findWholeWords.checked
@@ -133,7 +133,7 @@ Maui.Page
             bottom: parent.bottom
             margins: Maui.Style.space.big
         }
-        color: control.Kirigami.Theme.backgroundColor
+        color: Maui.Theme.backgroundColor
         width: _countLabel.implicitWidth
         height: Maui.Style.rowHeight
         radius: Maui.Style.radiusV
@@ -143,7 +143,7 @@ Maui.Page
             id: _countLabel
             anchors.centerIn: parent
             text: body.length + " / " + body.lineCount
-            color: control.Kirigami.Theme.textColor
+            color: Maui.Theme.textColor
             opacity: 0.5
         }
     }
@@ -307,13 +307,13 @@ Maui.Page
                 readonly property int index_ : index
                 Layout.fillWidth: true
                 
-                Kirigami.Theme.backgroundColor:
+                Maui.Theme.backgroundColor:
                 {
                     switch(alert.level)
                     {
-                        case 0: return Kirigami.Theme.positiveTextColor
-                        case 1: return Kirigami.Theme.neutralTextColor
-                        case 2: return Kirigami.Theme.negativeTextColor
+                        case 0: return Maui.Theme.positiveTextColor
+                        case 1: return Maui.Theme.neutralTextColor
+                        case 2: return Maui.Theme.negativeTextColor
                     }
                 }
                 
@@ -337,8 +337,8 @@ Maui.Page
                         text: modelData
                         onClicked: alert.triggerAction(_alertAction.index_, _alertBar.index_)
                         
-                        Kirigami.Theme.backgroundColor: Qt.lighter(_alertBar.Kirigami.Theme.backgroundColor, 1.2)
-                        Kirigami.Theme.textColor: Qt.darker(Kirigami.Theme.backgroundColor)
+                        Maui.Theme.backgroundColor: Qt.lighter(_alertBar.Maui.Theme.backgroundColor, 1.2)
+                        Maui.Theme.textColor: Qt.darker(Maui.Theme.backgroundColor)
                     }
                 }
             }
@@ -417,7 +417,6 @@ Maui.Page
                     padding: Maui.Style.space.small
                     leftPadding: _linesCounter.width + Maui.Style.space.small
                     
-                    color: control.Kirigami.Theme.textColor
 
                     Label
                     {
@@ -438,10 +437,11 @@ Maui.Page
                         visible: !body.length && !body.preeditText && (!body.activeFocus || body.horizontalAlignment !== Qt.AlignHCenter)
                         elide: Text.ElideRight
                     }
+                    color: Maui.Theme.textColor
                     
                     background: Rectangle
                     {
-                        color: control.Kirigami.Theme.backgroundColor
+                        color: Maui.Theme.backgroundColor
                     }
                     
                     Keys.onPressed:
@@ -502,7 +502,7 @@ Maui.Page
                         
                         Rectangle
                         {
-                            color: Qt.darker(Kirigami.Theme.backgroundColor, 1)
+                            color: Qt.darker(Maui.Theme.backgroundColor, 1)
                             
                             ListView
                             {
@@ -586,7 +586,7 @@ Maui.Page
                                         width: 32
                                         height: parent.height
                                         opacity: isCurrentItem  ? 1 : 0.7
-                                        color:  isCurrentItem ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
+                                        color:  isCurrentItem ? Maui.Theme.highlightColor : Maui.Theme.textColor
                                         font.pointSize: Math.min(Maui.Style.fontSizes.medium, body.font.pointSize)
                                         horizontalAlignment: Text.AlignHCenter
                                         verticalAlignment: Text.AlignVCenter
@@ -614,13 +614,13 @@ Maui.Page
                                 }
                             }
                             
-//                            Kirigami.Separator
+//                            Maui.Separator
 //                            {
 //                                anchors.top: parent.top
 //                                anchors.bottom: parent.bottom
 //                                anchors.right: parent.right
 //                                width: 0.5
-//                                weight: Kirigami.Separator.Weight.Light
+//                                weight: Maui.Separator.Weight.Light
 //                            }
                         }
                     }
