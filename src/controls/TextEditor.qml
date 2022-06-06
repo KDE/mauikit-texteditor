@@ -407,8 +407,8 @@ Maui.Page
                     
                     textFormat: TextEdit.PlainText
                     wrapMode: TextEdit.WrapAnywhere
-                    selectionColor: Kirigami.Theme.highlightColor
-                    selectedTextColor: Kirigami.Theme.textColor
+                    selectionColor: Maui.Theme.highlightColor
+                    selectedTextColor: Maui.Theme.textColor
                     opacity: control.enabled ? 1 : 0.6
 
                     activeFocusOnPress: true
@@ -461,7 +461,7 @@ Maui.Page
                     
                     onPressAndHold:
                     {
-                        if(Kirigami.Settings.isMobile)
+                        if(Maui.Handy.isMobile)
                         {
                             return
                         }
@@ -471,7 +471,7 @@ Maui.Page
                     
                     onPressed:
                     {
-                        if(Kirigami.Settings.isMobile)
+                        if(Maui.Handy.isMobile)
                         {
                             return
                         }
