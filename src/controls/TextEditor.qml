@@ -441,7 +441,7 @@ Maui.Page
                     
                     background: Rectangle
                     {
-                        color: Maui.Theme.backgroundColor
+                        color: control.Maui.Theme.backgroundColor
                     }
                     
                     Keys.onPressed:
