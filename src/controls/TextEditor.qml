@@ -7,7 +7,6 @@ import QtQuick.Templates 2.15 as T
 import org.mauikit.controls 1.3 as Maui
 import org.mauikit.texteditor 1.0 as TE
 
-import org.kde.kirigami 2.14 as Kirigami
 
 /*!
  * \ since org.mauikit.texteditor 1.0
@@ -385,7 +384,7 @@ Maui.Page
             {
                 id: _flickable
                 
-                interactive: Kirigami.Settings.hasTransientTouchInput
+                interactive: Maui.Handy.isTouch
                 boundsBehavior : Flickable.StopAtBounds
                 boundsMovement : Flickable.StopAtBounds
                 
@@ -398,7 +397,7 @@ Maui.Page
                     placeholderText: i18n("Body")
                     
                     selectByKeyboard: true
-                    selectByMouse : !Kirigami.Settings.hasTransientTouchInput
+                    selectByMouse : !Maui.Handy.isMobile
                     
                     //                     tabStopDistance: 
                     //                     textMargin:
@@ -606,7 +605,7 @@ Maui.Page
                                             //control.goToLine(_delegate.line)
                                             //control.document.toggleFold(_delegate.line)
                                         //}
-                                        contentItem: Kirigami.Icon
+                                        contentItem: Maui.Icon
                                         {
                                             source: "go-down"
                                         }
