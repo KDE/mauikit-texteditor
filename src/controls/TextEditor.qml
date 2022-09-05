@@ -163,74 +163,8 @@ Page
         property var runOnMenuClose: () => {}
         property bool persistentSelectionSetting
         Component.onCompleted: persistentSelectionSetting = persistentSelectionSetting 
-        Instantiator
-        {
-            id: _suggestions
-            active: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled
-            model: documentMenu.suggestions
-            delegate: MenuItem 
-            {
-                text: modelData
-                onClicked:
-                {
-                    documentMenu.deselectWhenMenuClosed = false;
-                    documentMenu.runOnMenuClose = () => documentMenu.spellcheckhighlighter.replaceWord(modelData);
-                }
-            }
-            onObjectAdded: 
-            {
-                documentMenu.insertItem(0, object)
-            }
-            onObjectRemoved: documentMenu.removeItem(0)
-        }
-        
-        MenuItem {
-            visible: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled && documentMenu.suggestions.length === 0
-            action: Action {
-                text: documentMenu.spellcheckhighlighter ? qsTr("No suggestions for \"%1\"").arg(documentMenu.spellcheckhighlighter.wordUnderMouse) : ''
-                enabled: false
-            }
-        }
-        
-        MenuItem {
-            enabled: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled
-            action: Action {
-                text: documentMenu.spellcheckhighlighter ? qsTr("Add \"%1\" to dictionary").arg(documentMenu.spellcheckhighlighter.wordUnderMouse) : ''
-                onTriggered: {
-                    documentMenu.deselectWhenMenuClosed = false;
-                    documentMenu.runOnMenuClose = () => spellcheckhighlighter.addWordToDictionary(documentMenu.spellcheckhighlighter.wordUnderMouse);
-                }
-            }
-        }
-        
-        MenuItem {
-            enabled: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled
-            action: Action {
-                text: qsTr("Ignore")
-                onTriggered: {
-                    documentMenu.deselectWhenMenuClosed = false;
-                    documentMenu.runOnMenuClose = () => documentMenu.spellcheckhighlighter.ignoreWord(documentMenu.spellcheckhighlighter.wordUnderMouse);
-                }
-            }
-        }
-        
-        MenuItem 
-        {
-            enabled: !control.body.readOnly && documentMenu.spellcheckhighlighterLoader && documentMenu.spellcheckhighlighterLoader.activable
-            checkable: true
-            checked: documentMenu.spellcheckhighlighter ? documentMenu.spellcheckhighlighter.active : false
-            text: qsTr("Enable Spellchecker")
-            onCheckedChanged: {
-                spellcheckhighlighterLoader.active = checked;
-                documentMenu.spellcheckhighlighter = documentMenu.spellcheckhighlighterLoader.item;
-            }
-        }
-        
-        MenuSeparator 
-        {
-            visible: !control.body.readOnly && ((documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled) || (documentMenu.spellcheckhighlighterLoader && documentMenu.spellcheckhighlighterLoader.activable))
-        }
-        
+             
+      
         Maui.MenuItemActionRow
         {
             Action 
@@ -338,6 +272,83 @@ Page
             onTriggered: {
                 documentMenu.deselectWhenMenuClosed = false;
                 documentMenu.runOnMenuClose = () => control.body.remove(control.body.selectionStart, control.body.selectionEnd);
+            }
+        }   
+        
+        
+        MenuSeparator 
+        {  }
+        
+        Menu
+        {
+            id: _spellingMenu
+            title: i18n("Spelling")
+            Instantiator
+            {
+                id: _suggestions
+                active: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled
+                model: documentMenu.suggestions
+                delegate: MenuItem 
+                {
+                    text: modelData
+                    onClicked:
+                    {
+                        documentMenu.deselectWhenMenuClosed = false;
+                        documentMenu.runOnMenuClose = () => documentMenu.spellcheckhighlighter.replaceWord(modelData);
+                    }
+                }
+                onObjectAdded: 
+                {
+                    _spellingMenu.insertItem(0, object)
+                }
+                onObjectRemoved: _spellingMenu.removeItem(0)
+            }
+            
+            
+            MenuSeparator 
+            {
+                enabled: !control.body.readOnly && ((documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled) || (documentMenu.spellcheckhighlighterLoader && documentMenu.spellcheckhighlighterLoader.activable))
+            }
+            
+            MenuItem {
+                enabled: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled && documentMenu.suggestions.length === 0
+                action: Action {
+                    text: documentMenu.spellcheckhighlighter ? qsTr("No suggestions for \"%1\"").arg(documentMenu.spellcheckhighlighter.wordUnderMouse) : ''
+                    enabled: false
+                }
+            }
+            MenuItem {
+                enabled: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled
+                action: Action {
+                    text: documentMenu.spellcheckhighlighter ? qsTr("Add \"%1\" to dictionary").arg(documentMenu.spellcheckhighlighter.wordUnderMouse) : ''
+                    onTriggered: {
+                        documentMenu.deselectWhenMenuClosed = false;
+                        documentMenu.runOnMenuClose = () => spellcheckhighlighter.addWordToDictionary(documentMenu.spellcheckhighlighter.wordUnderMouse);
+                    }
+                }
+            }
+            
+            MenuItem {
+                enabled: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled
+                action: Action {
+                    text: qsTr("Ignore")
+                    onTriggered: {
+                        documentMenu.deselectWhenMenuClosed = false;
+                        documentMenu.runOnMenuClose = () => documentMenu.spellcheckhighlighter.ignoreWord(documentMenu.spellcheckhighlighter.wordUnderMouse);
+                    }
+                }
+            }
+            
+            MenuItem 
+            {
+                enabled: !control.body.readOnly && documentMenu.spellcheckhighlighterLoader && documentMenu.spellcheckhighlighterLoader.activable
+                checkable: true
+                checked: documentMenu.spellcheckhighlighter ? documentMenu.spellcheckhighlighter.active : false
+                text: qsTr("Enable Spellchecker")
+                onCheckedChanged: {
+                    spellcheckhighlighterLoader.active = checked;
+                    documentMenu.spellcheckhighlighter = documentMenu.spellcheckhighlighterLoader.item;
+                }
             }
         }
         
