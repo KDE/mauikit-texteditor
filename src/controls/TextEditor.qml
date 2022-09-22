@@ -23,6 +23,7 @@ Page
     id: control
     padding: Maui.Style.space.medium
     focus: false
+    clip: false
     title: document.fileName
     //     showTitle: false
     
@@ -283,6 +284,8 @@ Page
         {
             id: _spellingMenu
             title: i18n("Spelling")
+            enabled: control.spellcheckEnabled
+            
             Instantiator
             {
                 id: _suggestions
@@ -575,31 +578,16 @@ Page
     }
     
     contentItem: Item
-    {       
-        
-        Maui.Chip
-        {
-            text: body.length + " / " + body.lineCount
-            color: control.body.color
-            
-            visible: showLineCount
-            anchors
-            {
-                right: parent.right
-                bottom: parent.bottom
-                margins: Maui.Style.space.big
-            }
-            
-            opacity: 0.5
-            
-        }        
+    {   
+        clip: false
+             
         
         
         ScrollView
         {
             id: _scrollView
             anchors.fill: parent
-            
+            clip: false
             contentWidth: availableWidth
             
             Keys.enabled: true
@@ -635,7 +623,7 @@ Page
             Flickable
             {
                 id: _flickable
-                
+                clip: false
                 interactive: Maui.Handy.isTouch
                 boundsBehavior : Flickable.StopAtBounds
                 boundsMovement : Flickable.StopAtBounds
@@ -834,7 +822,23 @@ Page
                     }
                 }
             }
-        }         
+        }
+        
+        Maui.Chip
+        {
+            text: body.length + " / " + body.lineCount
+            color: control.body.color
+            
+            visible: showLineCount
+            anchors
+            {
+                right: parent.right
+                bottom: parent.bottom
+                margins: Maui.Style.space.big
+            }
+            
+            opacity: 0.5            
+        }   
     }
     
     function forceActiveFocus()
