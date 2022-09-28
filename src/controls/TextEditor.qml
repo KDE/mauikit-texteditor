@@ -27,12 +27,6 @@ Page
     title: document.fileName
     //     showTitle: false
     
-    /*!
-     *      If a small text tooltip should be visible at the editor right bottom area, displaying the
-     *      number of count of lines and words.
-     */
-    property bool showLineCount : true
-    
     property bool showFindBar: false
     
     onShowFindBarChanged:
@@ -822,23 +816,7 @@ Page
                     }
                 }
             }
-        }
-        
-        Maui.Chip
-        {
-            text: body.length + " / " + body.lineCount
-            color: control.body.color
-            
-            visible: showLineCount
-            anchors
-            {
-                right: parent.right
-                bottom: parent.bottom
-                margins: Maui.Style.space.big
-            }
-            
-            opacity: 0.5            
-        }   
+        }         
     }
     
     function forceActiveFocus()
