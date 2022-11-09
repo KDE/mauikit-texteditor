@@ -29,7 +29,7 @@ Kirigami.ApplicationWindow {
         id: editorComponent
         Kirigami.Page {
             id: rootEditorView
-            title: i18n("Edit")
+            title: i18nd("mauikittexteditor","Edit")
             leftPadding: 0
             rightPadding: 0
     
@@ -80,7 +80,7 @@ Kirigami.ApplicationWindow {
                         onTriggered: {
                             if (!imageDoc.save()) {
                                 msg.type = Kirigami.MessageType.Error
-                                msg.text = i18n("Unable to save file. Check if you have the correct permission to edit this file.")
+                                msg.text = i18nd("mauikittexteditor","Unable to save file. Check if you have the correct permission to edit this file.")
                                 msg.visible = true;
                             }
                         }
@@ -92,7 +92,7 @@ Kirigami.ApplicationWindow {
 
             FileDialog {
                 id: fileDialog
-                title: i18n("Save As")
+                title: i18nd("mauikittexteditor","Save As")
                 folder: shortcuts.home
                 selectMultiple: false
                 selectExisting: false
@@ -100,11 +100,11 @@ Kirigami.ApplicationWindow {
                     if (imageDoc.saveAs(fileDialog.fileUrl)) {;
                         imagePath = fileDialog.fileUrl;
                         msg.type = Kirigami.MessageType.Information
-                        msg.text = i18n("You are now editing a new file.")
+                        msg.text = i18nd("mauikittexteditor","You are now editing a new file.")
                         msg.visible = true;
                     } else {
                         msg.type = Kirigami.MessageType.Error
-                        msg.text = i18n("Unable to save file. Check if you have the correct permission to edit this file.")
+                        msg.text = i18nd("mauikittexteditor","Unable to save file. Check if you have the correct permission to edit this file.")
                         msg.visible = true;
                     }
                     fileDialog.close()
@@ -134,7 +134,7 @@ Kirigami.ApplicationWindow {
                     actions: [
                         Kirigami.Action {
                             iconName: rootEditorView.resizing ? "dialog-cancel" : "transform-crop"
-                            text: rootEditorView.resizing ? i18n("Cancel") : i18nc("@action:button Crop an image", "Crop");
+                            text: rootEditorView.resizing ? i18nd("mauikittexteditor","Cancel") : i18nc("@action:button Crop an image", "Crop");
                             onTriggered: rootEditorView.resizing = !rootEditorView.resizing;
                         },
                         Kirigami.Action {

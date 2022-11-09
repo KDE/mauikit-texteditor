@@ -2,13 +2,11 @@
 #
 # SPDX-License-Identifier: BSD-2-Clause
 
-ecm_create_qm_loader(texteditor_QM_LOADER libtexteditorplugin_qt)
 
 set(
     sources
     code/texteditor_plugin.cpp
     code/documenthandler.cpp
-    ${texteditor_QM_LOADER}
 )
 
 set(
@@ -29,6 +27,8 @@ add_library(
     ${pluginData}
     ${texteditor_QML_QRC}
 )
+
+    ecm_create_qm_loader(MauiKitTextEditor MauiKitTextEditorPlugin)
 
 add_library(MauiKit::TextEditor ALIAS MauiKitTextEditor)
 

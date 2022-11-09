@@ -25,7 +25,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
 include(GNUInstallDirs)
 include(KDEInstallDirs)
 include(KDECMakeSettings)
-#include(KDECompilerSettings)
+include(KDEClangFormat)
 include(FeatureSummary)
 include(ECMPoQmTools)
 include(ECMSetupVersion)
@@ -75,5 +75,10 @@ if(QUICK_COMPILER)
 endif()
 
 add_subdirectory(src)
+
+   ecm_install_po_files_as_qm(poqm)
+
+    file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
+kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

@@ -251,7 +251,7 @@ Page
         
         MenuItem
         {
-            text: i18n("Search Selected Text on Google...")
+            text: i18nd("mauikittexteditor","Search Selected Text on Google...")
             onTriggered: Qt.openUrlExternally("https://www.google.com/search?q="+body.selectedText)
             enabled: body.selectedText.length
         }
@@ -277,7 +277,7 @@ Page
         Menu
         {
             id: _spellingMenu
-            title: i18n("Spelling")
+            title: i18nd("mauikittexteditor","Spelling")
             enabled: control.spellcheckEnabled
             
             Instantiator
@@ -427,14 +427,14 @@ Page
                 {
                     id: _findCaseSensitively
                     checkable: true
-                    text: i18n("Case Sensitive")
+                    text: i18nd("mauikittexteditor","Case Sensitive")
                 }
                 
                 MenuItem
                 {
                     id: _findWholeWords
                     checkable: true
-                    text: i18n("Whole Words Only")
+                    text: i18nd("mauikittexteditor","Whole Words Only")
                 }
             }
             
@@ -444,7 +444,7 @@ Page
                 Layout.fillWidth: true
                 Layout.maximumWidth: 500
                 Layout.alignment: Qt.AlignCenter
-                placeholderText: i18n("Find")
+                placeholderText: i18nd("mauikittexteditor","Find")
                 
                 onAccepted:
                 {
@@ -481,14 +481,14 @@ Page
             middleContent: Maui.SearchField
             {
                 id: _replaceField
-                placeholderText: i18n("Replace")
+                placeholderText: i18nd("mauikittexteditor","Replace")
                 Layout.fillWidth: true
                 Layout.maximumWidth: 500
                 Layout.alignment: Qt.AlignCenter
                 icon.source: "edit-find-replace"
                 actions: Action
                 {
-                    text: i18n("Replace")
+                    text: i18nd("mauikittexteditor","Replace")
                     enabled: _replaceField.text.length
                     icon.name: "checkmark"
                     onTriggered: document.replace(_findField.text, _replaceField.text)
@@ -499,7 +499,7 @@ Page
             Button
             {
                 enabled: _replaceField.text.length
-                text: i18n("Replace All")
+                text: i18nd("mauikittexteditor","Replace All")
                 onClicked: document.replaceAll(_findField.text, _replaceField.text)
             }
             ]
@@ -628,7 +628,7 @@ Page
                     Maui.Theme.inherit: true
                     text: document.text
                     
-                    placeholderText: i18n("Body")
+                    placeholderText: i18nd("mauikittexteditor","Body")
                     
                     textFormat: TextEdit.PlainText
                     
