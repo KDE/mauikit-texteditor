@@ -6,4 +6,4 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 
-$XGETTEXT $(find src/ -name \*.cpp -o -name \*.h -o -name \*.qml) -o $podir/MauiKitTextEditorPlugin.pot
+$XGETTEXT $(find src/ -name \*.cpp -o -name \*.h -o -name \*.qml) -o $podir/mauikittexteditor.pot

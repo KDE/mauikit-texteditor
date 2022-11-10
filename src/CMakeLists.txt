@@ -28,8 +28,6 @@ add_library(
     ${texteditor_QML_QRC}
 )
 
-    ecm_create_qm_loader(MauiKitTextEditor MauiKitTextEditorPlugin)
-
 add_library(MauiKit::TextEditor ALIAS MauiKitTextEditor)
 
 if(QUICK_COMPILER)
