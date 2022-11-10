@@ -201,7 +201,7 @@ DocumentAlert *DocumentHandler::canNotSaveAlert(const QString &details)
 
 DocumentAlert *DocumentHandler::missingAlert()
 {
-    auto alert = new DocumentAlert(i18nd("mauikittexteditor","Your file was removed"), i18nd("mauikittexteditor","This file does not longer exists in your local storage, however you can save it again"), DocumentAlert::DANGER_LEVEL, Alerts::MISSING);
+    auto alert = new DocumentAlert(i18nd("mauikittexteditor","Your file was removed"), i18nd("mauikittexteditor","This file does not longer exist in your local storage, however you can save it again"), DocumentAlert::DANGER_LEVEL, Alerts::MISSING);
     
     const auto saveAction = [this]() {
         this->saveAs(this->fileUrl());
