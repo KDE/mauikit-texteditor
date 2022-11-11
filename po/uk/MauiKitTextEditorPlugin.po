@@ -1,0 +1,118 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the mauikit-texteditor package.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: mauikit-texteditor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-11-10 00:45+0000\n"
+"PO-Revision-Date: 2022-11-10 17:04+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: src/code/documenthandler.cpp:179
+#, kde-format
+msgid "File changed externally"
+msgstr "Файл змінено поза межами програми"
+
+#: src/code/documenthandler.cpp:179
+#, kde-format
+msgid "You can reload the file or save your changes now"
+msgstr "Ви можете перезавантажити файл або зберегти ваші зміни зараз"
+
+#: src/code/documenthandler.cpp:190
+#, kde-format
+msgid "Reload"
+msgstr "Перезавантажити"
+
+#: src/code/documenthandler.cpp:190
+#, kde-format
+msgid "Auto Reload"
+msgstr "Автоперезавантаження"
+
+#: src/code/documenthandler.cpp:190 src/code/documenthandler.cpp:198
+#, kde-format
+msgid "Ignore"
+msgstr "Ігнорувати"
+
+#: src/code/documenthandler.cpp:196
+#, kde-format
+msgid "File can not be saved"
+msgstr "Файл не може бути збережено"
+
+#: src/code/documenthandler.cpp:204
+#, kde-format
+msgid "Your file was removed"
+msgstr "Ваш файл було вилучено"
+
+#: src/code/documenthandler.cpp:204
+#, kde-format
+msgid ""
+"This file does not longer exists in your local storage, however you can save "
+"it again"
+msgstr ""
+"Цього файла більше не існує у вашому локальному сховищі даних. Втім, ви "
+"можете зберегти його знову."
+
+#: src/code/documenthandler.cpp:210
+#, kde-format
+msgid "Save"
+msgstr "Зберегти"
+
+#: src/code/documenthandler.cpp:804
+#, kde-format
+msgid "Cannot save: "
+msgstr "Не вдалося зберегти: "
+
+#: src/code/documenthandler.cpp:805
+#, kde-format
+msgid "Cannot save file "
+msgstr "Не вдалося зберегти файл"
+
+#: src/controls/TextEditor.qml:254
+#, kde-format
+msgid "Search Selected Text on Google..."
+msgstr "Шукати позначений текст у Google..."
+
+#: src/controls/TextEditor.qml:280
+#, kde-format
+msgid "Spelling"
+msgstr "Правопис"
+
+#: src/controls/TextEditor.qml:430
+#, kde-format
+msgid "Case Sensitive"
+msgstr "З урахуванням регістру"
+
+#: src/controls/TextEditor.qml:437
+#, kde-format
+msgid "Whole Words Only"
+msgstr "Лише цілі слова"
+
+#: src/controls/TextEditor.qml:447
+#, kde-format
+msgid "Find"
+msgstr "Знайти"
+
+#: src/controls/TextEditor.qml:484 src/controls/TextEditor.qml:491
+#, kde-format
+msgid "Replace"
+msgstr "Замінити"
+
+#: src/controls/TextEditor.qml:502
+#, kde-format
+msgid "Replace All"
+msgstr "Замінити всі"
+
+#: src/controls/TextEditor.qml:631
+#, kde-format
+msgid "Body"
+msgstr "Вміст"

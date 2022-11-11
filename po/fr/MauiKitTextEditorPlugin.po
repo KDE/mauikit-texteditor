@@ -1,0 +1,110 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mauikit-texteditor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-11-10 00:45+0000\n"
+"PO-Revision-Date: 2022-11-10 18:34+0100\n"
+"Last-Translator: KDE Francophone <kde-francophone@kde.org>\n"
+"Language-Team: KDE Francophone <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/code/documenthandler.cpp:179
+#, kde-format
+msgid "File changed externally"
+msgstr ""
+
+#: src/code/documenthandler.cpp:179
+#, kde-format
+msgid "You can reload the file or save your changes now"
+msgstr ""
+
+#: src/code/documenthandler.cpp:190
+#, kde-format
+msgid "Reload"
+msgstr ""
+
+#: src/code/documenthandler.cpp:190
+#, kde-format
+msgid "Auto Reload"
+msgstr ""
+
+#: src/code/documenthandler.cpp:190 src/code/documenthandler.cpp:198
+#, kde-format
+msgid "Ignore"
+msgstr ""
+
+#: src/code/documenthandler.cpp:196
+#, kde-format
+msgid "File can not be saved"
+msgstr ""
+
+#: src/code/documenthandler.cpp:204
+#, kde-format
+msgid "Your file was removed"
+msgstr ""
+
+#: src/code/documenthandler.cpp:204
+#, kde-format
+msgid ""
+"This file does not longer exists in your local storage, however you can save "
+"it again"
+msgstr ""
+
+#: src/code/documenthandler.cpp:210
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: src/code/documenthandler.cpp:804
+#, kde-format
+msgid "Cannot save: "
+msgstr ""
+
+#: src/code/documenthandler.cpp:805
+#, kde-format
+msgid "Cannot save file "
+msgstr ""
+
+#: src/controls/TextEditor.qml:254
+#, kde-format
+msgid "Search Selected Text on Google..."
+msgstr ""
+
+#: src/controls/TextEditor.qml:280
+#, kde-format
+msgid "Spelling"
+msgstr ""
+
+#: src/controls/TextEditor.qml:430
+#, kde-format
+msgid "Case Sensitive"
+msgstr ""
+
+#: src/controls/TextEditor.qml:437
+#, kde-format
+msgid "Whole Words Only"
+msgstr ""
+
+#: src/controls/TextEditor.qml:447
+#, kde-format
+msgid "Find"
+msgstr ""
+
+#: src/controls/TextEditor.qml:484 src/controls/TextEditor.qml:491
+#, kde-format
+msgid "Replace"
+msgstr ""
+
+#: src/controls/TextEditor.qml:502
+#, kde-format
+msgid "Replace All"
+msgstr ""
+
+#: src/controls/TextEditor.qml:631
+#, kde-format
+msgid "Body"
+msgstr ""
