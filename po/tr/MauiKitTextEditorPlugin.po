@@ -70,12 +70,12 @@ msgstr "Kaydet"
 #: src/code/documenthandler.cpp:804
 #, kde-format
 msgid "Cannot save: "
-msgstr "Kaydedilemiyor:"
+msgstr "Kaydedilemiyor: "
 
 #: src/code/documenthandler.cpp:805
 #, kde-format
 msgid "Cannot save file "
-msgstr "Dosya kaydedilemiyor"
+msgstr "Dosya kaydedilemiyor "
 
 #: src/controls/TextEditor.qml:254
 #, kde-format

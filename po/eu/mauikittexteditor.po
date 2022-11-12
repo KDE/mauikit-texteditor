@@ -1,16 +1,19 @@
-# Copyright (C) YEAR This file is copyright:
+# Translation for mauikittexteditor.po to Euskara/Basque (eu).
+# Copyright (C) 2022 This file is copyright:
 # This file is distributed under the same license as the mauikit-texteditor package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2022.
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-10 00:45+0000\n"
-"PO-Revision-Date: 2022-11-10 19:18-0400\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: \n"
-"Language: nl\n"
+"POT-Creation-Date: 2022-11-11 00:44+0000\n"
+"PO-Revision-Date: 2022-11-11 03:10+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,96 +23,98 @@ msgstr ""
 #: src/code/documenthandler.cpp:179
 #, kde-format
 msgid "File changed externally"
-msgstr "Bestand is extern gewijzigd"
+msgstr "Kanpotik aldatutako fitxategia"
 
 #: src/code/documenthandler.cpp:179
 #, kde-format
 msgid "You can reload the file or save your changes now"
-msgstr ""
+msgstr "Fitxategia birzamatu edo zure aldaketak, orain, gorde ditzakezu"
 
 #: src/code/documenthandler.cpp:190
 #, kde-format
 msgid "Reload"
-msgstr "Herladen"
+msgstr "Birzamatu"
 
 #: src/code/documenthandler.cpp:190
 #, kde-format
 msgid "Auto Reload"
-msgstr "Automatisch herladen"
+msgstr "Automatikoki birzamatu"
 
 #: src/code/documenthandler.cpp:190 src/code/documenthandler.cpp:198
 #, kde-format
 msgid "Ignore"
-msgstr "Negeren"
+msgstr "Ezikusi"
 
 #: src/code/documenthandler.cpp:196
 #, kde-format
 msgid "File can not be saved"
-msgstr ""
+msgstr "Fitxategia ezin da gorde"
 
 #: src/code/documenthandler.cpp:204
 #, kde-format
 msgid "Your file was removed"
-msgstr ""
+msgstr "Zure fitxategia ezabatu egin da"
 
 #: src/code/documenthandler.cpp:204
 #, kde-format
 msgid ""
-"This file does not longer exists in your local storage, however you can save "
+"This file does not longer exist in your local storage, however you can save "
 "it again"
 msgstr ""
+"Fitxategi hau dagoeneko ez dago zure gordetegi lokalean, hala ere berriz "
+"gorde dezakezu"
 
 #: src/code/documenthandler.cpp:210
 #, kde-format
 msgid "Save"
-msgstr "Opslaan"
+msgstr "Gorde"
 
 #: src/code/documenthandler.cpp:804
 #, kde-format
 msgid "Cannot save: "
-msgstr "Kan niet opslaan: "
+msgstr "Ezin du gorde:"
 
 #: src/code/documenthandler.cpp:805
 #, kde-format
 msgid "Cannot save file "
-msgstr "Bestand kan niet worden opgeslagen"
+msgstr "Ezin du fitxategia gorde"
 
 #: src/controls/TextEditor.qml:254
 #, kde-format
 msgid "Search Selected Text on Google..."
-msgstr ""
+msgstr "Bilatu hautatutako testua Googlen..."
 
 #: src/controls/TextEditor.qml:280
 #, kde-format
 msgid "Spelling"
-msgstr "Spelling"
+msgstr "Ortografia"
 
 #: src/controls/TextEditor.qml:430
 #, kde-format
 msgid "Case Sensitive"
-msgstr "Hoofdlettergevoelig"
+msgstr "Bereizi maiuskulak"
 
 #: src/controls/TextEditor.qml:437
 #, kde-format
 msgid "Whole Words Only"
-msgstr "Alleen hele woorden"
+msgstr "Hitz osoak bakarrik"
 
 #: src/controls/TextEditor.qml:447
 #, kde-format
 msgid "Find"
-msgstr "Zoeken"
+msgstr "Aurkitu"
 
 #: src/controls/TextEditor.qml:484 src/controls/TextEditor.qml:491
 #, kde-format
 msgid "Replace"
-msgstr "Vervangen"
+msgstr "Ordeztu"
 
 #: src/controls/TextEditor.qml:502
 #, kde-format
 msgid "Replace All"
-msgstr "Alles vervangen"
+msgstr "Ordeztu guztiak"
 
 #: src/controls/TextEditor.qml:631
 #, kde-format
 msgid "Body"
-msgstr "Inhoud"
+msgstr "Gorputza"
