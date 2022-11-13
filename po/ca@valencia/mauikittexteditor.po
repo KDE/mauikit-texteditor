@@ -1,59 +1,58 @@
-# Translation for mauikittexteditor.po to Euskara/Basque (eu).
-# Copyright (C) 2022 This file is copyright:
-# This file is distributed under the same license as the mauikit-texteditor package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# Translation of mauikittexteditor.po to Catalan (Valencian)
+# Copyright (C) 2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
 #
-# Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-11 00:44+0000\n"
-"PO-Revision-Date: 2022-11-11 03:10+0100\n"
-"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
-"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
-"Language: eu\n"
+"PO-Revision-Date: 2022-11-11 13:31+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.12.0\n"
 
 #: src/code/documenthandler.cpp:179
 #, kde-format
 msgid "File changed externally"
-msgstr "Kanpotik aldatutako fitxategia"
+msgstr "El fitxer ha canviat externament"
 
 #: src/code/documenthandler.cpp:179
 #, kde-format
 msgid "You can reload the file or save your changes now"
-msgstr "Fitxategia birzamatu edo zure aldaketak, orain, gorde ditzakezu"
+msgstr "Ara podeu tornar a carregar el fitxer o guardar els canvis"
 
 #: src/code/documenthandler.cpp:190
 #, kde-format
 msgid "Reload"
-msgstr "Birzamatu"
+msgstr "Torna a carregar"
 
 #: src/code/documenthandler.cpp:190
 #, kde-format
 msgid "Auto Reload"
-msgstr "Automatikoki birzamatu"
+msgstr "Recàrrega automàtica"
 
 #: src/code/documenthandler.cpp:190 src/code/documenthandler.cpp:198
 #, kde-format
 msgid "Ignore"
-msgstr "Ezikusi"
+msgstr "Ignora"
 
 #: src/code/documenthandler.cpp:196
 #, kde-format
 msgid "File can not be saved"
-msgstr "Fitxategia ezin da gorde"
+msgstr "El fitxer no s'ha pogut guardar"
 
 #: src/code/documenthandler.cpp:204
 #, kde-format
 msgid "Your file was removed"
-msgstr "Zure fitxategia ezabatu egin da"
+msgstr "El fitxer s'ha eliminat"
 
 #: src/code/documenthandler.cpp:204
 #, kde-format
@@ -61,28 +60,28 @@ msgid ""
 "This file does not longer exist in your local storage, however you can save "
 "it again"
 msgstr ""
-"Fitxategi hau dagoeneko ez dago zure gordetegi lokalean, hala ere berriz "
-"gorde dezakezu"
+"Este fitxer ja no existix en l'emmagatzematge local; tanmateix, el podeu "
+"tornar a guardar"
 
 #: src/code/documenthandler.cpp:210
 #, kde-format
 msgid "Save"
-msgstr "Gorde"
+msgstr "Guarda"
 
 #: src/code/documenthandler.cpp:804
 #, kde-format
 msgid "Cannot save: "
-msgstr "Ezin du gorde:"
+msgstr "No es pot guardar: "
 
 #: src/code/documenthandler.cpp:805
 #, kde-format
 msgid "Cannot save file "
-msgstr "Ezin du fitxategia gorde"
+msgstr "No s'ha pogut guardar el fitxer"
 
 #: src/controls/TextEditor.qml:254
 #, kde-format
 msgid "Search Selected Text on Google..."
-msgstr "Bilatu hautatutako testua Googlen..."
+msgstr "Busca a Google el text seleccionat..."
 
 #: src/controls/TextEditor.qml:280
 #, kde-format
@@ -92,29 +91,29 @@ msgstr "Ortografia"
 #: src/controls/TextEditor.qml:430
 #, kde-format
 msgid "Case Sensitive"
-msgstr "Bereizi maiuskulak"
+msgstr "Distingix entre majúscules i minúscules"
 
 #: src/controls/TextEditor.qml:437
 #, kde-format
 msgid "Whole Words Only"
-msgstr "Hitz osoak bakarrik"
+msgstr "Només paraules senceres"
 
 #: src/controls/TextEditor.qml:447
 #, kde-format
 msgid "Find"
-msgstr "Aurkitu"
+msgstr "Busca"
 
 #: src/controls/TextEditor.qml:484 src/controls/TextEditor.qml:491
 #, kde-format
 msgid "Replace"
-msgstr "Ordeztu"
+msgstr "Substituïx"
 
 #: src/controls/TextEditor.qml:502
 #, kde-format
 msgid "Replace All"
-msgstr "Ordeztu guztiak"
+msgstr "Substituïx-ho tot"
 
 #: src/controls/TextEditor.qml:631
 #, kde-format
 msgid "Body"
-msgstr "Gorputza"
+msgstr "Cos"
