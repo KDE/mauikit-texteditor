@@ -1,118 +1,115 @@
-# Copyright (C) YEAR This file is copyright:
+# German translations for mauikit-texteditor package.
+# Copyright (C) 2022 This file is copyright:
 # This file is distributed under the same license as the mauikit-texteditor package.
+# Automatically generated, 2022.
 #
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-11 00:44+0000\n"
-"PO-Revision-Date: 2022-11-12 09:08+0100\n"
-"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
-"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
-"Language: sl\n"
+"POT-Creation-Date: 2022-11-10 00:45+0000\n"
+"PO-Revision-Date: 2022-11-10 16:05+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/code/documenthandler.cpp:179
 #, kde-format
 msgid "File changed externally"
-msgstr "Datoteka je spremenjena od zunaj"
+msgstr ""
 
 #: src/code/documenthandler.cpp:179
 #, kde-format
 msgid "You can reload the file or save your changes now"
-msgstr "Lahko ponovno naložite datoteko ali shranite vaše spremembe zdaj"
+msgstr ""
 
 #: src/code/documenthandler.cpp:190
 #, kde-format
 msgid "Reload"
-msgstr "Ponovno naloži"
+msgstr ""
 
 #: src/code/documenthandler.cpp:190
 #, kde-format
 msgid "Auto Reload"
-msgstr "Samodejno naloži"
+msgstr ""
 
 #: src/code/documenthandler.cpp:190 src/code/documenthandler.cpp:198
 #, kde-format
 msgid "Ignore"
-msgstr "Prezri"
+msgstr ""
 
 #: src/code/documenthandler.cpp:196
 #, kde-format
 msgid "File can not be saved"
-msgstr "Datoteke ni mogoče shraniti"
+msgstr ""
 
 #: src/code/documenthandler.cpp:204
 #, kde-format
 msgid "Your file was removed"
-msgstr "Vaša datoteka je bila odstranjena"
+msgstr ""
 
 #: src/code/documenthandler.cpp:204
 #, kde-format
 msgid ""
-"This file does not longer exist in your local storage, however you can save "
+"This file does not longer exists in your local storage, however you can save "
 "it again"
 msgstr ""
-"Ta datoteka več ne obstaja v vaši lokalni hrambi, lahko pa jo ponovno "
-"shranite"
 
 #: src/code/documenthandler.cpp:210
 #, kde-format
 msgid "Save"
-msgstr "Shrani"
+msgstr ""
 
 #: src/code/documenthandler.cpp:804
 #, kde-format
 msgid "Cannot save: "
-msgstr "Ni mogoče shraniti: "
+msgstr ""
 
 #: src/code/documenthandler.cpp:805
 #, kde-format
 msgid "Cannot save file "
-msgstr "Ni mogoče shraniti datoteke "
+msgstr ""
 
 #: src/controls/TextEditor.qml:254
 #, kde-format
 msgid "Search Selected Text on Google..."
-msgstr "Išči izbrano besedilo na Google..."
+msgstr ""
 
 #: src/controls/TextEditor.qml:280
 #, kde-format
 msgid "Spelling"
-msgstr "Črkovanje"
+msgstr ""
 
 #: src/controls/TextEditor.qml:430
 #, kde-format
 msgid "Case Sensitive"
-msgstr "Upoštevaje velike/male črke"
+msgstr ""
 
 #: src/controls/TextEditor.qml:437
 #, kde-format
 msgid "Whole Words Only"
-msgstr "Samo cele besede"
+msgstr ""
 
 #: src/controls/TextEditor.qml:447
 #, kde-format
 msgid "Find"
-msgstr "Najdi"
+msgstr ""
 
 #: src/controls/TextEditor.qml:484 src/controls/TextEditor.qml:491
 #, kde-format
 msgid "Replace"
-msgstr "Zamenjaj"
+msgstr ""
 
 #: src/controls/TextEditor.qml:502
 #, kde-format
 msgid "Replace All"
-msgstr "Zamenjaj vse"
+msgstr ""
 
 #: src/controls/TextEditor.qml:631
 #, kde-format
 msgid "Body"
-msgstr "Telo"
+msgstr ""
