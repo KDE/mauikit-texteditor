@@ -1,56 +1,51 @@
-# Copyright (C) YEAR This file is copyright:
-# This file is distributed under the same license as the mauikit-texteditor package.
-#
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-11 00:44+0000\n"
-"PO-Revision-Date: 2022-11-14 15:31+0100\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: \n"
-"Language: nl\n"
+"PO-Revision-Date: 2022-11-15 09:28+0000\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-POFile-SpellExtra: Recarregamento\n"
 
 #: src/code/documenthandler.cpp:179
 #, kde-format
 msgid "File changed externally"
-msgstr "Bestand is extern gewijzigd"
+msgstr "Ficheiro modificado no exterior"
 
 #: src/code/documenthandler.cpp:179
 #, kde-format
 msgid "You can reload the file or save your changes now"
-msgstr "U kunt het bestand herladen of uw wijzigingen nu opslaan"
+msgstr "Poderá recarregar o ficheiro ou gravar agora as suas alterações"
 
 #: src/code/documenthandler.cpp:190
 #, kde-format
 msgid "Reload"
-msgstr "Herladen"
+msgstr "Recarregar"
 
 #: src/code/documenthandler.cpp:190
 #, kde-format
 msgid "Auto Reload"
-msgstr "Automatisch herladen"
+msgstr "Recarregamento Automático"
 
 #: src/code/documenthandler.cpp:190 src/code/documenthandler.cpp:198
 #, kde-format
 msgid "Ignore"
-msgstr "Negeren"
+msgstr "Ignorar"
 
 #: src/code/documenthandler.cpp:196
 #, kde-format
 msgid "File can not be saved"
-msgstr "Bestand kon niet worden opgeslagen"
+msgstr "Não é possível gravar o ficheiro"
 
 #: src/code/documenthandler.cpp:204
 #, kde-format
 msgid "Your file was removed"
-msgstr "Uw bestand is verwijderd"
+msgstr "O seu ficheiro foi removido"
 
 #: src/code/documenthandler.cpp:204
 #, kde-format
@@ -58,60 +53,60 @@ msgid ""
 "This file does not longer exist in your local storage, however you can save "
 "it again"
 msgstr ""
-"Dit bestand bestaat niet langer in uw lokale opslag, u kunt het echter "
-"opnieuw opslaan"
+"Este ficheiro não existe mais no seu armazenamento local; contudo, podê-lo-á "
+"gravar de novo"
 
 #: src/code/documenthandler.cpp:210
 #, kde-format
 msgid "Save"
-msgstr "Opslaan"
+msgstr "Gravar"
 
 #: src/code/documenthandler.cpp:804
 #, kde-format
 msgid "Cannot save: "
-msgstr "Kan niet opslaan: "
+msgstr "Não é possível gravar: "
 
 #: src/code/documenthandler.cpp:805
 #, kde-format
 msgid "Cannot save file "
-msgstr "Bestand kan niet worden opgeslagen"
+msgstr "Não é possível gravar o ficheiro "
 
 #: src/controls/TextEditor.qml:254
 #, kde-format
 msgid "Search Selected Text on Google..."
-msgstr "Geselecteerde tekst on Google zoeken..."
+msgstr "Procurar pelo Texto Seleccionado no Google..."
 
 #: src/controls/TextEditor.qml:280
 #, kde-format
 msgid "Spelling"
-msgstr "Spelling"
+msgstr "Ortografia"
 
 #: src/controls/TextEditor.qml:430
 #, kde-format
 msgid "Case Sensitive"
-msgstr "Hoofdlettergevoelig"
+msgstr "Distinguir Capitalização"
 
 #: src/controls/TextEditor.qml:437
 #, kde-format
 msgid "Whole Words Only"
-msgstr "Alleen hele woorden"
+msgstr "Apenas Palavras Inteiras"
 
 #: src/controls/TextEditor.qml:447
 #, kde-format
 msgid "Find"
-msgstr "Zoeken"
+msgstr "Procurar"
 
 #: src/controls/TextEditor.qml:484 src/controls/TextEditor.qml:491
 #, kde-format
 msgid "Replace"
-msgstr "Vervangen"
+msgstr "Substituir"
 
 #: src/controls/TextEditor.qml:502
 #, kde-format
 msgid "Replace All"
-msgstr "Alles vervangen"
+msgstr "Substituir Tudo"
 
 #: src/controls/TextEditor.qml:631
 #, kde-format
 msgid "Body"
-msgstr "Inhoud"
+msgstr "Conteúdo"
