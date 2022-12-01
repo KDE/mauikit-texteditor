@@ -1,0 +1,115 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the mauikit-texteditor package.
+# Paolo Zamponi <zapaolo@email.it>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mauikit-texteditor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-11-11 00:44+0000\n"
+"PO-Revision-Date: 2022-11-26 08:32+0100\n"
+"Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.08.3\n"
+
+#: src/code/documenthandler.cpp:179
+#, kde-format
+msgid "File changed externally"
+msgstr "File modificato esternamente"
+
+#: src/code/documenthandler.cpp:179
+#, kde-format
+msgid "You can reload the file or save your changes now"
+msgstr "Puoi ricaricare il file o salvare le tue modifiche adesso"
+
+#: src/code/documenthandler.cpp:190
+#, kde-format
+msgid "Reload"
+msgstr "Ricarica"
+
+#: src/code/documenthandler.cpp:190
+#, kde-format
+msgid "Auto Reload"
+msgstr "Ricarica automaticamente"
+
+#: src/code/documenthandler.cpp:190 src/code/documenthandler.cpp:198
+#, kde-format
+msgid "Ignore"
+msgstr "Ignora"
+
+#: src/code/documenthandler.cpp:196
+#, kde-format
+msgid "File can not be saved"
+msgstr "Il file non può essere salvato"
+
+#: src/code/documenthandler.cpp:204
+#, kde-format
+msgid "Your file was removed"
+msgstr "Il file è stato rimosso"
+
+#: src/code/documenthandler.cpp:204
+#, kde-format
+msgid ""
+"This file does not longer exist in your local storage, however you can save "
+"it again"
+msgstr "Il file non esiste più localmente, tuttavia puoi salvarlo di nuovo"
+
+#: src/code/documenthandler.cpp:210
+#, kde-format
+msgid "Save"
+msgstr "Salva"
+
+#: src/code/documenthandler.cpp:804
+#, kde-format
+msgid "Cannot save: "
+msgstr "Impossibile salvare: "
+
+#: src/code/documenthandler.cpp:805
+#, kde-format
+msgid "Cannot save file "
+msgstr "Impossibile salvare il file "
+
+#: src/controls/TextEditor.qml:254
+#, kde-format
+msgid "Search Selected Text on Google..."
+msgstr "Cerca in Google il testo selezionato..."
+
+#: src/controls/TextEditor.qml:280
+#, kde-format
+msgid "Spelling"
+msgstr "Controllo ortografico"
+
+#: src/controls/TextEditor.qml:430
+#, kde-format
+msgid "Case Sensitive"
+msgstr "Distingui maiuscole"
+
+#: src/controls/TextEditor.qml:437
+#, kde-format
+msgid "Whole Words Only"
+msgstr "Solo parole intere"
+
+#: src/controls/TextEditor.qml:447
+#, kde-format
+msgid "Find"
+msgstr "Trova"
+
+#: src/controls/TextEditor.qml:484 src/controls/TextEditor.qml:491
+#, kde-format
+msgid "Replace"
+msgstr "Sostituisci"
+
+#: src/controls/TextEditor.qml:502
+#, kde-format
+msgid "Replace All"
+msgstr "Sostituisci tutto"
+
+#: src/controls/TextEditor.qml:631
+#, kde-format
+msgid "Body"
+msgstr "Corpo"
