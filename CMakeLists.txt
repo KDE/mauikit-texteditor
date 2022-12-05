@@ -17,7 +17,7 @@ set(CMAKE_AUTORCC ON)
 
 set(AUTOMOC_MOC_OPTIONS -Muri=org.mauikit.texteditor)
 
-project(TextEditor LANGUAGES CXX VERSION 2.2.1)
+project(TextEditor LANGUAGES CXX VERSION 2.2.2)
 
 find_package(ECM ${KF5_VERSION} NO_MODULE)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
