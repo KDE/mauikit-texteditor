@@ -1,0 +1,115 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the mauikit-texteditor package.
+# Vit Pelcak <vit@pelcak.org>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mauikit-texteditor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-11-11 00:44+0000\n"
+"PO-Revision-Date: 2023-01-30 16:34+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 22.12.1\n"
+
+#: src/code/documenthandler.cpp:179
+#, kde-format
+msgid "File changed externally"
+msgstr "Soubor byl změněn zásahem z vnějšku"
+
+#: src/code/documenthandler.cpp:179
+#, kde-format
+msgid "You can reload the file or save your changes now"
+msgstr ""
+
+#: src/code/documenthandler.cpp:190
+#, kde-format
+msgid "Reload"
+msgstr "Obnovit"
+
+#: src/code/documenthandler.cpp:190
+#, kde-format
+msgid "Auto Reload"
+msgstr "Automatické opětovné načtení"
+
+#: src/code/documenthandler.cpp:190 src/code/documenthandler.cpp:198
+#, kde-format
+msgid "Ignore"
+msgstr "Ignorovat"
+
+#: src/code/documenthandler.cpp:196
+#, kde-format
+msgid "File can not be saved"
+msgstr ""
+
+#: src/code/documenthandler.cpp:204
+#, kde-format
+msgid "Your file was removed"
+msgstr ""
+
+#: src/code/documenthandler.cpp:204
+#, kde-format
+msgid ""
+"This file does not longer exist in your local storage, however you can save "
+"it again"
+msgstr ""
+
+#: src/code/documenthandler.cpp:210
+#, kde-format
+msgid "Save"
+msgstr "Uložit"
+
+#: src/code/documenthandler.cpp:804
+#, kde-format
+msgid "Cannot save: "
+msgstr "Nelze uložit: "
+
+#: src/code/documenthandler.cpp:805
+#, kde-format
+msgid "Cannot save file "
+msgstr "Nelze uložit soubor "
+
+#: src/controls/TextEditor.qml:254
+#, kde-format
+msgid "Search Selected Text on Google..."
+msgstr ""
+
+#: src/controls/TextEditor.qml:280
+#, kde-format
+msgid "Spelling"
+msgstr "Pravopis"
+
+#: src/controls/TextEditor.qml:430
+#, kde-format
+msgid "Case Sensitive"
+msgstr "Rozlišovat velikost písmen"
+
+#: src/controls/TextEditor.qml:437
+#, kde-format
+msgid "Whole Words Only"
+msgstr "Pouze celá slova"
+
+#: src/controls/TextEditor.qml:447
+#, kde-format
+msgid "Find"
+msgstr "Najít"
+
+#: src/controls/TextEditor.qml:484 src/controls/TextEditor.qml:491
+#, kde-format
+msgid "Replace"
+msgstr "Nahradit"
+
+#: src/controls/TextEditor.qml:502
+#, kde-format
+msgid "Replace All"
+msgstr "Nahradit vše"
+
+#: src/controls/TextEditor.qml:631
+#, kde-format
+msgid "Body"
+msgstr "Tělo"
