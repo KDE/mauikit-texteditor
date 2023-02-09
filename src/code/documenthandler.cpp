@@ -798,7 +798,7 @@ void DocumentHandler::saveAs(const QUrl &url)
     // 	}
     
     const QString filePath = url.toLocalFile();
-    const bool isHtml = QFileInfo(filePath).suffix().contains(QLatin1String("htm"));
+    const bool isHtml = QFileInfo(filePath).suffix().contains(QLatin1String("html"));
     QFile file(filePath);
     if (!file.open(QFile::WriteOnly | QFile::Truncate | (isHtml ? QFile::NotOpen : QFile::Text))) {
         emit error(i18nd("mauikittexteditor","Cannot save: ") + file.errorString());
