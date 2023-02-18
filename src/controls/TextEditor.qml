@@ -24,7 +24,7 @@ Page
     padding: Maui.Style.space.medium
     focus: false
     clip: false
-    title: document.fileName + document.modified ? "*" : ""
+    title: document.fileName + (document.modified ? "*" : "")
     //     showTitle: false
     
     property bool showFindBar: false
