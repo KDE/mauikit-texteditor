@@ -7,6 +7,7 @@ set(
     sources
     code/texteditor_plugin.cpp
     code/documenthandler.cpp
+    code/colorschemesmodel.cpp
 )
 
 set(

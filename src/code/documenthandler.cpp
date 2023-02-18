@@ -840,17 +840,6 @@ const QStringList DocumentHandler::getLanguageNameList()
     });
 }
 
-const QStringList DocumentHandler::getThemes()
-{
-    if (!DocumentHandler::m_repository)
-        DocumentHandler::m_repository = new KSyntaxHighlighting::Repository();
-    
-    const auto themes = DocumentHandler::m_repository->themes();
-    return std::accumulate(themes.constBegin(), themes.constEnd(), QStringList(), [](QStringList &res, const KSyntaxHighlighting::Theme &theme) -> QStringList {
-        res << theme.name();
-        return res;
-    });
-}
 
 void DocumentHandler::reset()
 {

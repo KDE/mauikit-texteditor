@@ -654,11 +654,6 @@ public slots:
      */
     static const QString getLanguageNameFromFileName(const QUrl &fileName);
 
-    /**
-     * @brief getThemes
-     * @return
-     */
-    static const QStringList getThemes();
 
 signals:
     void documentChanged();

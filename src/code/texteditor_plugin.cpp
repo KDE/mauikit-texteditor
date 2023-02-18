@@ -7,6 +7,7 @@
 
 #include "texteditor_plugin.h"
 #include "documenthandler.h"
+#include "colorschemesmodel.h"
 
 void TextEditorPlugin::registerTypes(const char *uri)
 {
@@ -15,5 +16,6 @@ void TextEditorPlugin::registerTypes(const char *uri)
 #endif
 
     qmlRegisterType<DocumentHandler>(uri, 1, 0, "DocumentHandler");
+    qmlRegisterType<ColorSchemesModel>(uri, 1, 0, "ColorSchemesModel");
     qmlRegisterType(resolveFileUrl(QStringLiteral("TextEditor.qml")), uri, 1, 0, "TextEditor");
 }
