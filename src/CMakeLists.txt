@@ -31,6 +31,18 @@ add_library(
 
 add_library(MauiKit::TextEditor ALIAS MauiKitTextEditor)
 
+generate_export_header(MauiKitTextEditor BASE_NAME TextEditor)
+set_target_properties(MauiKitTextEditor PROPERTIES
+    VERSION ${TextEditor_VERSION_STRING}
+    SOVERSION ${TextEditor_SOVERSION}
+    EXPORT_NAME TextEditor
+    )
+
+target_include_directories(MauiKitTextEditor
+    INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/MauiKit/TextEditor>")
+
+target_include_directories(MauiKitTextEditor PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR};${CMAKE_CURRENT_BINARY_DIR};>")
+
 if(QUICK_COMPILER)
     add_definitions(-DQUICK_COMPILER)
     target_compile_definitions(MauiKitTextEditor PUBLIC QUICK_COMPILER)
@@ -42,7 +54,7 @@ endif()
 
 target_link_libraries(
     MauiKitTextEditor
-       
+
     PRIVATE
         Qt5::Core
         Qt5::Quick
@@ -52,6 +64,15 @@ target_link_libraries(
         KF5::CoreAddons
         MauiKit
 )
+
+install(TARGETS MauiKitTextEditor EXPORT MauiKitTextEditorTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+
+install(FILES
+    ${headers}
+    ${CMAKE_CURRENT_BINARY_DIR}/texteditor_export.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/MauiKit/TextEditor
+    COMPONENT Devel)
+
 
 if (BUILD_SHARED_LIBS)
     add_custom_target(copy_to_bin ALL
