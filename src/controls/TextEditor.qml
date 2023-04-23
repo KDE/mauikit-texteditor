@@ -21,7 +21,7 @@ import org.kde.sonnet 1.0 as Sonnet
 Page
 {
     id: control
-    padding: Maui.Style.space.medium
+    padding: 0
     focus: false
     clip: false
     title: document.fileName + (document.modified ? "*" : "")
@@ -573,9 +573,7 @@ Page
     
     contentItem: Item
     {   
-        clip: false
-             
-        
+        clip: false                   
         
         ScrollView
         {
