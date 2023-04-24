@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-11 00:44+0000\n"
+"POT-Creation-Date: 2023-04-24 00:47+0000\n"
 "PO-Revision-Date: 2023-03-12 16:46+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -111,7 +111,7 @@ msgstr "Ersetzen"
 msgid "Replace All"
 msgstr "Alle ersetzen"
 
-#: src/controls/TextEditor.qml:631
+#: src/controls/TextEditor.qml:629
 #, kde-format
 msgid "Body"
 msgstr "Nachrichtentext"

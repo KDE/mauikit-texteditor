@@ -1,12 +1,12 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the mauikit-texteditor package.
-# Paolo Zamponi <zapaolo@email.it>, 2022.
+# Paolo Zamponi <feus73@gmail.com>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-11 00:44+0000\n"
+"POT-Creation-Date: 2023-04-24 00:47+0000\n"
 "PO-Revision-Date: 2022-11-26 08:32+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -109,7 +109,7 @@ msgstr "Sostituisci"
 msgid "Replace All"
 msgstr "Sostituisci tutto"
 
-#: src/controls/TextEditor.qml:631
+#: src/controls/TextEditor.qml:629
 #, kde-format
 msgid "Body"
 msgstr "Corpo"
