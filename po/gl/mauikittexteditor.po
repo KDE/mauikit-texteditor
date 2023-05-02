@@ -1,0 +1,116 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the mauikit-texteditor package.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mauikit-texteditor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-04-24 00:47+0000\n"
+"PO-Revision-Date: 2023-05-01 09:02+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.0\n"
+
+#: src/code/documenthandler.cpp:179
+#, kde-format
+msgid "File changed externally"
+msgstr "O ficheiro cambiou externamente"
+
+#: src/code/documenthandler.cpp:179
+#, kde-format
+msgid "You can reload the file or save your changes now"
+msgstr "Pode cargar de novo o ficheiro ou gardar os seus cambios agora"
+
+#: src/code/documenthandler.cpp:190
+#, kde-format
+msgid "Reload"
+msgstr "Cargar de novo"
+
+#: src/code/documenthandler.cpp:190
+#, kde-format
+msgid "Auto Reload"
+msgstr "Cargar de novo automaticamente"
+
+#: src/code/documenthandler.cpp:190 src/code/documenthandler.cpp:198
+#, kde-format
+msgid "Ignore"
+msgstr "Ignorar"
+
+#: src/code/documenthandler.cpp:196
+#, kde-format
+msgid "File can not be saved"
+msgstr "Non se pode gardar o ficheiro"
+
+#: src/code/documenthandler.cpp:204
+#, kde-format
+msgid "Your file was removed"
+msgstr "Eliminouse o ficheiro"
+
+#: src/code/documenthandler.cpp:204
+#, kde-format
+msgid ""
+"This file does not longer exist in your local storage, however you can save "
+"it again"
+msgstr ""
+"O ficheiro xa non existe no almacenamento local, pero pode gardalo de novo"
+
+#: src/code/documenthandler.cpp:210
+#, kde-format
+msgid "Save"
+msgstr "Gardar"
+
+#: src/code/documenthandler.cpp:804
+#, kde-format
+msgid "Cannot save: "
+msgstr "Non se pode gardar: "
+
+#: src/code/documenthandler.cpp:805
+#, kde-format
+msgid "Cannot save file "
+msgstr "Non se pode gardar o ficheiro "
+
+#: src/controls/TextEditor.qml:254
+#, kde-format
+msgid "Search Selected Text on Google..."
+msgstr "Buscar o texto seleccionado en Google…"
+
+#: src/controls/TextEditor.qml:280
+#, kde-format
+msgid "Spelling"
+msgstr "Ortografía"
+
+#: src/controls/TextEditor.qml:430
+#, kde-format
+msgid "Case Sensitive"
+msgstr "Distinguir as maiúsculas"
+
+#: src/controls/TextEditor.qml:437
+#, kde-format
+msgid "Whole Words Only"
+msgstr "Só palabras enteiras"
+
+#: src/controls/TextEditor.qml:447
+#, kde-format
+msgid "Find"
+msgstr "Atopar"
+
+#: src/controls/TextEditor.qml:484 src/controls/TextEditor.qml:491
+#, kde-format
+msgid "Replace"
+msgstr "Substituír"
+
+#: src/controls/TextEditor.qml:502
+#, kde-format
+msgid "Replace All"
+msgstr "Substituílo todo"
+
+#: src/controls/TextEditor.qml:629
+#, kde-format
+msgid "Body"
+msgstr "Corpo"
