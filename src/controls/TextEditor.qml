@@ -171,7 +171,7 @@ Page
                 onTriggered: 
                 {
                     documentMenu.deselectWhenMenuClosed = false;
-                    documentMenu.runOnMenuClose = () => target.undo();
+                    documentMenu.runOnMenuClose = () => body.undo();
                 }
             }            
             
@@ -184,7 +184,7 @@ Page
                 onTriggered:
                 {
                     documentMenu.deselectWhenMenuClosed = false;
-                    documentMenu.runOnMenuClose = () => target.redo();
+                    documentMenu.runOnMenuClose = () => body.redo();
                 }
             }            
         }        
@@ -647,16 +647,6 @@ Page
                         }                                    // TODO: Move cursor
                     }
                     
-                    onPressAndHold:
-                    {
-                        if(Maui.Handy.isMobile)
-                        {
-                            return
-                        }
-                        
-                        documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(point.position.x, point.position.y));
-                    }
-                    
                     onPressed:
                     {
                         if(Maui.Handy.isMobile)
@@ -814,7 +804,18 @@ Page
                     }
                 }
             }
-        }         
+        }          
+
+            
+            Maui.FloatingButton
+            {
+                visible: Maui.Handy.isTouch
+                icon.name: "edit-menu"
+                onClicked: documentMenu.targetClick(spellcheckhighlighterLoader)
+                anchors.bottom: parent.bottom
+                anchors.right: parent.right
+                anchors.margins: Maui.Style.space.big
+            }
     }
     
     function forceActiveFocus()
