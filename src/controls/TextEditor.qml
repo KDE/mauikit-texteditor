@@ -362,8 +362,7 @@ Page
             }
             
             storeCursorAndSelection();            
-            documentMenu.show()
-            
+            documentMenu.show()            
         }
         
         function storeCursorAndSelection()
@@ -649,11 +648,11 @@ Page
                     
                     onPressAndHold:
                     {
-                        if(Maui.Handy.isMobile)
-                        {
-                            return
-                        }
-                        
+//                         if(Maui.Handy.isMobile)
+//                         {
+//                             return
+//                         }
+//                         
                         documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(point.position.x, point.position.y));
                     }
                     
