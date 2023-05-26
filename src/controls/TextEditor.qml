@@ -157,8 +157,7 @@ Page
         property bool deselectWhenMenuClosed: true
         property var runOnMenuClose: () => {}
         property bool persistentSelectionSetting
-        Component.onCompleted: persistentSelectionSetting = persistentSelectionSetting 
-             
+        Component.onCompleted: persistentSelectionSetting = body.persistentSelection              
       
         Maui.MenuItemActionRow
         {
@@ -272,14 +271,15 @@ Page
         
         
         MenuSeparator 
-        {  }
+        {
+        }
         
         Menu
         {
             id: _spellingMenu
             title: i18nd("mauikittexteditor","Spelling")
             enabled: control.spellcheckEnabled
-            
+           
             Instantiator
             {
                 id: _suggestions
@@ -299,8 +299,7 @@ Page
                     _spellingMenu.insertItem(0, object)
                 }
                 onObjectRemoved: _spellingMenu.removeItem(0)
-            }
-            
+            }            
             
             MenuSeparator 
             {
@@ -616,7 +615,7 @@ Page
             {
                 id: _flickable
                 clip: false
-                interactive: Maui.Handy.isTouch
+                interactive: true
                 boundsBehavior : Flickable.StopAtBounds
                 boundsMovement : Flickable.StopAtBounds
                 
@@ -656,7 +655,7 @@ Page
                         
                         if(event.button === Qt.RightButton)
                         {
-                            documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(event.x, event.y));
+                            documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(event.x, event.y))
                         }
                     }                       
                     
@@ -811,7 +810,7 @@ Page
             {
                 visible: Maui.Handy.isTouch
                 icon.name: "edit-menu"
-                onClicked: documentMenu.targetClick(spellcheckhighlighterLoader)
+                onClicked: documentMenu.targetClick(spellcheckhighlighterLoader, body.cursorPosition)
                 anchors.bottom: parent.bottom
                 anchors.right: parent.right
                 anchors.margins: Maui.Style.space.big
