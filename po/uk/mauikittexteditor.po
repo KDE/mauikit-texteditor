@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-24 00:47+0000\n"
+"POT-Creation-Date: 2023-05-27 00:46+0000\n"
 "PO-Revision-Date: 2022-11-11 17:40+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -77,7 +77,7 @@ msgstr "Не вдалося зберегти: "
 msgid "Cannot save file "
 msgstr "Не вдалося зберегти файл"
 
-#: src/controls/TextEditor.qml:254
+#: src/controls/TextEditor.qml:253
 #, kde-format
 msgid "Search Selected Text on Google..."
 msgstr "Шукати позначений текст у Google..."
@@ -87,32 +87,32 @@ msgstr "Шукати позначений текст у Google..."
 msgid "Spelling"
 msgstr "Правопис"
 
-#: src/controls/TextEditor.qml:430
+#: src/controls/TextEditor.qml:429
 #, kde-format
 msgid "Case Sensitive"
 msgstr "З урахуванням регістру"
 
-#: src/controls/TextEditor.qml:437
+#: src/controls/TextEditor.qml:436
 #, kde-format
 msgid "Whole Words Only"
 msgstr "Лише цілі слова"
 
-#: src/controls/TextEditor.qml:447
+#: src/controls/TextEditor.qml:446
 #, kde-format
 msgid "Find"
 msgstr "Знайти"
 
-#: src/controls/TextEditor.qml:484 src/controls/TextEditor.qml:491
+#: src/controls/TextEditor.qml:483 src/controls/TextEditor.qml:490
 #, kde-format
 msgid "Replace"
 msgstr "Замінити"
 
-#: src/controls/TextEditor.qml:502
+#: src/controls/TextEditor.qml:501
 #, kde-format
 msgid "Replace All"
 msgstr "Замінити всі"
 
-#: src/controls/TextEditor.qml:629
+#: src/controls/TextEditor.qml:628
 #, kde-format
 msgid "Body"
 msgstr "Вміст"
