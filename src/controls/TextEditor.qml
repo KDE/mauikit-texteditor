@@ -361,8 +361,7 @@ Page
             }
             
             storeCursorAndSelection();            
-            documentMenu.show()
-            
+            documentMenu.show()            
         }
         
         function storeCursorAndSelection()
@@ -646,6 +645,19 @@ Page
                         }                                    // TODO: Move cursor
                     }
                     
+<<<<<<< HEAD
+=======
+                    onPressAndHold:
+                    {
+//                         if(Maui.Handy.isMobile)
+//                         {
+//                             return
+//                         }
+//                         
+                        documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(point.position.x, point.position.y));
+                    }
+                    
+>>>>>>> fa82aef (test fixes to mobile contetxualmenu)
                     onPressed:
                     {
                         if(Maui.Handy.isMobile)
