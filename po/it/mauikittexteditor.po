@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-07-12 00:46+0000\n"
 "PO-Revision-Date: 2022-11-26 08:32+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -84,32 +84,32 @@ msgstr "Cerca in Google il testo selezionato..."
 msgid "Spelling"
 msgstr "Controllo ortografico"
 
-#: src/controls/TextEditor.qml:429
+#: src/controls/TextEditor.qml:428
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Distingui maiuscole"
 
-#: src/controls/TextEditor.qml:436
+#: src/controls/TextEditor.qml:435
 #, kde-format
 msgid "Whole Words Only"
 msgstr "Solo parole intere"
 
-#: src/controls/TextEditor.qml:446
+#: src/controls/TextEditor.qml:445
 #, kde-format
 msgid "Find"
 msgstr "Trova"
 
-#: src/controls/TextEditor.qml:483 src/controls/TextEditor.qml:490
+#: src/controls/TextEditor.qml:482 src/controls/TextEditor.qml:489
 #, kde-format
 msgid "Replace"
 msgstr "Sostituisci"
 
-#: src/controls/TextEditor.qml:501
+#: src/controls/TextEditor.qml:500
 #, kde-format
 msgid "Replace All"
 msgstr "Sostituisci tutto"
 
-#: src/controls/TextEditor.qml:628
+#: src/controls/TextEditor.qml:627
 #, kde-format
 msgid "Body"
 msgstr "Corpo"

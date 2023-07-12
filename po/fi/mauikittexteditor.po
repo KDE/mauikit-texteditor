@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-07-12 00:46+0000\n"
 "PO-Revision-Date: 2022-12-03 10:22+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -86,32 +86,32 @@ msgstr "Etsi valittua tekstiä Googlella…"
 msgid "Spelling"
 msgstr "Oikeinkirjoitus"
 
-#: src/controls/TextEditor.qml:429
+#: src/controls/TextEditor.qml:428
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Erota pien- ja suuraakkoset"
 
-#: src/controls/TextEditor.qml:436
+#: src/controls/TextEditor.qml:435
 #, kde-format
 msgid "Whole Words Only"
 msgstr "Vain kokonaiset sanat"
 
-#: src/controls/TextEditor.qml:446
+#: src/controls/TextEditor.qml:445
 #, kde-format
 msgid "Find"
 msgstr "Etsi"
 
-#: src/controls/TextEditor.qml:483 src/controls/TextEditor.qml:490
+#: src/controls/TextEditor.qml:482 src/controls/TextEditor.qml:489
 #, kde-format
 msgid "Replace"
 msgstr "Korvaa"
 
-#: src/controls/TextEditor.qml:501
+#: src/controls/TextEditor.qml:500
 #, kde-format
 msgid "Replace All"
 msgstr "Korvaa kaikki"
 
-#: src/controls/TextEditor.qml:628
+#: src/controls/TextEditor.qml:627
 #, kde-format
 msgid "Body"
 msgstr "Runko"

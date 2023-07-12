@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 00:46+0000\n"
+"POT-Creation-Date: 2023-07-12 00:46+0000\n"
 "PO-Revision-Date: 2022-11-11 13:31+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -88,32 +88,32 @@ msgstr "Cerca a Google el text seleccionat..."
 msgid "Spelling"
 msgstr "Ortografia"
 
-#: src/controls/TextEditor.qml:429
+#: src/controls/TextEditor.qml:428
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Distingeix majúscules i minúscules"
 
-#: src/controls/TextEditor.qml:436
+#: src/controls/TextEditor.qml:435
 #, kde-format
 msgid "Whole Words Only"
 msgstr "Només paraules senceres"
 
-#: src/controls/TextEditor.qml:446
+#: src/controls/TextEditor.qml:445
 #, kde-format
 msgid "Find"
 msgstr "Cerca"
 
-#: src/controls/TextEditor.qml:483 src/controls/TextEditor.qml:490
+#: src/controls/TextEditor.qml:482 src/controls/TextEditor.qml:489
 #, kde-format
 msgid "Replace"
 msgstr "Substitueix"
 
-#: src/controls/TextEditor.qml:501
+#: src/controls/TextEditor.qml:500
 #, kde-format
 msgid "Replace All"
 msgstr "Substitueix-ho tot"
 
-#: src/controls/TextEditor.qml:628
+#: src/controls/TextEditor.qml:627
 #, kde-format
 msgid "Body"
 msgstr "Cos"
