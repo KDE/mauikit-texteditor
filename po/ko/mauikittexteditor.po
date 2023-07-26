@@ -1,0 +1,115 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the mauikit-texteditor package.
+# Shinjo Park <kde@peremen.name>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mauikit-texteditor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-07-12 00:46+0000\n"
+"PO-Revision-Date: 2023-07-26 00:41+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 22.12.3\n"
+
+#: src/code/documenthandler.cpp:179
+#, kde-format
+msgid "File changed externally"
+msgstr "외부에서 파일 변경됨"
+
+#: src/code/documenthandler.cpp:179
+#, kde-format
+msgid "You can reload the file or save your changes now"
+msgstr "파일을 새로 고치거나 지금 저장할 수 있습니다"
+
+#: src/code/documenthandler.cpp:190
+#, kde-format
+msgid "Reload"
+msgstr "새로 고침"
+
+#: src/code/documenthandler.cpp:190
+#, kde-format
+msgid "Auto Reload"
+msgstr "자동 새로 고침"
+
+#: src/code/documenthandler.cpp:190 src/code/documenthandler.cpp:198
+#, kde-format
+msgid "Ignore"
+msgstr "무시"
+
+#: src/code/documenthandler.cpp:196
+#, kde-format
+msgid "File can not be saved"
+msgstr "파일을 저장할 수 없음"
+
+#: src/code/documenthandler.cpp:204
+#, kde-format
+msgid "Your file was removed"
+msgstr "파일이 삭제됨"
+
+#: src/code/documenthandler.cpp:204
+#, kde-format
+msgid ""
+"This file does not longer exist in your local storage, however you can save "
+"it again"
+msgstr "이 파일이 더 이상 로컬 저장소에 없으나 다시 저장할 수 있습니다"
+
+#: src/code/documenthandler.cpp:210
+#, kde-format
+msgid "Save"
+msgstr "저장"
+
+#: src/code/documenthandler.cpp:804
+#, kde-format
+msgid "Cannot save: "
+msgstr "저장할 수 없음: "
+
+#: src/code/documenthandler.cpp:805
+#, kde-format
+msgid "Cannot save file "
+msgstr "파일을 저장할 수 없음 "
+
+#: src/controls/TextEditor.qml:253
+#, kde-format
+msgid "Search Selected Text on Google..."
+msgstr "Google로 선택한 텍스트 검색..."
+
+#: src/controls/TextEditor.qml:280
+#, kde-format
+msgid "Spelling"
+msgstr "맞춤법 검사"
+
+#: src/controls/TextEditor.qml:428
+#, kde-format
+msgid "Case Sensitive"
+msgstr "대소문자 구분"
+
+#: src/controls/TextEditor.qml:435
+#, kde-format
+msgid "Whole Words Only"
+msgstr "단어 단위로"
+
+#: src/controls/TextEditor.qml:445
+#, kde-format
+msgid "Find"
+msgstr "찾기"
+
+#: src/controls/TextEditor.qml:482 src/controls/TextEditor.qml:489
+#, kde-format
+msgid "Replace"
+msgstr "바꾸기"
+
+#: src/controls/TextEditor.qml:500
+#, kde-format
+msgid "Replace All"
+msgstr "모두 바꾸기"
+
+#: src/controls/TextEditor.qml:627
+#, kde-format
+msgid "Body"
+msgstr "본문"
