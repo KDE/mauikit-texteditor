@@ -66,7 +66,7 @@ include(ECMQmlModule)
 option(QUICK_COMPILER "Use QtQuick compiler to improve performance" TRUE)
 
 if(ANDROID)
-    find_package(Qt5 REQUIRED COMPONENTS AndroidExtras)
+    find_package(Qt${QT_MAJOR_VERSION} REQUIRED COMPONENTS AndroidExtras)
 endif()
 
 find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} REQUIRED COMPONENTS

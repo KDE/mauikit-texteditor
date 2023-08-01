@@ -171,7 +171,7 @@ public Q_SLOTS:
     {
         qDebug() << "TRIGGERING DOCUMENT ACTION AT INDEX << " << actionIndex << alertIndex;
         this->m_actions.at(actionIndex).action();
-        emit this->done(alertIndex);
+        Q_EMIT this->done(alertIndex);
     }
 
 Q_SIGNALS:

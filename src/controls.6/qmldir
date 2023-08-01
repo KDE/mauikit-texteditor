@@ -1,0 +1,4 @@
+module org.mauikit.texteditor
+plugin MauiKitTextEditor
+classname TextEditorPlugin
+typeinfo plugins.qmltypes

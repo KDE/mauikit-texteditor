@@ -13,7 +13,9 @@ class TextEditorPlugin : public QQmlExtensionPlugin
     Q_PLUGIN_METADATA(IID QQmlExtensionInterface_iid)
 public:
     void registerTypes(const char *uri) override;
+
 private:    
+    QUrl componentUrl(const QString &fileName) const;
 
     QString resolveFileUrl(const QString &filePath) const
     {
