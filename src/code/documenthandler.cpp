@@ -71,7 +71,7 @@
 #include <QTextDocumentWriter>
 #include <QUrl>
 
-#include <MauiKit/Core/fmh.h>
+#include <MauiKit4/Core/fmh.h>
 
 #if defined Q_OS_MACOS || defined Q_OS_WIN32
 #include <KF5/KSyntaxHighlighting/Definition>
@@ -169,7 +169,7 @@ void FileLoader::loadFile(const QUrl &url)
         if (file.open(QFile::ReadOnly)) {
             const auto array = file.readAll();
             QTextCodec *codec = QTextDocumentWriter(url.toLocalFile()).codec();
-            emit this->fileReady(codec->toUnicode(array), url);
+            Q_EMIT this->fileReady(codec->toUnicode(array), url);
         }
     }
 }
@@ -179,12 +179,12 @@ DocumentAlert *DocumentHandler::externallyModifiedAlert()
     auto alert = new DocumentAlert(i18nd("mauikittexteditor","File changed externally"), i18nd("mauikittexteditor","You can reload the file or save your changes now"), DocumentAlert::WARNING_LEVEL, Alerts::MODIFIED);
     
     const auto reloadAction = [this]() {
-        emit this->loadFile(this->fileUrl());
+        Q_EMIT this->loadFile(this->fileUrl());
     };
     
     const auto autoReloadAction = [this]() {
         this->setAutoReload(true);
-        emit this->loadFile(this->fileUrl());
+        Q_EMIT this->loadFile(this->fileUrl());
     };
     
     alert->setActions({{i18nd("mauikittexteditor","Reload"), reloadAction}, {i18nd("mauikittexteditor","Auto Reload"), autoReloadAction}, {i18nd("mauikittexteditor","Ignore"), []() {}}});
@@ -236,10 +236,10 @@ DocumentHandler::DocumentHandler(QObject *parent)
                 this->textDocument()->setModified(false);
                 
                 this->isRich = Qt::mightBeRichText(this->text());
-                emit this->isRichChanged();
+                Q_EMIT this->isRichChanged();
             }
             
-            emit this->loaded(url);
+            Q_EMIT this->loaded(url);
             
             reset();
         });
@@ -259,7 +259,7 @@ DocumentHandler::DocumentHandler(QObject *parent)
         m_autoSaveTimer.start(AUTOSAVE_TIMEOUT);
     
     connect(this, &DocumentHandler::cursorPositionChanged, [this]() {
-        emit this->currentLineIndexChanged();
+        Q_EMIT this->currentLineIndexChanged();
     });
     
     connect(this->m_watcher, &QFileSystemWatcher::fileChanged, [this](QString url) {
@@ -283,7 +283,7 @@ DocumentHandler::DocumentHandler(QObject *parent)
                 return;
             }
             
-            emit this->loadFile(this->fileUrl());
+            Q_EMIT this->loadFile(this->fileUrl());
         }
     });
 }
@@ -305,7 +305,7 @@ void DocumentHandler::setText(const QString &text)
 {
     if (text != this->m_text) {
         this->m_text = text;
-        emit textChanged();
+        Q_EMIT textChanged();
     }
 }
 
@@ -320,7 +320,7 @@ void DocumentHandler::setAutoReload(const bool &value)
         return;
     
     this->m_autoReload = value;
-    emit this->autoReloadChanged();
+    Q_EMIT this->autoReloadChanged();
 }
 
 bool DocumentHandler::autoSave() const
@@ -334,7 +334,7 @@ void DocumentHandler::setAutoSave(const bool &value)
         return;
     
     m_autoSave = value;
-    emit autoSaveChanged();
+    Q_EMIT autoSaveChanged();
     
     if (m_autoSave) {
         if (!m_autoSaveTimer.isActive())
@@ -362,7 +362,7 @@ void DocumentHandler::setExternallyModified(const bool &value)
         return;
     
     this->m_externallyModified = value;
-    emit this->externallyModifiedChanged();
+    Q_EMIT this->externallyModifiedChanged();
 }
 
 void DocumentHandler::setStyle()
@@ -415,7 +415,7 @@ void DocumentHandler::refreshAllBlocks()
     if (textDocument()) {
         for (QTextBlock it = textDocument()->begin(); it != textDocument()->end(); it = it.next())
         {
-            emit this->textDocument()->documentLayout()->updateBlock(it);
+            Q_EMIT this->textDocument()->documentLayout()->updateBlock(it);
         }
     }
 }
@@ -429,7 +429,7 @@ void DocumentHandler::setFormatName(const QString &formatName)
 {
     if (this->m_formatName != formatName) {
         this->m_formatName = formatName;
-        emit this->formatNameChanged();
+        Q_EMIT this->formatNameChanged();
     }
     
     this->setStyle();
@@ -446,7 +446,7 @@ void DocumentHandler::setBackgroundColor(const QColor &color)
         return;
     
     this->m_backgroundColor = color;
-    emit this->backgroundColorChanged();
+    Q_EMIT this->backgroundColorChanged();
     
     if (!DocumentHandler::m_repository)
         DocumentHandler::m_repository = new KSyntaxHighlighting::Repository();
@@ -465,7 +465,7 @@ QQuickTextDocument *DocumentHandler::document() const
 void DocumentHandler::setDocument(QQuickTextDocument *document)
 {
     this->m_document = document;
-    emit documentChanged();
+    Q_EMIT documentChanged();
     
     if (this->textDocument()) {
         this->textDocument()->setModified(false);
@@ -476,7 +476,7 @@ void DocumentHandler::setDocument(QQuickTextDocument *document)
         //          connect(this->textDocument(), &QTextDocument::cursorPositionChanged, [this](const QTextCursor &)
         //                 {
         //                     qDebug() << "Cursors position changed";
-        //                     emit currentLineIndexChanged();
+        //                     Q_EMIT currentLineIndexChanged();
         //                 });
         
         this->load(m_fileUrl);
@@ -500,7 +500,7 @@ void DocumentHandler::setCursorPosition(int position)
     }
     
     m_cursorPosition = position;
-    emit cursorPositionChanged();
+    Q_EMIT cursorPositionChanged();
 }
 
 int DocumentHandler::selectionStart() const
@@ -514,7 +514,7 @@ void DocumentHandler::setSelectionStart(int position)
         return;
     
     m_selectionStart = position;
-    emit selectionStartChanged();
+    Q_EMIT selectionStartChanged();
 }
 
 int DocumentHandler::selectionEnd() const
@@ -528,7 +528,7 @@ void DocumentHandler::setSelectionEnd(int position)
         return;
     
     m_selectionEnd = position;
-    emit selectionEndChanged();
+    Q_EMIT selectionEndChanged();
 }
 
 QString DocumentHandler::fontFamily() const
@@ -545,7 +545,7 @@ void DocumentHandler::setFontFamily(const QString &family)
     QTextCharFormat format;
     format.setFontFamily(family);
     mergeFormatOnWordOrSelection(format);
-    emit fontFamilyChanged();
+    Q_EMIT fontFamilyChanged();
 }
 
 QColor DocumentHandler::textColor() const
@@ -562,7 +562,7 @@ void DocumentHandler::setTextColor(const QColor &color)
     QTextCharFormat format;
     format.setForeground(QBrush(color));
     mergeFormatOnWordOrSelection(format);
-    emit textColorChanged();
+    Q_EMIT textColorChanged();
 }
 
 Qt::Alignment DocumentHandler::alignment() const
@@ -579,7 +579,7 @@ void DocumentHandler::setAlignment(Qt::Alignment alignment)
     format.setAlignment(alignment);
     QTextCursor cursor = textCursor();
     cursor.mergeBlockFormat(format);
-    emit alignmentChanged();
+    Q_EMIT alignmentChanged();
 }
 
 bool DocumentHandler::bold() const
@@ -595,7 +595,7 @@ void DocumentHandler::setBold(bool bold)
     QTextCharFormat format;
     format.setFontWeight(bold ? QFont::Bold : QFont::Normal);
     mergeFormatOnWordOrSelection(format);
-    emit boldChanged();
+    Q_EMIT boldChanged();
 }
 
 bool DocumentHandler::uppercase() const
@@ -611,7 +611,7 @@ void DocumentHandler::setUppercase(bool uppercase)
     QTextCharFormat format;
     format.setFontCapitalization(uppercase ? QFont::AllUppercase : QFont::AllLowercase);
     mergeFormatOnWordOrSelection(format);
-    emit uppercaseChanged();
+    Q_EMIT uppercaseChanged();
 }
 
 bool DocumentHandler::italic() const
@@ -627,7 +627,7 @@ void DocumentHandler::setItalic(bool italic)
     QTextCharFormat format;
     format.setFontItalic(italic);
     mergeFormatOnWordOrSelection(format);
-    emit italicChanged();
+    Q_EMIT italicChanged();
 }
 
 bool DocumentHandler::underline() const
@@ -643,7 +643,7 @@ void DocumentHandler::setUnderline(bool underline)
     QTextCharFormat format;
     format.setFontUnderline(underline);
     mergeFormatOnWordOrSelection(format);
-    emit underlineChanged();
+    Q_EMIT underlineChanged();
 }
 
 bool DocumentHandler::getIsRich() const
@@ -678,7 +678,7 @@ void DocumentHandler::setFontSize(int size)
     QTextCharFormat format;
     format.setFontPointSize(size);
     mergeFormatOnWordOrSelection(format);
-    emit fontSizeChanged();
+    Q_EMIT fontSizeChanged();
 }
 
 void DocumentHandler::setTabSpace(qreal value)
@@ -694,7 +694,7 @@ void DocumentHandler::setTabSpace(qreal value)
         textDocument()->setDefaultTextOption(textOptions);
     }
     
-    emit tabSpaceChanged();
+    Q_EMIT tabSpaceChanged();
     refreshAllBlocks();
 }
 
@@ -731,8 +731,8 @@ void DocumentHandler::setFileUrl(const QUrl &url)
     
     load(m_fileUrl);
     
-    emit fileUrlChanged();
-    emit fileInfoChanged();
+    Q_EMIT fileUrlChanged();
+    Q_EMIT fileInfoChanged();
 }
 
 QVariantMap DocumentHandler::fileInfo() const
@@ -770,7 +770,7 @@ void DocumentHandler::load(const QUrl &url)
     this->m_watcher->removePaths(this->m_watcher->files());
     this->m_watcher->addPath(m_fileUrl.toLocalFile());
     
-    emit this->loadFile(m_fileUrl);
+    Q_EMIT this->loadFile(m_fileUrl);
     
     if (m_enableSyntaxHighlighting) {
         this->setFormatName(DocumentHandler::getLanguageNameFromFileName(m_fileUrl));
@@ -791,7 +791,7 @@ void DocumentHandler::saveAs(const QUrl &url)
     // 	QTextDocumentWriter textWriter(url.toLocalFile());
     // 	if(!textWriter.write(this->textDocument()))
     // 	{
-    // 		emit error(i18nd("mauikittexteditor","Cannot save file ")+ url.toString());
+    // 		Q_EMIT error(i18nd("mauikittexteditor","Cannot save file ")+ url.toString());
     //         qWarning() << "can not save file" << textWriter.supportedDocumentFormats() << textWriter.format();
     // 		this->m_alerts->append(this->canNotSaveAlert(i18nd("mauikittexteditor","Cannot save file ")+ url.toString()));
     // 		return;
@@ -801,14 +801,14 @@ void DocumentHandler::saveAs(const QUrl &url)
     const bool isHtml = QFileInfo(filePath).suffix().contains(QLatin1String("html"));
     QFile file(filePath);
     if (!file.open(QFile::WriteOnly | QFile::Truncate | (isHtml ? QFile::NotOpen : QFile::Text))) {
-        emit error(i18nd("mauikittexteditor","Cannot save: ") + file.errorString());
+        Q_EMIT error(i18nd("mauikittexteditor","Cannot save: ") + file.errorString());
         this->m_alerts->append(this->canNotSaveAlert(i18nd("mauikittexteditor","Cannot save file ") + file.errorString() + url.toString()));
         
         return;
     }
     file.write((isHtml ? doc->toHtml() : doc->toPlainText()).toUtf8());
     file.close();
-    emit fileSaved();
+    Q_EMIT fileSaved();
     
     doc->setModified(false);
     
@@ -816,7 +816,7 @@ void DocumentHandler::saveAs(const QUrl &url)
         return;
     
     m_fileUrl = url;
-    emit fileUrlChanged();
+    Q_EMIT fileUrlChanged();
 }
 
 const QString DocumentHandler::getLanguageNameFromFileName(const QUrl &fileName)
@@ -843,13 +843,13 @@ const QStringList DocumentHandler::getLanguageNameList()
 
 void DocumentHandler::reset()
 {
-    emit fontFamilyChanged();
-    emit alignmentChanged();
-    emit boldChanged();
-    emit italicChanged();
-    emit underlineChanged();
-    emit fontSizeChanged();
-    emit textColorChanged();
+    Q_EMIT fontFamilyChanged();
+    Q_EMIT alignmentChanged();
+    Q_EMIT boldChanged();
+    Q_EMIT italicChanged();
+    Q_EMIT underlineChanged();
+    Q_EMIT fontSizeChanged();
+    Q_EMIT textColorChanged();
 }
 
 QTextCursor DocumentHandler::textCursor() const
@@ -940,7 +940,7 @@ void DocumentHandler::find(const QString &query,const bool &forward)
             setSelectionStart(found.selectionStart());
             setSelectionEnd(found.selectionEnd());
             setCursorPosition(found.position());
-            emit searchFound(selectionStart(), selectionEnd());
+            Q_EMIT searchFound(selectionStart(), selectionEnd());
         }   
     }
 }
@@ -1075,7 +1075,7 @@ void DocumentHandler::toggleFold(const int &line)
         
         for (QTextBlock it = startBlock; it != endBlock; it = it.next())
         {
-            emit this->textDocument()->documentLayout()->updateBlock(it);
+            Q_EMIT this->textDocument()->documentLayout()->updateBlock(it);
         }
         
         // redraw document
@@ -1083,7 +1083,7 @@ void DocumentHandler::toggleFold(const int &line)
         qDebug() << "Fold line"<< line << startBlock.position() << endBlock.position() << doc->blockCount();
         
         //         // update scrollbars
-        emit doc->documentLayout()->documentSizeChanged(
+        Q_EMIT doc->documentLayout()->documentSizeChanged(
             doc->documentLayout()->documentSize());
     }
 }
@@ -1136,7 +1136,7 @@ void DocumentHandler::setEnableSyntaxHighlighting(const bool &value)
         this->setFormatName(DocumentHandler::getLanguageNameFromFileName(m_fileUrl));
     }
     
-    emit enableSyntaxHighlightingChanged();
+    Q_EMIT enableSyntaxHighlightingChanged();
 }
 
 bool DocumentHandler::enableSyntaxHighlighting() const
@@ -1152,7 +1152,7 @@ void DocumentHandler::setTheme(const QString &theme)
     m_theme = theme;
     setStyle();
     qDebug() << "changinf the theme<< " << theme << m_theme;
-    emit themeChanged();
+    Q_EMIT themeChanged();
 }
 
 QString DocumentHandler::theme() const
