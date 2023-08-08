@@ -95,7 +95,7 @@ set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/MauiKitTextEditor${M
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX TextEditor
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/texteditor_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/MauiKitTextEditorConfigVersion.cmake"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/MauiKitTextEditor${MAUI_MAJOR_VERSION}ConfigVersion.cmake"
     SOVERSION ${PROJECT_VERSION_MAJOR})
 
 configure_package_config_file(
