@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-12 00:46+0000\n"
+"POT-Creation-Date: 2023-08-15 00:44+0000\n"
 "PO-Revision-Date: 2023-02-07 23:37+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -74,41 +74,50 @@ msgstr "無法儲存："
 msgid "Cannot save file "
 msgstr "無法儲存檔案 "
 
+#: src/controls.5/TextEditor.qml:253 src/controls.6/TextEditor.qml:253
 #: src/controls/TextEditor.qml:253
 #, kde-format
 msgid "Search Selected Text on Google..."
 msgstr "在 Google 上搜尋選取的文字…"
 
+#: src/controls.5/TextEditor.qml:280 src/controls.6/TextEditor.qml:280
 #: src/controls/TextEditor.qml:280
 #, kde-format
 msgid "Spelling"
 msgstr "拼字"
 
+#: src/controls.5/TextEditor.qml:428 src/controls.6/TextEditor.qml:428
 #: src/controls/TextEditor.qml:428
 #, kde-format
 msgid "Case Sensitive"
 msgstr "區分大小寫"
 
+#: src/controls.5/TextEditor.qml:435 src/controls.6/TextEditor.qml:435
 #: src/controls/TextEditor.qml:435
 #, kde-format
 msgid "Whole Words Only"
 msgstr "必須符合整個單字"
 
+#: src/controls.5/TextEditor.qml:445 src/controls.6/TextEditor.qml:445
 #: src/controls/TextEditor.qml:445
 #, kde-format
 msgid "Find"
 msgstr "尋找"
 
+#: src/controls.5/TextEditor.qml:482 src/controls.5/TextEditor.qml:489
+#: src/controls.6/TextEditor.qml:482 src/controls.6/TextEditor.qml:489
 #: src/controls/TextEditor.qml:482 src/controls/TextEditor.qml:489
 #, kde-format
 msgid "Replace"
 msgstr "取代"
 
+#: src/controls.5/TextEditor.qml:500 src/controls.6/TextEditor.qml:500
 #: src/controls/TextEditor.qml:500
 #, kde-format
 msgid "Replace All"
 msgstr "全部取代"
 
+#: src/controls.5/TextEditor.qml:627 src/controls.6/TextEditor.qml:627
 #: src/controls/TextEditor.qml:627
 #, kde-format
 msgid "Body"
