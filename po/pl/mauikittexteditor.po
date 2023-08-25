@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-15 00:44+0000\n"
+"POT-Creation-Date: 2023-08-25 00:45+0000\n"
 "PO-Revision-Date: 2023-04-29 10:42+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -77,50 +77,42 @@ msgid "Cannot save file "
 msgstr "Nie można zapisać pliku "
 
 #: src/controls.5/TextEditor.qml:253 src/controls.6/TextEditor.qml:253
-#: src/controls/TextEditor.qml:253
 #, kde-format
 msgid "Search Selected Text on Google..."
 msgstr "Poszukaj zaznaczonego tekstu na Google..."
 
 #: src/controls.5/TextEditor.qml:280 src/controls.6/TextEditor.qml:280
-#: src/controls/TextEditor.qml:280
 #, kde-format
 msgid "Spelling"
 msgstr "Pisownia"
 
 #: src/controls.5/TextEditor.qml:428 src/controls.6/TextEditor.qml:428
-#: src/controls/TextEditor.qml:428
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Rozróżniaj wielkość liter"
 
 #: src/controls.5/TextEditor.qml:435 src/controls.6/TextEditor.qml:435
-#: src/controls/TextEditor.qml:435
 #, kde-format
 msgid "Whole Words Only"
 msgstr "Tylko całe słowa"
 
 #: src/controls.5/TextEditor.qml:445 src/controls.6/TextEditor.qml:445
-#: src/controls/TextEditor.qml:445
 #, kde-format
 msgid "Find"
 msgstr "Poszukaj"
 
 #: src/controls.5/TextEditor.qml:482 src/controls.5/TextEditor.qml:489
 #: src/controls.6/TextEditor.qml:482 src/controls.6/TextEditor.qml:489
-#: src/controls/TextEditor.qml:482 src/controls/TextEditor.qml:489
 #, kde-format
 msgid "Replace"
 msgstr "Zastąp"
 
 #: src/controls.5/TextEditor.qml:500 src/controls.6/TextEditor.qml:500
-#: src/controls/TextEditor.qml:500
 #, kde-format
 msgid "Replace All"
 msgstr "Zastąp wszystkie"
 
 #: src/controls.5/TextEditor.qml:627 src/controls.6/TextEditor.qml:627
-#: src/controls/TextEditor.qml:627
 #, kde-format
 msgid "Body"
 msgstr "Treść"
