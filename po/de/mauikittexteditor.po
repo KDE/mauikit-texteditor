@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-24 00:47+0000\n"
-"PO-Revision-Date: 2023-03-12 16:46+0100\n"
+"POT-Creation-Date: 2023-08-25 00:45+0000\n"
+"PO-Revision-Date: 2023-05-28 10:38+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 23.07.70\n"
 
 #: src/code/documenthandler.cpp:179
 #, kde-format
@@ -27,7 +27,7 @@ msgstr "Die Datei wurde extern geändert"
 #: src/code/documenthandler.cpp:179
 #, kde-format
 msgid "You can reload the file or save your changes now"
-msgstr ""
+msgstr "Sie können die Datei jetzt neu laden oder Ihre Änderungen speichern"
 
 #: src/code/documenthandler.cpp:190
 #, kde-format
@@ -76,42 +76,43 @@ msgstr "Speichern nicht möglich: "
 msgid "Cannot save file "
 msgstr "Die Datei kann nicht gespeichert werden "
 
-#: src/controls/TextEditor.qml:254
+#: src/controls.5/TextEditor.qml:253 src/controls.6/TextEditor.qml:253
 #, kde-format
 msgid "Search Selected Text on Google..."
 msgstr "Mit ausgewähltem Text eine Google-Suche starten ..."
 
-#: src/controls/TextEditor.qml:280
+#: src/controls.5/TextEditor.qml:280 src/controls.6/TextEditor.qml:280
 #, kde-format
 msgid "Spelling"
 msgstr "Rechtschreibung"
 
-#: src/controls/TextEditor.qml:430
+#: src/controls.5/TextEditor.qml:428 src/controls.6/TextEditor.qml:428
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Groß-/Kleinschreibung beachten"
 
-#: src/controls/TextEditor.qml:437
+#: src/controls.5/TextEditor.qml:435 src/controls.6/TextEditor.qml:435
 #, kde-format
 msgid "Whole Words Only"
 msgstr "Nur ganze Wörter"
 
-#: src/controls/TextEditor.qml:447
+#: src/controls.5/TextEditor.qml:445 src/controls.6/TextEditor.qml:445
 #, kde-format
 msgid "Find"
 msgstr "Suchen"
 
-#: src/controls/TextEditor.qml:484 src/controls/TextEditor.qml:491
+#: src/controls.5/TextEditor.qml:482 src/controls.5/TextEditor.qml:489
+#: src/controls.6/TextEditor.qml:482 src/controls.6/TextEditor.qml:489
 #, kde-format
 msgid "Replace"
 msgstr "Ersetzen"
 
-#: src/controls/TextEditor.qml:502
+#: src/controls.5/TextEditor.qml:500 src/controls.6/TextEditor.qml:500
 #, kde-format
 msgid "Replace All"
 msgstr "Alle ersetzen"
 
-#: src/controls/TextEditor.qml:629
+#: src/controls.5/TextEditor.qml:627 src/controls.6/TextEditor.qml:627
 #, kde-format
 msgid "Body"
 msgstr "Nachrichtentext"

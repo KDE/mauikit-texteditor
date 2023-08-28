@@ -48,8 +48,7 @@
  **
  ****************************************************************************/
 
-#ifndef DOCUMENTHANDLER_H
-#define DOCUMENTHANDLER_H
+#pragma once
 
 #include <QAbstractListModel>
 #include <QDebug>
@@ -162,7 +161,7 @@ private:
 
     QVector<AlertAction> m_actions;
 
-public slots:
+public Q_SLOTS:
     /**
      * @brief triggerAction
      * @param actionIndex
@@ -172,10 +171,10 @@ public slots:
     {
         qDebug() << "TRIGGERING DOCUMENT ACTION AT INDEX << " << actionIndex << alertIndex;
         this->m_actions.at(actionIndex).action();
-        emit this->done(alertIndex);
+        Q_EMIT this->done(alertIndex);
     }
 
-signals:
+Q_SIGNALS:
     /**
      * @brief done
      * @param index
@@ -215,14 +214,14 @@ class FileLoader : public QObject
 {
     Q_OBJECT
 
-public slots:
+public Q_SLOTS:
     /**
      * @brief loadFile
      * @param url
      */
     void loadFile(const QUrl &url);
 
-signals:
+Q_SIGNALS:
     /**
      * @brief fileReady
      * @param array
@@ -597,7 +596,7 @@ public:
         return (darkness > 0.5);
     }
 
-public slots:
+public Q_SLOTS:
     /**
      * @brief load
      * @param url
@@ -654,8 +653,7 @@ public slots:
      */
     static const QString getLanguageNameFromFileName(const QUrl &fileName);
 
-
-signals:
+Q_SIGNALS:
     void documentChanged();
     void fileSaved();
 
@@ -763,5 +761,3 @@ private:
     
     void refreshAllBlocks();
 };
-
-#endif // DOCUMENTHANDLER_H

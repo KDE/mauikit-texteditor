@@ -1,54 +1,56 @@
-# Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the mauikit-texteditor package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-25 00:45+0000\n"
-"PO-Revision-Date: 2023-01-01 15:49+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
-"Language-Team: fr\n"
-"Language: fr\n"
+"PO-Revision-Date: 2023-08-05 07:55+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
 
 #: src/code/documenthandler.cpp:179
 #, kde-format
 msgid "File changed externally"
-msgstr "Fichier modifié de façon externe"
+msgstr "Filen ändrades externt"
 
 #: src/code/documenthandler.cpp:179
 #, kde-format
 msgid "You can reload the file or save your changes now"
-msgstr ""
-"Vous pouvez recharger le fichier ou enregistrer vos modifications maintenant"
+msgstr "Du kan läsa in filen igen eller spara dina ändringar nu"
 
 #: src/code/documenthandler.cpp:190
 #, kde-format
 msgid "Reload"
-msgstr "Recharger"
+msgstr "Läs in igen"
 
 #: src/code/documenthandler.cpp:190
 #, kde-format
 msgid "Auto Reload"
-msgstr "Recharger automatiquement"
+msgstr "Automatisk återinläsning"
 
 #: src/code/documenthandler.cpp:190 src/code/documenthandler.cpp:198
 #, kde-format
 msgid "Ignore"
-msgstr "Ignorer"
+msgstr "Ignorera"
 
 #: src/code/documenthandler.cpp:196
 #, kde-format
 msgid "File can not be saved"
-msgstr "Il est impossible d'enregistrer le fichier."
+msgstr "Filen kan inte sparas"
 
 #: src/code/documenthandler.cpp:204
 #, kde-format
 msgid "Your file was removed"
-msgstr "Votre fichier a été supprimé"
+msgstr "Filen har tagits bort"
 
 #: src/code/documenthandler.cpp:204
 #, kde-format
@@ -56,61 +58,60 @@ msgid ""
 "This file does not longer exist in your local storage, however you can save "
 "it again"
 msgstr ""
-"Ce fichier n'existe plus sur votre support d'enregistrement, cependant, vous "
-"pouvez l'enregistrer à nouveau."
+"Filen finns inte längre i lokal lagring, men du kan dock spara den igen"
 
 #: src/code/documenthandler.cpp:210
 #, kde-format
 msgid "Save"
-msgstr "Enregistrer"
+msgstr "Spara"
 
 #: src/code/documenthandler.cpp:804
 #, kde-format
 msgid "Cannot save: "
-msgstr "Impossible d'enregistrer :"
+msgstr "Kan inte spara:"
 
 #: src/code/documenthandler.cpp:805
 #, kde-format
 msgid "Cannot save file "
-msgstr "Impossible d'enregistrer un fichier "
+msgstr "Kan inte spara fil"
 
 #: src/controls.5/TextEditor.qml:253 src/controls.6/TextEditor.qml:253
 #, kde-format
 msgid "Search Selected Text on Google..."
-msgstr "Rechercher le texte sélectionné dans Google..."
+msgstr "Sök i markerad text eller med Google..."
 
 #: src/controls.5/TextEditor.qml:280 src/controls.6/TextEditor.qml:280
 #, kde-format
 msgid "Spelling"
-msgstr "Vérification orthographique"
+msgstr "Stavning"
 
 #: src/controls.5/TextEditor.qml:428 src/controls.6/TextEditor.qml:428
 #, kde-format
 msgid "Case Sensitive"
-msgstr "Sensible à la casse"
+msgstr "Skiftlägeskänslig"
 
 #: src/controls.5/TextEditor.qml:435 src/controls.6/TextEditor.qml:435
 #, kde-format
 msgid "Whole Words Only"
-msgstr "Mots entiers uniquement"
+msgstr "Bara hela ord"
 
 #: src/controls.5/TextEditor.qml:445 src/controls.6/TextEditor.qml:445
 #, kde-format
 msgid "Find"
-msgstr "Trouver"
+msgstr "Sök"
 
 #: src/controls.5/TextEditor.qml:482 src/controls.5/TextEditor.qml:489
 #: src/controls.6/TextEditor.qml:482 src/controls.6/TextEditor.qml:489
 #, kde-format
 msgid "Replace"
-msgstr "Remplacer"
+msgstr "Ersätt"
 
 #: src/controls.5/TextEditor.qml:500 src/controls.6/TextEditor.qml:500
 #, kde-format
 msgid "Replace All"
-msgstr "Tout remplacer"
+msgstr "Ersätt alla"
 
 #: src/controls.5/TextEditor.qml:627 src/controls.6/TextEditor.qml:627
 #, kde-format
 msgid "Body"
-msgstr "Corps"
+msgstr "Text"
