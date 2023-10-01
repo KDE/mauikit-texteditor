@@ -45,7 +45,7 @@ msgstr "Ignorar"
 #: src/code/documenthandler.cpp:196
 #, kde-format
 msgid "File can not be saved"
-msgstr "Non se pode gardar o ficheiro"
+msgstr "Non é posíbel gardar o ficheiro"
 
 #: src/code/documenthandler.cpp:204
 #, kde-format
@@ -68,12 +68,12 @@ msgstr "Gardar"
 #: src/code/documenthandler.cpp:804
 #, kde-format
 msgid "Cannot save: "
-msgstr "Non se pode gardar: "
+msgstr "Non é posíbel gardar: "
 
 #: src/code/documenthandler.cpp:805
 #, kde-format
 msgid "Cannot save file "
-msgstr "Non se pode gardar o ficheiro "
+msgstr "Non é posíbel gardar o ficheiro "
 
 #: src/controls.5/TextEditor.qml:253 src/controls.6/TextEditor.qml:253
 #, kde-format
