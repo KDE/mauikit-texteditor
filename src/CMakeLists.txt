@@ -9,7 +9,11 @@ ecm_add_qml_module(MauiKitTextEditor${MAUI_MAJOR_VERSION} URI "org.mauikit.texte
 set(sources
     code/texteditor_plugin.cpp
     code/documenthandler.cpp
+    code/moduleinfo.cpp
     code/colorschemesmodel.cpp)
+
+set(headers
+    code/moduleinfo.h)
 
 if(QT_MAJOR_VERSION STREQUAL "5")
     if(QUICK_COMPILER)
