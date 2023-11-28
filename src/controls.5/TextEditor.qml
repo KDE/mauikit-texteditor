@@ -21,6 +21,7 @@ import org.kde.sonnet 1.0 as Sonnet
 Page
 {
     id: control
+
     padding: 0
     focus: false
     clip: false
@@ -44,17 +45,19 @@ Page
      *      \qmlproperty TextArea Editor::body
      * Access to the editor text area.
      */
-    property alias body : body
+    readonly property alias body : body
 
     /*!
      *      \qmlproperty DocumentHandler Editor::document
      */
-    property alias document : document
+    readonly property alias document : document
 
     /*!
      *      \qmlproperty ScrollablePage Editor::scrollView
      */
-    property alias scrollView: _scrollView
+    readonly property alias scrollView: _scrollView
+
+    readonly property alias documentMenu : _documentMenuLoader.item
 
     /*!
      *      \qmlproperty string Editor::text
@@ -127,8 +130,8 @@ Page
         property Sonnet.Settings settings: Sonnet.Settings {}
         active: activable && settings.checkerEnabledByDefault
         onActiveChanged: if (active) {
-            item.active = true;
-        }
+                             item.active = true;
+                         }
         sourceComponent: Sonnet.SpellcheckHighlighter {
             id: spellcheckhighlighter
             document:  body.textDocument
@@ -145,256 +148,261 @@ Page
         }
     }
 
-    Maui.ContextualMenu
+    Loader
     {
-        id: documentMenu
-        property var spellcheckhighlighter: null
-        property var spellcheckhighlighterLoader: null
-        property int restoredCursorPosition: 0
-        property int restoredSelectionStart
-        property int restoredSelectionEnd
-        property var suggestions: []
-        property bool deselectWhenMenuClosed: true
-        property var runOnMenuClose: () => {}
-        property bool persistentSelectionSetting
-        Component.onCompleted: persistentSelectionSetting = body.persistentSelection
+        id: _documentMenuLoader
 
-        Maui.MenuItemActionRow
+        asynchronous: true
+        sourceComponent: Maui.ContextualMenu
         {
-            Action
-            {
-                icon.name: "edit-undo-symbolic"
-                text: qsTr("Undo")
-                shortcut: StandardKey.Undo
+            property var spellcheckhighlighter: null
+            property var spellcheckhighlighterLoader: null
+            property int restoredCursorPosition: 0
+            property int restoredSelectionStart
+            property int restoredSelectionEnd
+            property var suggestions: []
+            property bool deselectWhenMenuClosed: true
+            property var runOnMenuClose: () => {}
+            property bool persistentSelectionSetting
+            Component.onCompleted: persistentSelectionSetting = body.persistentSelection
 
-                onTriggered:
+            Maui.MenuItemActionRow
+            {
+                Action
                 {
-                    documentMenu.deselectWhenMenuClosed = false;
-                    documentMenu.runOnMenuClose = () => body.undo();
-                }
-            }
+                    icon.name: "edit-undo-symbolic"
+                    text: qsTr("Undo")
+                    shortcut: StandardKey.Undo
 
-            Action
-            {
-                icon.name: "edit-redo-symbolic"
-                text: qsTr("Redo")
-                shortcut: StandardKey.Redo
-
-                onTriggered:
-                {
-                    documentMenu.deselectWhenMenuClosed = false;
-                    documentMenu.runOnMenuClose = () => body.redo();
-                }
-            }
-        }
-
-        MenuItem
-        {
-            action: Action {
-                icon.name: "edit-copy-symbolic"
-                text: qsTr("Copy")
-                shortcut: StandardKey.Copy
-            }
-            onTriggered:
-            {
-                documentMenu.deselectWhenMenuClosed = false;
-                documentMenu.runOnMenuClose = () => control.body.copy();
-            }
-            enabled: body.selectedText.length
-        }
-
-        MenuItem
-        {
-            action: Action {
-                icon.name: "edit-cut-symbolic"
-                text: qsTr("Cut")
-                shortcut: StandardKey.Cut
-            }
-            onTriggered:
-            {
-                documentMenu.deselectWhenMenuClosed = false;
-                documentMenu.runOnMenuClose = () => control.body.cut();
-            }
-            enabled: !body.readOnly && body.selectedText.length
-        }
-
-        MenuItem
-        {
-            action: Action {
-                icon.name: "edit-paste-symbolic"
-                text: qsTr("Paste")
-                shortcut: StandardKey.Paste
-            }
-            onTriggered:
-            {
-                documentMenu.deselectWhenMenuClosed = false;
-                documentMenu.runOnMenuClose = () => control.body.paste();
-            }
-            enabled: !body.readOnly
-        }
-
-
-        MenuItem
-        {
-            action: Action {
-                icon.name: "edit-select-all-symbolic"
-                text: qsTr("Select All")
-                shortcut: StandardKey.SelectAll
-            }
-            onTriggered:
-            {
-                documentMenu.deselectWhenMenuClosed = false
-                documentMenu.runOnMenuClose = () => control.body.selectAll();
-            }
-        }
-
-        MenuItem
-        {
-            text: i18nd("mauikittexteditor","Search Selected Text on Google...")
-            onTriggered: Qt.openUrlExternally("https://www.google.com/search?q="+body.selectedText)
-            enabled: body.selectedText.length
-        }
-
-        MenuItem
-        {
-            enabled: !control.body.readOnly && control.body.selectedText
-            action: Action {
-                icon.name: "edit-delete-symbolic"
-                text: qsTr("Delete")
-                shortcut: StandardKey.Delete
-            }
-            onTriggered: {
-                documentMenu.deselectWhenMenuClosed = false;
-                documentMenu.runOnMenuClose = () => control.body.remove(control.body.selectionStart, control.body.selectionEnd);
-            }
-        }
-
-
-        MenuSeparator
-        {
-        }
-
-        Menu
-        {
-            id: _spellingMenu
-            title: i18nd("mauikittexteditor","Spelling")
-            enabled: control.spellcheckEnabled
-
-            Instantiator
-            {
-                id: _suggestions
-                active: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled
-                model: documentMenu.suggestions
-                delegate: MenuItem
-                {
-                    text: modelData
-                    onClicked:
+                    onTriggered:
                     {
                         documentMenu.deselectWhenMenuClosed = false;
-                        documentMenu.runOnMenuClose = () => documentMenu.spellcheckhighlighter.replaceWord(modelData);
+                        documentMenu.runOnMenuClose = () => body.undo();
                     }
                 }
-                onObjectAdded:
+
+                Action
                 {
-                    _spellingMenu.insertItem(0, object)
-                }
-                onObjectRemoved: _spellingMenu.removeItem(0)
-            }
+                    icon.name: "edit-redo-symbolic"
+                    text: qsTr("Redo")
+                    shortcut: StandardKey.Redo
 
-            MenuSeparator
-            {
-                enabled: !control.body.readOnly && ((documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled) || (documentMenu.spellcheckhighlighterLoader && documentMenu.spellcheckhighlighterLoader.activable))
-            }
-
-            MenuItem {
-                enabled: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled && documentMenu.suggestions.length === 0
-                action: Action {
-                    text: documentMenu.spellcheckhighlighter ? qsTr("No suggestions for \"%1\"").arg(documentMenu.spellcheckhighlighter.wordUnderMouse) : ''
-                    enabled: false
-                }
-            }
-            MenuItem {
-                enabled: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled
-                action: Action {
-                    text: documentMenu.spellcheckhighlighter ? qsTr("Add \"%1\" to dictionary").arg(documentMenu.spellcheckhighlighter.wordUnderMouse) : ''
-                    onTriggered: {
+                    onTriggered:
+                    {
                         documentMenu.deselectWhenMenuClosed = false;
-                        documentMenu.runOnMenuClose = () => spellcheckhighlighter.addWordToDictionary(documentMenu.spellcheckhighlighter.wordUnderMouse);
-                    }
-                }
-            }
-
-            MenuItem {
-                enabled: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled
-                action: Action {
-                    text: qsTr("Ignore")
-                    onTriggered: {
-                        documentMenu.deselectWhenMenuClosed = false;
-                        documentMenu.runOnMenuClose = () => documentMenu.spellcheckhighlighter.ignoreWord(documentMenu.spellcheckhighlighter.wordUnderMouse);
+                        documentMenu.runOnMenuClose = () => body.redo();
                     }
                 }
             }
 
             MenuItem
             {
-                enabled: !control.body.readOnly && documentMenu.spellcheckhighlighterLoader && documentMenu.spellcheckhighlighterLoader.activable
-                checkable: true
-                checked: documentMenu.spellcheckhighlighter ? documentMenu.spellcheckhighlighter.active : false
-                text: qsTr("Enable Spellchecker")
-                onCheckedChanged: {
-                    spellcheckhighlighterLoader.active = checked;
-                    documentMenu.spellcheckhighlighter = documentMenu.spellcheckhighlighterLoader.item;
+                action: Action {
+                    icon.name: "edit-copy-symbolic"
+                    text: qsTr("Copy")
+                    shortcut: StandardKey.Copy
+                }
+                onTriggered:
+                {
+                    documentMenu.deselectWhenMenuClosed = false;
+                    documentMenu.runOnMenuClose = () => control.body.copy();
+                }
+                enabled: body.selectedText.length
+            }
+
+            MenuItem
+            {
+                action: Action {
+                    icon.name: "edit-cut-symbolic"
+                    text: qsTr("Cut")
+                    shortcut: StandardKey.Cut
+                }
+                onTriggered:
+                {
+                    documentMenu.deselectWhenMenuClosed = false;
+                    documentMenu.runOnMenuClose = () => control.body.cut();
+                }
+                enabled: !body.readOnly && body.selectedText.length
+            }
+
+            MenuItem
+            {
+                action: Action {
+                    icon.name: "edit-paste-symbolic"
+                    text: qsTr("Paste")
+                    shortcut: StandardKey.Paste
+                }
+                onTriggered:
+                {
+                    documentMenu.deselectWhenMenuClosed = false;
+                    documentMenu.runOnMenuClose = () => control.body.paste();
+                }
+                enabled: !body.readOnly
+            }
+
+
+            MenuItem
+            {
+                action: Action {
+                    icon.name: "edit-select-all-symbolic"
+                    text: qsTr("Select All")
+                    shortcut: StandardKey.SelectAll
+                }
+                onTriggered:
+                {
+                    documentMenu.deselectWhenMenuClosed = false
+                    documentMenu.runOnMenuClose = () => control.body.selectAll();
                 }
             }
-        }
 
-        function targetClick(spellcheckhighlighter, mousePosition)
-        {
-            control.body.persistentSelection = true; // persist selection when menu is opened
-            documentMenu.spellcheckhighlighterLoader = spellcheckhighlighter;
-            if (spellcheckhighlighter && spellcheckhighlighter.active) {
-                documentMenu.spellcheckhighlighter = spellcheckhighlighter.item;
-                documentMenu.suggestions = mousePosition ? spellcheckhighlighter.item.suggestions(mousePosition) : [];
-            } else {
-                documentMenu.spellcheckhighlighter = null;
-                documentMenu.suggestions = [];
-            }
-
-            storeCursorAndSelection();
-            documentMenu.show()
-        }
-
-        function storeCursorAndSelection()
-        {
-            documentMenu.restoredCursorPosition = control.body.cursorPosition;
-            documentMenu.restoredSelectionStart = control.body.selectionStart;
-            documentMenu.restoredSelectionEnd = control.body.selectionEnd;
-        }
-
-        onOpened:
-        {
-            runOnMenuClose = () => {};
-        }
-
-        onClosed:
-        {
-            // restore text field's original persistent selection setting
-            body.persistentSelection = documentMenu.persistentSelectionSetting
-            // deselect text field text if menu is closed not because of a right click on the text field
-            if (documentMenu.deselectWhenMenuClosed)
+            MenuItem
             {
-                body.deselect();
+                text: i18nd("mauikittexteditor","Search Selected Text on Google...")
+                onTriggered: Qt.openUrlExternally("https://www.google.com/search?q="+body.selectedText)
+                enabled: body.selectedText.length
             }
-            documentMenu.deselectWhenMenuClosed = true;
 
-            // restore cursor position
-            body.forceActiveFocus();
-            body.cursorPosition = documentMenu.restoredCursorPosition;
-            body.select(documentMenu.restoredSelectionStart, documentMenu.restoredSelectionEnd);
+            MenuItem
+            {
+                enabled: !control.body.readOnly && control.body.selectedText
+                action: Action {
+                    icon.name: "edit-delete-symbolic"
+                    text: qsTr("Delete")
+                    shortcut: StandardKey.Delete
+                }
+                onTriggered: {
+                    documentMenu.deselectWhenMenuClosed = false;
+                    documentMenu.runOnMenuClose = () => control.body.remove(control.body.selectionStart, control.body.selectionEnd);
+                }
+            }
 
-            // run action, and free memory
-            runOnMenuClose();
-            runOnMenuClose = () => {};
+
+            MenuSeparator
+            {
+            }
+
+            Menu
+            {
+                id: _spellingMenu
+                title: i18nd("mauikittexteditor","Spelling")
+                enabled: control.spellcheckEnabled
+
+                Instantiator
+                {
+                    id: _suggestions
+                    active: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled
+                    model: documentMenu.suggestions
+                    delegate: MenuItem
+                    {
+                        text: modelData
+                        onClicked:
+                        {
+                            documentMenu.deselectWhenMenuClosed = false;
+                            documentMenu.runOnMenuClose = () => documentMenu.spellcheckhighlighter.replaceWord(modelData);
+                        }
+                    }
+                    onObjectAdded:
+                    {
+                        _spellingMenu.insertItem(0, object)
+                    }
+                    onObjectRemoved: _spellingMenu.removeItem(0)
+                }
+
+                MenuSeparator
+                {
+                    enabled: !control.body.readOnly && ((documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled) || (documentMenu.spellcheckhighlighterLoader && documentMenu.spellcheckhighlighterLoader.activable))
+                }
+
+                MenuItem {
+                    enabled: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled && documentMenu.suggestions.length === 0
+                    action: Action {
+                        text: documentMenu.spellcheckhighlighter ? qsTr("No suggestions for \"%1\"").arg(documentMenu.spellcheckhighlighter.wordUnderMouse) : ''
+                        enabled: false
+                    }
+                }
+                MenuItem {
+                    enabled: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled
+                    action: Action {
+                        text: documentMenu.spellcheckhighlighter ? qsTr("Add \"%1\" to dictionary").arg(documentMenu.spellcheckhighlighter.wordUnderMouse) : ''
+                        onTriggered: {
+                            documentMenu.deselectWhenMenuClosed = false;
+                            documentMenu.runOnMenuClose = () => spellcheckhighlighter.addWordToDictionary(documentMenu.spellcheckhighlighter.wordUnderMouse);
+                        }
+                    }
+                }
+
+                MenuItem {
+                    enabled: !control.body.readOnly && documentMenu.spellcheckhighlighter !== null && documentMenu.spellcheckhighlighter.active && documentMenu.spellcheckhighlighter.wordIsMisspelled
+                    action: Action {
+                        text: qsTr("Ignore")
+                        onTriggered: {
+                            documentMenu.deselectWhenMenuClosed = false;
+                            documentMenu.runOnMenuClose = () => documentMenu.spellcheckhighlighter.ignoreWord(documentMenu.spellcheckhighlighter.wordUnderMouse);
+                        }
+                    }
+                }
+
+                MenuItem
+                {
+                    enabled: !control.body.readOnly && documentMenu.spellcheckhighlighterLoader && documentMenu.spellcheckhighlighterLoader.activable
+                    checkable: true
+                    checked: documentMenu.spellcheckhighlighter ? documentMenu.spellcheckhighlighter.active : false
+                    text: qsTr("Enable Spellchecker")
+                    onCheckedChanged: {
+                        spellcheckhighlighterLoader.active = checked;
+                        documentMenu.spellcheckhighlighter = documentMenu.spellcheckhighlighterLoader.item;
+                    }
+                }
+            }
+
+            function targetClick(spellcheckhighlighter, mousePosition)
+            {
+                control.body.persistentSelection = true; // persist selection when menu is opened
+                documentMenu.spellcheckhighlighterLoader = spellcheckhighlighter;
+                if (spellcheckhighlighter && spellcheckhighlighter.active) {
+                    documentMenu.spellcheckhighlighter = spellcheckhighlighter.item;
+                    documentMenu.suggestions = mousePosition ? spellcheckhighlighter.item.suggestions(mousePosition) : [];
+                } else {
+                    documentMenu.spellcheckhighlighter = null;
+                    documentMenu.suggestions = [];
+                }
+
+                storeCursorAndSelection();
+                documentMenu.show()
+            }
+
+            function storeCursorAndSelection()
+            {
+                documentMenu.restoredCursorPosition = control.body.cursorPosition;
+                documentMenu.restoredSelectionStart = control.body.selectionStart;
+                documentMenu.restoredSelectionEnd = control.body.selectionEnd;
+            }
+
+            onOpened:
+            {
+                runOnMenuClose = () => {};
+            }
+
+            onClosed:
+            {
+                // restore text field's original persistent selection setting
+                body.persistentSelection = documentMenu.persistentSelectionSetting
+                // deselect text field text if menu is closed not because of a right click on the text field
+                if (documentMenu.deselectWhenMenuClosed)
+                {
+                    body.deselect();
+                }
+                documentMenu.deselectWhenMenuClosed = true;
+
+                // restore cursor position
+                body.forceActiveFocus();
+                body.cursorPosition = documentMenu.restoredCursorPosition;
+                body.select(documentMenu.restoredSelectionStart, documentMenu.restoredSelectionEnd);
+
+                // run action, and free memory
+                runOnMenuClose();
+                runOnMenuClose = () => {};
+            }
         }
     }
 
@@ -457,13 +465,6 @@ Page
                     icon.name: "arrow-up"
                     onTriggered: document.find(_findField.text, false)
                 }
-
-                //                    Action
-                //                    {
-                //                        enabled: _findField.text.length
-                //                        icon.name: "arrow-down"
-                //                        onTriggered: document.find(_findField.text, true)
-                //                    }
                 ]
             }
         }
@@ -475,6 +476,7 @@ Page
             visible: _replaceButton.checked && _findToolBar.visible
             width: parent.width
             enabled: !body.readOnly
+            forceCenterMiddleContent: false
 
             middleContent: Maui.SearchField
             {
@@ -493,14 +495,12 @@ Page
                 }
             }
 
-            rightContent: [
-            Button
+            rightContent: Button
             {
                 enabled: _replaceField.text.length
                 text: i18nd("mauikittexteditor","Replace All")
                 onClicked: document.replaceAll(_findField.text, _replaceField.text)
             }
-            ]
         }
     }
 
@@ -523,9 +523,9 @@ Page
                 {
                     switch(alert.level)
                     {
-                        case 0: return Maui.Theme.positiveBackgroundColor
-                        case 1: return Maui.Theme.neutralBackgroundColor
-                        case 2: return Maui.Theme.negativeBackgroundColor
+                    case 0: return Maui.Theme.positiveBackgroundColor
+                    case 1: return Maui.Theme.neutralBackgroundColor
+                    case 2: return Maui.Theme.negativeBackgroundColor
                     }
                 }
 
@@ -533,38 +533,38 @@ Page
                 {
                     switch(alert.level)
                     {
-                        case 0: return Maui.Theme.positiveTextColor
-                        case 1: return Maui.Theme.neutralTextColor
-                        case 2: return Maui.Theme.negativeTextColor
+                    case 0: return Maui.Theme.positiveTextColor
+                    case 1: return Maui.Theme.neutralTextColor
+                    case 2: return Maui.Theme.negativeTextColor
                     }
                 }
 
                 forceCenterMiddleContent: false
-                    middleContent: Maui.ListItemTemplate
+                middleContent: Maui.ListItemTemplate
+                {
+                    Maui.Theme.inherit: true
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    label1.text: alert.title
+                    label2.text: alert.body
+                }
+
+                rightContent: Repeater
+                {
+                    model: alert.actionLabels
+
+                    Button
                     {
-                        Maui.Theme.inherit: true
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                        label1.text: alert.title
-                        label2.text: alert.body
+                        id: _alertAction
+                        property int index_ : index
+                        text: modelData
+                        onClicked: alert.triggerAction(_alertAction.index_, _alertBar.index_)
+
+                        Maui.Theme.backgroundColor: Qt.lighter(_alertBar.Maui.Theme.backgroundColor, 1.2)
+                        Maui.Theme.hoverColor: Qt.lighter(_alertBar.Maui.Theme.backgroundColor, 1)
+                        Maui.Theme.textColor: Qt.darker(Maui.Theme.backgroundColor)
                     }
-
-                    rightContent: Repeater
-                    {
-                        model: alert.actionLabels
-
-                        Button
-                        {
-                            id: _alertAction
-                            property int index_ : index
-                            text: modelData
-                            onClicked: alert.triggerAction(_alertAction.index_, _alertBar.index_)
-
-                            Maui.Theme.backgroundColor: Qt.lighter(_alertBar.Maui.Theme.backgroundColor, 1.2)
-                            Maui.Theme.hoverColor: Qt.lighter(_alertBar.Maui.Theme.backgroundColor, 1)
-                            Maui.Theme.textColor: Qt.darker(Maui.Theme.backgroundColor)
-                        }
-                    }
+                }
             }
         }
     }
@@ -647,11 +647,11 @@ Page
 
                     onPressAndHold:
                     {
-//                         if(Maui.Handy.isMobile)
-//                         {
-//                             return
-//                         }
-//
+                        //                         if(Maui.Handy.isMobile)
+                        //                         {
+                        //                             return
+                        //                         }
+                        //
                         documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(point.position.x, point.position.y));
                     }
 
@@ -814,16 +814,21 @@ Page
             }
         }
 
+        Loader
+        {
+            active: Maui.Handy.isTouch
+            asynchronous: true
 
-            Maui.FloatingButton
+            anchors.bottom: parent.bottom
+            anchors.right: parent.right
+            anchors.margins: Maui.Style.space.big
+
+            sourceComponent: Maui.FloatingButton
             {
-                visible: Maui.Handy.isTouch
                 icon.name: "edit-menu"
                 onClicked: documentMenu.targetClick(spellcheckhighlighterLoader, body.cursorPosition)
-                anchors.bottom: parent.bottom
-                anchors.right: parent.right
-                anchors.margins: Maui.Style.space.big
             }
+        }
     }
 
     function forceActiveFocus()
