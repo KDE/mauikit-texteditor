@@ -4,11 +4,9 @@
 #include <KAboutData>
 #include "texteditor_export.h"
 
-namespace MauiKitCore
+namespace MauiKitTextEditor
 {
    TEXTEDITOR_EXPORT QString versionString();
    TEXTEDITOR_EXPORT QString buildVersion();
    TEXTEDITOR_EXPORT KAboutComponent aboutData();
-
-   TEXTEDITOR_EXPORT KAboutComponent aboutLuv();
 };

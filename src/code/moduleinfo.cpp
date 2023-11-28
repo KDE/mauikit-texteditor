@@ -2,17 +2,17 @@
 #include "../texteditor_version.h"
 #include <KI18n/KLocalizedString>
 
-QString MauiKitCore::versionString()
+QString MauiKitTextEditor::versionString()
 {
     return QStringLiteral(TextEditor_VERSION_STRING);
 }
 
-QString MauiKitCore::buildVersion()
+QString MauiKitTextEditor::buildVersion()
 {
     return GIT_BRANCH+QStringLiteral("/")+GIT_COMMIT_HASH;
 }
 
-KAboutComponent MauiKitCore::aboutData()
+KAboutComponent MauiKitTextEditor::aboutData()
 {
     return KAboutComponent(QStringLiteral("MauiKit TextEditor"),
                          i18n("Text editor controls."),

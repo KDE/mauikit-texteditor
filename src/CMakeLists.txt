@@ -28,7 +28,8 @@ ecm_target_qml_sources(MauiKitTextEditor${MAUI_MAJOR_VERSION} SOURCES
 
 target_sources(MauiKitTextEditor${MAUI_MAJOR_VERSION}
     PRIVATE
-    ${sources})
+    ${sources}
+    ${headers})
 
 add_library(MauiKit${MAUI_MAJOR_VERSION}::TextEditor ALIAS MauiKitTextEditor${MAUI_MAJOR_VERSION})
 
