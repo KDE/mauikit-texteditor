@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:29+0000\n"
+"POT-Creation-Date: 2023-11-29 00:41+0000\n"
 "PO-Revision-Date: 2022-12-31 16:02+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -76,38 +76,43 @@ msgstr "Cannot save: "
 msgid "Cannot save file "
 msgstr "Cannot save file "
 
-#: src/controls.5/TextEditor.qml:253 src/controls.6/TextEditor.qml:253
+#: src/code/moduleinfo.cpp:18
+#, kde-format
+msgid "Text editor controls."
+msgstr ""
+
+#: src/controls.5/TextEditor.qml:260 src/controls.6/TextEditor.qml:253
 #, kde-format
 msgid "Search Selected Text on Google..."
 msgstr "Search Selected Text on Google..."
 
-#: src/controls.5/TextEditor.qml:280 src/controls.6/TextEditor.qml:280
+#: src/controls.5/TextEditor.qml:287 src/controls.6/TextEditor.qml:280
 #, kde-format
 msgid "Spelling"
 msgstr "Spelling"
 
-#: src/controls.5/TextEditor.qml:428 src/controls.6/TextEditor.qml:428
+#: src/controls.5/TextEditor.qml:436 src/controls.6/TextEditor.qml:428
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Case Sensitive"
 
-#: src/controls.5/TextEditor.qml:435 src/controls.6/TextEditor.qml:435
+#: src/controls.5/TextEditor.qml:443 src/controls.6/TextEditor.qml:435
 #, kde-format
 msgid "Whole Words Only"
 msgstr "Whole Words Only"
 
-#: src/controls.5/TextEditor.qml:445 src/controls.6/TextEditor.qml:445
+#: src/controls.5/TextEditor.qml:453 src/controls.6/TextEditor.qml:445
 #, kde-format
 msgid "Find"
 msgstr "Find"
 
-#: src/controls.5/TextEditor.qml:482 src/controls.5/TextEditor.qml:489
+#: src/controls.5/TextEditor.qml:484 src/controls.5/TextEditor.qml:491
 #: src/controls.6/TextEditor.qml:482 src/controls.6/TextEditor.qml:489
 #, kde-format
 msgid "Replace"
 msgstr "Replace"
 
-#: src/controls.5/TextEditor.qml:500 src/controls.6/TextEditor.qml:500
+#: src/controls.5/TextEditor.qml:501 src/controls.6/TextEditor.qml:500
 #, kde-format
 msgid "Replace All"
 msgstr "Replace All"
