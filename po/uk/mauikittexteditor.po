@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the mauikit-texteditor package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 00:41+0000\n"
-"PO-Revision-Date: 2022-11-11 17:40+0200\n"
+"PO-Revision-Date: 2023-11-29 09:34+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -80,7 +80,7 @@ msgstr "Не вдалося зберегти файл"
 #: src/code/moduleinfo.cpp:18
 #, kde-format
 msgid "Text editor controls."
-msgstr ""
+msgstr "Засоби керування текстового редактора."
 
 #: src/controls.5/TextEditor.qml:260 src/controls.6/TextEditor.qml:253
 #, kde-format
