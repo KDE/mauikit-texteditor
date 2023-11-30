@@ -1,15 +1,15 @@
 # Translation of mauikittexteditor.po to Catalan
-# Copyright (C) 2022 This_file_is_part_of_KDE
+# Copyright (C) 2022-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-25 00:45+0000\n"
-"PO-Revision-Date: 2022-11-11 13:31+0100\n"
+"POT-Creation-Date: 2023-11-29 00:41+0000\n"
+"PO-Revision-Date: 2023-11-29 15:24+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: src/code/documenthandler.cpp:179
 #, kde-format
@@ -78,38 +78,43 @@ msgstr "No es pot desar: "
 msgid "Cannot save file "
 msgstr "No s'ha pogut desar el fitxer"
 
-#: src/controls.5/TextEditor.qml:253 src/controls.6/TextEditor.qml:253
+#: src/code/moduleinfo.cpp:18
+#, kde-format
+msgid "Text editor controls."
+msgstr "Controls de l'editor de text."
+
+#: src/controls.5/TextEditor.qml:260 src/controls.6/TextEditor.qml:253
 #, kde-format
 msgid "Search Selected Text on Google..."
 msgstr "Cerca a Google el text seleccionat..."
 
-#: src/controls.5/TextEditor.qml:280 src/controls.6/TextEditor.qml:280
+#: src/controls.5/TextEditor.qml:287 src/controls.6/TextEditor.qml:280
 #, kde-format
 msgid "Spelling"
 msgstr "Ortografia"
 
-#: src/controls.5/TextEditor.qml:428 src/controls.6/TextEditor.qml:428
+#: src/controls.5/TextEditor.qml:436 src/controls.6/TextEditor.qml:428
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Distingeix majúscules i minúscules"
 
-#: src/controls.5/TextEditor.qml:435 src/controls.6/TextEditor.qml:435
+#: src/controls.5/TextEditor.qml:443 src/controls.6/TextEditor.qml:435
 #, kde-format
 msgid "Whole Words Only"
 msgstr "Només paraules senceres"
 
-#: src/controls.5/TextEditor.qml:445 src/controls.6/TextEditor.qml:445
+#: src/controls.5/TextEditor.qml:453 src/controls.6/TextEditor.qml:445
 #, kde-format
 msgid "Find"
 msgstr "Cerca"
 
-#: src/controls.5/TextEditor.qml:482 src/controls.5/TextEditor.qml:489
+#: src/controls.5/TextEditor.qml:484 src/controls.5/TextEditor.qml:491
 #: src/controls.6/TextEditor.qml:482 src/controls.6/TextEditor.qml:489
 #, kde-format
 msgid "Replace"
 msgstr "Substitueix"
 
-#: src/controls.5/TextEditor.qml:500 src/controls.6/TextEditor.qml:500
+#: src/controls.5/TextEditor.qml:501 src/controls.6/TextEditor.qml:500
 #, kde-format
 msgid "Replace All"
 msgstr "Substitueix-ho tot"

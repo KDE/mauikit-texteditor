@@ -1,18 +1,18 @@
-# Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
+# SPDX-FileCopyrightText: 2023 Xavier BESNARD <xavier.besnard@neuf.fr>
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-25 00:45+0000\n"
-"PO-Revision-Date: 2023-01-01 15:49+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"POT-Creation-Date: 2023-11-29 00:41+0000\n"
+"PO-Revision-Date: 2023-11-01 14:37+0100\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: src/code/documenthandler.cpp:179
 #, kde-format
@@ -56,7 +56,7 @@ msgid ""
 "This file does not longer exist in your local storage, however you can save "
 "it again"
 msgstr ""
-"Ce fichier n'existe plus sur votre support d'enregistrement, cependant, vous "
+"Ce fichier n'existe plus sur votre média d'enregistrement, cependant, vous "
 "pouvez l'enregistrer à nouveau."
 
 #: src/code/documenthandler.cpp:210
@@ -74,38 +74,43 @@ msgstr "Impossible d'enregistrer :"
 msgid "Cannot save file "
 msgstr "Impossible d'enregistrer un fichier "
 
-#: src/controls.5/TextEditor.qml:253 src/controls.6/TextEditor.qml:253
+#: src/code/moduleinfo.cpp:18
+#, kde-format
+msgid "Text editor controls."
+msgstr ""
+
+#: src/controls.5/TextEditor.qml:260 src/controls.6/TextEditor.qml:253
 #, kde-format
 msgid "Search Selected Text on Google..."
 msgstr "Rechercher le texte sélectionné dans Google..."
 
-#: src/controls.5/TextEditor.qml:280 src/controls.6/TextEditor.qml:280
+#: src/controls.5/TextEditor.qml:287 src/controls.6/TextEditor.qml:280
 #, kde-format
 msgid "Spelling"
 msgstr "Vérification orthographique"
 
-#: src/controls.5/TextEditor.qml:428 src/controls.6/TextEditor.qml:428
+#: src/controls.5/TextEditor.qml:436 src/controls.6/TextEditor.qml:428
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Sensible à la casse"
 
-#: src/controls.5/TextEditor.qml:435 src/controls.6/TextEditor.qml:435
+#: src/controls.5/TextEditor.qml:443 src/controls.6/TextEditor.qml:435
 #, kde-format
 msgid "Whole Words Only"
 msgstr "Mots entiers uniquement"
 
-#: src/controls.5/TextEditor.qml:445 src/controls.6/TextEditor.qml:445
+#: src/controls.5/TextEditor.qml:453 src/controls.6/TextEditor.qml:445
 #, kde-format
 msgid "Find"
 msgstr "Trouver"
 
-#: src/controls.5/TextEditor.qml:482 src/controls.5/TextEditor.qml:489
+#: src/controls.5/TextEditor.qml:484 src/controls.5/TextEditor.qml:491
 #: src/controls.6/TextEditor.qml:482 src/controls.6/TextEditor.qml:489
 #, kde-format
 msgid "Replace"
 msgstr "Remplacer"
 
-#: src/controls.5/TextEditor.qml:500 src/controls.6/TextEditor.qml:500
+#: src/controls.5/TextEditor.qml:501 src/controls.6/TextEditor.qml:500
 #, kde-format
 msgid "Replace All"
 msgstr "Tout remplacer"
