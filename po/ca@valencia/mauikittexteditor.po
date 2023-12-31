@@ -86,7 +86,7 @@ msgstr "Controls de l'editor de text."
 #: src/controls.5/TextEditor.qml:260 src/controls.6/TextEditor.qml:253
 #, kde-format
 msgid "Search Selected Text on Google..."
-msgstr "Busca a Google el text seleccionat..."
+msgstr "Busca en Google el text seleccionat..."
 
 #: src/controls.5/TextEditor.qml:287 src/controls.6/TextEditor.qml:280
 #, kde-format
