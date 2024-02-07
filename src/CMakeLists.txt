@@ -24,7 +24,8 @@ if(QT_MAJOR_VERSION STREQUAL "5")
 endif()
 
 ecm_target_qml_sources(MauiKitTextEditor${MAUI_MAJOR_VERSION} SOURCES
-    controls.${QT_MAJOR_VERSION}/TextEditor.qml)
+    controls.${QT_MAJOR_VERSION}/TextEditor.qml
+    controls.${QT_MAJOR_VERSION}/ColorSchemesPage.qml)
 
 target_sources(MauiKitTextEditor${MAUI_MAJOR_VERSION}
     PRIVATE

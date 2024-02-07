@@ -18,6 +18,7 @@ void TextEditorPlugin::registerTypes(const char *uri)
     qmlRegisterType<DocumentHandler>(uri, 1, 0, "DocumentHandler");
     qmlRegisterType<ColorSchemesModel>(uri, 1, 0, "ColorSchemesModel");
     qmlRegisterType(componentUrl(QStringLiteral("TextEditor.qml")), uri, 1, 0, "TextEditor");
+    qmlRegisterType(componentUrl(QStringLiteral("ColorSchemesPage.qml")), uri, 1, 0, "ColorSchemesPage");
 }
 
 QUrl TextEditorPlugin::componentUrl(const QString &fileName) const
