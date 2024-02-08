@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 00:41+0000\n"
+"POT-Creation-Date: 2024-02-08 01:39+0000\n"
 "PO-Revision-Date: 2023-11-29 18:11+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -78,6 +78,39 @@ msgstr "Impossibile salvare il file "
 #, kde-format
 msgid "Text editor controls."
 msgstr "Controlli dell'editor di testo."
+
+#: src/controls.5/ColorSchemesPage.qml:11
+#: src/controls.5/ColorSchemesPage.qml:20
+#, kde-format
+msgid "Colors"
+msgstr ""
+
+#: src/controls.5/ColorSchemesPage.qml:21
+#, kde-format
+msgid ""
+"Configure the style of the syntax highliting. This configuration in not "
+"applied for rich text formats."
+msgstr ""
+
+#: src/controls.5/ColorSchemesPage.qml:25
+#, kde-format
+msgid "Color"
+msgstr ""
+
+#: src/controls.5/ColorSchemesPage.qml:26
+#, kde-format
+msgid "Editor background color."
+msgstr ""
+
+#: src/controls.5/ColorSchemesPage.qml:57
+#, kde-format
+msgid "Theme"
+msgstr ""
+
+#: src/controls.5/ColorSchemesPage.qml:58
+#, kde-format
+msgid "Editor color scheme style."
+msgstr ""
 
 #: src/controls.5/TextEditor.qml:260 src/controls.6/TextEditor.qml:253
 #, kde-format
