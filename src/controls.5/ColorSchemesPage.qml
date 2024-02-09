@@ -18,7 +18,7 @@ import org.mauikit.texteditor 1.0 as TE
             Maui.SectionGroup
             {
                 title: i18n("Colors")
-                description: i18n("Configure the style of the syntax highliting. This configuration in not applied for rich text formats.")
+                description: i18n("Configure the style of the syntax highlighting. This configuration in not applied for rich text formats.")
 
                 Maui.SectionItem
                 {
