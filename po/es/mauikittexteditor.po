@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the mauikit-texteditor package.
 #
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikittexteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-08 01:39+0000\n"
-"PO-Revision-Date: 2023-11-30 00:55+0100\n"
+"PO-Revision-Date: 2024-02-08 12:28+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: src/code/documenthandler.cpp:179
 #, kde-format
@@ -87,7 +87,7 @@ msgstr "Controles del editor de texto."
 #: src/controls.5/ColorSchemesPage.qml:20
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "Colores"
 
 #: src/controls.5/ColorSchemesPage.qml:21
 #, kde-format
@@ -95,26 +95,28 @@ msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
+"Configura el estilo del resaltado sintáctico. Esta configuración no se "
+"aplica a los formatos de texto enriquecido."
 
 #: src/controls.5/ColorSchemesPage.qml:25
 #, kde-format
 msgid "Color"
-msgstr ""
+msgstr "Color"
 
 #: src/controls.5/ColorSchemesPage.qml:26
 #, kde-format
 msgid "Editor background color."
-msgstr ""
+msgstr "Color del fondo del editor."
 
 #: src/controls.5/ColorSchemesPage.qml:57
 #, kde-format
 msgid "Theme"
-msgstr ""
+msgstr "Tema"
 
 #: src/controls.5/ColorSchemesPage.qml:58
 #, kde-format
 msgid "Editor color scheme style."
-msgstr ""
+msgstr "Estilo del esquema de color del editor."
 
 #: src/controls.5/TextEditor.qml:260 src/controls.6/TextEditor.qml:253
 #, kde-format

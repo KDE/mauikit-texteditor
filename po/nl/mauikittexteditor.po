@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the mauikit-texteditor package.
 #
-# SPDX-FileCopyrightText: 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-08 01:39+0000\n"
-"PO-Revision-Date: 2023-11-29 18:06+0100\n"
+"PO-Revision-Date: 2024-02-08 14:12+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: src/code/documenthandler.cpp:179
 #, kde-format
@@ -85,7 +85,7 @@ msgstr "Besturing van de tekstbewerker."
 #: src/controls.5/ColorSchemesPage.qml:20
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "Kleuren"
 
 #: src/controls.5/ColorSchemesPage.qml:21
 #, kde-format
@@ -93,26 +93,28 @@ msgid ""
 "Configure the style of the syntax highliting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
+"De stijl van de syntaxisaccentuering configureren. Deze configuratie wordt "
+"niet toegepast voor indelingen met opgemaakte tekst."
 
 #: src/controls.5/ColorSchemesPage.qml:25
 #, kde-format
 msgid "Color"
-msgstr ""
+msgstr "Kleur"
 
 #: src/controls.5/ColorSchemesPage.qml:26
 #, kde-format
 msgid "Editor background color."
-msgstr ""
+msgstr "Achtergrondkleur van bewerker."
 
 #: src/controls.5/ColorSchemesPage.qml:57
 #, kde-format
 msgid "Theme"
-msgstr ""
+msgstr "Thema"
 
 #: src/controls.5/ColorSchemesPage.qml:58
 #, kde-format
 msgid "Editor color scheme style."
-msgstr ""
+msgstr "Kleurenschemastijl van bewerker."
 
 #: src/controls.5/TextEditor.qml:260 src/controls.6/TextEditor.qml:253
 #, kde-format

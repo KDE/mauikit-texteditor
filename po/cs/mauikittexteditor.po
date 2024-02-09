@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the mauikit-texteditor package.
-# Vit Pelcak <vit@pelcak.org>, 2023.
+# SPDX-FileCopyrightText: 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-08 01:39+0000\n"
-"PO-Revision-Date: 2023-01-30 16:34+0100\n"
+"PO-Revision-Date: 2024-01-19 15:49+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: src/code/documenthandler.cpp:179
 #, kde-format
@@ -77,13 +77,13 @@ msgstr "Nelze uložit soubor "
 #: src/code/moduleinfo.cpp:18
 #, kde-format
 msgid "Text editor controls."
-msgstr ""
+msgstr "Ovládání editoru textu."
 
 #: src/controls.5/ColorSchemesPage.qml:11
 #: src/controls.5/ColorSchemesPage.qml:20
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "Barvy"
 
 #: src/controls.5/ColorSchemesPage.qml:21
 #, kde-format
@@ -95,7 +95,7 @@ msgstr ""
 #: src/controls.5/ColorSchemesPage.qml:25
 #, kde-format
 msgid "Color"
-msgstr ""
+msgstr "Barva"
 
 #: src/controls.5/ColorSchemesPage.qml:26
 #, kde-format
@@ -105,7 +105,7 @@ msgstr ""
 #: src/controls.5/ColorSchemesPage.qml:57
 #, kde-format
 msgid "Theme"
-msgstr ""
+msgstr "Motiv"
 
 #: src/controls.5/ColorSchemesPage.qml:58
 #, kde-format
