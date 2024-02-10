@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-08 01:39+0000\n"
-"PO-Revision-Date: 2023-11-29 22:32+0100\n"
+"POT-Creation-Date: 2024-02-10 01:51+0000\n"
+"PO-Revision-Date: 2024-02-09 21:14+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -86,34 +86,34 @@ msgstr "Tekstredaktilaj regiloj."
 #: src/controls.5/ColorSchemesPage.qml:20
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "Koloroj"
 
 #: src/controls.5/ColorSchemesPage.qml:21
 #, kde-format
 msgid ""
-"Configure the style of the syntax highliting. This configuration in not "
+"Configure the style of the syntax highlighting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
 
 #: src/controls.5/ColorSchemesPage.qml:25
 #, kde-format
 msgid "Color"
-msgstr ""
+msgstr "Koloro"
 
 #: src/controls.5/ColorSchemesPage.qml:26
 #, kde-format
 msgid "Editor background color."
-msgstr ""
+msgstr "Fonkoloro de redaktilo."
 
 #: src/controls.5/ColorSchemesPage.qml:57
 #, kde-format
 msgid "Theme"
-msgstr ""
+msgstr "Etoso"
 
 #: src/controls.5/ColorSchemesPage.qml:58
 #, kde-format
 msgid "Editor color scheme style."
-msgstr ""
+msgstr "Kolorskemo de redaktilo."
 
 #: src/controls.5/TextEditor.qml:260 src/controls.6/TextEditor.qml:253
 #, kde-format
