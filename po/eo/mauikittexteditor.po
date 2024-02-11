@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-10 01:51+0000\n"
-"PO-Revision-Date: 2024-02-09 21:14+0100\n"
+"PO-Revision-Date: 2024-02-10 07:05+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -94,6 +94,8 @@ msgid ""
 "Configure the style of the syntax highlighting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
+"Agordi la stilon de la sintaksreliefigo. Ĉi agordo ne estas aplikata por "
+"riĉaj tekstformatoj."
 
 #: src/controls.5/ColorSchemesPage.qml:25
 #, kde-format
