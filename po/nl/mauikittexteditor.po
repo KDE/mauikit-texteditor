@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-10 01:51+0000\n"
-"PO-Revision-Date: 2024-02-08 14:12+0100\n"
+"PO-Revision-Date: 2024-02-10 11:15+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -88,10 +88,7 @@ msgid "Colors"
 msgstr "Kleuren"
 
 #: src/controls.5/ColorSchemesPage.qml:21
-#, fuzzy, kde-format
-#| msgid ""
-#| "Configure the style of the syntax highliting. This configuration in not "
-#| "applied for rich text formats."
+#, kde-format
 msgid ""
 "Configure the style of the syntax highlighting. This configuration in not "
 "applied for rich text formats."
