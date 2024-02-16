@@ -630,7 +630,7 @@ Page
 
                     leftPadding: _linesCounter.width + padding
 
-                    Keys.onPressed:
+                    Keys.onPressed: (event) =>
                     {
                         if(event.key === Qt.Key_PageUp)
                         {
@@ -645,17 +645,17 @@ Page
                         }                                    // TODO: Move cursor
                     }
 
-                    onPressAndHold:
+                    onPressAndHold: (event) =>
                     {
                         //                         if(Maui.Handy.isMobile)
                         //                         {
                         //                             return
                         //                         }
                         //
-                        documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(point.position.x, point.position.y));
+                        documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(event.x, event.y));
                     }
 
-                    onPressed:
+                    onPressed: (event) =>
                     {
                         if(Maui.Handy.isMobile)
                         {
