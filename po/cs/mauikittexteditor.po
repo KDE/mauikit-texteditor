@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-10 01:51+0000\n"
-"PO-Revision-Date: 2024-01-19 15:49+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-02-19 17:05+0100\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -100,7 +100,7 @@ msgstr "Barva"
 #: src/controls.5/ColorSchemesPage.qml:26
 #, kde-format
 msgid "Editor background color."
-msgstr ""
+msgstr "Barva pozadí editoru."
 
 #: src/controls.5/ColorSchemesPage.qml:57
 #, kde-format
@@ -110,7 +110,7 @@ msgstr "Motiv"
 #: src/controls.5/ColorSchemesPage.qml:58
 #, kde-format
 msgid "Editor color scheme style."
-msgstr ""
+msgstr "Styl barevného schématu editoru."
 
 #: src/controls.5/TextEditor.qml:260 src/controls.6/TextEditor.qml:253
 #, kde-format
