@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the mauikit-texteditor package.
-# Tommi Nieminen <translator@legisign.org>, 2022, 2023.
+# Tommi Nieminen <translator@legisign.org>, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-10 01:51+0000\n"
-"PO-Revision-Date: 2023-12-11 18:15+0200\n"
+"PO-Revision-Date: 2024-02-14 19:00+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -85,7 +85,7 @@ msgstr "Tekstimuokkainsäätimet."
 #: src/controls.5/ColorSchemesPage.qml:20
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "Värit"
 
 #: src/controls.5/ColorSchemesPage.qml:21
 #, kde-format
@@ -93,26 +93,27 @@ msgid ""
 "Configure the style of the syntax highlighting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
+"Aseta syntaksikorostuksen tyyli. Asetusta ei käytetä muotoiltuun tekstiin."
 
 #: src/controls.5/ColorSchemesPage.qml:25
 #, kde-format
 msgid "Color"
-msgstr ""
+msgstr "Väri"
 
 #: src/controls.5/ColorSchemesPage.qml:26
 #, kde-format
 msgid "Editor background color."
-msgstr ""
+msgstr "Muokkaimen taustaväri."
 
 #: src/controls.5/ColorSchemesPage.qml:57
 #, kde-format
 msgid "Theme"
-msgstr ""
+msgstr "Teema"
 
 #: src/controls.5/ColorSchemesPage.qml:58
 #, kde-format
 msgid "Editor color scheme style."
-msgstr ""
+msgstr "Muokkaimen värimalli."
 
 #: src/controls.5/TextEditor.qml:260 src/controls.6/TextEditor.qml:253
 #, kde-format
