@@ -10,7 +10,8 @@ set(sources
     code/texteditor_plugin.cpp
     code/documenthandler.cpp
     code/moduleinfo.cpp
-    code/colorschemesmodel.cpp)
+    code/colorschemesmodel.cpp
+    code/linenumbermodel.cpp)
 
 set(headers
     code/moduleinfo.h)

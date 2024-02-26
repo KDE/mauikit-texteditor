@@ -41,6 +41,10 @@ Page
         }
     }
 
+    onWidthChanged: body.update()
+
+    onHeightChanged: body.update()
+
     /*!
      *      \qmlproperty TextArea Editor::body
      * Access to the editor text area.
@@ -104,6 +108,11 @@ Page
     property bool showLineNumbers : false
 
     property bool spellcheckEnabled: false
+
+    FontMetrics {
+        id: fontMetrics
+        font: body.font
+    }
 
     TE.DocumentHandler
     {
@@ -459,12 +468,12 @@ Page
 
                 actions:[
 
-                Action
-                {
-                    enabled: _findField.text.length
-                    icon.name: "arrow-up"
-                    onTriggered: document.find(_findField.text, false)
-                }
+                    Action
+                    {
+                        enabled: _findField.text.length
+                        icon.name: "arrow-up"
+                        onTriggered: document.find(_findField.text, false)
+                    }
                 ]
             }
         }
@@ -571,186 +580,100 @@ Page
 
     contentItem: Item
     {
-        clip: false
 
-        ScrollView
+        RowLayout
         {
-            id: _scrollView
             anchors.fill: parent
             clip: false
-            contentWidth: availableWidth
 
-            Keys.enabled: true
-            Keys.forwardTo: body
-            Keys.onPressed:
+            Loader
             {
-                if((event.key === Qt.Key_F) && (event.modifiers & Qt.ControlModifier))
-                {
-                    control.showFindBar = true
+                id: _linesCounter
+                asynchronous: true
+                active: control.showLineNumbers && !document.isRich
 
-                    if(control.body.selectedText.length)
-                    {
-                        _findField.text =  control.body.selectedText
-                    }else
-                    {
-                        _findField.selectAll()
-                    }
+                Layout.fillHeight: true
+                Layout.preferredWidth: active ?  fontMetrics.averageCharacterWidth
+                                                * (Math.floor(Math.log10(body.lineCount)) + 1) + 10 : 0
 
-                    _findField.forceActiveFocus()
-                    event.accepted = true
-                }
 
-                if((event.key === Qt.Key_R) && (event.modifiers & Qt.ControlModifier))
-                {
-                    control.showFindBar = true
-                    _replaceButton.checked = true
-                    _findField.text = control.body.selectedText
-                    _replaceField.forceActiveFocus()
-                    event.accepted = true
-                }
+                sourceComponent: _linesCounterComponent
             }
 
-            Flickable
+            Component
             {
-                id: _flickable
-                clip: false
-                interactive: true
-                boundsBehavior : Flickable.StopAtBounds
-                boundsMovement : Flickable.StopAtBounds
+                id: _linesCounterComponent
 
-                TextArea.flickable: TextArea
+                Flickable
                 {
-                    id: body
-                    Maui.Theme.inherit: true
-                    text: document.text
+                    id: _linesFlickable
+                    interactive: false
+                    //                contentY: _flickable.contentY
 
-                    placeholderText: i18nd("mauikittexteditor","Body")
-
-                    textFormat: TextEdit.PlainText
-
-                    leftPadding: _linesCounter.width + padding
-
-                    Keys.onPressed: (event) =>
+                    Binding on contentY
                     {
-                        if(event.key === Qt.Key_PageUp)
-                        {
-                            _flickable.flick(0,  60*Math.sqrt(_flickable.height))
-                            event.accepted = true
-                        }
-
-                        if(event.key === Qt.Key_PageDown)
-                        {
-                            _flickable.flick(0, -60*Math.sqrt(_flickable.height))
-                            event.accepted = true
-                        }                                    // TODO: Move cursor
+                        value: _flickable.contentY
+                        restoreMode: Binding.RestoreBindingOrValue
                     }
 
-                    onPressAndHold: (event) =>
+                    Rectangle
                     {
-                        //                         if(Maui.Handy.isMobile)
-                        //                         {
-                        //                             return
-                        //                         }
-                        //
-                        documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(event.x, event.y));
-                    }
+                        anchors.fill: parent
+                        anchors.topMargin: body.topPadding + body.textMargin
 
-                    onPressed: (event) =>
-                    {
-                        if(Maui.Handy.isMobile)
+                        implicitHeight: Math.max(_linesCounterList.contentHeight, control.height)
+
+                        color: Qt.darker(Maui.Theme.backgroundColor, 1)
+
+
+                        Column
                         {
-                            return
-                        }
+                            id: _linesCounterList
+                            anchors.fill: parent
 
-                        if(event.button === Qt.RightButton)
-                        {
-                            documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(event.x, event.y))
-                        }
-                    }
 
-                    Loader
-                    {
-                        id: _linesCounter
-                        asynchronous: true
-                        active: control.showLineNumbers && !document.isRich
 
-                        anchors.left: parent.left
-                        anchors.top: parent.top
+                            //                                Binding on currentIndex
+                            //                                {
+                            //                                    value: document.currentLineIndex
+                            //                                    restoreMode: Binding.RestoreBindingOrValue
+                            //                                }
 
-                        height: Math.max(_flickable.contentHeight, control.height)
-                        width: active ? 48 : 0
-                        sourceComponent: _linesCounterComponent
-                    }
+                            //                                Timer
+                            //                                {
+                            //                                    id: _lineIndexTimer
+                            //                                    interval: 250
+                            //                                    onTriggered: _linesCounterList.currentIndex = document.currentLineIndex
+                            //                                }
 
-                    Component
-                    {
-                        id: _linesCounterComponent
+                            //                                Connections
+                            //                                {
+                            //                                    target: document
+                            //                                    function onLineCountChanged()
+                            //                                    {
+                            //                                        _lineIndexTimer.restart()
+                            //                                    }
+                            //                                }
 
-                        Rectangle
-                        {
-                            color: Qt.darker(Maui.Theme.backgroundColor, 1)
-
-                            ListView
+                            Repeater
                             {
-                                id: _linesCounterList
 
-                                anchors.fill: parent
-                                anchors.topMargin: body.topPadding + body.textMargin
-
-                                model: document.lineCount
-
-                                Binding on currentIndex
+                                model: TE.LineNumberModel
                                 {
-                                    value: document.currentLineIndex
-                                    restoreMode: Binding.RestoreBindingOrValue
+                                    lineCount: body.text !== "" ? document.lineCount : 0
                                 }
-
-                                Timer
-                                {
-                                    id: _lineIndexTimer
-                                    interval: 250
-                                    onTriggered: _linesCounterList.currentIndex= document.currentLineIndex
-                                }
-
-                                Connections
-                                {
-                                    target: document
-                                    function onLineCountChanged()
-                                    {
-                                        _lineIndexTimer.restart()
-                                    }
-                                }
-
-                                orientation: ListView.Vertical
-                                interactive: false
-                                snapMode: ListView.NoSnap
-
-                                boundsBehavior: Flickable.StopAtBounds
-                                boundsMovement :Flickable.StopAtBounds
-
-                                preferredHighlightBegin: 0
-                                preferredHighlightEnd: width
-
-                                highlightRangeMode: ListView.StrictlyEnforceRange
-                                highlightMoveDuration: 0
-                                highlightFollowsCurrentItem: false
-                                highlightResizeDuration: 0
-                                highlightMoveVelocity: -1
-                                highlightResizeVelocity: -1
-
-                                maximumFlickVelocity: 0
 
                                 delegate: Row
                                 {
                                     id: _delegate
+
                                     readonly property int line : index
                                     property bool foldable : control.document.isFoldable(line)
-                                    width:  ListView.view.width
-                                    height: Math.max(fontSize, document.lineHeight(line))
 
-                                    readonly property real fontSize : control.body.font.pointSize
+                                    width: parent.width
+                                    height: Math.max(Math.ceil(fontMetrics.lineSpacing), document.lineHeight(line))
 
-                                    readonly property bool isCurrentItem : ListView.isCurrentItem
+                                    readonly property bool isCurrentItem : document.currentLineIndex === index
 
                                     Connections
                                     {
@@ -758,12 +681,23 @@ Page
 
                                         function onContentHeightChanged()
                                         {
+                                            if(body.wrapMode !== Text.NoWrap)
+                                            {
+                                                _delegate.height = control.document.lineHeight(_delegate.line)
+                                            }
+
                                             if(_delegate.isCurrentItem)
                                             {
                                                 console.log("Updating line height")
-                                                _delegate.height = control.document.lineHeight(_delegate.line)
                                                 _delegate.foldable = control.document.isFoldable(_delegate.line)
                                             }
+
+                                            _linesFlickable.contentY = _flickable.contentY
+                                        }
+
+                                        function onWrapModeChanged()
+                                        {
+                                             _delegate.height = control.document.lineHeight(_delegate.line)
                                         }
                                     }
 
@@ -772,13 +706,19 @@ Page
                                         width: 32
                                         height: parent.height
                                         opacity: isCurrentItem  ? 1 : 0.7
-                                        color: isCurrentItem ? control.Maui.Theme.highlightColor : control.body.color
+                                        color: isCurrentItem ? control.Maui.Theme.highlightedTextColor  : control.body.color
                                         font.pointSize: Math.min(Maui.Style.fontSizes.medium, body.font.pointSize)
                                         horizontalAlignment: Text.AlignHCenter
                                         verticalAlignment: Text.AlignVCenter
                                         //                                         renderType: Text.NativeRendering
                                         font.family: "Monospace"
                                         text: index+1
+
+                                        background: Rectangle
+                                        {
+                                            visible: isCurrentItem
+                                            color: Maui.Theme.highlightColor
+                                        }
                                     }
 
                                     AbstractButton
@@ -812,25 +752,133 @@ Page
                     }
                 }
             }
-        }
 
-        Loader
-        {
-            active: Maui.Handy.isTouch
-            asynchronous: true
 
-            anchors.bottom: parent.bottom
-            anchors.right: parent.right
-            anchors.margins: Maui.Style.space.big
-
-            sourceComponent: Maui.FloatingButton
+            ScrollView
             {
-                icon.name: "edit-menu"
-                onClicked: documentMenu.targetClick(spellcheckhighlighterLoader, body.cursorPosition)
+                id: _scrollView
+
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+
+                clip: false
+
+                ScrollBar.horizontal.policy: ScrollBar.AsNeeded
+
+                Keys.enabled: true
+                Keys.forwardTo: body
+                Keys.onPressed: (event) =>
+                                {
+                                    if((event.key === Qt.Key_F) && (event.modifiers & Qt.ControlModifier))
+                                    {
+                                        control.showFindBar = true
+
+                                        if(control.body.selectedText.length)
+                                        {
+                                            _findField.text =  control.body.selectedText
+                                        }else
+                                        {
+                                            _findField.selectAll()
+                                        }
+
+                                        _findField.forceActiveFocus()
+                                        event.accepted = true
+                                    }
+
+                                    if((event.key === Qt.Key_R) && (event.modifiers & Qt.ControlModifier))
+                                    {
+                                        control.showFindBar = true
+                                        _replaceButton.checked = true
+                                        _findField.text = control.body.selectedText
+                                        _replaceField.forceActiveFocus()
+                                        event.accepted = true
+                                    }
+                                }
+
+                Flickable
+                {
+                    id: _flickable
+                    clip: false
+                    interactive: true
+                    boundsBehavior : Flickable.StopAtBounds
+                    boundsMovement : Flickable.StopAtBounds
+
+                    TextArea.flickable: TextArea
+                    {
+                        id: body
+                        Maui.Theme.inherit: true
+                        text: document.text
+
+                        placeholderText: i18nd("mauikittexteditor","Body")
+
+                        textFormat: TextEdit.PlainText
+
+                        leftPadding: _linesCounter.width + padding
+
+                        tabStopDistance: fontMetrics.averageCharacterWidth * 4
+                        renderType: Text.QtRendering
+                        antialiasing: true
+
+                        Keys.onPressed: (event) =>
+                                        {
+                                            if(event.key === Qt.Key_PageUp)
+                                            {
+                                                _flickable.flick(0,  60*Math.sqrt(_flickable.height))
+                                                event.accepted = true
+                                            }
+
+                                            if(event.key === Qt.Key_PageDown)
+                                            {
+                                                _flickable.flick(0, -60*Math.sqrt(_flickable.height))
+                                                event.accepted = true
+                                            }                                    // TODO: Move cursor
+                                        }
+
+                        onPressAndHold: (event) =>
+                                        {
+                                            //                         if(Maui.Handy.isMobile)
+                                            //                         {
+                                            //                             return
+                                            //                         }
+                                            //
+                                            documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(event.x, event.y));
+                                        }
+
+                        onPressed: (event) =>
+                                   {
+                                       if(Maui.Handy.isMobile)
+                                       {
+                                           return
+                                       }
+
+                                       if(event.button === Qt.RightButton)
+                                       {
+                                           documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(event.x, event.y))
+                                       }
+                                   }
+                    }
+                }
+
+                Loader
+                {
+                    active: Maui.Handy.isTouch
+                    asynchronous: true
+
+                    anchors.bottom: parent.bottom
+                    anchors.right: parent.right
+                    anchors.margins: Maui.Style.space.big
+
+                    sourceComponent: Maui.FloatingButton
+                    {
+                        icon.name: "edit-menu"
+                        onClicked: documentMenu.targetClick(spellcheckhighlighterLoader, body.cursorPosition)
+                    }
+                }
             }
         }
-    }
 
+
+    }
     function forceActiveFocus()
     {
         body.forceActiveFocus()
