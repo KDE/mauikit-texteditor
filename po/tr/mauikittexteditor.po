@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-10 01:51+0000\n"
+"POT-Creation-Date: 2024-02-27 01:36+0000\n"
 "PO-Revision-Date: 2024-02-10 16:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -116,43 +116,43 @@ msgstr "Tema"
 msgid "Editor color scheme style."
 msgstr "Düzenleyici renk şeması biçemi"
 
-#: src/controls.5/TextEditor.qml:260 src/controls.6/TextEditor.qml:253
+#: src/controls.5/TextEditor.qml:269 src/controls.6/TextEditor.qml:253
 #, kde-format
 msgid "Search Selected Text on Google..."
 msgstr "Seçili Metni Google'da Ara..."
 
-#: src/controls.5/TextEditor.qml:287 src/controls.6/TextEditor.qml:280
+#: src/controls.5/TextEditor.qml:296 src/controls.6/TextEditor.qml:280
 #, kde-format
 msgid "Spelling"
 msgstr "Yazım Denetimi"
 
-#: src/controls.5/TextEditor.qml:436 src/controls.6/TextEditor.qml:428
+#: src/controls.5/TextEditor.qml:445 src/controls.6/TextEditor.qml:428
 #, kde-format
 msgid "Case Sensitive"
 msgstr "BÜYÜK/küçük Harf Duyarlı"
 
-#: src/controls.5/TextEditor.qml:443 src/controls.6/TextEditor.qml:435
+#: src/controls.5/TextEditor.qml:452 src/controls.6/TextEditor.qml:435
 #, kde-format
 msgid "Whole Words Only"
 msgstr "Yalnızca Tam Sözcükler"
 
-#: src/controls.5/TextEditor.qml:453 src/controls.6/TextEditor.qml:445
+#: src/controls.5/TextEditor.qml:462 src/controls.6/TextEditor.qml:445
 #, kde-format
 msgid "Find"
 msgstr "Bul"
 
-#: src/controls.5/TextEditor.qml:484 src/controls.5/TextEditor.qml:491
+#: src/controls.5/TextEditor.qml:493 src/controls.5/TextEditor.qml:500
 #: src/controls.6/TextEditor.qml:482 src/controls.6/TextEditor.qml:489
 #, kde-format
 msgid "Replace"
 msgstr "Değiştir"
 
-#: src/controls.5/TextEditor.qml:501 src/controls.6/TextEditor.qml:500
+#: src/controls.5/TextEditor.qml:510 src/controls.6/TextEditor.qml:500
 #, kde-format
 msgid "Replace All"
 msgstr "Tümünü Değiştir"
 
-#: src/controls.5/TextEditor.qml:627 src/controls.6/TextEditor.qml:627
+#: src/controls.5/TextEditor.qml:812 src/controls.6/TextEditor.qml:627
 #, kde-format
 msgid "Body"
 msgstr "Gövde"
