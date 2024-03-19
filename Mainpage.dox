@@ -1,0 +1,165 @@
+/*
+ *  This file is part of MauiKit
+ *  SPDX-FileCopyrightText: 2023 Camilo Higuita <milo.h@aol.com>
+ *
+ *  SPDX-License-Identifier: LGPL-2.0-or-later
+ */
+
+
+/** @mainpage mauikit-texteditor
+
+@section overview Introduction
+MauiKit Text Editor is a set of <a href="https://doc.qt.io/qt-6/qtquick-index.html">QtQuick</a> components and classes for viewing and editing plain text files, with support for syntax highlighing, find&replace, and many other built-in features. The visual controls are designed to integrate well with the rest of MauiKit controls and the Maui HIG.
+
+You can think of this - and other - MauiKit Frameworks as KDE's KParts, where each module accomplishes a specific function and when plug together you can quickly assemble a more powerful app. Components like this one are usually used and shared among multiple Maui Applications.
+
+@image html nota.png "Nota app using the Text Editor controls"
+
+@section component Components
+MauiKit Text Editor has a set of visual controls and helper classes. Some of the visual controls are a graphical representation of the classes or wrappers that consume the API models.
+
+@subsection views Visual Controls
+
+- @link TextEditor TextEditor @endlink
+- @link ColorSchemesPage ColorSchemesPage @endlink
+
+@subsection classes Classes
+The helper classes are not part of a public API library, but instead are exposed to the QML engine and can be imported and used from QML
+
+- DocumentHandler
+
+@section example Minimal Example
+
+@code
+import QtQuick
+import QtQuick.Controls
+
+import org.mauikit.controls as Maui
+
+import org.mauikit.texteditor as TE
+
+Maui.ApplicationWindow
+{
+    id: root
+
+    Maui.Page
+    {
+        Maui.Controls.showCSD: true
+        anchors.fill: parent
+
+        headBar.leftContent: ToolButton
+        {
+            icon.name:"folder-open"
+            onClicked: _editor.fileUrl = "file:///home/camiloh/nota/CMakeLists.txt"
+        }
+
+        TE.TextEditor
+        {
+            id: _editor
+            anchors.fill: parent
+            body.wrapMode: Text.NoWrap
+            document.enableSyntaxHighlighting: true
+        }
+    }
+}
+@endcode
+
+@subsection tutorial Tutorial
+To use this framework components, you can import the module using QML as `import org.mauikit.texteditor`, or include the headers and link to the target library for C++.
+
+Examples for every control can be found in the examples directory.
+
+If you have any questions about MauiKit Text Editor, feel free to drop by the Maui Project group on Telegram as `[at]mauiproject`.
+
+A complete guide on how to set up and create an application using the MauiKit Text Editor controls can be found here [quickstart](@ref quickstart).
+
+@image html colors.png "ColorSchemes component"
+
+@section deployment Deployment
+
+@subsection building Building
+For building MauiKit Text Editor from source, you will need to be familiar with some basic shell commands, with a console aka terminal emulator and your distribution package manager.
+
+Before building it, make sure you have all the dependencies already installed with its development files.
+
+`git cmake make kf6-ki18n kf6-kcoreaddons kf6-pty`
+
+Then you can clone the project to your machine.
+
+`git clone https://invent.kde.org/maui/mauikit-texteditor.git`
+
+Now that you have the sources, go into the `mauikit-texteditor` folder and start the building process.
+
+`cd mauikit-texteditor`
+
+Let's build the project into a separate directory
+
+`mkdir build`
+
+Then.
+
+`cd build`
+
+An lets build it. 
+In this example the installation prefix path is set to the `/usr` directory; you can modify it if you want to, but bare in mind that you will also need to let know Qt where else it can find the installed QML plugins.
+
+`cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_WITH_QT6=ON`
+
+If everything goes right, the next step is to install it on the system for it to be ready to be used.
+
+@subsection installation Installation
+
+Once the project has been built from source - as explained in the previous section, you can install it.
+
+`sudo make install`
+
+This step will install the QML plugin to the right location.
+
+If you don't want to build it from source, you can also look for it in your distribution packages.
+
+For example, to install it on Arch based distributions:
+
+`sudo pacman install mauikit-texteditor4`
+
+Debian based distros:
+
+`sudo apt install mauikit-texteditor4`
+
+
+For Android, you will need to build it from source and install it at your Qt for Android root directory. 
+
+The easiest way is to build it using Qt Creator. Go to the project settings page, and enable the CMake build step for installation. That will install MauiKit into the right location. Remember you need to set the Kit to be Android.
+You can read more about setting up Qt from Android on their website.
+
+@subsection usage Usage
+The simplest and recommended way to use MauiKit is to just use the packages provided by your Linux distribution, or build it as a module and deploy it together with the main application.
+
+Once MauiKit has been installed you can start using it in your QML files. Checkout the ApplicationWindow for a quick example.
+
+@subsection examples Examples
+
+@subsection android Android
+
+@section notes Notes
+
+@subsection contributing Contributing
+
+If you find any syntax errors, missing documentation, or not working code snippets or examples, please consider reporting the issue at 
+<a href="https://invent.kde.org/maui/mauikit-texteditor/-/issues">MauiKit Text Editor</a> issues page, with the **documentation** tag.
+
+If you want to contribute with the documentation efforts, you can contact the Maui Project at Telegram [at]mauiproject.
+
+@authors
+Camilo Higuita \<milo.h@aol.com.com\><br>
+
+@maintainers
+Camilo Higuita \<milo.h@aol.com.com\><br>
+
+@licenses
+@lgpl
+*/
+
+// DOXYGEN_SET_RECURSIVE = YES
+// DOXYGEN_SET_EXCLUDE_PATTERNS += *_p.h */private/* */examples/* */doc/* */styles/*
+// DOXYGEN_SET_PROJECT_NAME = MauiKit
+// vim:ts=4:sw=4:expandtab:filetype=doxygen

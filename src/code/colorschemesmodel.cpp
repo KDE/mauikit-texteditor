@@ -1,7 +1,5 @@
 #include "colorschemesmodel.h"
 
-
-
 #include <QDebug>
 
 ColorSchemesModel::ColorSchemesModel(QObject *parent) : QAbstractListModel(parent)

@@ -64,11 +64,8 @@
 #include <QFileSystemWatcher>
 #include <QQmlFile>
 #include <QQmlFileSelector>
-#include <QQuickTextDocument>
 #include <QTextCharFormat>
-#include <QTextCodec>
 #include <QTextDocument>
-#include <QTextDocumentWriter>
 #include <QUrl>
 
 #include <MauiKit3/Core/fmh.h>
@@ -101,7 +98,7 @@ Alerts::Alerts(QObject *parent)
 Alerts::~Alerts()
 {
     qDebug() << "REMOVING ALL DOCUMENTS ALERTS" << this->m_alerts.size();
-    for (auto *alert : qAsConst(m_alerts)) {
+    for (auto *alert : std::as_const(m_alerts)) {
         delete alert;
         alert = nullptr;
     }
@@ -164,12 +161,13 @@ void Alerts::append(DocumentAlert *alert)
 
 void FileLoader::loadFile(const QUrl &url)
 {
-    if (FMH::fileExists(url)) {
+    if (FMH::fileExists(url)) 
+    {
         QFile file(url.toLocalFile());
-        if (file.open(QFile::ReadOnly)) {
+        if (file.open(QFile::ReadOnly))
+        {
             const auto array = file.readAll();
-            QTextCodec *codec = QTextDocumentWriter(url.toLocalFile()).codec();
-            Q_EMIT this->fileReady(codec->toUnicode(array), url);
+            Q_EMIT this->fileReady(QString::fromStdString(array.toStdString()), url);
         }
     }
 }
@@ -543,7 +541,7 @@ QString DocumentHandler::fontFamily() const
 void DocumentHandler::setFontFamily(const QString &family)
 {
     QTextCharFormat format;
-    format.setFontFamily(family);
+    format.setFontFamilies({family});
     mergeFormatOnWordOrSelection(format);
     Q_EMIT fontFamilyChanged();
 }

@@ -58,12 +58,10 @@
 #include <QThread>
 #include <QTimer>
 #include <QUrl>
+#include <QQuickTextDocument>
 
-QT_BEGIN_NAMESPACE
 class QFileSystemWatcher;
 class QTextDocument;
-class QQuickTextDocument;
-QT_END_NAMESPACE
 
 namespace KSyntaxHighlighting
 {
@@ -74,7 +72,8 @@ class SyntaxHighlighter;
 /**
  * @brief The AlertAction struct
  */
-struct AlertAction {
+struct AlertAction
+{
     QString label;
     std::function<void()> action;
 };
@@ -231,64 +230,183 @@ Q_SIGNALS:
 };
 
 /**
- * @brief The DocumentHandler class
+ * @brief The DocumentHandler class.
+ * @note This is not part of any public API, and can it is only exposed as part of the TextEditor control.
+ * 
  */
 class DocumentHandler : public QObject
 {
     Q_OBJECT
 
+    /**
+     * 
+     */
     Q_PROPERTY(QQuickTextDocument *document READ document WRITE setDocument NOTIFY documentChanged)
+    
+   /**
+     * 
+     */
     Q_PROPERTY(int cursorPosition READ cursorPosition WRITE setCursorPosition NOTIFY cursorPositionChanged)
+    
+    /**
+     * 
+     */
     Q_PROPERTY(int selectionStart READ selectionStart WRITE setSelectionStart NOTIFY selectionStartChanged)
+    
+    /**
+     * 
+     */
     Q_PROPERTY(int selectionEnd READ selectionEnd WRITE setSelectionEnd NOTIFY selectionEndChanged)
 
+    /**
+     * 
+     */
     Q_PROPERTY(QColor textColor READ textColor WRITE setTextColor NOTIFY textColorChanged)
+    
+    /**
+     * 
+     */
     Q_PROPERTY(QString fontFamily READ fontFamily WRITE setFontFamily NOTIFY fontFamilyChanged)
+    
+    /**
+     * 
+     */
     Q_PROPERTY(Qt::Alignment alignment READ alignment WRITE setAlignment NOTIFY alignmentChanged)
 
+    /**
+     * 
+     */
     Q_PROPERTY(bool bold READ bold WRITE setBold NOTIFY boldChanged)
+    
+    /**
+     * 
+     */
     Q_PROPERTY(bool uppercase READ uppercase WRITE setUppercase NOTIFY uppercaseChanged)
+    
+    /**
+     * 
+     */
     Q_PROPERTY(bool italic READ italic WRITE setItalic NOTIFY italicChanged)
+    
+    /**
+     * 
+     */
     Q_PROPERTY(bool underline READ underline WRITE setUnderline NOTIFY underlineChanged)
+    
+    /**
+     * 
+     */
     Q_PROPERTY(bool isRich READ getIsRich NOTIFY isRichChanged)
 
+    /**
+     * 
+     */
     Q_PROPERTY(int lineCount READ lineCount NOTIFY lineCountChanged)
+    
+    /**
+     * 
+     */
     Q_PROPERTY(int fontSize READ fontSize WRITE setFontSize NOTIFY fontSizeChanged)
+    
+    /**
+     * 
+     */
     Q_PROPERTY(qreal tabSpace READ tabSpace WRITE setTabSpace NOTIFY tabSpaceChanged)
-
+    
+    /**
+     * 
+     */
     Q_PROPERTY(QString fileName READ fileName NOTIFY fileUrlChanged)
+    
+    /**
+     * 
+     */
     Q_PROPERTY(QString fileType READ fileType NOTIFY fileUrlChanged)
 
+    /**
+     * 
+     */
     Q_PROPERTY(QVariantMap fileInfo READ fileInfo NOTIFY fileInfoChanged)
+    
+    /**
+     * 
+     */
     Q_PROPERTY(QUrl fileUrl READ fileUrl WRITE setFileUrl NOTIFY fileUrlChanged)
 
+    /**
+     * 
+     */
     Q_PROPERTY(QString text READ text WRITE setText NOTIFY textChanged)
 
-    Q_PROPERTY(bool externallyModified READ getExternallyModified WRITE setExternallyModified NOTIFY externallyModifiedChanged)
+    /**
+     * 
+     */
+    Q_PROPERTY(bool externallyModified READ getExternallyModified NOTIFY externallyModifiedChanged)
 
+    /**
+     * 
+     */
     Q_PROPERTY(bool modified READ getModified NOTIFY modifiedChanged)
 
+     /**
+     * 
+     */
     Q_PROPERTY(bool autoReload READ getAutoReload WRITE setAutoReload NOTIFY autoReloadChanged)
+    
+     /**
+     * 
+     */
     Q_PROPERTY(bool autoSave READ autoSave WRITE setAutoSave NOTIFY autoSaveChanged)
 
+     /**
+     * 
+     */
     Q_PROPERTY(QString formatName READ formatName WRITE setFormatName NOTIFY formatNameChanged)
 
+     /**
+     * 
+     */
     Q_PROPERTY(int currentLineIndex READ getCurrentLineIndex NOTIFY currentLineIndexChanged)
 
+     /**
+     * 
+     */
     Q_PROPERTY(Alerts *alerts READ getAlerts CONSTANT FINAL)
 
+     /**
+     * 
+     */
     Q_PROPERTY(QColor backgroundColor READ getBackgroundColor WRITE setBackgroundColor NOTIFY backgroundColorChanged)
 
+     /**
+     * 
+     */
     Q_PROPERTY(QString theme READ theme WRITE setTheme NOTIFY themeChanged)
 
+     /**
+     * 
+     */
     Q_PROPERTY(bool enableSyntaxHighlighting READ enableSyntaxHighlighting WRITE setEnableSyntaxHighlighting NOTIFY enableSyntaxHighlightingChanged)    
         
+     /**
+     * 
+     */
     Q_PROPERTY(bool findWholeWords MEMBER m_findWholeWords NOTIFY findWholeWordsChanged)    
     
+     /**
+     * 
+     */
     Q_PROPERTY(bool findCaseSensitively MEMBER m_findCaseSensitively NOTIFY findCaseSensitivelyChanged)
 
 public:
+    /**
+     * @private
+     */
     explicit DocumentHandler(QObject *parent = nullptr);
+    
+    /**
+     * @private
+     */
     ~DocumentHandler();
 
     /**
@@ -596,12 +714,14 @@ public:
         return (darkness > 0.5);
     }
 
-public Q_SLOTS:
+private Q_SLOTS:
     /**
      * @brief load
      * @param url
      */
     void load(const QUrl &url);
+
+public Q_SLOTS:
 
     /**
      * @brief saveAs

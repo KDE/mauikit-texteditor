@@ -1,11 +1,27 @@
-# SPDX-FileCopyrightText: 2020 Carl Schwan <carl@carlschwan.eu>
-#
-# SPDX-License-Identifier: BSD-2-Clause
-description: MauiKit QtQuick plugins for text editing
-maintainer: camiloh
-type: functional
+maintainer: milohr
+fancyname: MauiKit TextEditor
+description: QtQuick plugin for text editing tools
 platforms:
     - name: Linux
+    - name: FreeBSD
 public_lib: true
 deprecated: false
-release: false
+type: functional
+release: true
+logo: logo.png
+irc: '#kde-maui'
+mailinglist: '' # do we have one?
+group: mauikit
+qdoc: false
+public_doc_dir:
+    - docs
+public_source_dirs:  # optional, default to src, must be a list
+  - src/code
+  - src/controls.6
+public_example_dirs: examples
+libraries:
+    - cmake: MauiKit4::TextEditor
+cmakename: MauiKitTextEditor4
+
+group_info:
+    name: mauikit
