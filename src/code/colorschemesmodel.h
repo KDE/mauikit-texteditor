@@ -11,7 +11,6 @@
 #include <KSyntaxHighlighting/Theme>
 #endif
 
-
 class ColorSchemesModel : public QAbstractListModel, public QQmlParserStatus
 {
     Q_INTERFACES(QQmlParserStatus)
