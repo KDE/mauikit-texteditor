@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-27 01:36+0000\n"
+"POT-Creation-Date: 2024-03-20 01:40+0000\n"
 "PO-Revision-Date: 2024-02-15 17:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -17,59 +17,60 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 24.01.95\n"
 
-#: src/code/documenthandler.cpp:179
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "File changed externally"
 msgstr "檔案已在外部變更"
 
-#: src/code/documenthandler.cpp:179
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "You can reload the file or save your changes now"
 msgstr "您可以重新載入檔案或現在儲存您的變更"
 
-#: src/code/documenthandler.cpp:190
+#: src/code/documenthandler.cpp:188
 #, kde-format
 msgid "Reload"
 msgstr "重新載入"
 
-#: src/code/documenthandler.cpp:190
+#: src/code/documenthandler.cpp:188
 #, kde-format
 msgid "Auto Reload"
 msgstr "自動重新載入"
 
-#: src/code/documenthandler.cpp:190 src/code/documenthandler.cpp:198
+#: src/code/documenthandler.cpp:188 src/code/documenthandler.cpp:196
+#: src/controls.6/TextEditor.qml:455
 #, kde-format
 msgid "Ignore"
 msgstr "忽略"
 
-#: src/code/documenthandler.cpp:196
+#: src/code/documenthandler.cpp:194
 #, kde-format
 msgid "File can not be saved"
 msgstr "檔案無法儲存"
 
-#: src/code/documenthandler.cpp:204
+#: src/code/documenthandler.cpp:202
 #, kde-format
 msgid "Your file was removed"
 msgstr "您的檔案已被移除"
 
-#: src/code/documenthandler.cpp:204
+#: src/code/documenthandler.cpp:202
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
 "it again"
 msgstr "這個檔案已經不再存在於您的本地儲存空間，然而您還是可以重新儲存它"
 
-#: src/code/documenthandler.cpp:210
+#: src/code/documenthandler.cpp:208
 #, kde-format
 msgid "Save"
 msgstr "儲存"
 
-#: src/code/documenthandler.cpp:804
+#: src/code/documenthandler.cpp:802
 #, kde-format
 msgid "Cannot save: "
 msgstr "無法儲存："
 
-#: src/code/documenthandler.cpp:805
+#: src/code/documenthandler.cpp:803
 #, kde-format
 msgid "Cannot save file "
 msgstr "無法儲存檔案 "
@@ -81,11 +82,14 @@ msgstr "文字編輯器控制元件。"
 
 #: src/controls.5/ColorSchemesPage.qml:11
 #: src/controls.5/ColorSchemesPage.qml:20
+#: src/controls.6/ColorSchemesPage.qml:53
+#: src/controls.6/ColorSchemesPage.qml:74
 #, kde-format
 msgid "Colors"
 msgstr "顏色"
 
 #: src/controls.5/ColorSchemesPage.qml:21
+#: src/controls.6/ColorSchemesPage.qml:75
 #, kde-format
 msgid ""
 "Configure the style of the syntax highlighting. This configuration in not "
@@ -93,62 +97,117 @@ msgid ""
 msgstr "設定語法突顯風格。這個選項不會套用到富文字格式上。"
 
 #: src/controls.5/ColorSchemesPage.qml:25
+#: src/controls.6/ColorSchemesPage.qml:79
 #, kde-format
 msgid "Color"
 msgstr "顏色"
 
 #: src/controls.5/ColorSchemesPage.qml:26
+#: src/controls.6/ColorSchemesPage.qml:80
 #, kde-format
 msgid "Editor background color."
 msgstr "編輯器背景顏色。"
 
 #: src/controls.5/ColorSchemesPage.qml:57
+#: src/controls.6/ColorSchemesPage.qml:110
 #, kde-format
 msgid "Theme"
 msgstr "主題"
 
 #: src/controls.5/ColorSchemesPage.qml:58
+#: src/controls.6/ColorSchemesPage.qml:111
 #, kde-format
 msgid "Editor color scheme style."
 msgstr "編輯器配色方案風格。"
 
-#: src/controls.5/TextEditor.qml:269 src/controls.6/TextEditor.qml:253
+#: src/controls.5/TextEditor.qml:268 src/controls.6/TextEditor.qml:363
 #, kde-format
 msgid "Search Selected Text on Google..."
 msgstr "在 Google 上搜尋選取的文字…"
 
-#: src/controls.5/TextEditor.qml:296 src/controls.6/TextEditor.qml:280
+#: src/controls.5/TextEditor.qml:295 src/controls.6/TextEditor.qml:392
 #, kde-format
 msgid "Spelling"
 msgstr "拼字"
 
-#: src/controls.5/TextEditor.qml:445 src/controls.6/TextEditor.qml:428
+#: src/controls.5/TextEditor.qml:444 src/controls.6/TextEditor.qml:556
 #, kde-format
 msgid "Case Sensitive"
 msgstr "區分大小寫"
 
-#: src/controls.5/TextEditor.qml:452 src/controls.6/TextEditor.qml:435
+#: src/controls.5/TextEditor.qml:451 src/controls.6/TextEditor.qml:563
 #, kde-format
 msgid "Whole Words Only"
 msgstr "必須符合整個單字"
 
-#: src/controls.5/TextEditor.qml:462 src/controls.6/TextEditor.qml:445
+#: src/controls.5/TextEditor.qml:461 src/controls.6/TextEditor.qml:573
 #, kde-format
 msgid "Find"
 msgstr "尋找"
 
-#: src/controls.5/TextEditor.qml:493 src/controls.5/TextEditor.qml:500
-#: src/controls.6/TextEditor.qml:482 src/controls.6/TextEditor.qml:489
+#: src/controls.5/TextEditor.qml:492 src/controls.5/TextEditor.qml:499
+#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
 #, kde-format
 msgid "Replace"
 msgstr "取代"
 
-#: src/controls.5/TextEditor.qml:510 src/controls.6/TextEditor.qml:500
+#: src/controls.5/TextEditor.qml:509 src/controls.6/TextEditor.qml:621
 #, kde-format
 msgid "Replace All"
 msgstr "全部取代"
 
-#: src/controls.5/TextEditor.qml:812 src/controls.6/TextEditor.qml:627
+#: src/controls.5/TextEditor.qml:811 src/controls.6/TextEditor.qml:913
 #, kde-format
 msgid "Body"
 msgstr "本文"
+
+#: src/controls.6/TextEditor.qml:270
+#, kde-format
+msgid "Undo"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:283
+#, kde-format
+msgid "Redo"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:299
+#, kde-format
+msgid "Copy"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:316
+#, kde-format
+msgid "Cut"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:332
+#, kde-format
+msgid "Paste"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:350
+#, fuzzy, kde-format
+#| msgid "Replace All"
+msgid "Select All"
+msgstr "全部取代"
+
+#: src/controls.6/TextEditor.qml:374
+#, kde-format
+msgid "Delete"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:431
+#, kde-format
+msgid "No suggestions for \"%1\""
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:441
+#, kde-format
+msgid "Add \"%1\" to dictionary"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:469
+#, kde-format
+msgid "Enable Spellchecker"
+msgstr ""
