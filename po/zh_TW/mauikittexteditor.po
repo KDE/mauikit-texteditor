@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-20 01:40+0000\n"
-"PO-Revision-Date: 2024-02-15 17:38+0900\n"
+"PO-Revision-Date: 2024-03-20 18:30+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: src/code/documenthandler.cpp:177
 #, kde-format
@@ -164,50 +164,49 @@ msgstr "本文"
 #: src/controls.6/TextEditor.qml:270
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "復原"
 
 #: src/controls.6/TextEditor.qml:283
 #, kde-format
 msgid "Redo"
-msgstr ""
+msgstr "重做"
 
 #: src/controls.6/TextEditor.qml:299
 #, kde-format
 msgid "Copy"
-msgstr ""
+msgstr "複製"
 
 #: src/controls.6/TextEditor.qml:316
 #, kde-format
 msgid "Cut"
-msgstr ""
+msgstr "剪下"
 
 #: src/controls.6/TextEditor.qml:332
 #, kde-format
 msgid "Paste"
-msgstr ""
+msgstr "貼上"
 
 #: src/controls.6/TextEditor.qml:350
-#, fuzzy, kde-format
-#| msgid "Replace All"
+#, kde-format
 msgid "Select All"
-msgstr "全部取代"
+msgstr "全部選取"
 
 #: src/controls.6/TextEditor.qml:374
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "刪除"
 
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
 msgid "No suggestions for \"%1\""
-msgstr ""
+msgstr "沒有 \"%1\" 的建議"
 
 #: src/controls.6/TextEditor.qml:441
 #, kde-format
 msgid "Add \"%1\" to dictionary"
-msgstr ""
+msgstr "將 \"%1\" 加到字典中"
 
 #: src/controls.6/TextEditor.qml:469
 #, kde-format
 msgid "Enable Spellchecker"
-msgstr ""
+msgstr "啟用拼字檢查程式"

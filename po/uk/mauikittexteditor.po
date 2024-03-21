@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-20 01:40+0000\n"
-"PO-Revision-Date: 2024-02-10 08:41+0200\n"
+"PO-Revision-Date: 2024-03-20 08:07+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -169,50 +169,49 @@ msgstr "Вміст"
 #: src/controls.6/TextEditor.qml:270
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "Скасувати"
 
 #: src/controls.6/TextEditor.qml:283
 #, kde-format
 msgid "Redo"
-msgstr ""
+msgstr "Повторити"
 
 #: src/controls.6/TextEditor.qml:299
 #, kde-format
 msgid "Copy"
-msgstr ""
+msgstr "Копіювати"
 
 #: src/controls.6/TextEditor.qml:316
 #, kde-format
 msgid "Cut"
-msgstr ""
+msgstr "Вирізати"
 
 #: src/controls.6/TextEditor.qml:332
 #, kde-format
 msgid "Paste"
-msgstr ""
+msgstr "Вставити"
 
 #: src/controls.6/TextEditor.qml:350
-#, fuzzy, kde-format
-#| msgid "Replace All"
+#, kde-format
 msgid "Select All"
-msgstr "Замінити всі"
+msgstr "Позначити все"
 
 #: src/controls.6/TextEditor.qml:374
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Вилучити"
 
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
 msgid "No suggestions for \"%1\""
-msgstr ""
+msgstr "Немає пропозицій щодо «%1»"
 
 #: src/controls.6/TextEditor.qml:441
 #, kde-format
 msgid "Add \"%1\" to dictionary"
-msgstr ""
+msgstr "Додати «%1» до словника"
 
 #: src/controls.6/TextEditor.qml:469
 #, kde-format
 msgid "Enable Spellchecker"
-msgstr ""
+msgstr "Увімкнути перевірку правопису"
