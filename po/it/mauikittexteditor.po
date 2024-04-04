@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-20 01:40+0000\n"
-"PO-Revision-Date: 2024-02-14 14:41+0100\n"
+"PO-Revision-Date: 2024-03-29 09:26+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: src/code/documenthandler.cpp:177
 #, kde-format
@@ -166,50 +166,49 @@ msgstr "Corpo"
 #: src/controls.6/TextEditor.qml:270
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "Annulla"
 
 #: src/controls.6/TextEditor.qml:283
 #, kde-format
 msgid "Redo"
-msgstr ""
+msgstr "Rifai"
 
 #: src/controls.6/TextEditor.qml:299
 #, kde-format
 msgid "Copy"
-msgstr ""
+msgstr "Copia"
 
 #: src/controls.6/TextEditor.qml:316
 #, kde-format
 msgid "Cut"
-msgstr ""
+msgstr "Taglia"
 
 #: src/controls.6/TextEditor.qml:332
 #, kde-format
 msgid "Paste"
-msgstr ""
+msgstr "Incolla"
 
 #: src/controls.6/TextEditor.qml:350
-#, fuzzy, kde-format
-#| msgid "Replace All"
+#, kde-format
 msgid "Select All"
-msgstr "Sostituisci tutto"
+msgstr "Seleziona tutto"
 
 #: src/controls.6/TextEditor.qml:374
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Elimina"
 
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
 msgid "No suggestions for \"%1\""
-msgstr ""
+msgstr "Nessun suggerimento per «%1»"
 
 #: src/controls.6/TextEditor.qml:441
 #, kde-format
 msgid "Add \"%1\" to dictionary"
-msgstr ""
+msgstr "Aggiungi «%1» al dizionario"
 
 #: src/controls.6/TextEditor.qml:469
 #, kde-format
 msgid "Enable Spellchecker"
-msgstr ""
+msgstr "Abilita il controllo ortografico"
