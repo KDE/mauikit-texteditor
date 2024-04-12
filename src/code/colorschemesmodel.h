@@ -2,6 +2,7 @@
 #include <QObject>
 #include <QAbstractListModel>
 #include <QQmlParserStatus>
+#include <QQmlEngine>
 
 #if defined Q_OS_MACOS || defined Q_OS_WIN32
 #include <KF5/KSyntaxHighlighting/Repository>
@@ -15,6 +16,8 @@ class ColorSchemesModel : public QAbstractListModel, public QQmlParserStatus
 {
     Q_INTERFACES(QQmlParserStatus)
     Q_OBJECT
+    QML_ELEMENT
+    
 public:
 
     enum Role

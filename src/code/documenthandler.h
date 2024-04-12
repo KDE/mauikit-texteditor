@@ -59,6 +59,7 @@
 #include <QTimer>
 #include <QUrl>
 #include <QQuickTextDocument>
+#include <QQmlEngine>
 
 class QFileSystemWatcher;
 class QTextDocument;
@@ -237,7 +238,7 @@ Q_SIGNALS:
 class DocumentHandler : public QObject
 {
     Q_OBJECT
-
+    QML_ELEMENT
     /**
      * 
      */

@@ -4,6 +4,9 @@
 
 remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_STRICT_ITERATORS -DQT_NO_CAST_FROM_BYTEARRAY)
 
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/code)
+    
 ecm_add_qml_module(MauiKitTextEditor${MAUI_MAJOR_VERSION}
     URI "org.mauikit.texteditor"
     CLASS_NAME TextEditorPlugin)

@@ -10,6 +10,8 @@
 class LineNumberModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
+    
     Q_PROPERTY(int lineCount READ lineCount WRITE setLineCount NOTIFY lineCountChanged)
 
 public:
