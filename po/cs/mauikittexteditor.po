@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-20 01:40+0000\n"
-"PO-Revision-Date: 2024-02-19 17:05+0100\n"
+"PO-Revision-Date: 2024-04-17 09:37+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: src/code/documenthandler.cpp:177
 #, kde-format
@@ -199,14 +199,14 @@ msgstr "Smazat"
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
 msgid "No suggestions for \"%1\""
-msgstr ""
+msgstr "Žádné návrhy pro \"%1\""
 
 #: src/controls.6/TextEditor.qml:441
 #, kde-format
 msgid "Add \"%1\" to dictionary"
-msgstr ""
+msgstr "Přidat \"%1\" do slovníku"
 
 #: src/controls.6/TextEditor.qml:469
 #, kde-format
 msgid "Enable Spellchecker"
-msgstr ""
+msgstr "Povolit kontrolu pravopisu"
