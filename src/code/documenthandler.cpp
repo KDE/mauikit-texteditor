@@ -68,7 +68,12 @@
 #include <QTextDocument>
 #include <QUrl>
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <MauiKit3/Core/fmh.h>
+#else
+#include <MauiKit4/Core/fmh.h>
+#endif
+
 
 #if defined Q_OS_MACOS || defined Q_OS_WIN32
 #include <KF5/KSyntaxHighlighting/Definition>
