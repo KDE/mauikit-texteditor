@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-20 01:40+0000\n"
+"POT-Creation-Date: 2024-04-30 01:43+0000\n"
 "PO-Revision-Date: 2024-03-20 14:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -17,44 +17,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 24.02.0\n"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:182
 #, kde-format
 msgid "File changed externally"
 msgstr "Dosya dışarıdan değiştirildi"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:182
 #, kde-format
 msgid "You can reload the file or save your changes now"
 msgstr ""
 "Dosyayı yeniden yükleyebilir veya değişikliklerinizi şimdi kaydedebilirsiniz"
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:193
 #, kde-format
 msgid "Reload"
 msgstr "Yeniden Yükle"
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:193
 #, kde-format
 msgid "Auto Reload"
 msgstr "Otomatik Yeniden Yükle"
 
-#: src/code/documenthandler.cpp:188 src/code/documenthandler.cpp:196
+#: src/code/documenthandler.cpp:193 src/code/documenthandler.cpp:201
 #: src/controls.6/TextEditor.qml:455
 #, kde-format
 msgid "Ignore"
 msgstr "Yok Say"
 
-#: src/code/documenthandler.cpp:194
+#: src/code/documenthandler.cpp:199
 #, kde-format
 msgid "File can not be saved"
 msgstr "Dosya kaydedilemedi"
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:207
 #, kde-format
 msgid "Your file was removed"
 msgstr "Dosyanız kaldırıldı"
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:207
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
@@ -62,17 +62,17 @@ msgid ""
 msgstr ""
 "Bu dosya, yerel depolamanızda artık yok; ancak yeniden kaydedebilirsiniz"
 
-#: src/code/documenthandler.cpp:208
+#: src/code/documenthandler.cpp:213
 #, kde-format
 msgid "Save"
 msgstr "Kaydet"
 
-#: src/code/documenthandler.cpp:802
+#: src/code/documenthandler.cpp:807
 #, kde-format
 msgid "Cannot save: "
 msgstr "Kaydedilemiyor: "
 
-#: src/code/documenthandler.cpp:803
+#: src/code/documenthandler.cpp:808
 #, kde-format
 msgid "Cannot save file "
 msgstr "Dosya kaydedilemiyor "

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-20 01:40+0000\n"
+"POT-Creation-Date: 2024-04-30 01:43+0000\n"
 "PO-Revision-Date: 2022-11-15 09:28+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -13,43 +13,43 @@ msgstr ""
 "X-POFile-SpellExtra: Recarregamento\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:182
 #, kde-format
 msgid "File changed externally"
 msgstr "Ficheiro modificado no exterior"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:182
 #, kde-format
 msgid "You can reload the file or save your changes now"
 msgstr "Poderá recarregar o ficheiro ou gravar agora as suas alterações"
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:193
 #, kde-format
 msgid "Reload"
 msgstr "Recarregar"
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:193
 #, kde-format
 msgid "Auto Reload"
 msgstr "Recarregamento Automático"
 
-#: src/code/documenthandler.cpp:188 src/code/documenthandler.cpp:196
+#: src/code/documenthandler.cpp:193 src/code/documenthandler.cpp:201
 #: src/controls.6/TextEditor.qml:455
 #, kde-format
 msgid "Ignore"
 msgstr "Ignorar"
 
-#: src/code/documenthandler.cpp:194
+#: src/code/documenthandler.cpp:199
 #, kde-format
 msgid "File can not be saved"
 msgstr "Não é possível gravar o ficheiro"
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:207
 #, kde-format
 msgid "Your file was removed"
 msgstr "O seu ficheiro foi removido"
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:207
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
@@ -58,17 +58,17 @@ msgstr ""
 "Este ficheiro não existe mais no seu armazenamento local; contudo, podê-lo-á "
 "gravar de novo"
 
-#: src/code/documenthandler.cpp:208
+#: src/code/documenthandler.cpp:213
 #, kde-format
 msgid "Save"
 msgstr "Gravar"
 
-#: src/code/documenthandler.cpp:802
+#: src/code/documenthandler.cpp:807
 #, kde-format
 msgid "Cannot save: "
 msgstr "Não é possível gravar: "
 
-#: src/code/documenthandler.cpp:803
+#: src/code/documenthandler.cpp:808
 #, kde-format
 msgid "Cannot save file "
 msgstr "Não é possível gravar o ficheiro "

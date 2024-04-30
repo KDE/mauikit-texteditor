@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-20 01:40+0000\n"
+"POT-Creation-Date: 2024-04-30 01:43+0000\n"
 "PO-Revision-Date: 2023-12-27 18:40+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -18,43 +18,43 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 23.08.3\n"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:182
 #, kde-format
 msgid "File changed externally"
 msgstr "Plik zmieniono zewnętrznie"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:182
 #, kde-format
 msgid "You can reload the file or save your changes now"
 msgstr "Możesz teraz wczytać plik ponownie lub zapisać swoje zmiany"
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:193
 #, kde-format
 msgid "Reload"
 msgstr "Wczytaj ponownie"
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:193
 #, kde-format
 msgid "Auto Reload"
 msgstr "Sam wczytuj ponownie"
 
-#: src/code/documenthandler.cpp:188 src/code/documenthandler.cpp:196
+#: src/code/documenthandler.cpp:193 src/code/documenthandler.cpp:201
 #: src/controls.6/TextEditor.qml:455
 #, kde-format
 msgid "Ignore"
 msgstr "Pomiń"
 
-#: src/code/documenthandler.cpp:194
+#: src/code/documenthandler.cpp:199
 #, kde-format
 msgid "File can not be saved"
 msgstr "Pliku nie można zamknąć"
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:207
 #, kde-format
 msgid "Your file was removed"
 msgstr "Plik został usunięty"
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:207
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
@@ -62,17 +62,17 @@ msgid ""
 msgstr ""
 "Ten plik nie istnieje już w twojej pamięci, jednak możesz go zapisać ponownie"
 
-#: src/code/documenthandler.cpp:208
+#: src/code/documenthandler.cpp:213
 #, kde-format
 msgid "Save"
 msgstr "Zapisz"
 
-#: src/code/documenthandler.cpp:802
+#: src/code/documenthandler.cpp:807
 #, kde-format
 msgid "Cannot save: "
 msgstr "Nie można zapisać: "
 
-#: src/code/documenthandler.cpp:803
+#: src/code/documenthandler.cpp:808
 #, kde-format
 msgid "Cannot save file "
 msgstr "Nie można zapisać pliku "

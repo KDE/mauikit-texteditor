@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-20 01:40+0000\n"
+"POT-Creation-Date: 2024-04-30 01:43+0000\n"
 "PO-Revision-Date: 2024-03-20 10:46+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -17,43 +17,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.0\n"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:182
 #, kde-format
 msgid "File changed externally"
 msgstr "Bestand is extern gewijzigd"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:182
 #, kde-format
 msgid "You can reload the file or save your changes now"
 msgstr "U kunt het bestand herladen of uw wijzigingen nu opslaan"
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:193
 #, kde-format
 msgid "Reload"
 msgstr "Herladen"
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:193
 #, kde-format
 msgid "Auto Reload"
 msgstr "Automatisch herladen"
 
-#: src/code/documenthandler.cpp:188 src/code/documenthandler.cpp:196
+#: src/code/documenthandler.cpp:193 src/code/documenthandler.cpp:201
 #: src/controls.6/TextEditor.qml:455
 #, kde-format
 msgid "Ignore"
 msgstr "Negeren"
 
-#: src/code/documenthandler.cpp:194
+#: src/code/documenthandler.cpp:199
 #, kde-format
 msgid "File can not be saved"
 msgstr "Bestand kon niet worden opgeslagen"
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:207
 #, kde-format
 msgid "Your file was removed"
 msgstr "Uw bestand is verwijderd"
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:207
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
@@ -62,17 +62,17 @@ msgstr ""
 "Dit bestand bestaat niet langer in uw lokale opslag, u kunt het echter "
 "opnieuw opslaan"
 
-#: src/code/documenthandler.cpp:208
+#: src/code/documenthandler.cpp:213
 #, kde-format
 msgid "Save"
 msgstr "Opslaan"
 
-#: src/code/documenthandler.cpp:802
+#: src/code/documenthandler.cpp:807
 #, kde-format
 msgid "Cannot save: "
 msgstr "Kan niet opslaan: "
 
-#: src/code/documenthandler.cpp:803
+#: src/code/documenthandler.cpp:808
 #, kde-format
 msgid "Cannot save file "
 msgstr "Bestand kan niet worden opgeslagen"

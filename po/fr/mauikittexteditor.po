@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-20 01:40+0000\n"
+"POT-Creation-Date: 2024-04-30 01:43+0000\n"
 "PO-Revision-Date: 2024-03-21 09:25+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -14,44 +14,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:182
 #, kde-format
 msgid "File changed externally"
 msgstr "Fichier modifié de façon externe"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:182
 #, kde-format
 msgid "You can reload the file or save your changes now"
 msgstr ""
 "Vous pouvez recharger le fichier ou enregistrer vos modifications maintenant"
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:193
 #, kde-format
 msgid "Reload"
 msgstr "Recharger"
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:193
 #, kde-format
 msgid "Auto Reload"
 msgstr "Recharger automatiquement"
 
-#: src/code/documenthandler.cpp:188 src/code/documenthandler.cpp:196
+#: src/code/documenthandler.cpp:193 src/code/documenthandler.cpp:201
 #: src/controls.6/TextEditor.qml:455
 #, kde-format
 msgid "Ignore"
 msgstr "Ignorer"
 
-#: src/code/documenthandler.cpp:194
+#: src/code/documenthandler.cpp:199
 #, kde-format
 msgid "File can not be saved"
 msgstr "Il est impossible d'enregistrer le fichier."
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:207
 #, kde-format
 msgid "Your file was removed"
 msgstr "Votre fichier a été supprimé"
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:207
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
@@ -60,17 +60,17 @@ msgstr ""
 "Ce fichier n'existe plus sur votre média d'enregistrement, cependant, vous "
 "pouvez l'enregistrer à nouveau."
 
-#: src/code/documenthandler.cpp:208
+#: src/code/documenthandler.cpp:213
 #, kde-format
 msgid "Save"
 msgstr "Enregistrer"
 
-#: src/code/documenthandler.cpp:802
+#: src/code/documenthandler.cpp:807
 #, kde-format
 msgid "Cannot save: "
 msgstr "Impossible d'enregistrer :"
 
-#: src/code/documenthandler.cpp:803
+#: src/code/documenthandler.cpp:808
 #, kde-format
 msgid "Cannot save file "
 msgstr "Impossible d'enregistrer un fichier "
