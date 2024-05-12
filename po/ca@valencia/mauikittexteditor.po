@@ -129,7 +129,7 @@ msgstr "Editor de l'estil de l'esquema de color."
 #: src/controls.5/TextEditor.qml:268 src/controls.6/TextEditor.qml:363
 #, kde-format
 msgid "Search Selected Text on Google..."
-msgstr "Busca en Google el text seleccionat..."
+msgstr "Busca en Google el text seleccionat…"
 
 #: src/controls.5/TextEditor.qml:295 src/controls.6/TextEditor.qml:392
 #, kde-format
