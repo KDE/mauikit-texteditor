@@ -6,7 +6,7 @@ remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_STRICT_ITERATORS -DQT_NO_CAST_FR
 
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/code)
-    
+
 ecm_add_qml_module(MauiKitTextEditor${MAUI_MAJOR_VERSION}
     URI "org.mauikit.texteditor"
     CLASS_NAME TextEditorPlugin)
@@ -21,13 +21,8 @@ set(sources
 set(headers
     code/moduleinfo.h)
 
-if(QT_MAJOR_VERSION STREQUAL "5")
-    if(QUICK_COMPILER)
-        qtquick_compiler_add_resources(texteditor_QML_QRC resources.qrc)
-    else()
-        qt5_add_resources(texteditor_QML_QRC resources.qrc)
-    endif()
-endif()
+#        qt_add_resources(texteditor_QML_QRC resources.qrc)
+
 
 ecm_target_qml_sources(MauiKitTextEditor${MAUI_MAJOR_VERSION} SOURCES
     controls.${QT_MAJOR_VERSION}/TextEditor.qml
@@ -39,15 +34,6 @@ target_sources(MauiKitTextEditor${MAUI_MAJOR_VERSION}
     ${headers})
 
 add_library(MauiKit${MAUI_MAJOR_VERSION}::TextEditor ALIAS MauiKitTextEditor${MAUI_MAJOR_VERSION})
-
-if (QT_MAJOR_VERSION STREQUAL "5")
-    if(QUICK_COMPILER)
-        target_sources(MauiKitTextEditor${MAUI_MAJOR_VERSION} PRIVATE ${texteditor_QML_QRC})
-
-        add_definitions(-DQUICK_COMPILER)
-        target_compile_definitions(MauiKitTextEditor${MAUI_MAJOR_VERSION} PUBLIC QUICK_COMPILER)
-    endif()
-endif()
 
 generate_export_header(MauiKitTextEditor${MAUI_MAJOR_VERSION} BASE_NAME TextEditor)
 set_target_properties(MauiKitTextEditor${MAUI_MAJOR_VERSION} PROPERTIES
@@ -75,7 +61,6 @@ target_link_libraries(MauiKitTextEditor${MAUI_MAJOR_VERSION}
     MauiKit${MAUI_MAJOR_VERSION})
 
 ecm_finalize_qml_module(MauiKitTextEditor${MAUI_MAJOR_VERSION} DESTINATION ${KDE_INSTALL_QMLDIR})
-ecm_generate_qmltypes(org.mauikit.texteditor 3.0 DESTINATION ${KDE_INSTALL_QMLDIR}/org/mauikit/texteditor)
 
 install(TARGETS MauiKitTextEditor${MAUI_MAJOR_VERSION} EXPORT MauiKitTextEditor${MAUI_MAJOR_VERSION}Targets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
