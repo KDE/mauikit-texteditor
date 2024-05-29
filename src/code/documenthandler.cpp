@@ -132,7 +132,7 @@ QHash<int, QByteArray> Alerts::roleNames() const
 
 bool Alerts::contains(DocumentAlert *const alert)
 {
-    for (const auto &alert_ : qAsConst(m_alerts)) {
+    for (const auto &alert_ : std::as_const(m_alerts)) {
         if (alert_->getId() == alert->getId())
             return true;
     }
@@ -166,7 +166,7 @@ void Alerts::append(DocumentAlert *alert)
 
 void FileLoader::loadFile(const QUrl &url)
 {
-    if (FMH::fileExists(url)) 
+    if (FMH::fileExists(url))
     {
         QFile file(url.toLocalFile());
         if (file.open(QFile::ReadOnly))
