@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-30 01:43+0000\n"
+"POT-Creation-Date: 2024-05-30 01:47+0000\n"
 "PO-Revision-Date: 2024-03-20 14:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -17,44 +17,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 24.02.0\n"
 
-#: src/code/documenthandler.cpp:182
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "File changed externally"
 msgstr "Dosya dışarıdan değiştirildi"
 
-#: src/code/documenthandler.cpp:182
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "You can reload the file or save your changes now"
 msgstr ""
 "Dosyayı yeniden yükleyebilir veya değişikliklerinizi şimdi kaydedebilirsiniz"
 
-#: src/code/documenthandler.cpp:193
+#: src/code/documenthandler.cpp:188
 #, kde-format
 msgid "Reload"
 msgstr "Yeniden Yükle"
 
-#: src/code/documenthandler.cpp:193
+#: src/code/documenthandler.cpp:188
 #, kde-format
 msgid "Auto Reload"
 msgstr "Otomatik Yeniden Yükle"
 
-#: src/code/documenthandler.cpp:193 src/code/documenthandler.cpp:201
+#: src/code/documenthandler.cpp:188 src/code/documenthandler.cpp:196
 #: src/controls.6/TextEditor.qml:455
 #, kde-format
 msgid "Ignore"
 msgstr "Yok Say"
 
-#: src/code/documenthandler.cpp:199
+#: src/code/documenthandler.cpp:194
 #, kde-format
 msgid "File can not be saved"
 msgstr "Dosya kaydedilemedi"
 
-#: src/code/documenthandler.cpp:207
+#: src/code/documenthandler.cpp:202
 #, kde-format
 msgid "Your file was removed"
 msgstr "Dosyanız kaldırıldı"
 
-#: src/code/documenthandler.cpp:207
+#: src/code/documenthandler.cpp:202
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
@@ -62,17 +62,17 @@ msgid ""
 msgstr ""
 "Bu dosya, yerel depolamanızda artık yok; ancak yeniden kaydedebilirsiniz"
 
-#: src/code/documenthandler.cpp:213
+#: src/code/documenthandler.cpp:208
 #, kde-format
 msgid "Save"
 msgstr "Kaydet"
 
-#: src/code/documenthandler.cpp:807
+#: src/code/documenthandler.cpp:802
 #, kde-format
 msgid "Cannot save: "
 msgstr "Kaydedilemiyor: "
 
-#: src/code/documenthandler.cpp:808
+#: src/code/documenthandler.cpp:803
 #, kde-format
 msgid "Cannot save file "
 msgstr "Dosya kaydedilemiyor "
@@ -82,15 +82,12 @@ msgstr "Dosya kaydedilemiyor "
 msgid "Text editor controls."
 msgstr "Metin düzenleyicisi denetimleri."
 
-#: src/controls.5/ColorSchemesPage.qml:11
-#: src/controls.5/ColorSchemesPage.qml:20
 #: src/controls.6/ColorSchemesPage.qml:53
 #: src/controls.6/ColorSchemesPage.qml:74
 #, kde-format
 msgid "Colors"
 msgstr "Renkler"
 
-#: src/controls.5/ColorSchemesPage.qml:21
 #: src/controls.6/ColorSchemesPage.qml:75
 #, kde-format
 msgid ""
@@ -100,70 +97,25 @@ msgstr ""
 "Sözdizim vurgulamasının biçemini yapılandırın. Bu yapılandırma, zengin metin "
 "biçimlerine uygulanmaz."
 
-#: src/controls.5/ColorSchemesPage.qml:25
 #: src/controls.6/ColorSchemesPage.qml:79
 #, kde-format
 msgid "Color"
 msgstr "Renk"
 
-#: src/controls.5/ColorSchemesPage.qml:26
 #: src/controls.6/ColorSchemesPage.qml:80
 #, kde-format
 msgid "Editor background color."
 msgstr "Düzenleyici arka plan rengi."
 
-#: src/controls.5/ColorSchemesPage.qml:57
 #: src/controls.6/ColorSchemesPage.qml:110
 #, kde-format
 msgid "Theme"
 msgstr "Tema"
 
-#: src/controls.5/ColorSchemesPage.qml:58
 #: src/controls.6/ColorSchemesPage.qml:111
 #, kde-format
 msgid "Editor color scheme style."
 msgstr "Düzenleyici renk şeması biçemi"
-
-#: src/controls.5/TextEditor.qml:268 src/controls.6/TextEditor.qml:363
-#, kde-format
-msgid "Search Selected Text on Google..."
-msgstr "Seçili Metni Google'da Ara..."
-
-#: src/controls.5/TextEditor.qml:295 src/controls.6/TextEditor.qml:392
-#, kde-format
-msgid "Spelling"
-msgstr "Yazım Denetimi"
-
-#: src/controls.5/TextEditor.qml:444 src/controls.6/TextEditor.qml:556
-#, kde-format
-msgid "Case Sensitive"
-msgstr "BÜYÜK/küçük Harf Duyarlı"
-
-#: src/controls.5/TextEditor.qml:451 src/controls.6/TextEditor.qml:563
-#, kde-format
-msgid "Whole Words Only"
-msgstr "Yalnızca Tam Sözcükler"
-
-#: src/controls.5/TextEditor.qml:461 src/controls.6/TextEditor.qml:573
-#, kde-format
-msgid "Find"
-msgstr "Bul"
-
-#: src/controls.5/TextEditor.qml:492 src/controls.5/TextEditor.qml:499
-#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
-#, kde-format
-msgid "Replace"
-msgstr "Değiştir"
-
-#: src/controls.5/TextEditor.qml:509 src/controls.6/TextEditor.qml:621
-#, kde-format
-msgid "Replace All"
-msgstr "Tümünü Değiştir"
-
-#: src/controls.5/TextEditor.qml:811 src/controls.6/TextEditor.qml:913
-#, kde-format
-msgid "Body"
-msgstr "Gövde"
 
 #: src/controls.6/TextEditor.qml:270
 #, kde-format
@@ -195,10 +147,20 @@ msgstr "Yapıştır"
 msgid "Select All"
 msgstr "Tümünü Seç"
 
+#: src/controls.6/TextEditor.qml:363
+#, kde-format
+msgid "Search Selected Text on Google..."
+msgstr "Seçili Metni Google'da Ara..."
+
 #: src/controls.6/TextEditor.qml:374
 #, kde-format
 msgid "Delete"
 msgstr "Sil"
+
+#: src/controls.6/TextEditor.qml:392
+#, kde-format
+msgid "Spelling"
+msgstr "Yazım Denetimi"
 
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
@@ -214,3 +176,33 @@ msgstr "Sözlüğe Ekle: \"%1\""
 #, kde-format
 msgid "Enable Spellchecker"
 msgstr "Yazım Denetimini Etkinleştir"
+
+#: src/controls.6/TextEditor.qml:556
+#, kde-format
+msgid "Case Sensitive"
+msgstr "BÜYÜK/küçük Harf Duyarlı"
+
+#: src/controls.6/TextEditor.qml:563
+#, kde-format
+msgid "Whole Words Only"
+msgstr "Yalnızca Tam Sözcükler"
+
+#: src/controls.6/TextEditor.qml:573
+#, kde-format
+msgid "Find"
+msgstr "Bul"
+
+#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
+#, kde-format
+msgid "Replace"
+msgstr "Değiştir"
+
+#: src/controls.6/TextEditor.qml:621
+#, kde-format
+msgid "Replace All"
+msgstr "Tümünü Değiştir"
+
+#: src/controls.6/TextEditor.qml:913
+#, kde-format
+msgid "Body"
+msgstr "Gövde"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-30 01:43+0000\n"
+"POT-Creation-Date: 2024-05-30 01:47+0000\n"
 "PO-Revision-Date: 2024-02-14 19:00+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,43 +17,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: src/code/documenthandler.cpp:182
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "File changed externally"
 msgstr "Tiedosto on muuttunut ulkoisesti"
 
-#: src/code/documenthandler.cpp:182
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "You can reload the file or save your changes now"
 msgstr "Tiedoston voi ladata uudelleen tai tallentaa muutokset nyt"
 
-#: src/code/documenthandler.cpp:193
+#: src/code/documenthandler.cpp:188
 #, kde-format
 msgid "Reload"
 msgstr "Lataa uudelleen"
 
-#: src/code/documenthandler.cpp:193
+#: src/code/documenthandler.cpp:188
 #, kde-format
 msgid "Auto Reload"
 msgstr "Lataa automaattisesti uudelleen"
 
-#: src/code/documenthandler.cpp:193 src/code/documenthandler.cpp:201
+#: src/code/documenthandler.cpp:188 src/code/documenthandler.cpp:196
 #: src/controls.6/TextEditor.qml:455
 #, kde-format
 msgid "Ignore"
 msgstr "Sivuuta"
 
-#: src/code/documenthandler.cpp:199
+#: src/code/documenthandler.cpp:194
 #, kde-format
 msgid "File can not be saved"
 msgstr "Tiedostoa ei voi tallentaa"
 
-#: src/code/documenthandler.cpp:207
+#: src/code/documenthandler.cpp:202
 #, kde-format
 msgid "Your file was removed"
 msgstr "Tiedosto on poistettu"
 
-#: src/code/documenthandler.cpp:207
+#: src/code/documenthandler.cpp:202
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
@@ -62,17 +62,17 @@ msgstr ""
 "Tiedostoa ei enää ole paikallisessa tallennustilassa, mutta sen voi "
 "tallentaa uudelleen"
 
-#: src/code/documenthandler.cpp:213
+#: src/code/documenthandler.cpp:208
 #, kde-format
 msgid "Save"
 msgstr "Tallenna"
 
-#: src/code/documenthandler.cpp:807
+#: src/code/documenthandler.cpp:802
 #, kde-format
 msgid "Cannot save: "
 msgstr "Ei voida tallentaa: "
 
-#: src/code/documenthandler.cpp:808
+#: src/code/documenthandler.cpp:803
 #, kde-format
 msgid "Cannot save file "
 msgstr "Ei voida tallentaa tiedostoa "
@@ -82,15 +82,12 @@ msgstr "Ei voida tallentaa tiedostoa "
 msgid "Text editor controls."
 msgstr "Tekstimuokkainsäätimet."
 
-#: src/controls.5/ColorSchemesPage.qml:11
-#: src/controls.5/ColorSchemesPage.qml:20
 #: src/controls.6/ColorSchemesPage.qml:53
 #: src/controls.6/ColorSchemesPage.qml:74
 #, kde-format
 msgid "Colors"
 msgstr "Värit"
 
-#: src/controls.5/ColorSchemesPage.qml:21
 #: src/controls.6/ColorSchemesPage.qml:75
 #, kde-format
 msgid ""
@@ -99,70 +96,25 @@ msgid ""
 msgstr ""
 "Aseta syntaksikorostuksen tyyli. Asetusta ei käytetä muotoiltuun tekstiin."
 
-#: src/controls.5/ColorSchemesPage.qml:25
 #: src/controls.6/ColorSchemesPage.qml:79
 #, kde-format
 msgid "Color"
 msgstr "Väri"
 
-#: src/controls.5/ColorSchemesPage.qml:26
 #: src/controls.6/ColorSchemesPage.qml:80
 #, kde-format
 msgid "Editor background color."
 msgstr "Muokkaimen taustaväri."
 
-#: src/controls.5/ColorSchemesPage.qml:57
 #: src/controls.6/ColorSchemesPage.qml:110
 #, kde-format
 msgid "Theme"
 msgstr "Teema"
 
-#: src/controls.5/ColorSchemesPage.qml:58
 #: src/controls.6/ColorSchemesPage.qml:111
 #, kde-format
 msgid "Editor color scheme style."
 msgstr "Muokkaimen värimalli."
-
-#: src/controls.5/TextEditor.qml:268 src/controls.6/TextEditor.qml:363
-#, kde-format
-msgid "Search Selected Text on Google..."
-msgstr "Etsi valittua tekstiä Googlella…"
-
-#: src/controls.5/TextEditor.qml:295 src/controls.6/TextEditor.qml:392
-#, kde-format
-msgid "Spelling"
-msgstr "Oikeinkirjoitus"
-
-#: src/controls.5/TextEditor.qml:444 src/controls.6/TextEditor.qml:556
-#, kde-format
-msgid "Case Sensitive"
-msgstr "Erota pien- ja suuraakkoset"
-
-#: src/controls.5/TextEditor.qml:451 src/controls.6/TextEditor.qml:563
-#, kde-format
-msgid "Whole Words Only"
-msgstr "Vain kokonaiset sanat"
-
-#: src/controls.5/TextEditor.qml:461 src/controls.6/TextEditor.qml:573
-#, kde-format
-msgid "Find"
-msgstr "Etsi"
-
-#: src/controls.5/TextEditor.qml:492 src/controls.5/TextEditor.qml:499
-#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
-#, kde-format
-msgid "Replace"
-msgstr "Korvaa"
-
-#: src/controls.5/TextEditor.qml:509 src/controls.6/TextEditor.qml:621
-#, kde-format
-msgid "Replace All"
-msgstr "Korvaa kaikki"
-
-#: src/controls.5/TextEditor.qml:811 src/controls.6/TextEditor.qml:913
-#, kde-format
-msgid "Body"
-msgstr "Runko"
 
 #: src/controls.6/TextEditor.qml:270
 #, kde-format
@@ -195,10 +147,20 @@ msgstr ""
 msgid "Select All"
 msgstr "Korvaa kaikki"
 
+#: src/controls.6/TextEditor.qml:363
+#, kde-format
+msgid "Search Selected Text on Google..."
+msgstr "Etsi valittua tekstiä Googlella…"
+
 #: src/controls.6/TextEditor.qml:374
 #, kde-format
 msgid "Delete"
 msgstr ""
+
+#: src/controls.6/TextEditor.qml:392
+#, kde-format
+msgid "Spelling"
+msgstr "Oikeinkirjoitus"
 
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
@@ -214,3 +176,33 @@ msgstr ""
 #, kde-format
 msgid "Enable Spellchecker"
 msgstr ""
+
+#: src/controls.6/TextEditor.qml:556
+#, kde-format
+msgid "Case Sensitive"
+msgstr "Erota pien- ja suuraakkoset"
+
+#: src/controls.6/TextEditor.qml:563
+#, kde-format
+msgid "Whole Words Only"
+msgstr "Vain kokonaiset sanat"
+
+#: src/controls.6/TextEditor.qml:573
+#, kde-format
+msgid "Find"
+msgstr "Etsi"
+
+#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
+#, kde-format
+msgid "Replace"
+msgstr "Korvaa"
+
+#: src/controls.6/TextEditor.qml:621
+#, kde-format
+msgid "Replace All"
+msgstr "Korvaa kaikki"
+
+#: src/controls.6/TextEditor.qml:913
+#, kde-format
+msgid "Body"
+msgstr "Runko"

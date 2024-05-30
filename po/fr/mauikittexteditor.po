@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-30 01:43+0000\n"
+"POT-Creation-Date: 2024-05-30 01:47+0000\n"
 "PO-Revision-Date: 2024-03-21 09:25+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -14,44 +14,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: src/code/documenthandler.cpp:182
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "File changed externally"
 msgstr "Fichier modifié de façon externe"
 
-#: src/code/documenthandler.cpp:182
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "You can reload the file or save your changes now"
 msgstr ""
 "Vous pouvez recharger le fichier ou enregistrer vos modifications maintenant"
 
-#: src/code/documenthandler.cpp:193
+#: src/code/documenthandler.cpp:188
 #, kde-format
 msgid "Reload"
 msgstr "Recharger"
 
-#: src/code/documenthandler.cpp:193
+#: src/code/documenthandler.cpp:188
 #, kde-format
 msgid "Auto Reload"
 msgstr "Recharger automatiquement"
 
-#: src/code/documenthandler.cpp:193 src/code/documenthandler.cpp:201
+#: src/code/documenthandler.cpp:188 src/code/documenthandler.cpp:196
 #: src/controls.6/TextEditor.qml:455
 #, kde-format
 msgid "Ignore"
 msgstr "Ignorer"
 
-#: src/code/documenthandler.cpp:199
+#: src/code/documenthandler.cpp:194
 #, kde-format
 msgid "File can not be saved"
 msgstr "Il est impossible d'enregistrer le fichier."
 
-#: src/code/documenthandler.cpp:207
+#: src/code/documenthandler.cpp:202
 #, kde-format
 msgid "Your file was removed"
 msgstr "Votre fichier a été supprimé"
 
-#: src/code/documenthandler.cpp:207
+#: src/code/documenthandler.cpp:202
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
@@ -60,17 +60,17 @@ msgstr ""
 "Ce fichier n'existe plus sur votre média d'enregistrement, cependant, vous "
 "pouvez l'enregistrer à nouveau."
 
-#: src/code/documenthandler.cpp:213
+#: src/code/documenthandler.cpp:208
 #, kde-format
 msgid "Save"
 msgstr "Enregistrer"
 
-#: src/code/documenthandler.cpp:807
+#: src/code/documenthandler.cpp:802
 #, kde-format
 msgid "Cannot save: "
 msgstr "Impossible d'enregistrer :"
 
-#: src/code/documenthandler.cpp:808
+#: src/code/documenthandler.cpp:803
 #, kde-format
 msgid "Cannot save file "
 msgstr "Impossible d'enregistrer un fichier "
@@ -80,15 +80,12 @@ msgstr "Impossible d'enregistrer un fichier "
 msgid "Text editor controls."
 msgstr "Contrôles de l'éditeur de texte."
 
-#: src/controls.5/ColorSchemesPage.qml:11
-#: src/controls.5/ColorSchemesPage.qml:20
 #: src/controls.6/ColorSchemesPage.qml:53
 #: src/controls.6/ColorSchemesPage.qml:74
 #, kde-format
 msgid "Colors"
 msgstr "Couleurs"
 
-#: src/controls.5/ColorSchemesPage.qml:21
 #: src/controls.6/ColorSchemesPage.qml:75
 #, kde-format
 msgid ""
@@ -98,70 +95,25 @@ msgstr ""
 "Configurer le style de la coloration syntaxique. Cette configuration ne peut "
 "être appliquée pour le format « RTF »."
 
-#: src/controls.5/ColorSchemesPage.qml:25
 #: src/controls.6/ColorSchemesPage.qml:79
 #, kde-format
 msgid "Color"
 msgstr "Couleur"
 
-#: src/controls.5/ColorSchemesPage.qml:26
 #: src/controls.6/ColorSchemesPage.qml:80
 #, kde-format
 msgid "Editor background color."
 msgstr "Couleur d'arrière-plan de l'éditeur."
 
-#: src/controls.5/ColorSchemesPage.qml:57
 #: src/controls.6/ColorSchemesPage.qml:110
 #, kde-format
 msgid "Theme"
 msgstr "Thème"
 
-#: src/controls.5/ColorSchemesPage.qml:58
 #: src/controls.6/ColorSchemesPage.qml:111
 #, kde-format
 msgid "Editor color scheme style."
 msgstr "Style du thème de couleurs de l'éditeur."
-
-#: src/controls.5/TextEditor.qml:268 src/controls.6/TextEditor.qml:363
-#, kde-format
-msgid "Search Selected Text on Google..."
-msgstr "Rechercher le texte sélectionné dans Google..."
-
-#: src/controls.5/TextEditor.qml:295 src/controls.6/TextEditor.qml:392
-#, kde-format
-msgid "Spelling"
-msgstr "Vérification orthographique"
-
-#: src/controls.5/TextEditor.qml:444 src/controls.6/TextEditor.qml:556
-#, kde-format
-msgid "Case Sensitive"
-msgstr "Sensible à la casse"
-
-#: src/controls.5/TextEditor.qml:451 src/controls.6/TextEditor.qml:563
-#, kde-format
-msgid "Whole Words Only"
-msgstr "Mots entiers uniquement"
-
-#: src/controls.5/TextEditor.qml:461 src/controls.6/TextEditor.qml:573
-#, kde-format
-msgid "Find"
-msgstr "Trouver"
-
-#: src/controls.5/TextEditor.qml:492 src/controls.5/TextEditor.qml:499
-#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
-#, kde-format
-msgid "Replace"
-msgstr "Remplacer"
-
-#: src/controls.5/TextEditor.qml:509 src/controls.6/TextEditor.qml:621
-#, kde-format
-msgid "Replace All"
-msgstr "Tout remplacer"
-
-#: src/controls.5/TextEditor.qml:811 src/controls.6/TextEditor.qml:913
-#, kde-format
-msgid "Body"
-msgstr "Corps"
 
 #: src/controls.6/TextEditor.qml:270
 #, kde-format
@@ -193,10 +145,20 @@ msgstr "Coller"
 msgid "Select All"
 msgstr "Tout sélectionner"
 
+#: src/controls.6/TextEditor.qml:363
+#, kde-format
+msgid "Search Selected Text on Google..."
+msgstr "Rechercher le texte sélectionné dans Google..."
+
 #: src/controls.6/TextEditor.qml:374
 #, kde-format
 msgid "Delete"
 msgstr "Supprimer"
+
+#: src/controls.6/TextEditor.qml:392
+#, kde-format
+msgid "Spelling"
+msgstr "Vérification orthographique"
 
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
@@ -212,3 +174,33 @@ msgstr "Ajouter « %1 » au dictionnaire"
 #, kde-format
 msgid "Enable Spellchecker"
 msgstr "Activer le vérificateur d'orthographe"
+
+#: src/controls.6/TextEditor.qml:556
+#, kde-format
+msgid "Case Sensitive"
+msgstr "Sensible à la casse"
+
+#: src/controls.6/TextEditor.qml:563
+#, kde-format
+msgid "Whole Words Only"
+msgstr "Mots entiers uniquement"
+
+#: src/controls.6/TextEditor.qml:573
+#, kde-format
+msgid "Find"
+msgstr "Trouver"
+
+#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
+#, kde-format
+msgid "Replace"
+msgstr "Remplacer"
+
+#: src/controls.6/TextEditor.qml:621
+#, kde-format
+msgid "Replace All"
+msgstr "Tout remplacer"
+
+#: src/controls.6/TextEditor.qml:913
+#, kde-format
+msgid "Body"
+msgstr "Corps"

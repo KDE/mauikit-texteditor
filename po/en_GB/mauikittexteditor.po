@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-30 01:43+0000\n"
+"POT-Creation-Date: 2024-05-30 01:47+0000\n"
 "PO-Revision-Date: 2024-05-24 19:17+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -17,43 +17,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.2\n"
 
-#: src/code/documenthandler.cpp:182
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "File changed externally"
 msgstr "File changed externally"
 
-#: src/code/documenthandler.cpp:182
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "You can reload the file or save your changes now"
 msgstr "You can reload the file or save your changes now"
 
-#: src/code/documenthandler.cpp:193
+#: src/code/documenthandler.cpp:188
 #, kde-format
 msgid "Reload"
 msgstr "Reload"
 
-#: src/code/documenthandler.cpp:193
+#: src/code/documenthandler.cpp:188
 #, kde-format
 msgid "Auto Reload"
 msgstr "Auto Reload"
 
-#: src/code/documenthandler.cpp:193 src/code/documenthandler.cpp:201
+#: src/code/documenthandler.cpp:188 src/code/documenthandler.cpp:196
 #: src/controls.6/TextEditor.qml:455
 #, kde-format
 msgid "Ignore"
 msgstr "Ignore"
 
-#: src/code/documenthandler.cpp:199
+#: src/code/documenthandler.cpp:194
 #, kde-format
 msgid "File can not be saved"
 msgstr "File can not be saved"
 
-#: src/code/documenthandler.cpp:207
+#: src/code/documenthandler.cpp:202
 #, kde-format
 msgid "Your file was removed"
 msgstr "Your file was removed"
 
-#: src/code/documenthandler.cpp:207
+#: src/code/documenthandler.cpp:202
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
@@ -62,17 +62,17 @@ msgstr ""
 "This file does not longer exist in your local storage, however you can save "
 "it again"
 
-#: src/code/documenthandler.cpp:213
+#: src/code/documenthandler.cpp:208
 #, kde-format
 msgid "Save"
 msgstr "Save"
 
-#: src/code/documenthandler.cpp:807
+#: src/code/documenthandler.cpp:802
 #, kde-format
 msgid "Cannot save: "
 msgstr "Cannot save: "
 
-#: src/code/documenthandler.cpp:808
+#: src/code/documenthandler.cpp:803
 #, kde-format
 msgid "Cannot save file "
 msgstr "Cannot save file "
@@ -82,15 +82,12 @@ msgstr "Cannot save file "
 msgid "Text editor controls."
 msgstr "Text editor controls."
 
-#: src/controls.5/ColorSchemesPage.qml:11
-#: src/controls.5/ColorSchemesPage.qml:20
 #: src/controls.6/ColorSchemesPage.qml:53
 #: src/controls.6/ColorSchemesPage.qml:74
 #, kde-format
 msgid "Colors"
 msgstr "Colours"
 
-#: src/controls.5/ColorSchemesPage.qml:21
 #: src/controls.6/ColorSchemesPage.qml:75
 #, kde-format
 msgid ""
@@ -100,70 +97,25 @@ msgstr ""
 "Configure the style of the syntax highlighting. This configuration in not "
 "applied for rich text formats."
 
-#: src/controls.5/ColorSchemesPage.qml:25
 #: src/controls.6/ColorSchemesPage.qml:79
 #, kde-format
 msgid "Color"
 msgstr "Colour"
 
-#: src/controls.5/ColorSchemesPage.qml:26
 #: src/controls.6/ColorSchemesPage.qml:80
 #, kde-format
 msgid "Editor background color."
 msgstr "Editor background colour."
 
-#: src/controls.5/ColorSchemesPage.qml:57
 #: src/controls.6/ColorSchemesPage.qml:110
 #, kde-format
 msgid "Theme"
 msgstr "Theme"
 
-#: src/controls.5/ColorSchemesPage.qml:58
 #: src/controls.6/ColorSchemesPage.qml:111
 #, kde-format
 msgid "Editor color scheme style."
 msgstr "Editor colour scheme style."
-
-#: src/controls.5/TextEditor.qml:268 src/controls.6/TextEditor.qml:363
-#, kde-format
-msgid "Search Selected Text on Google..."
-msgstr "Search Selected Text on Google..."
-
-#: src/controls.5/TextEditor.qml:295 src/controls.6/TextEditor.qml:392
-#, kde-format
-msgid "Spelling"
-msgstr "Spelling"
-
-#: src/controls.5/TextEditor.qml:444 src/controls.6/TextEditor.qml:556
-#, kde-format
-msgid "Case Sensitive"
-msgstr "Case Sensitive"
-
-#: src/controls.5/TextEditor.qml:451 src/controls.6/TextEditor.qml:563
-#, kde-format
-msgid "Whole Words Only"
-msgstr "Whole Words Only"
-
-#: src/controls.5/TextEditor.qml:461 src/controls.6/TextEditor.qml:573
-#, kde-format
-msgid "Find"
-msgstr "Find"
-
-#: src/controls.5/TextEditor.qml:492 src/controls.5/TextEditor.qml:499
-#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
-#, kde-format
-msgid "Replace"
-msgstr "Replace"
-
-#: src/controls.5/TextEditor.qml:509 src/controls.6/TextEditor.qml:621
-#, kde-format
-msgid "Replace All"
-msgstr "Replace All"
-
-#: src/controls.5/TextEditor.qml:811 src/controls.6/TextEditor.qml:913
-#, kde-format
-msgid "Body"
-msgstr "Body"
 
 #: src/controls.6/TextEditor.qml:270
 #, kde-format
@@ -195,10 +147,20 @@ msgstr "Paste"
 msgid "Select All"
 msgstr "Select All"
 
+#: src/controls.6/TextEditor.qml:363
+#, kde-format
+msgid "Search Selected Text on Google..."
+msgstr "Search Selected Text on Google..."
+
 #: src/controls.6/TextEditor.qml:374
 #, kde-format
 msgid "Delete"
 msgstr "Delete"
+
+#: src/controls.6/TextEditor.qml:392
+#, kde-format
+msgid "Spelling"
+msgstr "Spelling"
 
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
@@ -214,3 +176,33 @@ msgstr "Add \"%1\" to dictionary"
 #, kde-format
 msgid "Enable Spellchecker"
 msgstr "Enable Spellchecker"
+
+#: src/controls.6/TextEditor.qml:556
+#, kde-format
+msgid "Case Sensitive"
+msgstr "Case Sensitive"
+
+#: src/controls.6/TextEditor.qml:563
+#, kde-format
+msgid "Whole Words Only"
+msgstr "Whole Words Only"
+
+#: src/controls.6/TextEditor.qml:573
+#, kde-format
+msgid "Find"
+msgstr "Find"
+
+#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
+#, kde-format
+msgid "Replace"
+msgstr "Replace"
+
+#: src/controls.6/TextEditor.qml:621
+#, kde-format
+msgid "Replace All"
+msgstr "Replace All"
+
+#: src/controls.6/TextEditor.qml:913
+#, kde-format
+msgid "Body"
+msgstr "Body"

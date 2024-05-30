@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-30 01:43+0000\n"
+"POT-Creation-Date: 2024-05-30 01:47+0000\n"
 "PO-Revision-Date: 2024-03-20 08:07+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -18,43 +18,43 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.1\n"
 
-#: src/code/documenthandler.cpp:182
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "File changed externally"
 msgstr "Файл змінено поза межами програми"
 
-#: src/code/documenthandler.cpp:182
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "You can reload the file or save your changes now"
 msgstr "Ви можете перезавантажити файл або зберегти ваші зміни зараз"
 
-#: src/code/documenthandler.cpp:193
+#: src/code/documenthandler.cpp:188
 #, kde-format
 msgid "Reload"
 msgstr "Перезавантажити"
 
-#: src/code/documenthandler.cpp:193
+#: src/code/documenthandler.cpp:188
 #, kde-format
 msgid "Auto Reload"
 msgstr "Автоперезавантаження"
 
-#: src/code/documenthandler.cpp:193 src/code/documenthandler.cpp:201
+#: src/code/documenthandler.cpp:188 src/code/documenthandler.cpp:196
 #: src/controls.6/TextEditor.qml:455
 #, kde-format
 msgid "Ignore"
 msgstr "Ігнорувати"
 
-#: src/code/documenthandler.cpp:199
+#: src/code/documenthandler.cpp:194
 #, kde-format
 msgid "File can not be saved"
 msgstr "Не вдалося зберегти файл"
 
-#: src/code/documenthandler.cpp:207
+#: src/code/documenthandler.cpp:202
 #, kde-format
 msgid "Your file was removed"
 msgstr "Ваш файл було вилучено"
 
-#: src/code/documenthandler.cpp:207
+#: src/code/documenthandler.cpp:202
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
@@ -63,17 +63,17 @@ msgstr ""
 "Цього файла більше не існує у вашому локальному сховищі даних. Втім, ви "
 "можете зберегти його знову."
 
-#: src/code/documenthandler.cpp:213
+#: src/code/documenthandler.cpp:208
 #, kde-format
 msgid "Save"
 msgstr "Зберегти"
 
-#: src/code/documenthandler.cpp:807
+#: src/code/documenthandler.cpp:802
 #, kde-format
 msgid "Cannot save: "
 msgstr "Не вдалося зберегти: "
 
-#: src/code/documenthandler.cpp:808
+#: src/code/documenthandler.cpp:803
 #, kde-format
 msgid "Cannot save file "
 msgstr "Не вдалося зберегти файл"
@@ -83,15 +83,12 @@ msgstr "Не вдалося зберегти файл"
 msgid "Text editor controls."
 msgstr "Засоби керування текстового редактора."
 
-#: src/controls.5/ColorSchemesPage.qml:11
-#: src/controls.5/ColorSchemesPage.qml:20
 #: src/controls.6/ColorSchemesPage.qml:53
 #: src/controls.6/ColorSchemesPage.qml:74
 #, kde-format
 msgid "Colors"
 msgstr "Кольори"
 
-#: src/controls.5/ColorSchemesPage.qml:21
 #: src/controls.6/ColorSchemesPage.qml:75
 #, kde-format
 msgid ""
@@ -101,70 +98,25 @@ msgstr ""
 "Налаштувати стиль підсвічування синтаксису Ці налаштування не буде "
 "застосовано до форматованого тексту."
 
-#: src/controls.5/ColorSchemesPage.qml:25
 #: src/controls.6/ColorSchemesPage.qml:79
 #, kde-format
 msgid "Color"
 msgstr "Колір"
 
-#: src/controls.5/ColorSchemesPage.qml:26
 #: src/controls.6/ColorSchemesPage.qml:80
 #, kde-format
 msgid "Editor background color."
 msgstr "Колір тла редактора."
 
-#: src/controls.5/ColorSchemesPage.qml:57
 #: src/controls.6/ColorSchemesPage.qml:110
 #, kde-format
 msgid "Theme"
 msgstr "Тема"
 
-#: src/controls.5/ColorSchemesPage.qml:58
 #: src/controls.6/ColorSchemesPage.qml:111
 #, kde-format
 msgid "Editor color scheme style."
 msgstr "Схема кольорів редактора."
-
-#: src/controls.5/TextEditor.qml:268 src/controls.6/TextEditor.qml:363
-#, kde-format
-msgid "Search Selected Text on Google..."
-msgstr "Шукати позначений текст у Google..."
-
-#: src/controls.5/TextEditor.qml:295 src/controls.6/TextEditor.qml:392
-#, kde-format
-msgid "Spelling"
-msgstr "Правопис"
-
-#: src/controls.5/TextEditor.qml:444 src/controls.6/TextEditor.qml:556
-#, kde-format
-msgid "Case Sensitive"
-msgstr "З урахуванням регістру"
-
-#: src/controls.5/TextEditor.qml:451 src/controls.6/TextEditor.qml:563
-#, kde-format
-msgid "Whole Words Only"
-msgstr "Лише цілі слова"
-
-#: src/controls.5/TextEditor.qml:461 src/controls.6/TextEditor.qml:573
-#, kde-format
-msgid "Find"
-msgstr "Знайти"
-
-#: src/controls.5/TextEditor.qml:492 src/controls.5/TextEditor.qml:499
-#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
-#, kde-format
-msgid "Replace"
-msgstr "Замінити"
-
-#: src/controls.5/TextEditor.qml:509 src/controls.6/TextEditor.qml:621
-#, kde-format
-msgid "Replace All"
-msgstr "Замінити всі"
-
-#: src/controls.5/TextEditor.qml:811 src/controls.6/TextEditor.qml:913
-#, kde-format
-msgid "Body"
-msgstr "Вміст"
 
 #: src/controls.6/TextEditor.qml:270
 #, kde-format
@@ -196,10 +148,20 @@ msgstr "Вставити"
 msgid "Select All"
 msgstr "Позначити все"
 
+#: src/controls.6/TextEditor.qml:363
+#, kde-format
+msgid "Search Selected Text on Google..."
+msgstr "Шукати позначений текст у Google..."
+
 #: src/controls.6/TextEditor.qml:374
 #, kde-format
 msgid "Delete"
 msgstr "Вилучити"
+
+#: src/controls.6/TextEditor.qml:392
+#, kde-format
+msgid "Spelling"
+msgstr "Правопис"
 
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
@@ -215,3 +177,33 @@ msgstr "Додати «%1» до словника"
 #, kde-format
 msgid "Enable Spellchecker"
 msgstr "Увімкнути перевірку правопису"
+
+#: src/controls.6/TextEditor.qml:556
+#, kde-format
+msgid "Case Sensitive"
+msgstr "З урахуванням регістру"
+
+#: src/controls.6/TextEditor.qml:563
+#, kde-format
+msgid "Whole Words Only"
+msgstr "Лише цілі слова"
+
+#: src/controls.6/TextEditor.qml:573
+#, kde-format
+msgid "Find"
+msgstr "Знайти"
+
+#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
+#, kde-format
+msgid "Replace"
+msgstr "Замінити"
+
+#: src/controls.6/TextEditor.qml:621
+#, kde-format
+msgid "Replace All"
+msgstr "Замінити всі"
+
+#: src/controls.6/TextEditor.qml:913
+#, kde-format
+msgid "Body"
+msgstr "Вміст"
