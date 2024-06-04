@@ -1,8 +1,7 @@
 // Copyright (C) 2023 The Qt Company Ltd.
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR BSD-3-Clause
 
-#ifndef LINENUMBERMODEL_H
-#define LINENUMBERMODEL_H
+#pragma once
 
 #include <QAbstractItemModel>
 #include <QQmlEngine>
@@ -30,4 +29,3 @@ private:
     int m_lineCount = 0;
 };
 
-#endif // LINENUMBERMODEL_H

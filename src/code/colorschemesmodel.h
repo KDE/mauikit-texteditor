@@ -4,13 +4,8 @@
 #include <QQmlParserStatus>
 #include <QQmlEngine>
 
-#if defined Q_OS_MACOS || defined Q_OS_WIN32
-#include <KF5/KSyntaxHighlighting/Repository>
-#include <KF5/KSyntaxHighlighting/Theme>
-#else
 #include <KSyntaxHighlighting/Repository>
 #include <KSyntaxHighlighting/Theme>
-#endif
 
 class ColorSchemesModel : public QAbstractListModel, public QQmlParserStatus
 {

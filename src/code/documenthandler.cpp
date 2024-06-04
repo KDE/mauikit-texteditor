@@ -50,11 +50,7 @@
 
 #include "documenthandler.h"
 
-#if defined Q_OS_MACOS || defined Q_OS_WIN
-#include <KF5/KI18n/KLocalizedString>
-#else
 #include <KLocalizedString>
-#endif
 
 #include <QAbstractTextDocumentLayout>
 #include <QDebug>
@@ -70,17 +66,10 @@
 
 #include <MauiKit4/Core/fmh.h>
 
-#if defined Q_OS_MACOS || defined Q_OS_WIN32
-#include <KF5/KSyntaxHighlighting/Definition>
-#include <KF5/KSyntaxHighlighting/Repository>
-#include <KF5/KSyntaxHighlighting/SyntaxHighlighter>
-#include <KF5/KSyntaxHighlighting/Theme>
-#else
 #include <KSyntaxHighlighting/Definition>
 #include <KSyntaxHighlighting/Repository>
 #include <KSyntaxHighlighting/SyntaxHighlighter>
 #include <KSyntaxHighlighting/Theme>
-#endif
 
 #define AUTOSAVE_TIMEOUT 5000
 
