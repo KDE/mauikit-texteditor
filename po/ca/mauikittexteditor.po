@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-30 01:47+0000\n"
+"POT-Creation-Date: 2024-06-05 02:05+0000\n"
 "PO-Revision-Date: 2024-03-20 09:50+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -19,43 +19,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:166
 #, kde-format
 msgid "File changed externally"
 msgstr "El fitxer ha canviat externament"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:166
 #, kde-format
 msgid "You can reload the file or save your changes now"
 msgstr "Ara podeu tornar a carregar el fitxer o desar els canvis"
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "Reload"
 msgstr "Torna a carregar"
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "Auto Reload"
 msgstr "Recàrrega automàtica"
 
-#: src/code/documenthandler.cpp:188 src/code/documenthandler.cpp:196
+#: src/code/documenthandler.cpp:177 src/code/documenthandler.cpp:185
 #: src/controls.6/TextEditor.qml:455
 #, kde-format
 msgid "Ignore"
 msgstr "Ignora"
 
-#: src/code/documenthandler.cpp:194
+#: src/code/documenthandler.cpp:183
 #, kde-format
 msgid "File can not be saved"
 msgstr "El fitxer no s'ha pogut desar"
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:191
 #, kde-format
 msgid "Your file was removed"
 msgstr "El fitxer s'ha eliminat"
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:191
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
@@ -64,17 +64,17 @@ msgstr ""
 "Aquest fitxer ja no existeix en l'emmagatzematge local; tanmateix, el podeu "
 "tornar a desar"
 
-#: src/code/documenthandler.cpp:208
+#: src/code/documenthandler.cpp:197
 #, kde-format
 msgid "Save"
 msgstr "Desa"
 
-#: src/code/documenthandler.cpp:802
+#: src/code/documenthandler.cpp:791
 #, kde-format
 msgid "Cannot save: "
 msgstr "No es pot desar: "
 
-#: src/code/documenthandler.cpp:803
+#: src/code/documenthandler.cpp:792
 #, kde-format
 msgid "Cannot save file "
 msgstr "No s'ha pogut desar el fitxer"

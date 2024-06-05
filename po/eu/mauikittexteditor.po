@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-30 01:47+0000\n"
+"POT-Creation-Date: 2024-06-05 02:05+0000\n"
 "PO-Revision-Date: 2024-02-13 01:07+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,43 +20,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:166
 #, kde-format
 msgid "File changed externally"
 msgstr "Fitxategia kanpotik aldatu da"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:166
 #, kde-format
 msgid "You can reload the file or save your changes now"
 msgstr "Fitxategia birzamatu edo zure aldaketak, orain, gorde ditzakezu"
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "Reload"
 msgstr "Birzamatu"
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "Auto Reload"
 msgstr "Automatikoki birzamatu"
 
-#: src/code/documenthandler.cpp:188 src/code/documenthandler.cpp:196
+#: src/code/documenthandler.cpp:177 src/code/documenthandler.cpp:185
 #: src/controls.6/TextEditor.qml:455
 #, kde-format
 msgid "Ignore"
 msgstr "Ezikusi"
 
-#: src/code/documenthandler.cpp:194
+#: src/code/documenthandler.cpp:183
 #, kde-format
 msgid "File can not be saved"
 msgstr "Fitxategia ezin da gorde"
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:191
 #, kde-format
 msgid "Your file was removed"
 msgstr "Zure fitxategia ezabatu egin da"
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:191
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
@@ -65,17 +65,17 @@ msgstr ""
 "Fitxategi hau dagoeneko ez dago zure gordetegi lokalean, hala ere berriz "
 "gorde dezakezu"
 
-#: src/code/documenthandler.cpp:208
+#: src/code/documenthandler.cpp:197
 #, kde-format
 msgid "Save"
 msgstr "Gorde"
 
-#: src/code/documenthandler.cpp:802
+#: src/code/documenthandler.cpp:791
 #, kde-format
 msgid "Cannot save: "
 msgstr "Ezin du gorde:"
 
-#: src/code/documenthandler.cpp:803
+#: src/code/documenthandler.cpp:792
 #, kde-format
 msgid "Cannot save file "
 msgstr "Ezin du fitxategia gorde"

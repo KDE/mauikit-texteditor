@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-30 01:47+0000\n"
+"POT-Creation-Date: 2024-06-05 02:05+0000\n"
 "PO-Revision-Date: 2024-04-17 09:37+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,60 +17,60 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 24.02.1\n"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:166
 #, kde-format
 msgid "File changed externally"
 msgstr "Soubor byl změněn zásahem z vnějšku"
 
-#: src/code/documenthandler.cpp:177
+#: src/code/documenthandler.cpp:166
 #, kde-format
 msgid "You can reload the file or save your changes now"
 msgstr ""
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "Reload"
 msgstr "Obnovit"
 
-#: src/code/documenthandler.cpp:188
+#: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "Auto Reload"
 msgstr "Automatické opětovné načtení"
 
-#: src/code/documenthandler.cpp:188 src/code/documenthandler.cpp:196
+#: src/code/documenthandler.cpp:177 src/code/documenthandler.cpp:185
 #: src/controls.6/TextEditor.qml:455
 #, kde-format
 msgid "Ignore"
 msgstr "Ignorovat"
 
-#: src/code/documenthandler.cpp:194
+#: src/code/documenthandler.cpp:183
 #, kde-format
 msgid "File can not be saved"
 msgstr ""
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:191
 #, kde-format
 msgid "Your file was removed"
 msgstr ""
 
-#: src/code/documenthandler.cpp:202
+#: src/code/documenthandler.cpp:191
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
 "it again"
 msgstr ""
 
-#: src/code/documenthandler.cpp:208
+#: src/code/documenthandler.cpp:197
 #, kde-format
 msgid "Save"
 msgstr "Uložit"
 
-#: src/code/documenthandler.cpp:802
+#: src/code/documenthandler.cpp:791
 #, kde-format
 msgid "Cannot save: "
 msgstr "Nelze uložit: "
 
-#: src/code/documenthandler.cpp:803
+#: src/code/documenthandler.cpp:792
 #, kde-format
 msgid "Cannot save file "
 msgstr "Nelze uložit soubor "
