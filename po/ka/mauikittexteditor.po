@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-05 02:05+0000\n"
-"PO-Revision-Date: 2023-12-01 07:11+0100\n"
+"PO-Revision-Date: 2024-07-07 10:28+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -87,7 +87,7 @@ msgstr "ტექსტური რედაქტორის კონტრ�
 #: src/controls.6/ColorSchemesPage.qml:74
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "ფერები"
 
 #: src/controls.6/ColorSchemesPage.qml:75
 #, kde-format
@@ -95,57 +95,58 @@ msgid ""
 "Configure the style of the syntax highlighting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
+"მოირგეთ სინტაქსის გამოკვეთის სტილი. კონფიგურაცია არ ეხება მდიდარი ტექსტის "
+"ფორმატებს."
 
 #: src/controls.6/ColorSchemesPage.qml:79
 #, kde-format
 msgid "Color"
-msgstr ""
+msgstr "ფერი"
 
 #: src/controls.6/ColorSchemesPage.qml:80
 #, kde-format
 msgid "Editor background color."
-msgstr ""
+msgstr "რედაქტორის ფონის ფერი."
 
 #: src/controls.6/ColorSchemesPage.qml:110
 #, kde-format
 msgid "Theme"
-msgstr ""
+msgstr "თემა"
 
 #: src/controls.6/ColorSchemesPage.qml:111
 #, kde-format
 msgid "Editor color scheme style."
-msgstr ""
+msgstr "რედაქტორის ფერის სქემის სტილი."
 
 #: src/controls.6/TextEditor.qml:270
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "დაბრუნება"
 
 #: src/controls.6/TextEditor.qml:283
 #, kde-format
 msgid "Redo"
-msgstr ""
+msgstr "გამეორება"
 
 #: src/controls.6/TextEditor.qml:299
 #, kde-format
 msgid "Copy"
-msgstr ""
+msgstr "კოპირება"
 
 #: src/controls.6/TextEditor.qml:316
 #, kde-format
 msgid "Cut"
-msgstr ""
+msgstr "ამოჭრა"
 
 #: src/controls.6/TextEditor.qml:332
 #, kde-format
 msgid "Paste"
-msgstr ""
+msgstr "ჩასმა"
 
 #: src/controls.6/TextEditor.qml:350
-#, fuzzy, kde-format
-#| msgid "Replace All"
+#, kde-format
 msgid "Select All"
-msgstr "ყველას ჩანაცვლება"
+msgstr "ყველაფრის მონიშვნა"
 
 #: src/controls.6/TextEditor.qml:363
 #, kde-format
@@ -155,7 +156,7 @@ msgstr "მონიშნული ტექსტის Google-ში მო�
 #: src/controls.6/TextEditor.qml:374
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "წაშლა"
 
 #: src/controls.6/TextEditor.qml:392
 #, kde-format
@@ -165,17 +166,17 @@ msgstr "მართლწერა"
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
 msgid "No suggestions for \"%1\""
-msgstr ""
+msgstr "\"%1\"-ისთვის მინიშნება არ არსებობს"
 
 #: src/controls.6/TextEditor.qml:441
 #, kde-format
 msgid "Add \"%1\" to dictionary"
-msgstr ""
+msgstr "\"%1-ის ჩამატება ლექსიკონში"
 
 #: src/controls.6/TextEditor.qml:469
 #, kde-format
 msgid "Enable Spellchecker"
-msgstr ""
+msgstr "მართლწერის შემოწმების ჩართვა"
 
 #: src/controls.6/TextEditor.qml:556
 #, kde-format
