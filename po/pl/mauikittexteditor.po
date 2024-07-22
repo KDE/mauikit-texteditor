@@ -1,14 +1,14 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the mauikit-texteditor package.
+# SPDX-FileCopyrightText: 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# SPDX-FileCopyrightText: 2023 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-05 02:05+0000\n"
-"PO-Revision-Date: 2023-12-27 18:40+0100\n"
-"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>\n"
+"PO-Revision-Date: 2024-07-21 13:24+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: src/code/documenthandler.cpp:166
 #, kde-format
@@ -85,7 +86,7 @@ msgstr "Sterowanie do edytowania tekstu."
 #: src/controls.6/ColorSchemesPage.qml:74
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "Kolory"
 
 #: src/controls.6/ColorSchemesPage.qml:75
 #, kde-format
@@ -93,57 +94,58 @@ msgid ""
 "Configure the style of the syntax highlighting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
+"Ustawienia wyglądu podświetlania składni. Ustawienia te nie są stosowane dla "
+"tekstu formatowanego."
 
 #: src/controls.6/ColorSchemesPage.qml:79
 #, kde-format
 msgid "Color"
-msgstr ""
+msgstr "Kolor"
 
 #: src/controls.6/ColorSchemesPage.qml:80
 #, kde-format
 msgid "Editor background color."
-msgstr ""
+msgstr "Barwa tła edytora."
 
 #: src/controls.6/ColorSchemesPage.qml:110
 #, kde-format
 msgid "Theme"
-msgstr ""
+msgstr "Wygląd"
 
 #: src/controls.6/ColorSchemesPage.qml:111
 #, kde-format
 msgid "Editor color scheme style."
-msgstr ""
+msgstr "Zestaw barw edytora."
 
 #: src/controls.6/TextEditor.qml:270
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "Cofnij"
 
 #: src/controls.6/TextEditor.qml:283
 #, kde-format
 msgid "Redo"
-msgstr ""
+msgstr "Przywróć"
 
 #: src/controls.6/TextEditor.qml:299
 #, kde-format
 msgid "Copy"
-msgstr ""
+msgstr "Skopiuj"
 
 #: src/controls.6/TextEditor.qml:316
 #, kde-format
 msgid "Cut"
-msgstr ""
+msgstr "Wytnij"
 
 #: src/controls.6/TextEditor.qml:332
 #, kde-format
 msgid "Paste"
-msgstr ""
+msgstr "Wklej"
 
 #: src/controls.6/TextEditor.qml:350
-#, fuzzy, kde-format
-#| msgid "Replace All"
+#, kde-format
 msgid "Select All"
-msgstr "Zastąp wszystkie"
+msgstr "Zaznacz wszystko"
 
 #: src/controls.6/TextEditor.qml:363
 #, kde-format
@@ -153,7 +155,7 @@ msgstr "Poszukaj zaznaczonego tekstu na Google..."
 #: src/controls.6/TextEditor.qml:374
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Usuń"
 
 #: src/controls.6/TextEditor.qml:392
 #, kde-format
@@ -163,17 +165,17 @@ msgstr "Pisownia"
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
 msgid "No suggestions for \"%1\""
-msgstr ""
+msgstr "Brak podpowiedzi dla \"%1\""
 
 #: src/controls.6/TextEditor.qml:441
 #, kde-format
 msgid "Add \"%1\" to dictionary"
-msgstr ""
+msgstr "Dodaj \"%1\" do słownika"
 
 #: src/controls.6/TextEditor.qml:469
 #, kde-format
 msgid "Enable Spellchecker"
-msgstr ""
+msgstr "Włącz sprawdzanie pisowni"
 
 #: src/controls.6/TextEditor.qml:556
 #, kde-format
