@@ -22,8 +22,6 @@ set(headers
     code/moduleinfo.h)
 
 #        qt_add_resources(texteditor_QML_QRC resources.qrc)
-
-
 ecm_target_qml_sources(MauiKitTextEditor${MAUI_MAJOR_VERSION} SOURCES
     controls.${QT_MAJOR_VERSION}/TextEditor.qml
     controls.${QT_MAJOR_VERSION}/ColorSchemesPage.qml)
@@ -45,10 +43,6 @@ target_include_directories(MauiKitTextEditor${MAUI_MAJOR_VERSION}
     INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/MauiKit${MAUI_MAJOR_VERSION}/TextEditor>")
 
 target_include_directories(MauiKitTextEditor${MAUI_MAJOR_VERSION} PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR};${CMAKE_CURRENT_BINARY_DIR};>")
-
-if(ANDROID)
-    target_link_libraries(MauiKitTextEditor${MAUI_MAJOR_VERSION} PRIVATE Qt${QT_MAJOR_VERSION}::AndroidExtras)
-endif()
 
 target_link_libraries(MauiKitTextEditor${MAUI_MAJOR_VERSION}
     PRIVATE
