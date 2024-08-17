@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-05 02:05+0000\n"
-"PO-Revision-Date: 2024-02-13 01:07+0100\n"
+"PO-Revision-Date: 2024-08-16 19:14+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: src/code/documenthandler.cpp:166
 #, kde-format
@@ -123,33 +123,32 @@ msgstr "Editorearen kolore-antolaeraren estiloa."
 #: src/controls.6/TextEditor.qml:270
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "Desegin"
 
 #: src/controls.6/TextEditor.qml:283
 #, kde-format
 msgid "Redo"
-msgstr ""
+msgstr "Berregin"
 
 #: src/controls.6/TextEditor.qml:299
 #, kde-format
 msgid "Copy"
-msgstr ""
+msgstr "Kopiatu"
 
 #: src/controls.6/TextEditor.qml:316
 #, kde-format
 msgid "Cut"
-msgstr ""
+msgstr "Ebaki"
 
 #: src/controls.6/TextEditor.qml:332
 #, kde-format
 msgid "Paste"
-msgstr ""
+msgstr "Itsatsi"
 
 #: src/controls.6/TextEditor.qml:350
-#, fuzzy, kde-format
-#| msgid "Replace All"
+#, kde-format
 msgid "Select All"
-msgstr "Ordeztu guztiak"
+msgstr "Hautatu dena"
 
 #: src/controls.6/TextEditor.qml:363
 #, kde-format
@@ -159,7 +158,7 @@ msgstr "Bilatu hautatutako testua Googlen..."
 #: src/controls.6/TextEditor.qml:374
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Ezabatu"
 
 #: src/controls.6/TextEditor.qml:392
 #, kde-format
@@ -169,17 +168,17 @@ msgstr "Ortografia"
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
 msgid "No suggestions for \"%1\""
-msgstr ""
+msgstr "\"%1\"(e)rako iradokizunik ez"
 
 #: src/controls.6/TextEditor.qml:441
 #, kde-format
 msgid "Add \"%1\" to dictionary"
-msgstr ""
+msgstr "Gehitu \"%1\" histegian"
 
 #: src/controls.6/TextEditor.qml:469
 #, kde-format
 msgid "Enable Spellchecker"
-msgstr ""
+msgstr "Gaitu ortografia itzultzailea"
 
 #: src/controls.6/TextEditor.qml:556
 #, kde-format
