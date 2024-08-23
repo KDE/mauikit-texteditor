@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/mauikit/texteditor">
-        <file alias="TextEditor.qml">controls.5/TextEditor.qml</file>
-        <file alias="ColorSchemesPage.qml">controls.5/ColorSchemesPage.qml</file>
-    </qresource>
-</RCC>
