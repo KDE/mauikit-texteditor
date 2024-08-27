@@ -203,9 +203,9 @@ Page
         findWholeWords: _findWholeWords.checked
 
         onSearchFound: (start, end) =>
-        {
-            body.select(start, end)
-        }
+                       {
+                           body.select(start, end)
+                       }
     }
 
     Loader
@@ -233,10 +233,10 @@ Page
             active: spellcheckhighlighterLoader.activable && settings.checkerEnabledByDefault
 
             onChangeCursorPosition: (start, end) =>
-            {
-                body.cursorPosition = start;
-                body.moveCursorSelection(end, TextEdit.SelectCharacters);
-            }
+                                    {
+                                        body.cursorPosition = start;
+                                        body.moveCursorSelection(end, TextEdit.SelectCharacters);
+                                    }
         }
     }
 
@@ -408,14 +408,14 @@ Page
                     }
 
                     onObjectAdded: (index, object) =>
-                    {
-                        _spellingMenu.insertItem(0, object)
-                    }
+                                   {
+                                       _spellingMenu.insertItem(0, object)
+                                   }
 
                     onObjectRemoved: (index, object) =>
-                    {
-                        _spellingMenu.removeItem(_spellingMenu.itemAt(0))
-                    }
+                                     {
+                                         _spellingMenu.removeItem(_spellingMenu.itemAt(0))
+                                     }
                 }
 
                 MenuSeparator
@@ -598,29 +598,29 @@ Page
             enabled: !body.readOnly
             forceCenterMiddleContent: false
 
-                middleContent: Maui.SearchField
+            middleContent: Maui.SearchField
+            {
+                id: _replaceField
+                placeholderText: i18nd("mauikittexteditor","Replace")
+                Layout.fillWidth: true
+                Layout.maximumWidth: 500
+                Layout.alignment: Qt.AlignCenter
+                icon.source: "edit-find-replace"
+                actions: Action
                 {
-                    id: _replaceField
-                    placeholderText: i18nd("mauikittexteditor","Replace")
-                    Layout.fillWidth: true
-                    Layout.maximumWidth: 500
-                    Layout.alignment: Qt.AlignCenter
-                    icon.source: "edit-find-replace"
-                    actions: Action
-                    {
-                        text: i18nd("mauikittexteditor","Replace")
-                        enabled: _replaceField.text.length
-                        icon.name: "checkmark"
-                        onTriggered: document.replace(_findField.text, _replaceField.text)
-                    }
-                }
-
-                rightContent: Button
-                {
+                    text: i18nd("mauikittexteditor","Replace")
                     enabled: _replaceField.text.length
-                    text: i18nd("mauikittexteditor","Replace All")
-                    onClicked: document.replaceAll(_findField.text, _replaceField.text)
+                    icon.name: "checkmark"
+                    onTriggered: document.replace(_findField.text, _replaceField.text)
                 }
+            }
+
+            rightContent: Button
+            {
+                enabled: _replaceField.text.length
+                text: i18nd("mauikittexteditor","Replace All")
+                onClicked: document.replaceAll(_findField.text, _replaceField.text)
+            }
         }
     }
 
@@ -643,9 +643,9 @@ Page
                 {
                     switch(alert.level)
                     {
-                        case 0: return Maui.Theme.positiveBackgroundColor
-                        case 1: return Maui.Theme.neutralBackgroundColor
-                        case 2: return Maui.Theme.negativeBackgroundColor
+                    case 0: return Maui.Theme.positiveBackgroundColor
+                    case 1: return Maui.Theme.neutralBackgroundColor
+                    case 2: return Maui.Theme.negativeBackgroundColor
                     }
                 }
 
@@ -653,38 +653,38 @@ Page
                 {
                     switch(alert.level)
                     {
-                        case 0: return Maui.Theme.positiveTextColor
-                        case 1: return Maui.Theme.neutralTextColor
-                        case 2: return Maui.Theme.negativeTextColor
+                    case 0: return Maui.Theme.positiveTextColor
+                    case 1: return Maui.Theme.neutralTextColor
+                    case 2: return Maui.Theme.negativeTextColor
                     }
                 }
 
                 forceCenterMiddleContent: false
-                    middleContent: Maui.ListItemTemplate
+                middleContent: Maui.ListItemTemplate
+                {
+                    Maui.Theme.inherit: true
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    label1.text: alert.title
+                    label2.text: alert.body
+                }
+
+                rightContent: Repeater
+                {
+                    model: alert.actionLabels
+
+                    Button
                     {
-                        Maui.Theme.inherit: true
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                        label1.text: alert.title
-                        label2.text: alert.body
+                        id: _alertAction
+                        property int index_ : index
+                        text: modelData
+                        onClicked: alert.triggerAction(_alertAction.index_, _alertBar.index_)
+
+                        Maui.Theme.backgroundColor: Qt.lighter(_alertBar.Maui.Theme.backgroundColor, 1.2)
+                        Maui.Theme.hoverColor: Qt.lighter(_alertBar.Maui.Theme.backgroundColor, 1)
+                        Maui.Theme.textColor: Qt.darker(Maui.Theme.backgroundColor)
                     }
-
-                    rightContent: Repeater
-                    {
-                        model: alert.actionLabels
-
-                        Button
-                        {
-                            id: _alertAction
-                            property int index_ : index
-                            text: modelData
-                            onClicked: alert.triggerAction(_alertAction.index_, _alertBar.index_)
-
-                            Maui.Theme.backgroundColor: Qt.lighter(_alertBar.Maui.Theme.backgroundColor, 1.2)
-                            Maui.Theme.hoverColor: Qt.lighter(_alertBar.Maui.Theme.backgroundColor, 1)
-                            Maui.Theme.textColor: Qt.darker(Maui.Theme.backgroundColor)
-                        }
-                    }
+                }
             }
         }
     }
@@ -848,7 +848,7 @@ Page
 
                 Layout.fillHeight: true
                 Layout.preferredWidth: active ?  fontMetrics.averageCharacterWidth
-                * (Math.floor(Math.log10(body.lineCount)) + 1) + 10 : 0
+                                                * (Math.floor(Math.log10(body.lineCount)) + 1) + 10 : 0
 
 
                 sourceComponent: _linesCounterComponent
@@ -868,32 +868,32 @@ Page
                 Keys.enabled: true
                 Keys.forwardTo: body
                 Keys.onPressed: (event) =>
-                {
-                    if((event.key === Qt.Key_F) && (event.modifiers & Qt.ControlModifier))
-                    {
-                        control.showFindBar = true
+                                {
+                                    if((event.key === Qt.Key_F) && (event.modifiers & Qt.ControlModifier))
+                                    {
+                                        control.showFindBar = true
 
-                        if(control.body.selectedText.length)
-                        {
-                            _findField.text =  control.body.selectedText
-                        }else
-                        {
-                            _findField.selectAll()
-                        }
+                                        if(control.body.selectedText.length)
+                                        {
+                                            _findField.text =  control.body.selectedText
+                                        }else
+                                        {
+                                            _findField.selectAll()
+                                        }
 
-                        _findField.forceActiveFocus()
-                        event.accepted = true
-                    }
+                                        _findField.forceActiveFocus()
+                                        event.accepted = true
+                                    }
 
-                    if((event.key === Qt.Key_R) && (event.modifiers & Qt.ControlModifier))
-                    {
-                        control.showFindBar = true
-                        _replaceButton.checked = true
-                        _findField.text = control.body.selectedText
-                        _replaceField.forceActiveFocus()
-                        event.accepted = true
-                    }
-                }
+                                    if((event.key === Qt.Key_R) && (event.modifiers & Qt.ControlModifier))
+                                    {
+                                        control.showFindBar = true
+                                        _replaceButton.checked = true
+                                        _findField.text = control.body.selectedText
+                                        _replaceField.forceActiveFocus()
+                                        event.accepted = true
+                                    }
+                                }
 
                 Flickable
                 {
@@ -921,50 +921,49 @@ Page
                         antialiasing: true
 
                         Keys.onPressed: (event) =>
-                        {
-                            if(event.key === Qt.Key_PageUp)
-                            {
-                                _flickable.flick(0,  60*Math.sqrt(_flickable.height))
-                                event.accepted = true
-                            }
+                                        {
+                                            if(event.key === Qt.Key_PageUp)
+                                            {
+                                                _flickable.flick(0,  60*Math.sqrt(_flickable.height))
+                                                event.accepted = true
+                                            }
 
-                            if(event.key === Qt.Key_PageDown)
-                            {
-                                _flickable.flick(0, -60*Math.sqrt(_flickable.height))
-                                event.accepted = true
-                            }                                    // TODO: Move cursor
-                        }
+                                            if(event.key === Qt.Key_PageDown)
+                                            {
+                                                _flickable.flick(0, -60*Math.sqrt(_flickable.height))
+                                                event.accepted = true
+                                            }                                    // TODO: Move cursor
+                                        }
 
                         onPressAndHold: (event) =>
-                        {
-                            //                         if(Maui.Handy.isMobile)
-                            //                         {
-                            //                             return
-                            //                         }
-                            //
-                            if(Maui.Handy.isMobile || Maui.Handy.isTouch)
-                            {
-                            documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(event.x, event.y))
-                            event.accepted = true
-                            return
-                            }
-                            event.accepted = false
-                        }
+                                        {
+                                            if(Maui.Handy.isAndroid)
+                                            {
+                                                return
+                                            }
+
+                                            if(Maui.Handy.isMobile || Maui.Handy.isTouch)
+                                            {
+                                                documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(event.x, event.y))
+                                                event.accepted = true
+                                                return
+                                            }
+                                            event.accepted = false
+                                        }
 
                         onPressed: (event) =>
-                        {
-                            if(Maui.Handy.isMobile)
-                            {
-                                event.accepted = false
-                                return
-                            }
+                                   {
+                                       if(Maui.Handy.isMobile)
+                                       {
+                                           return
+                                       }
 
-                            if(event.button === Qt.RightButton)
-                            {
-                                documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(event.x, event.y))
-                                event.accepted = true
-                            }
-                        }
+                                       if(event.button === Qt.RightButton)
+                                       {
+                                           documentMenu.targetClick(spellcheckhighlighterLoader, body.positionAt(event.x, event.y))
+                                           event.accepted = true
+                                       }
+                                   }
                     }
                 }
             }
