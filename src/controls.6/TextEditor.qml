@@ -919,6 +919,17 @@ Page
                         tabStopDistance: fontMetrics.averageCharacterWidth * 4
                         renderType: Text.QtRendering
                         antialiasing: true
+                        activeFocusOnPress: true
+                        focusPolicy: Qt.StrongFocus
+                        Keys.onReturnPressed:
+                        {
+                            // item_list.focus = true;
+                            if(Maui.Handy.isAndroid)//workaround for Android, since pressing return/enter will close the keyboard after inserting the break
+                            {
+                                body.insert(body.cursorPosition, "\n")
+                                Qt.inputMethod.show();
+                            }
+                        }
 
                         Keys.onPressed: (event) =>
                                         {
