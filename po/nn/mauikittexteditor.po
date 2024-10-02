@@ -1,12 +1,11 @@
 # Translation of mauikittexteditor to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-05 02:05+0000\n"
-"PO-Revision-Date: 2023-07-30 21:48+0200\n"
+"PO-Revision-Date: 2024-09-27 20:43+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 24.08.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -80,13 +79,13 @@ msgstr "Kan ikkje lagra fila "
 #: src/code/moduleinfo.cpp:18
 #, kde-format
 msgid "Text editor controls."
-msgstr ""
+msgstr "Skriveprogramkontrollar."
 
 #: src/controls.6/ColorSchemesPage.qml:53
 #: src/controls.6/ColorSchemesPage.qml:74
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "Fargar"
 
 #: src/controls.6/ColorSchemesPage.qml:75
 #, kde-format
@@ -94,56 +93,58 @@ msgid ""
 "Configure the style of the syntax highlighting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
+"Vel stil for syntaksmerking. Dette oppsettet vert ikkje brukt på riktekst-"
+"format."
 
 #: src/controls.6/ColorSchemesPage.qml:79
 #, kde-format
 msgid "Color"
-msgstr ""
+msgstr "Farge"
 
 #: src/controls.6/ColorSchemesPage.qml:80
 #, kde-format
 msgid "Editor background color."
-msgstr ""
+msgstr "Bakgrunnsfarge for skriveprogram."
 
 #: src/controls.6/ColorSchemesPage.qml:110
 #, kde-format
 msgid "Theme"
-msgstr ""
+msgstr "Tema"
 
 #: src/controls.6/ColorSchemesPage.qml:111
 #, kde-format
 msgid "Editor color scheme style."
-msgstr ""
+msgstr "Fargeoppsett for skriveprogram."
 
 #: src/controls.6/TextEditor.qml:270
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "Angra"
 
 #: src/controls.6/TextEditor.qml:283
 #, kde-format
 msgid "Redo"
-msgstr ""
+msgstr "Gjer om"
 
 #: src/controls.6/TextEditor.qml:299
 #, kde-format
 msgid "Copy"
-msgstr ""
+msgstr "Kopier"
 
 #: src/controls.6/TextEditor.qml:316
 #, kde-format
 msgid "Cut"
-msgstr ""
+msgstr "Klipp ut"
 
 #: src/controls.6/TextEditor.qml:332
 #, kde-format
 msgid "Paste"
-msgstr ""
+msgstr "Lim inn"
 
 #: src/controls.6/TextEditor.qml:350
 #, kde-format
 msgid "Select All"
-msgstr ""
+msgstr "Merk alt"
 
 #: src/controls.6/TextEditor.qml:363
 #, kde-format
@@ -153,7 +154,7 @@ msgstr "Søk etter merkt tekst på Google …"
 #: src/controls.6/TextEditor.qml:374
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Slett"
 
 #: src/controls.6/TextEditor.qml:392
 #, kde-format
@@ -163,17 +164,17 @@ msgstr "Stavekontroll"
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
 msgid "No suggestions for \"%1\""
-msgstr ""
+msgstr "Ingen forslag for «%1»"
 
 #: src/controls.6/TextEditor.qml:441
 #, kde-format
 msgid "Add \"%1\" to dictionary"
-msgstr ""
+msgstr "Legg til «%1» i ordlista"
 
 #: src/controls.6/TextEditor.qml:469
 #, kde-format
 msgid "Enable Spellchecker"
-msgstr ""
+msgstr "Bruk stavekontroll"
 
 #: src/controls.6/TextEditor.qml:556
 #, kde-format
