@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 02:05+0000\n"
+"POT-Creation-Date: 2024-11-13 01:49+0000\n"
 "PO-Revision-Date: 2024-03-20 22:52+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -203,7 +203,7 @@ msgstr "Anstataŭigi"
 msgid "Replace All"
 msgstr "Anstataŭigi Ĉion"
 
-#: src/controls.6/TextEditor.qml:913
+#: src/controls.6/TextEditor.qml:881
 #, kde-format
 msgid "Body"
 msgstr "Korpo"
