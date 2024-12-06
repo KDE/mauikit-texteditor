@@ -693,144 +693,112 @@ Page
     {
         id: _linesCounterComponent
 
-        Flickable
+        Rectangle
         {
-            id: _linesFlickable
-            interactive: false
-            //                contentY: _flickable.contentY
+            anchors.fill: parent
+            anchors.topMargin: body.topPadding + body.textMargin
 
-            Binding on contentY
-            {
-                value: _flickable.contentY
-                restoreMode: Binding.RestoreBindingOrValue
-            }
+            color: Qt.darker(Maui.Theme.backgroundColor, 1.2)
 
-            Rectangle
+            ListView
             {
+                id: _linesCounterList
                 anchors.fill: parent
-                anchors.topMargin: body.topPadding + body.textMargin
+                interactive: false
+                enabled: false
 
-                implicitHeight: Math.max(_linesCounterList.contentHeight, control.height)
-
-                color: Qt.darker(Maui.Theme.backgroundColor, 1)
-
-
-                Column
+                Binding on contentY
                 {
-                    id: _linesCounterList
-                    anchors.fill: parent
+                    value: _flickable.contentY
+                    restoreMode: Binding.RestoreBindingOrValue
+                }
 
+                model: TE.LineNumberModel
+                {
+                    lineCount: body.text !== "" ? document.lineCount : 0
+                }
 
+                delegate: RowLayout
+                {
+                    id: _delegate
 
-                    //                                Binding on currentIndex
-                    //                                {
-                    //                                    value: document.currentLineIndex
-                    //                                    restoreMode: Binding.RestoreBindingOrValue
-                    //                                }
+                    readonly property int line : index
+                    // property bool foldable : control.document.isFoldable(line)
 
-                    //                                Timer
-                    //                                {
-                    //                                    id: _lineIndexTimer
-                    //                                    interval: 250
-                    //                                    onTriggered: _linesCounterList.currentIndex = document.currentLineIndex
-                    //                                }
+                    width: ListView.view.width
+                    height: Math.max(Math.ceil(fontMetrics.lineSpacing), document.lineHeight(line))
 
-                    //                                Connections
-                    //                                {
-                    //                                    target: document
-                    //                                    function onLineCountChanged()
-                    //                                    {
-                    //                                        _lineIndexTimer.restart()
-                    //                                    }
-                    //                                }
+                    readonly property bool isCurrentItem : document.currentLineIndex === index
 
-                    Repeater
+                    Connections
                     {
+                        target: control.body
 
-                        model: TE.LineNumberModel
+                        function onContentHeightChanged()
                         {
-                            lineCount: body.text !== "" ? document.lineCount : 0
+                            if(body.wrapMode !== Text.NoWrap)
+                            {
+                                _delegate.height = control.document.lineHeight(_delegate.line)
+                            }
+
+                            if(_delegate.isCurrentItem)
+                            {
+                                console.log("Updating line height")
+                                // _delegate.foldable = control.document.isFoldable(_delegate.line)
+                            }
+
+                            _linesCounterList.contentY = _flickable.contentY
                         }
 
-                        delegate: Row
+                        function onWrapModeChanged()
                         {
-                            id: _delegate
-
-                            readonly property int line : index
-                            property bool foldable : control.document.isFoldable(line)
-
-                            width: parent.width
-                            height: Math.max(Math.ceil(fontMetrics.lineSpacing), document.lineHeight(line))
-
-                            readonly property bool isCurrentItem : document.currentLineIndex === index
-
-                            Connections
-                            {
-                                target: control.body
-
-                                function onContentHeightChanged()
-                                {
-                                    if(body.wrapMode !== Text.NoWrap)
-                                    {
-                                        _delegate.height = control.document.lineHeight(_delegate.line)
-                                    }
-
-                                    if(_delegate.isCurrentItem)
-                                    {
-                                        console.log("Updating line height")
-                                        _delegate.foldable = control.document.isFoldable(_delegate.line)
-                                    }
-
-                                    _linesFlickable.contentY = _flickable.contentY
-                                }
-
-                                function onWrapModeChanged()
-                                {
-                                    _delegate.height = control.document.lineHeight(_delegate.line)
-                                }
-                            }
-
-                            Label
-                            {
-                                width: 32
-                                height: parent.height
-                                opacity: isCurrentItem  ? 1 : 0.7
-                                color: isCurrentItem ? control.Maui.Theme.highlightedTextColor  : control.body.color
-                                font.pointSize: Math.min(Maui.Style.fontSizes.medium, body.font.pointSize)
-                                horizontalAlignment: Text.AlignHCenter
-                                verticalAlignment: Text.AlignVCenter
-                                //                                         renderType: Text.NativeRendering
-                                font.family: "Monospace"
-                                text: index+1
-
-                                background: Rectangle
-                                {
-                                    visible: isCurrentItem
-                                    color: Maui.Theme.highlightColor
-                                }
-                            }
-
-                            AbstractButton
-                            {
-                                visible: foldable
-                                anchors.verticalCenter: parent.verticalCenter
-                                height: 8
-                                width: 8
-                                //onClicked:
-                                //{
-                                //control.goToLine(_delegate.line)
-                                //control.document.toggleFold(_delegate.line)
-                                //}
-                                contentItem: Maui.Icon
-                                {
-                                    source: "go-down"
-                                }
-                            }
+                            _delegate.height = control.document.lineHeight(_delegate.line)
                         }
                     }
+
+                    Label
+                    {
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+
+                        opacity: isCurrentItem  ? 1 : 0.7
+                        color: isCurrentItem ? control.Maui.Theme.highlightedTextColor  : control.body.color
+                        font.pointSize: Math.min(Maui.Style.fontSizes.medium, body.font.pointSize)
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignTop
+                        //                                         renderType: Text.NativeRendering
+                        font.family: "Monospace"
+                        text: index+1
+
+                        background: Rectangle
+                        {
+                            visible: isCurrentItem
+                            color: Maui.Theme.highlightColor
+                        }
+                    }
+
+                    // AbstractButton
+                    // {
+                    //     visible: foldable
+                    //     Layout.alignment: Qt.AlignVCenter
+                    //     implicitHeight: 8
+                    //     implicitWidth: 8
+                    //     //onClicked:
+                    //     //{
+                    //     //control.goToLine(_delegate.line)
+                    //     //control.document.toggleFold(_delegate.line)
+                    //     //}
+                    //     contentItem: Maui.Icon
+                    //     {
+                    //         source: "go-down"
+                    //         color: isCurrentItem ? control.Maui.Theme.highlightedTextColor  : control.body.color
+                    //     }
+                    // }
                 }
+
             }
         }
+
     }
 
     contentItem: Item
@@ -844,10 +812,10 @@ Page
             {
                 id: _linesCounter
                 asynchronous: true
-                active: control.showLineNumbers && !document.isRich
+                active: control.showLineNumbers && !document.isRich && body.lineCount > 1 && body.wrapMode  === Text.NoWrap
 
                 Layout.fillHeight: true
-                Layout.preferredWidth: active ?  fontMetrics.averageCharacterWidth
+                Layout.preferredWidth: active ? fontMetrics.averageCharacterWidth
                                                 * (Math.floor(Math.log10(body.lineCount)) + 1) + 10 : 0
 
 
@@ -914,22 +882,24 @@ Page
 
                         textFormat: TextEdit.PlainText
 
-                        leftPadding: _linesCounter.width + padding
-
                         tabStopDistance: fontMetrics.averageCharacterWidth * 4
                         renderType: Text.QtRendering
                         antialiasing: true
                         activeFocusOnPress: true
                         focusPolicy: Qt.StrongFocus
-                        Keys.onReturnPressed:
-                        {
-                            // item_list.focus = true;
-                            if(Maui.Handy.isAndroid)//workaround for Android, since pressing return/enter will close the keyboard after inserting the break
-                            {
-                                body.insert(body.cursorPosition, "\n")
-                                Qt.inputMethod.show();
-                            }
-                        }
+
+                        Keys.onReturnPressed: (event) =>
+                                              {
+                                                  body.insert(body.cursorPosition, "\n")
+                                                  if(Maui.Handy.isAndroid)//workaround for Android, since pressing return/enter will close the keyboard after inserting the break
+                                                  /*The fix to this workaround has been introduced into  Qt 6.8
+                                                    see: https://doc.qt.io/qt-6/qml-qtquick-virtualkeyboard-settings-virtualkeyboardsettings.html#closeOnReturn-prop
+                                                    */
+                                                  {
+                                                      Qt.inputMethod.show();
+                                                      event.accepted = true
+                                                  }
+                                              }
 
                         Keys.onPressed: (event) =>
                                         {

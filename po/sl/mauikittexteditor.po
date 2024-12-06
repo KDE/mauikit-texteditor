@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 02:05+0000\n"
+"POT-Creation-Date: 2024-11-13 01:49+0000\n"
 "PO-Revision-Date: 2024-03-20 06:09+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -203,7 +203,7 @@ msgstr "Zamenjaj"
 msgid "Replace All"
 msgstr "Zamenjaj vse"
 
-#: src/controls.6/TextEditor.qml:913
+#: src/controls.6/TextEditor.qml:881
 #, kde-format
 msgid "Body"
 msgstr "Telo"
