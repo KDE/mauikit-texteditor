@@ -1,0 +1,204 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the mauikit-texteditor package.
+#
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: mauikit-texteditor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-11-13 01:49+0000\n"
+"PO-Revision-Date: 2024-12-28 11:01+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.12.0\n"
+
+#: src/code/documenthandler.cpp:166
+#, kde-format
+msgid "File changed externally"
+msgstr "הקובץ נערך חיצונית"
+
+#: src/code/documenthandler.cpp:166
+#, kde-format
+msgid "You can reload the file or save your changes now"
+msgstr "אפשר לרענן את הקובץ או לשמור את השינויים שלך כעת"
+
+#: src/code/documenthandler.cpp:177
+#, kde-format
+msgid "Reload"
+msgstr "רענון"
+
+#: src/code/documenthandler.cpp:177
+#, kde-format
+msgid "Auto Reload"
+msgstr "רענון אוטומטי"
+
+#: src/code/documenthandler.cpp:177 src/code/documenthandler.cpp:185
+#: src/controls.6/TextEditor.qml:455
+#, kde-format
+msgid "Ignore"
+msgstr "התעלמות"
+
+#: src/code/documenthandler.cpp:183
+#, kde-format
+msgid "File can not be saved"
+msgstr "אי אפשר לשמור את הקובץ"
+
+#: src/code/documenthandler.cpp:191
+#, kde-format
+msgid "Your file was removed"
+msgstr "הקובץ שלך הוסר"
+
+#: src/code/documenthandler.cpp:191
+#, kde-format
+msgid ""
+"This file does not longer exist in your local storage, however you can save "
+"it again"
+msgstr "הקובץ לא קיים עוד באחסון המקומי שלך, עם זאת ניתן לשמור אותו שוב"
+
+#: src/code/documenthandler.cpp:197
+#, kde-format
+msgid "Save"
+msgstr "שמירה"
+
+#: src/code/documenthandler.cpp:791
+#, kde-format
+msgid "Cannot save: "
+msgstr "לא ניתן לשמור: "
+
+#: src/code/documenthandler.cpp:792
+#, kde-format
+msgid "Cannot save file "
+msgstr "לא ניתן לשמור את הקובץ "
+
+#: src/code/moduleinfo.cpp:18
+#, kde-format
+msgid "Text editor controls."
+msgstr "פקדי עורך טקסט"
+
+#: src/controls.6/ColorSchemesPage.qml:53
+#: src/controls.6/ColorSchemesPage.qml:74
+#, kde-format
+msgid "Colors"
+msgstr "צבעים"
+
+#: src/controls.6/ColorSchemesPage.qml:75
+#, kde-format
+msgid ""
+"Configure the style of the syntax highlighting. This configuration in not "
+"applied for rich text formats."
+msgstr "הגדרת הסגנון להדגשת תחביר. ההגדרה לא חלה על תבניות טקסט עשיר."
+
+#: src/controls.6/ColorSchemesPage.qml:79
+#, kde-format
+msgid "Color"
+msgstr "צבע"
+
+#: src/controls.6/ColorSchemesPage.qml:80
+#, kde-format
+msgid "Editor background color."
+msgstr "צבע רקע עורך."
+
+#: src/controls.6/ColorSchemesPage.qml:110
+#, kde-format
+msgid "Theme"
+msgstr "ערכת עיצוב"
+
+#: src/controls.6/ColorSchemesPage.qml:111
+#, kde-format
+msgid "Editor color scheme style."
+msgstr "סגנון ערכת צבעים של העורך."
+
+#: src/controls.6/TextEditor.qml:270
+#, kde-format
+msgid "Undo"
+msgstr "הסגה"
+
+#: src/controls.6/TextEditor.qml:283
+#, kde-format
+msgid "Redo"
+msgstr "ביצוע מחדש"
+
+#: src/controls.6/TextEditor.qml:299
+#, kde-format
+msgid "Copy"
+msgstr "העתקה"
+
+#: src/controls.6/TextEditor.qml:316
+#, kde-format
+msgid "Cut"
+msgstr "גזירה"
+
+#: src/controls.6/TextEditor.qml:332
+#, kde-format
+msgid "Paste"
+msgstr "הדבקה"
+
+#: src/controls.6/TextEditor.qml:350
+#, kde-format
+msgid "Select All"
+msgstr "בחירה בהכול"
+
+#: src/controls.6/TextEditor.qml:363
+#, kde-format
+msgid "Search Selected Text on Google..."
+msgstr "חיפוש הטקסט הנבחר ב־Google…"
+
+#: src/controls.6/TextEditor.qml:374
+#, kde-format
+msgid "Delete"
+msgstr "מחיקה"
+
+#: src/controls.6/TextEditor.qml:392
+#, kde-format
+msgid "Spelling"
+msgstr "איות"
+
+#: src/controls.6/TextEditor.qml:431
+#, kde-format
+msgid "No suggestions for \"%1\""
+msgstr "אין הצעות עבור „%1”"
+
+#: src/controls.6/TextEditor.qml:441
+#, kde-format
+msgid "Add \"%1\" to dictionary"
+msgstr "הוספת „%1” למילון"
+
+#: src/controls.6/TextEditor.qml:469
+#, kde-format
+msgid "Enable Spellchecker"
+msgstr "הפעלת בודק איות"
+
+#: src/controls.6/TextEditor.qml:556
+#, kde-format
+msgid "Case Sensitive"
+msgstr "תלוי רישיות"
+
+#: src/controls.6/TextEditor.qml:563
+#, kde-format
+msgid "Whole Words Only"
+msgstr "מילים שלמות בלבד"
+
+#: src/controls.6/TextEditor.qml:573
+#, kde-format
+msgid "Find"
+msgstr "איתור"
+
+#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
+#, kde-format
+msgid "Replace"
+msgstr "החלפה"
+
+#: src/controls.6/TextEditor.qml:621
+#, kde-format
+msgid "Replace All"
+msgstr "החלפה של הכול"
+
+#: src/controls.6/TextEditor.qml:881
+#, kde-format
+msgid "Body"
+msgstr "תוכן"
