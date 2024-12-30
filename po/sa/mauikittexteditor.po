@@ -1,205 +1,208 @@
+# Sanskrit translations for mauikit-texteditor package.
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the mauikit-texteditor package.
+# Kali <EMAIL@ADDRESS>, 2024.
 #
-# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024 kali <shreekantkalwar@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:49+0000\n"
-"PO-Revision-Date: 2024-12-28 11:01+0200\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: צוות התרגום של KDE ישראל\n"
-"Language: he\n"
+"PO-Revision-Date: 2024-12-29 17:56+0530\n"
+"Last-Translator: kali <shreekantkalwar@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
+"Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
-"n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: src/code/documenthandler.cpp:166
 #, kde-format
 msgid "File changed externally"
-msgstr "הקובץ נערך חיצונית"
+msgstr "सञ्चिका बाह्यरूपेण परिवर्तिता"
 
 #: src/code/documenthandler.cpp:166
 #, kde-format
 msgid "You can reload the file or save your changes now"
-msgstr "אפשר לרענן את הקובץ או לשמור את השינויים שלך כעת"
+msgstr "भवान् सञ्चिकां पुनः लोड् कर्तुं शक्नोति अथवा इदानीं स्वपरिवर्तनानि रक्षितुं शक्नोति"
 
 #: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "Reload"
-msgstr "רענון"
+msgstr "पुनः लोड करें"
 
 #: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "Auto Reload"
-msgstr "רענון אוטומטי"
+msgstr "स्वतः पुनः लोड हो"
 
 #: src/code/documenthandler.cpp:177 src/code/documenthandler.cpp:185
 #: src/controls.6/TextEditor.qml:455
 #, kde-format
 msgid "Ignore"
-msgstr "התעלמות"
+msgstr "उपेक्षा"
 
 #: src/code/documenthandler.cpp:183
 #, kde-format
 msgid "File can not be saved"
-msgstr "אי אפשר לשמור את הקובץ"
+msgstr "सञ्चिका रक्षितुं न शक्यते"
 
 #: src/code/documenthandler.cpp:191
 #, kde-format
 msgid "Your file was removed"
-msgstr "הקובץ שלך הוסר"
+msgstr "भवतः सञ्चिका निष्कासिता"
 
 #: src/code/documenthandler.cpp:191
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
 "it again"
-msgstr "הקובץ לא קיים עוד באחסון המקומי שלך, עם זאת ניתן לשמור אותו שוב"
+msgstr ""
+"एषा सञ्चिका भवतः स्थानीयभण्डारणस्थाने अधिककालं यावत् नास्ति तथापि पुनः रक्षितुं शक्नुवन्ति"
 
 #: src/code/documenthandler.cpp:197
 #, kde-format
 msgid "Save"
-msgstr "שמירה"
+msgstr "रक्ष्"
 
 #: src/code/documenthandler.cpp:791
 #, kde-format
 msgid "Cannot save: "
-msgstr "לא ניתן לשמור: "
+msgstr "रक्षितुं न शक्यते :"
 
 #: src/code/documenthandler.cpp:792
 #, kde-format
 msgid "Cannot save file "
-msgstr "לא ניתן לשמור את הקובץ "
+msgstr "सञ्चिकां रक्षितुं न शक्यते"
 
 #: src/code/moduleinfo.cpp:18
 #, kde-format
 msgid "Text editor controls."
-msgstr "פקדי עורך טקסט"
+msgstr "पाठसम्पादकः नियन्त्रयति।"
 
 #: src/controls.6/ColorSchemesPage.qml:53
 #: src/controls.6/ColorSchemesPage.qml:74
 #, kde-format
 msgid "Colors"
-msgstr "צבעים"
+msgstr "वर्णाः"
 
 #: src/controls.6/ColorSchemesPage.qml:75
 #, kde-format
 msgid ""
 "Configure the style of the syntax highlighting. This configuration in not "
 "applied for rich text formats."
-msgstr "הגדרת הסגנון להדגשת תחביר. ההגדרה לא חלה על תבניות טקסט עשיר."
+msgstr ""
+"वाक्यविन्यासस्य प्रकाशनस्य शैलीं विन्यस्यताम् । इदं विन्यासः समृद्धपाठस्वरूपेषु न प्रयुक्तम् ।"
 
 #: src/controls.6/ColorSchemesPage.qml:79
 #, kde-format
 msgid "Color"
-msgstr "צבע"
+msgstr "वर्ण"
 
 #: src/controls.6/ColorSchemesPage.qml:80
 #, kde-format
 msgid "Editor background color."
-msgstr "צבע רקע עורך."
+msgstr "सम्पादक पृष्ठभूमि रंग।"
 
 #: src/controls.6/ColorSchemesPage.qml:110
 #, kde-format
 msgid "Theme"
-msgstr "ערכת עיצוב"
+msgstr "विषयवस्तु"
 
 #: src/controls.6/ColorSchemesPage.qml:111
 #, kde-format
 msgid "Editor color scheme style."
-msgstr "סגנון ערכת צבעים של העורך."
+msgstr "सम्पादक वर्ण योजना शैली।"
 
 #: src/controls.6/TextEditor.qml:270
 #, kde-format
 msgid "Undo"
-msgstr "הסגה"
+msgstr "पूर्ववत"
 
 #: src/controls.6/TextEditor.qml:283
 #, kde-format
 msgid "Redo"
-msgstr "ביצוע מחדש"
+msgstr "पुनः करो"
 
 #: src/controls.6/TextEditor.qml:299
 #, kde-format
 msgid "Copy"
-msgstr "העתקה"
+msgstr "प्रतिलिपि"
 
 #: src/controls.6/TextEditor.qml:316
 #, kde-format
 msgid "Cut"
-msgstr "גזירה"
+msgstr "छिन्न"
 
 #: src/controls.6/TextEditor.qml:332
 #, kde-format
 msgid "Paste"
-msgstr "הדבקה"
+msgstr "चिनोतु"
 
 #: src/controls.6/TextEditor.qml:350
 #, kde-format
 msgid "Select All"
-msgstr "בחירה בהכול"
+msgstr "सर्वं चिनोतु"
 
 #: src/controls.6/TextEditor.qml:363
 #, kde-format
 msgid "Search Selected Text on Google..."
-msgstr "חיפוש הטקסט הנבחר ב־Google…"
+msgstr "Google इत्यत्र चयनितं पाठं अन्वेष्टुम्..."
 
 #: src/controls.6/TextEditor.qml:374
 #, kde-format
 msgid "Delete"
-msgstr "מחיקה"
+msgstr "लुप्"
 
 #: src/controls.6/TextEditor.qml:392
 #, kde-format
 msgid "Spelling"
-msgstr "איות"
+msgstr "वर्तनी"
 
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
 msgid "No suggestions for \"%1\""
-msgstr "אין הצעות עבור „%1”"
+msgstr "\"%1\" कृते कोऽपि सुझावः नास्ति ।"
 
 #: src/controls.6/TextEditor.qml:441
 #, kde-format
 msgid "Add \"%1\" to dictionary"
-msgstr "הוספת „%1” למילון"
+msgstr "शब्दकोशे \"%1\" योजयन्तु"
 
 #: src/controls.6/TextEditor.qml:469
 #, kde-format
 msgid "Enable Spellchecker"
-msgstr "הפעלת בודק איות"
+msgstr "वर्तनीपरीक्षकं सक्षमं कुर्वन्तु"
 
 #: src/controls.6/TextEditor.qml:556
 #, kde-format
 msgid "Case Sensitive"
-msgstr "תלוי רישיות"
+msgstr "प्रकरणसंवेदनशीलम्"
 
 #: src/controls.6/TextEditor.qml:563
 #, kde-format
 msgid "Whole Words Only"
-msgstr "מילים שלמות בלבד"
+msgstr "सम्पूर्ण शब्द केवल"
 
 #: src/controls.6/TextEditor.qml:573
 #, kde-format
 msgid "Find"
-msgstr "איתור"
+msgstr "अन्वेषय"
 
 #: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
 #, kde-format
 msgid "Replace"
-msgstr "החלפה"
+msgstr "प्रत्याहृ"
 
 #: src/controls.6/TextEditor.qml:621
 #, kde-format
 msgid "Replace All"
-msgstr "החלפה של הכול"
+msgstr "सर्वेषां प्रतिस्थापनम्"
 
 #: src/controls.6/TextEditor.qml:881
 #, kde-format
 msgid "Body"
-msgstr "תוכן"
+msgstr "शरीरं"
