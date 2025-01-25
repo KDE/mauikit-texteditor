@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-13 01:49+0000\n"
-"PO-Revision-Date: 2024-12-28 11:01+0200\n"
+"PO-Revision-Date: 2025-01-24 09:27+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -31,12 +31,12 @@ msgstr "אפשר לרענן את הקובץ או לשמור את השינויי�
 #: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "Reload"
-msgstr "רענון"
+msgstr "ריענון"
 
 #: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "Auto Reload"
-msgstr "רענון אוטומטי"
+msgstr "ריענון אוטומטי"
 
 #: src/code/documenthandler.cpp:177 src/code/documenthandler.cpp:185
 #: src/controls.6/TextEditor.qml:455
