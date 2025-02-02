@@ -1,0 +1,208 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the mauikit-texteditor package.
+#
+# SPDX-FileCopyrightText: 2025 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: mauikit-texteditor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-11-13 01:49+0000\n"
+"PO-Revision-Date: 2025-01-31 16:58+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 24.12.1\n"
+
+#: src/code/documenthandler.cpp:166
+#, kde-format
+msgid "File changed externally"
+msgstr "Datni ir mainījusi ārēja programma"
+
+#: src/code/documenthandler.cpp:166
+#, kde-format
+msgid "You can reload the file or save your changes now"
+msgstr "Varat datni pārlādēt vai saglabāt savas izmaiņas"
+
+#: src/code/documenthandler.cpp:177
+#, kde-format
+msgid "Reload"
+msgstr "Pārlādēt"
+
+#: src/code/documenthandler.cpp:177
+#, kde-format
+msgid "Auto Reload"
+msgstr "Pārlādēt automātiski"
+
+#: src/code/documenthandler.cpp:177 src/code/documenthandler.cpp:185
+#: src/controls.6/TextEditor.qml:455
+#, kde-format
+msgid "Ignore"
+msgstr "Ignorēt"
+
+#: src/code/documenthandler.cpp:183
+#, kde-format
+msgid "File can not be saved"
+msgstr "Datni nevar saglabāt."
+
+#: src/code/documenthandler.cpp:191
+#, kde-format
+msgid "Your file was removed"
+msgstr "Jūsu datne ir noņemta"
+
+#: src/code/documenthandler.cpp:191
+#, kde-format
+msgid ""
+"This file does not longer exist in your local storage, however you can save "
+"it again"
+msgstr ""
+"Šī datne jūsu lokālajā krātuvē vairs nepastāv, tomēr varat to atkal saglabāt"
+
+#: src/code/documenthandler.cpp:197
+#, kde-format
+msgid "Save"
+msgstr "Saglabāt"
+
+#: src/code/documenthandler.cpp:791
+#, kde-format
+msgid "Cannot save: "
+msgstr "Nevar saglabāt: "
+
+#: src/code/documenthandler.cpp:792
+#, kde-format
+msgid "Cannot save file "
+msgstr "Datni saglabāt nevar "
+
+#: src/code/moduleinfo.cpp:18
+#, kde-format
+msgid "Text editor controls."
+msgstr "Teksta redaktora vadība."
+
+#: src/controls.6/ColorSchemesPage.qml:53
+#: src/controls.6/ColorSchemesPage.qml:74
+#, kde-format
+msgid "Colors"
+msgstr "Krāsas"
+
+#: src/controls.6/ColorSchemesPage.qml:75
+#, kde-format
+msgid ""
+"Configure the style of the syntax highlighting. This configuration in not "
+"applied for rich text formats."
+msgstr ""
+"Konfigurēt sintakses izcelšanas stilu. Šī konfigurācija neattiecas uz "
+"formatētu tekstu."
+
+#: src/controls.6/ColorSchemesPage.qml:79
+#, kde-format
+msgid "Color"
+msgstr "Krāsa"
+
+#: src/controls.6/ColorSchemesPage.qml:80
+#, kde-format
+msgid "Editor background color."
+msgstr "Redaktora fona krāsa."
+
+#: src/controls.6/ColorSchemesPage.qml:110
+#, kde-format
+msgid "Theme"
+msgstr "Motīvs"
+
+#: src/controls.6/ColorSchemesPage.qml:111
+#, kde-format
+msgid "Editor color scheme style."
+msgstr "Redaktora krāsu shēmas stils."
+
+#: src/controls.6/TextEditor.qml:270
+#, kde-format
+msgid "Undo"
+msgstr "Atsaukt"
+
+#: src/controls.6/TextEditor.qml:283
+#, kde-format
+msgid "Redo"
+msgstr "Atatsaukt"
+
+#: src/controls.6/TextEditor.qml:299
+#, kde-format
+msgid "Copy"
+msgstr "Kopēt"
+
+#: src/controls.6/TextEditor.qml:316
+#, kde-format
+msgid "Cut"
+msgstr "Izgriezt"
+
+#: src/controls.6/TextEditor.qml:332
+#, kde-format
+msgid "Paste"
+msgstr "Ielīmēt"
+
+#: src/controls.6/TextEditor.qml:350
+#, kde-format
+msgid "Select All"
+msgstr "Atlasīt visu"
+
+#: src/controls.6/TextEditor.qml:363
+#, kde-format
+msgid "Search Selected Text on Google..."
+msgstr "Meklēt atlasīto tekstu ar „Google“..."
+
+#: src/controls.6/TextEditor.qml:374
+#, kde-format
+msgid "Delete"
+msgstr "Dzēst"
+
+#: src/controls.6/TextEditor.qml:392
+#, kde-format
+msgid "Spelling"
+msgstr "Pareizrakstība"
+
+#: src/controls.6/TextEditor.qml:431
+#, kde-format
+msgid "No suggestions for \"%1\""
+msgstr "„%1“ nav ieteikumu"
+
+#: src/controls.6/TextEditor.qml:441
+#, kde-format
+msgid "Add \"%1\" to dictionary"
+msgstr "Pievienot „%1“ vārdnīcai"
+
+#: src/controls.6/TextEditor.qml:469
+#, kde-format
+msgid "Enable Spellchecker"
+msgstr "Ieslēgt pareizrakstības pārbaudi"
+
+#: src/controls.6/TextEditor.qml:556
+#, kde-format
+msgid "Case Sensitive"
+msgstr "Reģistrjutīga"
+
+#: src/controls.6/TextEditor.qml:563
+#, kde-format
+msgid "Whole Words Only"
+msgstr "Tikai pilnus vārdus"
+
+#: src/controls.6/TextEditor.qml:573
+#, kde-format
+msgid "Find"
+msgstr "Meklēt"
+
+#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
+#, kde-format
+msgid "Replace"
+msgstr "Aizvietot"
+
+#: src/controls.6/TextEditor.qml:621
+#, kde-format
+msgid "Replace All"
+msgstr "Aizvietot visus"
+
+#: src/controls.6/TextEditor.qml:881
+#, kde-format
+msgid "Body"
+msgstr "Pamatteksts"
