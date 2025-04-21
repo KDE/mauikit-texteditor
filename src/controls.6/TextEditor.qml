@@ -247,6 +247,7 @@ Page
         asynchronous: true
         sourceComponent: Maui.ContextualMenu
         {
+            id: _menu
             property var spellcheckhighlighter: null
             property var spellcheckhighlighterLoader: null
             property int restoredCursorPosition: 0
@@ -307,6 +308,8 @@ Page
                 }
 
                 enabled: body.selectedText.length
+                visible: enabled
+                height: visible ? implicitHeight : -_menu.spacing
             }
 
             MenuItem
@@ -322,6 +325,8 @@ Page
                     documentMenu.runOnMenuClose = () => control.body.cut();
                 }
                 enabled: !body.readOnly && body.selectedText.length
+                visible: enabled
+                height: visible ? implicitHeight : -_menu.spacing
             }
 
             MenuItem
@@ -357,24 +362,62 @@ Page
                     documentMenu.runOnMenuClose = () => control.body.selectAll();
                 }
             }
+            
+            MenuSeparator {}
 
             MenuItem
             {
                 text: i18nd("mauikittexteditor","Search Selected Text on Google...")
                 onTriggered: Qt.openUrlExternally("https://www.google.com/search?q="+body.selectedText)
                 enabled: body.selectedText.length
+                visible: enabled
+                height: visible ? implicitHeight : -_menu.spacing
+            }
+            
+            MenuItem
+            {
+                enabled: control.body.selectedText.length > 0 && Maui.Handy.isEmail(control.body.selectedText)
+                visible: enabled
+                height: visible ? implicitHeight : -_menu.spacing
+                text: i18n("Email")
+                icon.name: "mail-sent"
+                onTriggered: Qt.openUrlExternally("mailto:"+control.body.selectedText)
+            }
+            
+            MenuItem
+            {
+                enabled: control.body.selectedText.length > 0 && Maui.Handy.isPhoneNumber(control.body.selectedText)
+                visible: enabled
+                height: visible ? implicitHeight : -_menu.spacing
+                text: i18n("Save as Contact")
+                icon.name: "contact-new-symbolic"
+                onTriggered: Qt.openUrlExternally("tel:"+control.body.selectedText)
+            }
+            
+            MenuItem
+            {
+                enabled: control.body.selectedText.length > 0 && Maui.Handy.isWebLink(control.body.selectedText)
+                visible: enabled
+                height: visible ? implicitHeight : -_menu.spacing
+                text: i18n("Open Link")
+                icon.name: "website-symbolic"
+                onTriggered: Qt.openUrlExternally(control.body.selectedText)
             }
 
+            MenuSeparator {}
+            
             MenuItem
             {
                 enabled: !control.body.readOnly && control.body.selectedText
+                visible: enabled
+                height: visible ? implicitHeight : -_menu.spacing
                 action: Action
                 {
                     icon.name: "edit-delete-symbolic"
                     text: i18n("Delete")
                     shortcut: StandardKey.Delete
                 }
-
+                
                 onTriggered:
                 {
                     documentMenu.deselectWhenMenuClosed = false;
@@ -382,15 +425,13 @@ Page
                 }
             }
 
-            MenuSeparator
-            {
-            }
-
             Menu
             {
                 id: _spellingMenu
                 title: i18nd("mauikittexteditor","Spelling")
                 enabled: control.spellcheckEnabled
+                visible: enabled
+                height: visible ? implicitHeight : -_menu.spacing
 
                 Instantiator
                 {
