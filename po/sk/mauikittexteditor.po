@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikittexteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-13 01:49+0000\n"
+"POT-Creation-Date: 2025-04-22 00:40+0000\n"
 "PO-Revision-Date: 2023-03-12 11:38+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -36,7 +36,7 @@ msgid "Auto Reload"
 msgstr ""
 
 #: src/code/documenthandler.cpp:177 src/code/documenthandler.cpp:185
-#: src/controls.6/TextEditor.qml:455
+#: src/controls.6/TextEditor.qml:496
 #, kde-format
 msgid "Ignore"
 msgstr "Ignorovať"
@@ -111,93 +111,108 @@ msgstr ""
 msgid "Editor color scheme style."
 msgstr ""
 
-#: src/controls.6/TextEditor.qml:270
+#: src/controls.6/TextEditor.qml:271
 #, kde-format
 msgid "Undo"
 msgstr ""
 
-#: src/controls.6/TextEditor.qml:283
+#: src/controls.6/TextEditor.qml:284
 #, kde-format
 msgid "Redo"
 msgstr ""
 
-#: src/controls.6/TextEditor.qml:299
+#: src/controls.6/TextEditor.qml:300
 #, kde-format
 msgid "Copy"
 msgstr ""
 
-#: src/controls.6/TextEditor.qml:316
+#: src/controls.6/TextEditor.qml:319
 #, kde-format
 msgid "Cut"
 msgstr ""
 
-#: src/controls.6/TextEditor.qml:332
+#: src/controls.6/TextEditor.qml:337
 #, kde-format
 msgid "Paste"
 msgstr ""
 
-#: src/controls.6/TextEditor.qml:350
+#: src/controls.6/TextEditor.qml:355
 #, fuzzy, kde-format
 #| msgid "Replace All"
 msgid "Select All"
 msgstr "Nahradiť všetko"
 
-#: src/controls.6/TextEditor.qml:363
+#: src/controls.6/TextEditor.qml:370
 #, kde-format
 msgid "Search Selected Text on Google..."
 msgstr ""
 
-#: src/controls.6/TextEditor.qml:374
+#: src/controls.6/TextEditor.qml:382
 #, kde-format
-msgid "Delete"
+msgid "Email"
 msgstr ""
 
 #: src/controls.6/TextEditor.qml:392
 #, kde-format
+msgid "Save as Contact"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:402
+#, kde-format
+msgid "Open Link"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:417
+#, kde-format
+msgid "Delete"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:431
+#, kde-format
 msgid "Spelling"
 msgstr "Pravopis"
 
-#: src/controls.6/TextEditor.qml:431
+#: src/controls.6/TextEditor.qml:472
 #, kde-format
 msgid "No suggestions for \"%1\""
 msgstr ""
 
-#: src/controls.6/TextEditor.qml:441
+#: src/controls.6/TextEditor.qml:482
 #, kde-format
 msgid "Add \"%1\" to dictionary"
 msgstr ""
 
-#: src/controls.6/TextEditor.qml:469
+#: src/controls.6/TextEditor.qml:510
 #, kde-format
 msgid "Enable Spellchecker"
 msgstr ""
 
-#: src/controls.6/TextEditor.qml:556
+#: src/controls.6/TextEditor.qml:597
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Rozlišovať veľkosť písmen"
 
-#: src/controls.6/TextEditor.qml:563
+#: src/controls.6/TextEditor.qml:604
 #, kde-format
 msgid "Whole Words Only"
 msgstr "Iba celé slová"
 
-#: src/controls.6/TextEditor.qml:573
+#: src/controls.6/TextEditor.qml:614
 #, kde-format
 msgid "Find"
 msgstr "Nájsť"
 
-#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
+#: src/controls.6/TextEditor.qml:645 src/controls.6/TextEditor.qml:652
 #, kde-format
 msgid "Replace"
 msgstr "Nahradiť"
 
-#: src/controls.6/TextEditor.qml:621
+#: src/controls.6/TextEditor.qml:662
 #, kde-format
 msgid "Replace All"
 msgstr "Nahradiť všetko"
 
-#: src/controls.6/TextEditor.qml:881
+#: src/controls.6/TextEditor.qml:922
 #, kde-format
 msgid "Body"
 msgstr "Telo"

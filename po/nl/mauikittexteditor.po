@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-13 01:49+0000\n"
+"POT-Creation-Date: 2025-04-22 00:40+0000\n"
 "PO-Revision-Date: 2024-03-20 10:46+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -38,7 +38,7 @@ msgid "Auto Reload"
 msgstr "Automatisch herladen"
 
 #: src/code/documenthandler.cpp:177 src/code/documenthandler.cpp:185
-#: src/controls.6/TextEditor.qml:455
+#: src/controls.6/TextEditor.qml:496
 #, kde-format
 msgid "Ignore"
 msgstr "Negeren"
@@ -117,92 +117,107 @@ msgstr "Thema"
 msgid "Editor color scheme style."
 msgstr "Kleurenschemastijl van bewerker."
 
-#: src/controls.6/TextEditor.qml:270
+#: src/controls.6/TextEditor.qml:271
 #, kde-format
 msgid "Undo"
 msgstr "Ongedaan maken"
 
-#: src/controls.6/TextEditor.qml:283
+#: src/controls.6/TextEditor.qml:284
 #, kde-format
 msgid "Redo"
 msgstr "Opnieuw doen"
 
-#: src/controls.6/TextEditor.qml:299
+#: src/controls.6/TextEditor.qml:300
 #, kde-format
 msgid "Copy"
 msgstr "Kopiëren"
 
-#: src/controls.6/TextEditor.qml:316
+#: src/controls.6/TextEditor.qml:319
 #, kde-format
 msgid "Cut"
 msgstr "Knippen"
 
-#: src/controls.6/TextEditor.qml:332
+#: src/controls.6/TextEditor.qml:337
 #, kde-format
 msgid "Paste"
 msgstr "Plakken"
 
-#: src/controls.6/TextEditor.qml:350
+#: src/controls.6/TextEditor.qml:355
 #, kde-format
 msgid "Select All"
 msgstr "Alles selecteren"
 
-#: src/controls.6/TextEditor.qml:363
+#: src/controls.6/TextEditor.qml:370
 #, kde-format
 msgid "Search Selected Text on Google..."
 msgstr "Geselecteerde tekst on Google zoeken..."
 
-#: src/controls.6/TextEditor.qml:374
+#: src/controls.6/TextEditor.qml:382
+#, kde-format
+msgid "Email"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:392
+#, kde-format
+msgid "Save as Contact"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:402
+#, kde-format
+msgid "Open Link"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:417
 #, kde-format
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: src/controls.6/TextEditor.qml:392
+#: src/controls.6/TextEditor.qml:431
 #, kde-format
 msgid "Spelling"
 msgstr "Spelling"
 
-#: src/controls.6/TextEditor.qml:431
+#: src/controls.6/TextEditor.qml:472
 #, kde-format
 msgid "No suggestions for \"%1\""
 msgstr "Geen suggesties voor \"%1\""
 
-#: src/controls.6/TextEditor.qml:441
+#: src/controls.6/TextEditor.qml:482
 #, kde-format
 msgid "Add \"%1\" to dictionary"
 msgstr "\"%1\" aan woordenboek toevoegen"
 
-#: src/controls.6/TextEditor.qml:469
+#: src/controls.6/TextEditor.qml:510
 #, kde-format
 msgid "Enable Spellchecker"
 msgstr "Spellingcontrole inschakelen"
 
-#: src/controls.6/TextEditor.qml:556
+#: src/controls.6/TextEditor.qml:597
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Hoofdlettergevoelig"
 
-#: src/controls.6/TextEditor.qml:563
+#: src/controls.6/TextEditor.qml:604
 #, kde-format
 msgid "Whole Words Only"
 msgstr "Alleen hele woorden"
 
-#: src/controls.6/TextEditor.qml:573
+#: src/controls.6/TextEditor.qml:614
 #, kde-format
 msgid "Find"
 msgstr "Zoeken"
 
-#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
+#: src/controls.6/TextEditor.qml:645 src/controls.6/TextEditor.qml:652
 #, kde-format
 msgid "Replace"
 msgstr "Vervangen"
 
-#: src/controls.6/TextEditor.qml:621
+#: src/controls.6/TextEditor.qml:662
 #, kde-format
 msgid "Replace All"
 msgstr "Alles vervangen"
 
-#: src/controls.6/TextEditor.qml:881
+#: src/controls.6/TextEditor.qml:922
 #, kde-format
 msgid "Body"
 msgstr "Inhoud"

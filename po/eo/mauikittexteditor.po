@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-13 01:49+0000\n"
+"POT-Creation-Date: 2025-04-22 00:40+0000\n"
 "PO-Revision-Date: 2024-03-20 22:52+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -39,7 +39,7 @@ msgid "Auto Reload"
 msgstr "Aŭtomata Reŝargi"
 
 #: src/code/documenthandler.cpp:177 src/code/documenthandler.cpp:185
-#: src/controls.6/TextEditor.qml:455
+#: src/controls.6/TextEditor.qml:496
 #, kde-format
 msgid "Ignore"
 msgstr "Ignori"
@@ -118,92 +118,107 @@ msgstr "Etoso"
 msgid "Editor color scheme style."
 msgstr "Kolorskemo de redaktilo."
 
-#: src/controls.6/TextEditor.qml:270
+#: src/controls.6/TextEditor.qml:271
 #, kde-format
 msgid "Undo"
 msgstr "Malfari"
 
-#: src/controls.6/TextEditor.qml:283
+#: src/controls.6/TextEditor.qml:284
 #, kde-format
 msgid "Redo"
 msgstr "Refari"
 
-#: src/controls.6/TextEditor.qml:299
+#: src/controls.6/TextEditor.qml:300
 #, kde-format
 msgid "Copy"
 msgstr "Kopii"
 
-#: src/controls.6/TextEditor.qml:316
+#: src/controls.6/TextEditor.qml:319
 #, kde-format
 msgid "Cut"
 msgstr "Tondi"
 
-#: src/controls.6/TextEditor.qml:332
+#: src/controls.6/TextEditor.qml:337
 #, kde-format
 msgid "Paste"
 msgstr "Alglui"
 
-#: src/controls.6/TextEditor.qml:350
+#: src/controls.6/TextEditor.qml:355
 #, kde-format
 msgid "Select All"
 msgstr "Elekti Ĉion"
 
-#: src/controls.6/TextEditor.qml:363
+#: src/controls.6/TextEditor.qml:370
 #, kde-format
 msgid "Search Selected Text on Google..."
 msgstr "Serĉi Elektitan Tekston en Guglo..."
 
-#: src/controls.6/TextEditor.qml:374
+#: src/controls.6/TextEditor.qml:382
+#, kde-format
+msgid "Email"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:392
+#, kde-format
+msgid "Save as Contact"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:402
+#, kde-format
+msgid "Open Link"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:417
 #, kde-format
 msgid "Delete"
 msgstr "Forigi"
 
-#: src/controls.6/TextEditor.qml:392
+#: src/controls.6/TextEditor.qml:431
 #, kde-format
 msgid "Spelling"
 msgstr "Literumo"
 
-#: src/controls.6/TextEditor.qml:431
+#: src/controls.6/TextEditor.qml:472
 #, kde-format
 msgid "No suggestions for \"%1\""
 msgstr "Neniuj sugestoj por \"%1\""
 
-#: src/controls.6/TextEditor.qml:441
+#: src/controls.6/TextEditor.qml:482
 #, kde-format
 msgid "Add \"%1\" to dictionary"
 msgstr "Aldoni \"%1\" al vortaro"
 
-#: src/controls.6/TextEditor.qml:469
+#: src/controls.6/TextEditor.qml:510
 #, kde-format
 msgid "Enable Spellchecker"
 msgstr "Ebligi Literumkontrolilon"
 
-#: src/controls.6/TextEditor.qml:556
+#: src/controls.6/TextEditor.qml:597
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Usklecodistinga"
 
-#: src/controls.6/TextEditor.qml:563
+#: src/controls.6/TextEditor.qml:604
 #, kde-format
 msgid "Whole Words Only"
 msgstr "Nur Tutaj Vortoj"
 
-#: src/controls.6/TextEditor.qml:573
+#: src/controls.6/TextEditor.qml:614
 #, kde-format
 msgid "Find"
 msgstr "Trovi"
 
-#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
+#: src/controls.6/TextEditor.qml:645 src/controls.6/TextEditor.qml:652
 #, kde-format
 msgid "Replace"
 msgstr "Anstataŭigi"
 
-#: src/controls.6/TextEditor.qml:621
+#: src/controls.6/TextEditor.qml:662
 #, kde-format
 msgid "Replace All"
 msgstr "Anstataŭigi Ĉion"
 
-#: src/controls.6/TextEditor.qml:881
+#: src/controls.6/TextEditor.qml:922
 #, kde-format
 msgid "Body"
 msgstr "Korpo"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-13 01:49+0000\n"
+"POT-Creation-Date: 2025-04-22 00:40+0000\n"
 "PO-Revision-Date: 2024-03-20 18:30+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -38,7 +38,7 @@ msgid "Auto Reload"
 msgstr "自動重新載入"
 
 #: src/code/documenthandler.cpp:177 src/code/documenthandler.cpp:185
-#: src/controls.6/TextEditor.qml:455
+#: src/controls.6/TextEditor.qml:496
 #, kde-format
 msgid "Ignore"
 msgstr "忽略"
@@ -113,92 +113,107 @@ msgstr "主題"
 msgid "Editor color scheme style."
 msgstr "編輯器配色方案風格。"
 
-#: src/controls.6/TextEditor.qml:270
+#: src/controls.6/TextEditor.qml:271
 #, kde-format
 msgid "Undo"
 msgstr "復原"
 
-#: src/controls.6/TextEditor.qml:283
+#: src/controls.6/TextEditor.qml:284
 #, kde-format
 msgid "Redo"
 msgstr "重做"
 
-#: src/controls.6/TextEditor.qml:299
+#: src/controls.6/TextEditor.qml:300
 #, kde-format
 msgid "Copy"
 msgstr "複製"
 
-#: src/controls.6/TextEditor.qml:316
+#: src/controls.6/TextEditor.qml:319
 #, kde-format
 msgid "Cut"
 msgstr "剪下"
 
-#: src/controls.6/TextEditor.qml:332
+#: src/controls.6/TextEditor.qml:337
 #, kde-format
 msgid "Paste"
 msgstr "貼上"
 
-#: src/controls.6/TextEditor.qml:350
+#: src/controls.6/TextEditor.qml:355
 #, kde-format
 msgid "Select All"
 msgstr "全部選取"
 
-#: src/controls.6/TextEditor.qml:363
+#: src/controls.6/TextEditor.qml:370
 #, kde-format
 msgid "Search Selected Text on Google..."
 msgstr "在 Google 上搜尋選取的文字…"
 
-#: src/controls.6/TextEditor.qml:374
+#: src/controls.6/TextEditor.qml:382
+#, kde-format
+msgid "Email"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:392
+#, kde-format
+msgid "Save as Contact"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:402
+#, kde-format
+msgid "Open Link"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:417
 #, kde-format
 msgid "Delete"
 msgstr "刪除"
 
-#: src/controls.6/TextEditor.qml:392
+#: src/controls.6/TextEditor.qml:431
 #, kde-format
 msgid "Spelling"
 msgstr "拼字"
 
-#: src/controls.6/TextEditor.qml:431
+#: src/controls.6/TextEditor.qml:472
 #, kde-format
 msgid "No suggestions for \"%1\""
 msgstr "沒有 \"%1\" 的建議"
 
-#: src/controls.6/TextEditor.qml:441
+#: src/controls.6/TextEditor.qml:482
 #, kde-format
 msgid "Add \"%1\" to dictionary"
 msgstr "將 \"%1\" 加到字典中"
 
-#: src/controls.6/TextEditor.qml:469
+#: src/controls.6/TextEditor.qml:510
 #, kde-format
 msgid "Enable Spellchecker"
 msgstr "啟用拼字檢查程式"
 
-#: src/controls.6/TextEditor.qml:556
+#: src/controls.6/TextEditor.qml:597
 #, kde-format
 msgid "Case Sensitive"
 msgstr "區分大小寫"
 
-#: src/controls.6/TextEditor.qml:563
+#: src/controls.6/TextEditor.qml:604
 #, kde-format
 msgid "Whole Words Only"
 msgstr "必須符合整個單字"
 
-#: src/controls.6/TextEditor.qml:573
+#: src/controls.6/TextEditor.qml:614
 #, kde-format
 msgid "Find"
 msgstr "尋找"
 
-#: src/controls.6/TextEditor.qml:604 src/controls.6/TextEditor.qml:611
+#: src/controls.6/TextEditor.qml:645 src/controls.6/TextEditor.qml:652
 #, kde-format
 msgid "Replace"
 msgstr "取代"
 
-#: src/controls.6/TextEditor.qml:621
+#: src/controls.6/TextEditor.qml:662
 #, kde-format
 msgid "Replace All"
 msgstr "全部取代"
 
-#: src/controls.6/TextEditor.qml:881
+#: src/controls.6/TextEditor.qml:922
 #, kde-format
 msgid "Body"
 msgstr "本文"
