@@ -78,7 +78,9 @@ else()
     add_definitions(-DGIT_BRANCH="Stable")
 endif()
 
-qt_policy(SET QTP0004 NEW)
+if (QT_KNOWN_POLICY_QTP0004)
+    qt_policy(SET QTP0004 NEW)
+endif()
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/MauiKitTextEditor${MAUI_MAJOR_VERSION}")
 

@@ -918,6 +918,7 @@ Page
                         id: body
                         Maui.Theme.inherit: true
                         text: document.text
+                        clip: false
 
                         placeholderText: i18nd("mauikittexteditor","Body")
 
