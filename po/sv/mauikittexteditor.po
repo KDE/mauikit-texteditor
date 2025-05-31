@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the mauikit-texteditor package.
 #
-# SPDX-FileCopyrightText: 2023, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:41+0000\n"
-"PO-Revision-Date: 2024-05-02 15:10+0200\n"
+"PO-Revision-Date: 2025-05-30 21:03+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: src/code/documenthandler.cpp:166
 #, kde-format
@@ -154,17 +154,17 @@ msgstr "Sök i markerad text eller med Google..."
 #: src/controls.6/TextEditor.qml:382
 #, kde-format
 msgid "Email"
-msgstr ""
+msgstr "E-post"
 
 #: src/controls.6/TextEditor.qml:392
 #, kde-format
 msgid "Save as Contact"
-msgstr ""
+msgstr "Spara som kontakt"
 
 #: src/controls.6/TextEditor.qml:402
 #, kde-format
 msgid "Open Link"
-msgstr ""
+msgstr "Öppna länk"
 
 #: src/controls.6/TextEditor.qml:417
 #, kde-format
