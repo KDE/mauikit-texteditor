@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:41+0000\n"
-"PO-Revision-Date: 2025-01-31 16:58+0200\n"
+"PO-Revision-Date: 2025-06-07 16:57+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: src/code/documenthandler.cpp:166
 #, kde-format
@@ -155,17 +155,17 @@ msgstr "Meklēt atlasīto tekstu ar „Google“..."
 #: src/controls.6/TextEditor.qml:382
 #, kde-format
 msgid "Email"
-msgstr ""
+msgstr "E-pasta adrese"
 
 #: src/controls.6/TextEditor.qml:392
 #, kde-format
 msgid "Save as Contact"
-msgstr ""
+msgstr "Saglabāt kā kontaktu"
 
 #: src/controls.6/TextEditor.qml:402
 #, kde-format
 msgid "Open Link"
-msgstr ""
+msgstr "Atvērt saiti"
 
 #: src/controls.6/TextEditor.qml:417
 #, kde-format
