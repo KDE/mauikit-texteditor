@@ -36,7 +36,7 @@ msgstr "أعد التحميل"
 #: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "Auto Reload"
-msgstr "إعادة التحميل الآلي"
+msgstr "إعادة التحميل الآليّ"
 
 #: src/code/documenthandler.cpp:177 src/code/documenthandler.cpp:185
 #: src/controls.6/TextEditor.qml:496
