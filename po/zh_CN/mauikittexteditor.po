@@ -162,7 +162,7 @@ msgstr ""
 #: src/controls.6/TextEditor.qml:402
 #, kde-format
 msgid "Open Link"
-msgstr ""
+msgstr "打开链接"
 
 #: src/controls.6/TextEditor.qml:417
 #, kde-format
