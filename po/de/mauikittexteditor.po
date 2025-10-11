@@ -1,9 +1,7 @@
 # German translations for mauikit-texteditor package.
 # Copyright (C) 2022 This file is copyright:
 # This file is distributed under the same license as the mauikit-texteditor package.
-# Frederik Schwarzer <schwarzer@kde.org>, 2023.
-#
-# Automatically generated, 2022.
+# SPDX-FileCopyrightText: 2023 Frederik Schwarzer <schwarzer@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikittexteditor\n"
