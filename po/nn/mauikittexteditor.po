@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:41+0000\n"
-"PO-Revision-Date: 2024-09-27 20:43+0200\n"
+"PO-Revision-Date: 2025-10-26 13:35+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -154,17 +154,17 @@ msgstr "Søk etter merkt tekst på Google …"
 #: src/controls.6/TextEditor.qml:382
 #, kde-format
 msgid "Email"
-msgstr ""
+msgstr "E-postadresse"
 
 #: src/controls.6/TextEditor.qml:392
 #, kde-format
 msgid "Save as Contact"
-msgstr ""
+msgstr "Lagra som kontakt"
 
 #: src/controls.6/TextEditor.qml:402
 #, kde-format
 msgid "Open Link"
-msgstr ""
+msgstr "Opna lenkje"
 
 #: src/controls.6/TextEditor.qml:417
 #, kde-format
