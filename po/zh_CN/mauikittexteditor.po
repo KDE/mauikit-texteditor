@@ -21,133 +21,133 @@ msgstr ""
 #: src/code/documenthandler.cpp:166
 #, kde-format
 msgid "File changed externally"
-msgstr ""
+msgstr "文件已在外部被修改"
 
 #: src/code/documenthandler.cpp:166
 #, kde-format
 msgid "You can reload the file or save your changes now"
-msgstr ""
+msgstr "您可以重新加载文件或保存您的更改"
 
 #: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "Reload"
-msgstr ""
+msgstr "重新加载"
 
 #: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "Auto Reload"
-msgstr ""
+msgstr "自动重新加载"
 
 #: src/code/documenthandler.cpp:177 src/code/documenthandler.cpp:185
 #: src/controls.6/TextEditor.qml:496
 #, kde-format
 msgid "Ignore"
-msgstr ""
+msgstr "忽略"
 
 #: src/code/documenthandler.cpp:183
 #, kde-format
 msgid "File can not be saved"
-msgstr ""
+msgstr "无法保存文件"
 
 #: src/code/documenthandler.cpp:191
 #, kde-format
 msgid "Your file was removed"
-msgstr ""
+msgstr "您的文件已被删除"
 
 #: src/code/documenthandler.cpp:191
 #, kde-format
 msgid ""
 "This file does not longer exist in your local storage, however you can save "
 "it again"
-msgstr ""
+msgstr "此文件不再存在于您的本地存储中，但您可以再次保存"
 
 #: src/code/documenthandler.cpp:197
 #, kde-format
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: src/code/documenthandler.cpp:791
 #, kde-format
 msgid "Cannot save: "
-msgstr ""
+msgstr "无法保存："
 
 #: src/code/documenthandler.cpp:792
 #, kde-format
 msgid "Cannot save file "
-msgstr ""
+msgstr "无法保存文件 "
 
 #: src/code/moduleinfo.cpp:18
 #, kde-format
 msgid "Text editor controls."
-msgstr ""
+msgstr "文本编辑器控件"
 
 #: src/controls.6/ColorSchemesPage.qml:53
 #: src/controls.6/ColorSchemesPage.qml:74
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "配色方案"
 
 #: src/controls.6/ColorSchemesPage.qml:75
 #, kde-format
 msgid ""
 "Configure the style of the syntax highlighting. This configuration in not "
 "applied for rich text formats."
-msgstr ""
+msgstr "配置语法高亮样式。此配置不适用于富文本格式。"
 
 #: src/controls.6/ColorSchemesPage.qml:79
 #, kde-format
 msgid "Color"
-msgstr ""
+msgstr "颜色"
 
 #: src/controls.6/ColorSchemesPage.qml:80
 #, kde-format
 msgid "Editor background color."
-msgstr ""
+msgstr "编辑器背景颜色。"
 
 #: src/controls.6/ColorSchemesPage.qml:110
 #, kde-format
 msgid "Theme"
-msgstr ""
+msgstr "主题"
 
 #: src/controls.6/ColorSchemesPage.qml:111
 #, kde-format
 msgid "Editor color scheme style."
-msgstr ""
+msgstr "编辑器配色方案样式。"
 
 #: src/controls.6/TextEditor.qml:271
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "撤销"
 
 #: src/controls.6/TextEditor.qml:284
 #, kde-format
 msgid "Redo"
-msgstr ""
+msgstr "重做"
 
 #: src/controls.6/TextEditor.qml:300
 #, kde-format
 msgid "Copy"
-msgstr ""
+msgstr "复制"
 
 #: src/controls.6/TextEditor.qml:319
 #, kde-format
 msgid "Cut"
-msgstr ""
+msgstr "剪切"
 
 #: src/controls.6/TextEditor.qml:337
 #, kde-format
 msgid "Paste"
-msgstr ""
+msgstr "粘贴"
 
 #: src/controls.6/TextEditor.qml:355
 #, kde-format
 msgid "Select All"
-msgstr ""
+msgstr "全选"
 
 #: src/controls.6/TextEditor.qml:370
 #, kde-format
 msgid "Search Selected Text on Google..."
-msgstr ""
+msgstr "在Google上搜索选中的文本..."
 
 #: src/controls.6/TextEditor.qml:382
 #, kde-format
@@ -157,7 +157,7 @@ msgstr ""
 #: src/controls.6/TextEditor.qml:392
 #, kde-format
 msgid "Save as Contact"
-msgstr ""
+msgstr "保存为联系人"
 
 #: src/controls.6/TextEditor.qml:402
 #, kde-format
@@ -167,52 +167,52 @@ msgstr "打开链接"
 #: src/controls.6/TextEditor.qml:417
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
 msgid "Spelling"
-msgstr ""
+msgstr "拼写检查"
 
 #: src/controls.6/TextEditor.qml:472
 #, kde-format
 msgid "No suggestions for \"%1\""
-msgstr ""
+msgstr "没有关于“%1”的建议"
 
 #: src/controls.6/TextEditor.qml:482
 #, kde-format
 msgid "Add \"%1\" to dictionary"
-msgstr ""
+msgstr "添加“%1”到词典"
 
 #: src/controls.6/TextEditor.qml:510
 #, kde-format
 msgid "Enable Spellchecker"
-msgstr ""
+msgstr "启用拼写检查"
 
 #: src/controls.6/TextEditor.qml:597
 #, kde-format
 msgid "Case Sensitive"
-msgstr ""
+msgstr "区分大小写"
 
 #: src/controls.6/TextEditor.qml:604
 #, kde-format
 msgid "Whole Words Only"
-msgstr ""
+msgstr "全字匹配"
 
 #: src/controls.6/TextEditor.qml:614
 #, kde-format
 msgid "Find"
-msgstr ""
+msgstr "查找"
 
 #: src/controls.6/TextEditor.qml:645 src/controls.6/TextEditor.qml:652
 #, kde-format
 msgid "Replace"
-msgstr ""
+msgstr "替换"
 
 #: src/controls.6/TextEditor.qml:662
 #, kde-format
 msgid "Replace All"
-msgstr ""
+msgstr "全部替换"
 
 #: src/controls.6/TextEditor.qml:923
 #, kde-format
