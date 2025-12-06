@@ -152,7 +152,7 @@ msgstr "在Google上搜索选中的文本..."
 #: src/controls.6/TextEditor.qml:382
 #, kde-format
 msgid "Email"
-msgstr ""
+msgstr "电子邮箱"
 
 #: src/controls.6/TextEditor.qml:392
 #, kde-format
@@ -217,4 +217,4 @@ msgstr "全部替换"
 #: src/controls.6/TextEditor.qml:923
 #, kde-format
 msgid "Body"
-msgstr ""
+msgstr "正文"
