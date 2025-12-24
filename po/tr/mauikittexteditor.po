@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2025-04-22 19:57+0300\n"
-"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
+"PO-Revision-Date: 2025-12-23 12:28+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: src/code/documenthandler.cpp:166
 #, kde-format
@@ -150,7 +150,7 @@ msgstr "Tümünü Seç"
 #: src/controls.6/TextEditor.qml:370
 #, kde-format
 msgid "Search Selected Text on Google..."
-msgstr "Seçili Metni Google'da Ara..."
+msgstr "Seçili Metni Google’da Ara…"
 
 #: src/controls.6/TextEditor.qml:382
 #, kde-format
@@ -180,12 +180,12 @@ msgstr "Yazım Denetimi"
 #: src/controls.6/TextEditor.qml:472
 #, kde-format
 msgid "No suggestions for \"%1\""
-msgstr "\"%1\" için öneri yok"
+msgstr "“%1” için öneri yok"
 
 #: src/controls.6/TextEditor.qml:482
 #, kde-format
 msgid "Add \"%1\" to dictionary"
-msgstr "Sözlüğe Ekle: \"%1\""
+msgstr "Sözlüğe Ekle: “%1”"
 
 #: src/controls.6/TextEditor.qml:510
 #, kde-format
