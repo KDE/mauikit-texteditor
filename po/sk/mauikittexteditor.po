@@ -12,8 +12,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: src/code/documenthandler.cpp:166
 #, kde-format
@@ -33,7 +33,7 @@ msgstr "Znovu načítať"
 #: src/code/documenthandler.cpp:177
 #, kde-format
 msgid "Auto Reload"
-msgstr ""
+msgstr "Auto Reload"
 
 #: src/code/documenthandler.cpp:177 src/code/documenthandler.cpp:185
 #: src/controls.6/TextEditor.qml:496
@@ -82,7 +82,7 @@ msgstr ""
 #: src/controls.6/ColorSchemesPage.qml:74
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "Farby"
 
 #: src/controls.6/ColorSchemesPage.qml:75
 #, kde-format
@@ -94,7 +94,7 @@ msgstr ""
 #: src/controls.6/ColorSchemesPage.qml:79
 #, kde-format
 msgid "Color"
-msgstr ""
+msgstr "Farba"
 
 #: src/controls.6/ColorSchemesPage.qml:80
 #, kde-format
@@ -104,7 +104,7 @@ msgstr ""
 #: src/controls.6/ColorSchemesPage.qml:110
 #, kde-format
 msgid "Theme"
-msgstr ""
+msgstr "Téma"
 
 #: src/controls.6/ColorSchemesPage.qml:111
 #, kde-format
@@ -114,33 +114,32 @@ msgstr ""
 #: src/controls.6/TextEditor.qml:271
 #, kde-format
 msgid "Undo"
-msgstr ""
+msgstr "Späť"
 
 #: src/controls.6/TextEditor.qml:284
 #, kde-format
 msgid "Redo"
-msgstr ""
+msgstr "Znovu"
 
 #: src/controls.6/TextEditor.qml:300
 #, kde-format
 msgid "Copy"
-msgstr ""
+msgstr "Kopírovať"
 
 #: src/controls.6/TextEditor.qml:319
 #, kde-format
 msgid "Cut"
-msgstr ""
+msgstr "Vystrihnúť"
 
 #: src/controls.6/TextEditor.qml:337
 #, kde-format
 msgid "Paste"
-msgstr ""
+msgstr "Vložiť"
 
 #: src/controls.6/TextEditor.qml:355
-#, fuzzy, kde-format
-#| msgid "Replace All"
+#, kde-format
 msgid "Select All"
-msgstr "Nahradiť všetko"
+msgstr "Vybrať všetko"
 
 #: src/controls.6/TextEditor.qml:370
 #, kde-format
@@ -150,22 +149,22 @@ msgstr ""
 #: src/controls.6/TextEditor.qml:382
 #, kde-format
 msgid "Email"
-msgstr ""
+msgstr "E-mail"
 
 #: src/controls.6/TextEditor.qml:392
 #, kde-format
 msgid "Save as Contact"
-msgstr ""
+msgstr "Uložiť ako"
 
 #: src/controls.6/TextEditor.qml:402
 #, kde-format
 msgid "Open Link"
-msgstr ""
+msgstr "Otvoriť odkaz"
 
 #: src/controls.6/TextEditor.qml:417
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Vymazať zoznam"
 
 #: src/controls.6/TextEditor.qml:431
 #, kde-format
@@ -175,17 +174,17 @@ msgstr "Pravopis"
 #: src/controls.6/TextEditor.qml:472
 #, kde-format
 msgid "No suggestions for \"%1\""
-msgstr ""
+msgstr "Žiadne návrhy pre \"%1\""
 
 #: src/controls.6/TextEditor.qml:482
 #, kde-format
 msgid "Add \"%1\" to dictionary"
-msgstr ""
+msgstr "Pridať \"%1\" do slovníka"
 
 #: src/controls.6/TextEditor.qml:510
 #, kde-format
 msgid "Enable Spellchecker"
-msgstr ""
+msgstr "Enable Spellchecker"
 
 #: src/controls.6/TextEditor.qml:597
 #, kde-format
