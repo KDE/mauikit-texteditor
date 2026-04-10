@@ -23,7 +23,7 @@ msgstr "Súbor zmenený interne"
 #: src/code/documenthandler.cpp:166
 #, kde-format
 msgid "You can reload the file or save your changes now"
-msgstr ""
+msgstr "Teraz môžete znovu načítať súbor alebo uložiť zmeny"
 
 #: src/code/documenthandler.cpp:177
 #, kde-format
@@ -44,12 +44,12 @@ msgstr "Ignorovať"
 #: src/code/documenthandler.cpp:183
 #, kde-format
 msgid "File can not be saved"
-msgstr ""
+msgstr "Súbor sa nedá uložiť"
 
 #: src/code/documenthandler.cpp:191
 #, kde-format
 msgid "Your file was removed"
-msgstr ""
+msgstr "Váš súbor bol odstránený"
 
 #: src/code/documenthandler.cpp:191
 #, kde-format
@@ -57,6 +57,8 @@ msgid ""
 "This file does not longer exist in your local storage, however you can save "
 "it again"
 msgstr ""
+"Tento súbor už neexistuje vo vašom lokálnom úložisku, ale môžete ho znova "
+"uložiť"
 
 #: src/code/documenthandler.cpp:197
 #, kde-format
@@ -76,7 +78,7 @@ msgstr "Nie je možné uložiť súbor "
 #: src/code/moduleinfo.cpp:18
 #, kde-format
 msgid "Text editor controls."
-msgstr ""
+msgstr "Ovládacie prvky textového editora."
 
 #: src/controls.6/ColorSchemesPage.qml:53
 #: src/controls.6/ColorSchemesPage.qml:74
@@ -90,6 +92,8 @@ msgid ""
 "Configure the style of the syntax highlighting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
+"Nastaviť štýl zvýrazňovania syntaxe. Táto konfigurácia sa nepoužíva pri "
+"úprave formátovaného textu."
 
 #: src/controls.6/ColorSchemesPage.qml:79
 #, kde-format
@@ -99,7 +103,7 @@ msgstr "Farba"
 #: src/controls.6/ColorSchemesPage.qml:80
 #, kde-format
 msgid "Editor background color."
-msgstr ""
+msgstr "Farba pozadia editora."
 
 #: src/controls.6/ColorSchemesPage.qml:110
 #, kde-format
@@ -109,7 +113,7 @@ msgstr "Téma"
 #: src/controls.6/ColorSchemesPage.qml:111
 #, kde-format
 msgid "Editor color scheme style."
-msgstr ""
+msgstr "Štýl farebnej schémy editora."
 
 #: src/controls.6/TextEditor.qml:271
 #, kde-format
@@ -144,7 +148,7 @@ msgstr "Vybrať všetko"
 #: src/controls.6/TextEditor.qml:370
 #, kde-format
 msgid "Search Selected Text on Google..."
-msgstr ""
+msgstr "Hľadať vybraný text na Google..."
 
 #: src/controls.6/TextEditor.qml:382
 #, kde-format
