@@ -1,0 +1,219 @@
+# Uyghur translation for mauikittexteditor.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the mauikit-texteditor package.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mauikit-texteditor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"PO-Revision-Date: 2026-05-31 20:28-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: src/code/documenthandler.cpp:166
+#, kde-format
+msgid "File changed externally"
+msgstr ""
+
+#: src/code/documenthandler.cpp:166
+#, kde-format
+msgid "You can reload the file or save your changes now"
+msgstr ""
+
+#: src/code/documenthandler.cpp:177
+#, kde-format
+msgid "Reload"
+msgstr "قايتا يۈكلە"
+
+#: src/code/documenthandler.cpp:177
+#, kde-format
+msgid "Auto Reload"
+msgstr ""
+
+#: src/code/documenthandler.cpp:177 src/code/documenthandler.cpp:185
+#: src/controls.6/TextEditor.qml:496
+#, kde-format
+msgid "Ignore"
+msgstr "پەرۋا قىلما"
+
+#: src/code/documenthandler.cpp:183
+#, kde-format
+msgid "File can not be saved"
+msgstr ""
+
+#: src/code/documenthandler.cpp:191
+#, kde-format
+msgid "Your file was removed"
+msgstr ""
+
+#: src/code/documenthandler.cpp:191
+#, kde-format
+msgid ""
+"This file does not longer exist in your local storage, however you can save "
+"it again"
+msgstr ""
+
+#: src/code/documenthandler.cpp:197
+#, kde-format
+msgid "Save"
+msgstr "ساقلا"
+
+#: src/code/documenthandler.cpp:791
+#, kde-format
+msgid "Cannot save: "
+msgstr ""
+
+#: src/code/documenthandler.cpp:792
+#, kde-format
+msgid "Cannot save file "
+msgstr "ھۆججەتنى ساقلىغىلى بولمىدى. "
+
+#: src/code/moduleinfo.cpp:18
+#, kde-format
+msgid "Text editor controls."
+msgstr ""
+
+#: src/controls.6/ColorSchemesPage.qml:53
+#: src/controls.6/ColorSchemesPage.qml:74
+#, kde-format
+msgid "Colors"
+msgstr "رەڭ"
+
+#: src/controls.6/ColorSchemesPage.qml:75
+#, kde-format
+msgid ""
+"Configure the style of the syntax highlighting. This configuration in not "
+"applied for rich text formats."
+msgstr ""
+
+#: src/controls.6/ColorSchemesPage.qml:79
+#, kde-format
+msgid "Color"
+msgstr "رەڭ"
+
+#: src/controls.6/ColorSchemesPage.qml:80
+#, kde-format
+msgid "Editor background color."
+msgstr ""
+
+#: src/controls.6/ColorSchemesPage.qml:110
+#, kde-format
+msgid "Theme"
+msgstr "ئۆرنەك"
+
+#: src/controls.6/ColorSchemesPage.qml:111
+#, kde-format
+msgid "Editor color scheme style."
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:271
+#, kde-format
+msgid "Undo"
+msgstr "يېنىۋال"
+
+#: src/controls.6/TextEditor.qml:284
+#, kde-format
+msgid "Redo"
+msgstr "قايتىلا"
+
+#: src/controls.6/TextEditor.qml:300
+#, kde-format
+msgid "Copy"
+msgstr "كۆچۈر"
+
+#: src/controls.6/TextEditor.qml:319
+#, kde-format
+msgid "Cut"
+msgstr "كەس"
+
+#: src/controls.6/TextEditor.qml:337
+#, kde-format
+msgid "Paste"
+msgstr "چاپلا"
+
+#: src/controls.6/TextEditor.qml:355
+#, kde-format
+msgid "Select All"
+msgstr "ھەممىنى تاللا"
+
+#: src/controls.6/TextEditor.qml:370
+#, kde-format
+msgid "Search Selected Text on Google..."
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:382
+#, kde-format
+msgid "Email"
+msgstr "ئېلخەت"
+
+#: src/controls.6/TextEditor.qml:392
+#, kde-format
+msgid "Save as Contact"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:402
+#, kde-format
+msgid "Open Link"
+msgstr "ئۇلانما ئاچ"
+
+#: src/controls.6/TextEditor.qml:417
+#, kde-format
+msgid "Delete"
+msgstr "ئۆچۈر"
+
+#: src/controls.6/TextEditor.qml:431
+#, kde-format
+msgid "Spelling"
+msgstr "ئىملا تەكشۈر"
+
+#: src/controls.6/TextEditor.qml:472
+#, kde-format
+msgid "No suggestions for \"%1\""
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:482
+#, kde-format
+msgid "Add \"%1\" to dictionary"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:510
+#, kde-format
+msgid "Enable Spellchecker"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:597
+#, kde-format
+msgid "Case Sensitive"
+msgstr "چوڭ كىچىك ھەرپنى پەرقلەندۈر"
+
+#: src/controls.6/TextEditor.qml:604
+#, kde-format
+msgid "Whole Words Only"
+msgstr ""
+
+#: src/controls.6/TextEditor.qml:614
+#, kde-format
+msgid "Find"
+msgstr "ئىزدە"
+
+#: src/controls.6/TextEditor.qml:645 src/controls.6/TextEditor.qml:652
+#, kde-format
+msgid "Replace"
+msgstr "ئالماشتۇر"
+
+#: src/controls.6/TextEditor.qml:662
+#, kde-format
+msgid "Replace All"
+msgstr "ھەممىنى ئالماشتۇر"
+
+#: src/controls.6/TextEditor.qml:923
+#, kde-format
+msgid "Body"
+msgstr "جىسىم"
