@@ -1,5 +1,6 @@
 # Translation of mauikittexteditor to Norwegian Nynorsk
 #
+# Karl Ove Hufthammer <karl@huftis.org>, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
