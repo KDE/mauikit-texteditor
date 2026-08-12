@@ -21,7 +21,7 @@ msgstr ""
 #: src/code/documenthandler.cpp:166
 #, kde-format
 msgid "File changed externally"
-msgstr "تغير الملف خارجياً"
+msgstr "تغير الملف خارجيًا"
 
 #: src/code/documenthandler.cpp:166
 #, kde-format
