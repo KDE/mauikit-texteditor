@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the mauikit-texteditor package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022-2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: mauikit-texteditor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2025-12-23 12:28+0300\n"
+"PO-Revision-Date: 2026-11-10 21:39+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: src/code/documenthandler.cpp:166
 #, kde-format
@@ -94,7 +94,7 @@ msgid ""
 "Configure the style of the syntax highlighting. This configuration in not "
 "applied for rich text formats."
 msgstr ""
-"Sözdizim vurgulamasının biçemini yapılandırın. Bu yapılandırma, zengin metin "
+"Sözdizim vurgulamasının stilini yapılandırın. Bu yapılandırma, zengin metin "
 "biçimlerine uygulanmaz."
 
 #: src/controls.6/ColorSchemesPage.qml:79
@@ -115,7 +115,7 @@ msgstr "Tema"
 #: src/controls.6/ColorSchemesPage.qml:111
 #, kde-format
 msgid "Editor color scheme style."
-msgstr "Düzenleyici renk şeması biçemi"
+msgstr "Düzenleyici renk şeması stili"
 
 #: src/controls.6/TextEditor.qml:271
 #, kde-format
